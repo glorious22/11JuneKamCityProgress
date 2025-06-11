@@ -62,18 +62,13 @@ const HookahLounge = () => {
 
           {/* Service Description */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div>
-              {/* Optimized Shisha Image from Flickr */}
-              <section className="text-center px-4 py-8">
-                <div className="max-w-3xl mx-auto">
-                  <img
-                    src="https://live.staticflickr.com/65535/54575639694_9a16f68006_c.jpg"
-                    alt="Premium Hookah Lounge experience at Kamalo City"
-                    className="w-full h-auto object-cover rounded-lg shadow-md"
-                    loading="lazy"
-                  />
-                </div>
-              </section>
+            <div className="max-w-lg mx-auto lg:mx-0">
+              <img
+                src="https://live.staticflickr.com/65535/54575639694_9a16f68006_c.jpg"
+                alt="Kamalo City - Premium Hookah Lounge experience"
+                className="w-full h-auto object-cover rounded-lg shadow-md"
+                loading="lazy"
+              />
             </div>
             <div>
               <h2 className="text-3xl font-bold mb-6 text-kamalo-red">Premium Hookah Experience</h2>
@@ -164,13 +159,13 @@ const HookahLounge = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+27731598909"
-                className="bg-kamalo-red text-white px-6 py-3 rounded-full hover:bg-red-700 transition-colors font-semibold"
+                className="bg-kamalo-red text-white px-6 py-3 rounded-full hover:bg-red-700 transition-colors font-semibold hover:scale-105 hover:shadow-lg transition duration-300"
               >
                 Call Us: +27 73 159 8909
               </a>
               <a
                 href="/reservations"
-                className="border border-kamalo-red text-kamalo-red px-6 py-3 rounded-full hover:bg-kamalo-red hover:text-white transition-colors font-semibold"
+                className="border border-kamalo-red text-kamalo-red px-6 py-3 rounded-full hover:bg-kamalo-red hover:text-white transition-colors font-semibold hover:scale-105 hover:shadow-lg transition duration-300"
               >
                 Make Reservation
               </a>

@@ -24,6 +24,7 @@ import {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
@@ -40,6 +41,37 @@ const Navbar = () => {
           <Link to="/" className="text-white hover:text-kamalo-red transition-colors text-base">
             Home
           </Link>
+          
+          {/* Menu Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center text-white hover:text-kamalo-red transition-colors focus:outline-none text-base">
+              Menu
+              <ChevronDown className="ml-1 w-4 h-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-black/95 border-gray-800 mt-2">
+              <DropdownMenuItem asChild>
+                <Link to="/menu" className="text-white hover:text-kamalo-red transition-colors">
+                  Standard Menu
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/menu/daily-specials" className="text-white hover:text-kamalo-red transition-colors">
+                  Daily Specials
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/menu/vegetable-sides" className="text-white hover:text-kamalo-red transition-colors">
+                  Vegetable Sides
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/menu/sides" className="text-white hover:text-kamalo-red transition-colors">
+                  Sides
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center text-white hover:text-kamalo-red transition-colors focus:outline-none text-base">
               Services
@@ -125,6 +157,27 @@ const Navbar = () => {
                   <Link to="/" className="block text-white hover:text-kamalo-red transition-colors py-3 text-base border-b border-gray-700" onClick={() => setIsOpen(false)}>
                     Home
                   </Link>
+                  
+                  <Collapsible open={menuOpen} onOpenChange={setMenuOpen}>
+                    <CollapsibleTrigger className="flex items-center justify-between w-full text-white hover:text-kamalo-red transition-colors py-3 text-base border-b border-gray-700">
+                      Menu
+                      <ChevronDown className={`w-4 h-4 transition-transform ${menuOpen ? 'rotate-180' : ''}`} />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="space-y-2 pl-4 mt-2">
+                      <Link to="/menu" className="block text-gray-300 hover:text-kamalo-red transition-colors py-2 text-base" onClick={() => setIsOpen(false)}>
+                        Standard Menu
+                      </Link>
+                      <Link to="/menu/daily-specials" className="block text-gray-300 hover:text-kamalo-red transition-colors py-2 text-base" onClick={() => setIsOpen(false)}>
+                        Daily Specials
+                      </Link>
+                      <Link to="/menu/vegetable-sides" className="block text-gray-300 hover:text-kamalo-red transition-colors py-2 text-base" onClick={() => setIsOpen(false)}>
+                        Vegetable Sides
+                      </Link>
+                      <Link to="/menu/sides" className="block text-gray-300 hover:text-kamalo-red transition-colors py-2 text-base" onClick={() => setIsOpen(false)}>
+                        Sides
+                      </Link>
+                    </CollapsibleContent>
+                  </Collapsible>
                   
                   <Collapsible open={servicesOpen} onOpenChange={setServicesOpen}>
                     <CollapsibleTrigger className="flex items-center justify-between w-full text-white hover:text-kamalo-red transition-colors py-3 text-base border-b border-gray-700">

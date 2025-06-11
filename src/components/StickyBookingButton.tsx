@@ -20,13 +20,14 @@ const StickyBookingButton = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 animate-bounce">
+    <div className="fixed bottom-6 right-6 z-40">
       <Link
         to="/reservations"
-        className="bg-kamalo-red hover:bg-red-600 text-white px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 font-semibold hover:scale-105"
+        className="bg-kamalo-red hover:bg-red-600 text-white px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 font-semibold hover:scale-105 animate-pulse"
       >
         <Calendar className="w-5 h-5" />
         <span className="hidden sm:inline">Reserve Now</span>
+        <span className="sm:hidden">Book</span>
       </Link>
     </div>
   );

@@ -52,7 +52,10 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
             Welcome to <span className="text-kamalo-red">Kamalo City</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-kamalo-gold mb-4 font-semibold">
+            Where Flavor, Culture & Vibes Meet
+          </p>
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Experience authentic African cuisine, premium hookah lounge, live entertainment, and professional services in the heart of Goodwood, Cape Town.
           </p>
           

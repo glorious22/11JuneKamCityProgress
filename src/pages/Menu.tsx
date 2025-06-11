@@ -106,30 +106,10 @@ const Menu = () => {
             </p>
           </div>
 
-          {/* Menu Navigation Links - matching Gallery filter buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button
-              className="px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg bg-kamalo-red text-white hover:bg-red-600"
-            >
+          {/* Single "All Items" Button */}
+          <div className="flex justify-center mb-12">
+            <Button className="px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg bg-kamalo-red text-white hover:bg-red-600">
               All Items
-            </Button>
-            <Button
-              asChild
-              className="px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg bg-gray-800 text-gray-300 hover:bg-gray-700"
-            >
-              <Link to="/menu/daily-specials">Daily Specials</Link>
-            </Button>
-            <Button
-              asChild
-              className="px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg bg-gray-800 text-gray-300 hover:bg-gray-700"
-            >
-              <Link to="/menu/vegetable-sides">Vegetable Sides</Link>
-            </Button>
-            <Button
-              asChild
-              className="px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg bg-gray-800 text-gray-300 hover:bg-gray-700"
-            >
-              <Link to="/menu/sides">Sides</Link>
             </Button>
           </div>
 

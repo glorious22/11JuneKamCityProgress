@@ -1,6 +1,7 @@
 import { Gamepad2, Trophy, Users, Calendar } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -9,6 +10,14 @@ import {
 } from "@/components/ui/accordion";
 
 const GameNights = () => {
+  useEffect(() => {
+    document.title = "Game Nights - Kamalo City | Pool, Chess, Dominoes & More";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Join our exciting game nights at Kamalo City featuring pool, chess, dominoes, Uno and more. Prizes, food, and community fun in Cape Town.');
+    }
+  }, []);
+
   const faqs = [
     {
       question: "When will game nights start?",
@@ -64,9 +73,10 @@ const GameNights = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=400&h=300&fit=crop"
-                alt="Game Night"
+                src="https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Kamalo City - Game Night activities"
                 className="w-full h-64 object-cover rounded-lg"
+                loading="lazy"
               />
             </div>
             <div>
@@ -161,7 +171,7 @@ const GameNights = () => {
                 href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-kamalo-red text-white px-6 py-3 rounded-full hover:bg-red-700 transition-colors font-semibold"
+                className="bg-kamalo-red text-white px-6 py-3 rounded-full hover:bg-red-700 transition-colors font-semibold hover:scale-105 hover:shadow-lg transition duration-300"
               >
                 Join WhatsApp for Updates
               </a>
@@ -169,7 +179,7 @@ const GameNights = () => {
                 href="https://instagram.com/kamalo_city"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-kamalo-red text-kamalo-red px-6 py-3 rounded-full hover:bg-kamalo-red hover:text-white transition-colors font-semibold"
+                className="border border-kamalo-red text-kamalo-red px-6 py-3 rounded-full hover:bg-kamalo-red hover:text-white transition-colors font-semibold hover:scale-105 hover:shadow-lg transition duration-300"
               >
                 Follow on Instagram
               </a>

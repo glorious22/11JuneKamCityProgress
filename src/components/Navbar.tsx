@@ -24,7 +24,6 @@ import {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
@@ -42,36 +41,10 @@ const Navbar = () => {
             Home
           </Link>
           
-          {/* Menu Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center text-white hover:text-kamalo-red transition-colors focus:outline-none text-base">
-              Menu
-              <ChevronDown className="ml-1 w-4 h-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-black/95 border-gray-800 mt-2">
-              <DropdownMenuItem asChild>
-                <Link to="/menu" className="text-white hover:text-kamalo-red transition-colors">
-                  Standard Menu
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/menu/daily-specials" className="text-white hover:text-kamalo-red transition-colors">
-                  Daily Specials
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/menu/vegetable-sides" className="text-white hover:text-kamalo-red transition-colors">
-                  Vegetable Sides
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/menu/sides" className="text-white hover:text-kamalo-red transition-colors">
-                  Sides
-                </Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
+          <Link to="/menu" className="text-white hover:text-kamalo-red transition-colors text-base">
+            Menu
+          </Link>
+          
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center text-white hover:text-kamalo-red transition-colors focus:outline-none text-base">
               Services
@@ -109,6 +82,11 @@ const Navbar = () => {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
+                <Link to="/services/game-nights" className="text-white hover:text-kamalo-red transition-colors">
+                  Game Nights
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
                 <Link to="/services" className="text-white hover:text-kamalo-red transition-colors border-t border-gray-700 pt-2">
                   View All Services
                 </Link>
@@ -143,7 +121,7 @@ const Navbar = () => {
                 <Menu className="w-6 h-6" />
               </button>
             </DrawerTrigger>
-            <DrawerContent className="bg-kamalo-dark border-gray-800">
+            <DrawerContent className="bg-kamalo-dark border-gray-800 max-h-[80vh]">
               <DrawerHeader className="flex justify-between items-center border-b border-gray-700 pb-4">
                 <DrawerTitle className="text-white">Menu</DrawerTitle>
                 <DrawerClose asChild>
@@ -152,32 +130,15 @@ const Navbar = () => {
                   </button>
                 </DrawerClose>
               </DrawerHeader>
-              <div className="p-4 space-y-4 flex flex-col h-full">
-                <div className="flex-1 space-y-4">
+              <div className="p-4 space-y-4 flex flex-col h-full overflow-y-auto">
+                <div className="flex-1 space-y-4 overflow-y-auto">
                   <Link to="/" className="block text-white hover:text-kamalo-red transition-colors py-3 text-base border-b border-gray-700" onClick={() => setIsOpen(false)}>
                     Home
                   </Link>
                   
-                  <Collapsible open={menuOpen} onOpenChange={setMenuOpen}>
-                    <CollapsibleTrigger className="flex items-center justify-between w-full text-white hover:text-kamalo-red transition-colors py-3 text-base border-b border-gray-700">
-                      Menu
-                      <ChevronDown className={`w-4 h-4 transition-transform ${menuOpen ? 'rotate-180' : ''}`} />
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="space-y-2 pl-4 mt-2">
-                      <Link to="/menu" className="block text-gray-300 hover:text-kamalo-red transition-colors py-2 text-base" onClick={() => setIsOpen(false)}>
-                        Standard Menu
-                      </Link>
-                      <Link to="/menu/daily-specials" className="block text-gray-300 hover:text-kamalo-red transition-colors py-2 text-base" onClick={() => setIsOpen(false)}>
-                        Daily Specials
-                      </Link>
-                      <Link to="/menu/vegetable-sides" className="block text-gray-300 hover:text-kamalo-red transition-colors py-2 text-base" onClick={() => setIsOpen(false)}>
-                        Vegetable Sides
-                      </Link>
-                      <Link to="/menu/sides" className="block text-gray-300 hover:text-kamalo-red transition-colors py-2 text-base" onClick={() => setIsOpen(false)}>
-                        Sides
-                      </Link>
-                    </CollapsibleContent>
-                  </Collapsible>
+                  <Link to="/menu" className="block text-white hover:text-kamalo-red transition-colors py-3 text-base border-b border-gray-700" onClick={() => setIsOpen(false)}>
+                    Menu
+                  </Link>
                   
                   <Collapsible open={servicesOpen} onOpenChange={setServicesOpen}>
                     <CollapsibleTrigger className="flex items-center justify-between w-full text-white hover:text-kamalo-red transition-colors py-3 text-base border-b border-gray-700">
@@ -202,6 +163,9 @@ const Navbar = () => {
                       </Link>
                       <Link to="/services/barber-next-door" className="block text-gray-300 hover:text-kamalo-red transition-colors py-2 text-base" onClick={() => setIsOpen(false)}>
                         Barber Shop
+                      </Link>
+                      <Link to="/services/game-nights" className="block text-gray-300 hover:text-kamalo-red transition-colors py-2 text-base" onClick={() => setIsOpen(false)}>
+                        Game Nights
                       </Link>
                       <Link to="/services" className="block text-gray-300 hover:text-kamalo-red transition-colors py-2 text-base" onClick={() => setIsOpen(false)}>
                         View All Services

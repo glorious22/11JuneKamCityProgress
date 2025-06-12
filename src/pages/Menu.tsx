@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
+
   useEffect(() => {
     document.title = "Menu - Kamalo City | Authentic African Cuisine";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -13,88 +15,156 @@ const Menu = () => {
     }
   }, []);
 
-  // Menu items data - matching the gallery card structure
+  // Menu items data - extracted from Uber Eats
   const menuItems = [
+    // Daily Standard Dishes
     {
       id: 1,
-      category: "mains",
-      name: "Beef Stew (355g)",
+      category: "daily",
+      name: "Grilled Thomson",
       price: "R 133.65",
-      description: "Beef in a light tomatoes and brinjals sauce. Served with pap or rice and veg.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Well seasoned grilled thomson. Served with pap or rice and a side of traditional veg of your choice.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Grilled Thomson"
     },
     {
       id: 2,
-      category: "mains",
-      name: "Grilled Pork (380g)",
-      price: "R 145.00",
-      description: "Tender grilled pork served with traditional African spices and your choice of sides.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600"
+      category: "daily",
+      name: "Fried Thomson",
+      price: "R 133.65",
+      description: "Well seasoned fried thomson. Served with pap or rice and side traditional veg of choice.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Fried Thomson"
     },
     {
       id: 3,
-      category: "mains",
-      name: "Fried Thomson",
-      price: "R 125.00",
-      description: "Fresh Thomson fish, perfectly fried and seasoned with traditional African herbs.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600"
+      category: "daily",
+      name: "Grilled Pork (380g)",
+      price: "R 133.65",
+      description: "Grilled pork chops. Served with pap or rice and side of traditional veg of your choice.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Grilled Pork"
     },
     {
       id: 4,
-      category: "mains",
-      name: "Grilled Thomson",
-      price: "R 130.00",
-      description: "Grilled Thomson fish with light seasoning, served with pap and vegetables.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
+      category: "daily",
+      name: "Beef Stew (355g)",
+      price: "R 133.65",
+      description: "Beef in a light tomatoes and brinjals sauce. Served with pap or rice and veg.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Beef Stew"
     },
     {
       id: 5,
-      category: "mains",
-      name: "Fried Makayabu",
-      price: "R 120.00",
-      description: "Traditional dried fish preparation, fried to perfection with authentic spices.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600"
+      category: "daily",
+      name: "Grilled Chicken Quarter Leg",
+      price: "R 148.50",
+      description: "Well seasoned grilled chicken quarter leg. Served with pap or rice and a side of traditional veg of your choice.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Grilled Chicken Quarter Leg"
     },
+    // Featured Items (avoiding duplicates)
     {
       id: 6,
-      category: "mains",
+      category: "featured",
       name: "Fumbwa with Dry Fish",
-      price: "R 140.00",
-      description: "Traditional cassava leaves cooked with dried fish in rich, flavorful sauce.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600"
+      price: "R 108.00",
+      description: "A rich, earthy wild spinach dish slow-cooked with dry fish.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Fumbwa with Dry Fish"
     },
     {
       id: 7,
-      category: "sides",
-      name: "Portion Pap",
-      price: "R 13.50",
-      description: "Traditional African staple, perfect accompaniment to any main dish.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
+      category: "featured",
+      name: "Fried Makayabu",
+      price: "R 108.00",
+      description: "Crispy fried lightly salted cod served with your choice of sides.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Fried Makayabu"
     },
+    // Veg Sides
     {
       id: 8,
-      category: "sides",
-      name: "Portion Rice",
-      price: "R 34.00",
-      description: "Fried rice, perfect accompaniment to any main dish.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600"
+      category: "veg-sides",
+      name: "Spinach",
+      price: "R 67.50",
+      description: "A combination of fresh vegetables to bring maximum flavour to the dish.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Spinach"
     },
     {
       id: 9,
-      category: "vegetables",
-      name: "Spinach",
+      category: "veg-sides",
+      name: "Kasava Leaves",
       price: "R 67.50",
-      description: "Fresh vegetables cooked to bring maximum flavour to the dish.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Tender cassava leaves, a unique and flavourful traditional option.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Kasava Leaves"
+    },
+    {
+      id: 10,
+      category: "veg-sides",
+      name: "Matembele",
+      price: "R 67.50",
+      description: "Sweet potato leaves.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Matembele (Sweet potato leaves)"
+    },
+    // Sides
+    {
+      id: 11,
+      category: "sides",
+      name: "Portion Pap",
+      price: "R 13.50",
+      description: "Found in all traditional African homes, can be eaten with any of our other dishes.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Portion Pap"
+    },
+    {
+      id: 12,
+      category: "sides",
+      name: "Shikwanga (Sour Pap)",
+      price: "R 33.75",
+      description: "Soured cassava pap; popular and traditional.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Shikwanga (Sour Pap)"
+    },
+    {
+      id: 13,
+      category: "sides",
+      name: "Portion Rice",
+      price: "R 54.00",
+      description: "Fried rice, perfect with other dishes like beans or vegetables.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Portion Rice"
     }
   ];
+
+  const filteredItems = activeFilter === "all" 
+    ? menuItems 
+    : menuItems.filter(item => {
+        if (activeFilter === "daily-standard") {
+          return item.category === "daily" || item.category === "featured";
+        }
+        return item.category === activeFilter;
+      });
+
+  const getCategoryDisplayName = (category: string) => {
+    switch (category) {
+      case "daily": return "Daily Standard";
+      case "featured": return "Featured";
+      case "veg-sides": return "Veg Sides";
+      case "sides": return "Sides";
+      default: return category;
+    }
+  };
 
   return (
     <div className="min-h-screen bg-kamalo-dark text-white">
       <Navbar />
       <main className="pt-24 px-4 pb-12">
         <div className="max-w-7xl mx-auto">
-          {/* Header Section - matching Gallery page structure */}
+          {/* Header Section */}
           <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             Our <span className="text-kamalo-red">Menu</span>
           </h1>
@@ -106,45 +176,85 @@ const Menu = () => {
             </p>
           </div>
 
-          {/* Single "All Items" Button */}
-          <div className="flex justify-center mb-12">
-            <Button className="px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg bg-kamalo-red text-white hover:bg-red-600">
+          {/* Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12 overflow-x-auto pb-2">
+            <Button
+              onClick={() => setActiveFilter("all")}
+              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
+                activeFilter === "all" 
+                  ? "bg-kamalo-red text-white" 
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+              }`}
+            >
               All Items
+            </Button>
+            <Button
+              onClick={() => setActiveFilter("veg-sides")}
+              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
+                activeFilter === "veg-sides" 
+                  ? "bg-kamalo-red text-white" 
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+              }`}
+            >
+              Veg Sides
+            </Button>
+            <Button
+              onClick={() => setActiveFilter("daily-standard")}
+              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
+                activeFilter === "daily-standard" 
+                  ? "bg-kamalo-red text-white" 
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+              }`}
+            >
+              Daily Standard + Weekly Specials
+            </Button>
+            <Button
+              onClick={() => setActiveFilter("sides")}
+              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
+                activeFilter === "sides" 
+                  ? "bg-kamalo-red text-white" 
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+              }`}
+            >
+              Sides
             </Button>
           </div>
 
-          {/* Menu Grid - EXACTLY matching Gallery grid layout and styling */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {menuItems.map((item) => (
+          {/* Menu Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
+            {filteredItems.map((item) => (
               <div 
                 key={item.id} 
                 className="bg-black/50 rounded-lg overflow-hidden hover:scale-105 hover:shadow-lg transition duration-300 group"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
                   <img
                     src={item.image}
-                    alt={`Kamalo City - ${item.name}`}
+                    alt={item.alt}
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-lg font-bold text-white">{item.name}</h3>
-                    <span className="text-sm text-kamalo-red capitalize">{item.category}</span>
+                  <div className="absolute top-4 left-4">
+                    <span className="text-xs text-kamalo-red bg-black/70 px-2 py-1 rounded-full capitalize">
+                      {getCategoryDisplayName(item.category)}
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 right-4">
+                    <span className="text-lg font-bold text-white bg-black/70 px-3 py-1 rounded-full">
+                      {item.price}
+                    </span>
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-3">
-                    <h4 className="text-xl font-bold text-white">{item.name}</h4>
-                    <span className="text-lg font-bold text-kamalo-red">{item.price}</span>
-                  </div>
-                  <p className="text-gray-300 text-base leading-relaxed">{item.description}</p>
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-white mb-2">{item.name}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Call to Action Section - matching Gallery CTA */}
+          {/* Call to Action Section */}
           <div className="text-center mt-16">
             <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
               <h2 className="text-2xl font-bold text-white mb-4">

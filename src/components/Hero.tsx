@@ -52,8 +52,11 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
             Welcome to <span className="text-kamalo-red">Kamalo City</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience authentic African cuisine, premium hookah lounge, live entertainment, and professional services in the heart of Goodwood, Cape Town.
+          <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
+            An African restaurant in the heart of Goodwood, Cape Town
+          </p>
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Experience authentic African cuisine, a premium hookah lounge, live entertainment, and signature services — all under one roof.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -69,7 +72,7 @@ const Hero = () => {
               variant="outline" 
               className="border-2 border-kamalo-gold text-kamalo-gold hover:bg-kamalo-gold hover:text-black px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto"
             >
-              <Link to="/menu">Explore Menu</Link>
+              <Link to="/menu">Explore Our Menu</Link>
             </Button>
           </div>
           

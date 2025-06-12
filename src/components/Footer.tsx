@@ -45,7 +45,6 @@ const Footer = () => {
               <Link to="/" className="block hover:text-kamalo-red transition-colors">Home</Link>
               <Link to="/menu" className="block hover:text-kamalo-red transition-colors">Menu</Link>
               <Link to="/services" className="block hover:text-kamalo-red transition-colors">All Services</Link>
-              <Link to="/reservations" className="block hover:text-kamalo-red transition-colors">Reservations</Link>
               <Link to="/gallery" className="block hover:text-kamalo-red transition-colors">Gallery</Link>
               <Link to="/about" className="block hover:text-kamalo-red transition-colors">About</Link>
               <Link to="/contact" className="block hover:text-kamalo-red transition-colors">Contact</Link>
@@ -61,7 +60,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-kamalo-red transition-colors"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-5 h-5" />
                 <span>@kamalo_city</span>
               </a>
               <a
@@ -70,7 +69,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-kamalo-red transition-colors"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-5 h-5" />
                 <span>WhatsApp Group</span>
               </a>
               <a
@@ -79,7 +78,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-kamalo-red transition-colors"
               >
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
                 <span>Order on Uber Eats</span>

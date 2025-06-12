@@ -2,15 +2,12 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import IntroStory from "@/components/IntroStory";
-import AmbiancePreview from "@/components/AmbiancePreview";
-import OurCuisine from "@/components/OurCuisine";
-import LiveEventsServices from "@/components/LiveEventsServices";
+import ServicesPreview from "@/components/ServicesPreview";
+import MenuPreview from "@/components/MenuPreview";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import PerfumeSection from "@/components/PerfumeSection";
-import BookingCTA from "@/components/BookingCTA";
-import GalleryCTA from "@/components/GalleryCTA";
+import GalleryPreview from "@/components/GalleryPreview";
 import FAQ from "@/components/FAQ";
-import MapSection from "@/components/MapSection";
+import BookingCTA from "@/components/BookingCTA";
 import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 import StickyBookingButton from "@/components/StickyBookingButton";
@@ -31,15 +28,12 @@ const Index = () => {
       <main>
         <Hero />
         <IntroStory />
-        <AmbiancePreview />
-        <OurCuisine />
-        <LiveEventsServices />
+        <ServicesPreview />
+        <MenuPreview />
         <TestimonialsSection />
-        <PerfumeSection />
-        <BookingCTA />
-        <GalleryCTA />
+        <GalleryPreview />
         <FAQ />
-        <MapSection />
+        <BookingCTA />
         <ContactFormSection />
       </main>
       <Footer />

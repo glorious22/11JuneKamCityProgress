@@ -15,7 +15,7 @@ const Menu = () => {
     }
   }, []);
 
-  // Menu items data - extracted from Uber Eats
+  // Enhanced menu items data with additional featured dishes
   const menuItems = [
     // Daily Standard Dishes
     {
@@ -63,7 +63,7 @@ const Menu = () => {
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Image of Grilled Chicken Quarter Leg"
     },
-    // Featured Items (avoiding duplicates)
+    // Featured Items
     {
       id: 6,
       category: "featured",
@@ -81,6 +81,79 @@ const Menu = () => {
       description: "Crispy fried lightly salted cod served with your choice of sides.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Image of Fried Makayabu"
+    },
+    // Additional Featured Dishes from Homepage
+    {
+      id: 14,
+      category: "featured",
+      name: "Egusi Soup with Fufu",
+      price: "R 145.00",
+      description: "Traditional Nigerian soup with ground melon seeds and fufu.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Egusi Soup with Fufu"
+    },
+    {
+      id: 15,
+      category: "featured",
+      name: "Cameroon Ndolé",
+      price: "R 155.00",
+      description: "Cameroon's national dish with bitter leaves, peanuts, and fish.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Cameroon Ndolé"
+    },
+    {
+      id: 16,
+      category: "featured",
+      name: "Chicken Feet Delicacy",
+      price: "R 95.00",
+      description: "Tender chicken feet cooked in traditional African spices.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Chicken Feet Delicacy"
+    },
+    {
+      id: 17,
+      category: "featured",
+      name: "Saka Saka with Rice",
+      price: "R 125.00",
+      description: "Cassava leaves cooked with palm oil and served with rice.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Saka Saka with Rice"
+    },
+    {
+      id: 18,
+      category: "featured",
+      name: "Beef Skewers",
+      price: "R 115.00",
+      description: "Grilled beef skewers marinated in African spices.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Beef Skewers"
+    },
+    {
+      id: 19,
+      category: "featured",
+      name: "Fried Tilapia",
+      price: "R 135.00",
+      description: "Whole tilapia fish fried to perfection with traditional seasonings.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Fried Tilapia"
+    },
+    {
+      id: 20,
+      category: "featured",
+      name: "Congo-Style Chicken",
+      price: "R 140.00",
+      description: "Chicken prepared in traditional Congolese style with rich sauce.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Congo-Style Chicken"
+    },
+    {
+      id: 21,
+      category: "featured",
+      name: "Red Stew with Rice",
+      price: "R 120.00",
+      description: "Traditional red stew made with tomatoes and peppers, served with rice.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Image of Red Stew with Rice"
     },
     // Veg Sides
     {

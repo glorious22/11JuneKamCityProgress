@@ -65,11 +65,11 @@ const Reservations = () => {
           {/* SEO-Optimized Header Section */}
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-kamalo-gold mb-6">
-              Reservations at Kamalo City
+              Host Your Special Event at Kamalo City, Cape Town
             </h1>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                Planning a special evening or event in Cape Town? Kamalo City offers the perfect venue for your needs. Whether you're looking to reserve a table for an intimate dinner or book the entire venue for occasions like birthdays, parties, or corporate events, we've got you covered. Our team is dedicated to providing an unforgettable experience, complete with exquisite cuisine, vibrant ambiance, and top-notch service. Secure your reservation today and let Kamalo City make your event truly special.
+                Looking for the perfect venue in Cape Town? Kamalo City offers intimate dinners, birthday parties, corporate events, and more. Enjoy authentic cuisine, vibrant ambiance, and excellent service. Book your table or venue today for an unforgettable experience.
               </p>
             </div>
           </div>

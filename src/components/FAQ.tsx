@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import {
   Accordion,
@@ -77,7 +76,7 @@ const FAQ = () => {
                 value={`item-${index}`} 
                 className="bg-black/50 rounded-lg border border-gray-800 px-6 data-[state=open]:border-kamalo-red transition-colors"
               >
-                <AccordionTrigger className="text-white hover:text-kamalo-red transition-colors text-left py-6">
+                <AccordionTrigger className="text-white hover:text-kamalo-red transition-colors text-left py-6 font-bold">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-300 pb-6 leading-relaxed">

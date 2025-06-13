@@ -7,8 +7,6 @@ import MenuPreview from "@/components/MenuPreview";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import GalleryPreview from "@/components/GalleryPreview";
 import FAQ from "@/components/FAQ";
-import BookingCTA from "@/components/BookingCTA";
-import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -32,7 +30,6 @@ const Index = () => {
         <TestimonialsSection />
         <GalleryPreview />
         <FAQ />
-        <ContactFormSection />
       </main>
       <Footer />
     </div>

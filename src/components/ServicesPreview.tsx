@@ -1,4 +1,4 @@
-import { Music, Users, Wind, Calendar } from "lucide-react";
+import { Music, Users, Utensils, Wind } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
@@ -31,24 +31,24 @@ const ServicesPreview = () => {
     },
     {
       icon: Users,
-      title: "Private Bookings & Catering",
+      title: "Private Bookings",
       description: "Pre-orders, group functions, and private hire",
       link: "/services/private-bookings",
       image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
-      icon: Wind,
-      title: "Lifestyle Services",
-      description: "Hookah lounge, signature fragrances, barbershop, and social games",
-      link: "/services/hookah-lounge",
-      image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=400"
+      icon: Utensils,
+      title: "Pre-Orders & Catering",
+      description: "Order ahead for pickup or enjoy our full dining experience",
+      link: "/services/pre-order-food",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
-      icon: Calendar,
-      title: "Game Nights (Coming Soon)",
-      description: "Chess, dominoes, and casual group games",
-      link: "/services/game-nights",
-      image: "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=400"
+      icon: Wind,
+      title: "Lifestyle Services",
+      description: "Hookah lounge, signature fragrances, barbershop, and game nights",
+      link: "/services/hookah-lounge",
+      image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=400"
     }
   ];
 

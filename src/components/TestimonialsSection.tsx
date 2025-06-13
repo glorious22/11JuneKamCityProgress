@@ -8,28 +8,39 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      name: "Baptiste Cibangu",
+      name: "HM Baloji",
+      type: "Dine In",
       rating: 5,
-      text: "Excellent food, service, and atmosphere - all 5/5! A true gem in Cape Town.",
+      text: "Amazing African restaurant. I love to be there again and again for their lovely food, clean environments, live music and great service.",
       image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100"
     },
     {
-      name: "Emmanuel Ndachengedzwa",
+      name: "Ludi Smit",
+      type: "Takeaway",
       rating: 5,
-      text: "The food is absolutely great and the service is 5 star! Perfect dining experience.",
+      text: "This is a real traditional mid-African cuisine restaurant. Lovely atmosphere, soft reclining furniture, even a pool table. Owners are very forthcoming and friendly.",
       image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=100"
     },
     {
-      name: "Ludi Smit",
+      name: "Emmanuel Ndachengedzwa",
+      type: "Dine In - Lunch",
       rating: 5,
-      text: "Real traditional mid African cuisine restaurant with lovely atmosphere. Nice soft reclining furniture, pool table for relaxation. Owners are very forthcoming and friendly.",
+      text: "The food is absolutely great and the service is 5-star 👌💯.",
       image: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=100"
     },
     {
-      name: "Sarah Johnson",
+      name: "Kabareng Aubrey Moselelane",
+      type: "Dine In - Dinner",
       rating: 5,
-      text: "Amazing hookah experience and the live music on Fridays is incredible! Will definitely be back.",
+      text: "Kid-friendliness: It's kids friendly.",
       image: "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=100"
+    },
+    {
+      name: "Baptiste Cibangu",
+      type: "Local Guide",
+      rating: 5,
+      text: "Food: 5/5 | Service: 5/5 | Atmosphere: 5/5",
+      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100"
     }
   ];
 
@@ -69,7 +80,7 @@ const TestimonialsSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            What Our <span className="text-kamalo-red">Customers Say</span>
+            What Our <span className="text-kamalo-red">Guests Say</span>
           </h2>
           <p className="text-xl text-gray-300">
             Real experiences from our valued guests
@@ -100,7 +111,7 @@ const TestimonialsSection = () => {
                   <p className="text-kamalo-red font-semibold text-lg">
                     {testimonials[currentSlide].name}
                   </p>
-                  <p className="text-gray-400 text-sm">Verified Customer</p>
+                  <p className="text-gray-400 text-sm">{testimonials[currentSlide].type}</p>
                 </div>
               </div>
             </div>

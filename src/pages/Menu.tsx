@@ -15,219 +15,281 @@ const Menu = () => {
     }
   }, []);
 
-  // Enhanced menu items data with additional featured dishes
+  // Updated menu items with correct pricing and descriptions
   const menuItems = [
-    // Daily Standard Dishes
+    // Main Dishes
     {
       id: 1,
-      category: "daily",
-      name: "Grilled Thomson",
+      category: "main",
+      name: "Beef Stew (355g)",
       price: "R 133.65",
-      description: "Well seasoned grilled thomson. Served with pap or rice and a side of traditional veg of your choice.",
+      description: "Beef in a light tomato and brinjal sauce. Served with pap or rice and vegetables.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Grilled Thomson"
+      alt: "Kamalo City - Beef Stew"
     },
     {
       id: 2,
-      category: "daily",
-      name: "Fried Thomson",
+      category: "main",
+      name: "Grilled Thomson",
       price: "R 133.65",
-      description: "Well seasoned fried thomson. Served with pap or rice and side traditional veg of choice.",
+      description: "Well-seasoned grilled Thomson. Served with pap or rice and traditional vegetables.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Fried Thomson"
+      alt: "Kamalo City - Grilled Thomson"
     },
     {
       id: 3,
-      category: "daily",
+      category: "main",
       name: "Grilled Pork (380g)",
       price: "R 133.65",
-      description: "Grilled pork chops. Served with pap or rice and side of traditional veg of your choice.",
+      description: "Grilled pork chops served with pap or rice and vegetables.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Grilled Pork"
+      alt: "Kamalo City - Grilled Pork"
     },
     {
       id: 4,
-      category: "daily",
-      name: "Beef Stew (355g)",
+      category: "main",
+      name: "Fried Thomson",
       price: "R 133.65",
-      description: "Beef in a light tomatoes and brinjals sauce. Served with pap or rice and veg.",
+      description: "Fried and seasoned Thomson with pap or rice and traditional vegetables.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Beef Stew"
+      alt: "Kamalo City - Fried Thomson"
     },
     {
       id: 5,
-      category: "daily",
+      category: "main",
       name: "Grilled Chicken Quarter Leg",
-      price: "R 148.50",
-      description: "Well seasoned grilled chicken quarter leg. Served with pap or rice and a side of traditional veg of your choice.",
+      price: "R 146.50",
+      description: "Flame-grilled quarter chicken leg served with pap or rice and side vegetables.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Grilled Chicken Quarter Leg"
+      alt: "Kamalo City - Grilled Chicken Quarter Leg"
     },
-    // Featured Items
     {
       id: 6,
-      category: "featured",
-      name: "Fumbwa with Dry Fish",
-      price: "R 108.00",
-      description: "A rich, earthy wild spinach dish slow-cooked with dry fish.",
+      category: "main",
+      name: "Hard Chicken",
+      price: "R 146.50",
+      description: "Firm-textured chicken cooked traditionally. Served with pap or rice.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Fumbwa with Dry Fish"
+      alt: "Kamalo City - Hard Chicken"
     },
+    // Sides
     {
       id: 7,
-      category: "featured",
-      name: "Fried Makayabu",
-      price: "R 108.00",
-      description: "Crispy fried lightly salted cod served with your choice of sides.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Fried Makayabu"
-    },
-    // Additional Featured Dishes from Homepage
-    {
-      id: 14,
-      category: "featured",
-      name: "Egusi Soup with Fufu",
-      price: "R 145.00",
-      description: "Traditional Nigerian soup with ground melon seeds and fufu.",
+      category: "sides",
+      name: "Portion Pap",
+      price: "R 13.50",
+      description: "Traditional maize porridge.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Egusi Soup with Fufu"
+      alt: "Kamalo City - Portion Pap"
     },
-    {
-      id: 15,
-      category: "featured",
-      name: "Cameroon Ndolé",
-      price: "R 155.00",
-      description: "Cameroon's national dish with bitter leaves, peanuts, and fish.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Cameroon Ndolé"
-    },
-    {
-      id: 16,
-      category: "featured",
-      name: "Chicken Feet Delicacy",
-      price: "R 95.00",
-      description: "Tender chicken feet cooked in traditional African spices.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Chicken Feet Delicacy"
-    },
-    {
-      id: 17,
-      category: "featured",
-      name: "Saka Saka with Rice",
-      price: "R 125.00",
-      description: "Cassava leaves cooked with palm oil and served with rice.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Saka Saka with Rice"
-    },
-    {
-      id: 18,
-      category: "featured",
-      name: "Beef Skewers",
-      price: "R 115.00",
-      description: "Grilled beef skewers marinated in African spices.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Beef Skewers"
-    },
-    {
-      id: 19,
-      category: "featured",
-      name: "Fried Tilapia",
-      price: "R 135.00",
-      description: "Whole tilapia fish fried to perfection with traditional seasonings.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Fried Tilapia"
-    },
-    {
-      id: 20,
-      category: "featured",
-      name: "Congo-Style Chicken",
-      price: "R 140.00",
-      description: "Chicken prepared in traditional Congolese style with rich sauce.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Congo-Style Chicken"
-    },
-    {
-      id: 21,
-      category: "featured",
-      name: "Red Stew with Rice",
-      price: "R 120.00",
-      description: "Traditional red stew made with tomatoes and peppers, served with rice.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Red Stew with Rice"
-    },
-    // Veg Sides
     {
       id: 8,
-      category: "veg-sides",
-      name: "Spinach",
-      price: "R 67.50",
-      description: "A combination of fresh vegetables to bring maximum flavour to the dish.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Spinach"
+      category: "sides",
+      name: "Shikwanga (Sour Pap)",
+      price: "R 33.75",
+      description: "Fermented sour maize dough.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Shikwanga"
     },
     {
       id: 9,
+      category: "sides",
+      name: "Portion Rice",
+      price: "R 54.00",
+      description: "Steamed white rice.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Portion Rice"
+    },
+    // Vegetable Sides
+    {
+      id: 10,
+      category: "veg-sides",
+      name: "Spinach",
+      price: "R 67.50",
+      description: "Green spinach.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Spinach"
+    },
+    {
+      id: 11,
+      category: "veg-sides",
+      name: "Ndunda",
+      price: "R 67.50",
+      description: "Wild spinach.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Ndunda"
+    },
+    {
+      id: 12,
       category: "veg-sides",
       name: "Kasava Leaves",
       price: "R 67.50",
-      description: "Tender cassava leaves, a unique and flavourful traditional option.",
+      description: "Tender cassava leaves.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Kasava Leaves"
+      alt: "Kamalo City - Kasava Leaves"
     },
     {
-      id: 10,
+      id: 13,
+      category: "veg-sides",
+      name: "Ngai Ngai",
+      price: "R 67.50",
+      description: "Hibiscus and roselle leaves.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Ngai Ngai"
+    },
+    {
+      id: 14,
       category: "veg-sides",
       name: "Matembele",
       price: "R 67.50",
       description: "Sweet potato leaves.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Matembele (Sweet potato leaves)"
+      alt: "Kamalo City - Matembele"
     },
-    // Sides
     {
-      id: 11,
-      category: "sides",
-      name: "Portion Pap",
-      price: "R 13.50",
-      description: "Found in all traditional African homes, can be eaten with any of our other dishes.",
+      id: 15,
+      category: "veg-sides",
+      name: "Repu",
+      price: "R 67.50",
+      description: "Traditional Congolese leafy green.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Repu"
+    },
+    // Daily Specials - Monday
+    {
+      id: 16,
+      category: "daily-specials",
+      name: "Kapenta (Monday)",
+      price: "R 162.00",
+      description: "Fried kapenta in tomato sauce. Served with pap and veg.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Portion Pap"
+      alt: "Kamalo City - Kapenta"
     },
     {
-      id: 12,
-      category: "sides",
-      name: "Shikwanga (Sour Pap)",
-      price: "R 33.75",
-      description: "Soured cassava pap; popular and traditional.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Shikwanga (Sour Pap)"
-    },
-    {
-      id: 13,
-      category: "sides",
-      name: "Portion Rice",
-      price: "R 54.00",
-      description: "Fried rice, perfect with other dishes like beans or vegetables.",
+      id: 17,
+      category: "daily-specials",
+      name: "Ngolo - Cat Fish (Monday)",
+      price: "R 162.00",
+      description: "Catfish cooked in green pepper sauce. Served with pap and veg.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Image of Portion Rice"
+      alt: "Kamalo City - Ngolo Cat Fish"
+    },
+    // Daily Specials - Tuesday
+    {
+      id: 18,
+      category: "daily-specials",
+      name: "Cooked Pork Trotters (Tuesday)",
+      price: "R 108.00",
+      description: "Traditional cooked pork trotters.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Cooked Pork Trotters"
+    },
+    {
+      id: 19,
+      category: "daily-specials",
+      name: "Fried Mabundu (Tuesday)",
+      price: "R 108.00",
+      description: "Fried mabundu traditional dish.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Fried Mabundu"
+    },
+    {
+      id: 20,
+      category: "daily-specials",
+      name: "Cooked Beans (Tuesday)",
+      price: "R 108.00",
+      description: "Traditional cooked beans.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Cooked Beans"
+    },
+    // Daily Specials - Wednesday
+    {
+      id: 21,
+      category: "daily-specials",
+      name: "Fried Makayabu (Wednesday)",
+      price: "R 108.00",
+      description: "Fried makayabu fish.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Fried Makayabu"
+    },
+    {
+      id: 22,
+      category: "daily-specials",
+      name: "Fried Tilapia (Wednesday)",
+      price: "R 108.00",
+      description: "Fresh fried tilapia fish.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Fried Tilapia"
+    },
+    {
+      id: 23,
+      category: "daily-specials",
+      name: "Fumbwa with Dry Fish (Wednesday)",
+      price: "R 108.00",
+      description: "Traditional fumbwa with dry fish.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Fumbwa with Dry Fish"
+    },
+    // Daily Specials - Friday
+    {
+      id: 24,
+      category: "daily-specials",
+      name: "Cooked Beef Tripe - Mabumu (Friday)",
+      price: "R 108.00",
+      description: "Traditional cooked beef tripe.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Cooked Beef Tripe"
+    },
+    // Daily Specials - Saturday
+    {
+      id: 25,
+      category: "daily-specials",
+      name: "Igusi Soup (Saturday)",
+      price: "R 108.00",
+      description: "Traditional igusi soup.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Igusi Soup"
+    },
+    {
+      id: 26,
+      category: "daily-specials",
+      name: "Beef Sticks (Saturday)",
+      price: "R 40.50",
+      description: "Grilled beef sticks.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Beef Sticks"
+    },
+    // Daily Specials - Sunday
+    {
+      id: 27,
+      category: "daily-specials",
+      name: "Liboke Ya Ngolo (Sunday)",
+      price: "R 108.00",
+      description: "Traditional liboke ya ngolo catfish.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Liboke Ya Ngolo"
+    },
+    {
+      id: 28,
+      category: "daily-specials",
+      name: "Goat Hard Hot Sauce (Sunday)",
+      price: "R 108.00",
+      description: "Goat meat in spicy hot sauce.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Goat Hard Hot Sauce"
     }
   ];
 
   const filteredItems = activeFilter === "all" 
     ? menuItems 
-    : menuItems.filter(item => {
-        if (activeFilter === "daily-standard") {
-          return item.category === "daily" || item.category === "featured";
-        }
-        return item.category === activeFilter;
-      });
+    : menuItems.filter(item => item.category === activeFilter);
 
   const getCategoryDisplayName = (category: string) => {
     switch (category) {
-      case "daily": return "Daily Standard";
-      case "featured": return "Featured";
-      case "veg-sides": return "Veg Sides";
+      case "main": return "Main Dishes";
+      case "veg-sides": return "Vegetable Sides";
       case "sides": return "Sides";
+      case "daily-specials": return "Daily Specials";
       default: return category;
     }
   };
@@ -262,24 +324,14 @@ const Menu = () => {
               All Items
             </Button>
             <Button
-              onClick={() => setActiveFilter("veg-sides")}
+              onClick={() => setActiveFilter("main")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
-                activeFilter === "veg-sides" 
+                activeFilter === "main" 
                   ? "bg-kamalo-red text-white" 
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"
               }`}
             >
-              Veg Sides
-            </Button>
-            <Button
-              onClick={() => setActiveFilter("daily-standard")}
-              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
-                activeFilter === "daily-standard" 
-                  ? "bg-kamalo-red text-white" 
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-              }`}
-            >
-              Daily Standard + Weekly Specials
+              Main Dishes
             </Button>
             <Button
               onClick={() => setActiveFilter("sides")}
@@ -290,6 +342,26 @@ const Menu = () => {
               }`}
             >
               Sides
+            </Button>
+            <Button
+              onClick={() => setActiveFilter("veg-sides")}
+              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
+                activeFilter === "veg-sides" 
+                  ? "bg-kamalo-red text-white" 
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+              }`}
+            >
+              Vegetable Sides
+            </Button>
+            <Button
+              onClick={() => setActiveFilter("daily-specials")}
+              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
+                activeFilter === "daily-specials" 
+                  ? "bg-kamalo-red text-white" 
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+              }`}
+            >
+              Daily Specials
             </Button>
           </div>
 

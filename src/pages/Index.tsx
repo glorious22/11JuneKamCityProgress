@@ -10,7 +10,6 @@ import FAQ from "@/components/FAQ";
 import BookingCTA from "@/components/BookingCTA";
 import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
-import StickyBookingButton from "@/components/StickyBookingButton";
 
 const Index = () => {
   useEffect(() => {
@@ -33,11 +32,9 @@ const Index = () => {
         <TestimonialsSection />
         <GalleryPreview />
         <FAQ />
-        <BookingCTA />
         <ContactFormSection />
       </main>
       <Footer />
-      <StickyBookingButton />
     </div>
   );
 };

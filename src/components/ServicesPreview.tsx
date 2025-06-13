@@ -1,4 +1,4 @@
-import { Music, Users, Scissors, Wind } from "lucide-react";
+import { Music, Users, Wind, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
@@ -24,31 +24,31 @@ const ServicesPreview = () => {
   const services = [
     {
       icon: Music,
-      title: "Live Music Nights",
-      description: "Congolese rhythms every weekend",
+      title: "Live Entertainment",
+      description: "Music nights, DJs, and cultural showcases",
       link: "/services/live-entertainment",
       image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
       icon: Users,
-      title: "Private Bookings",
-      description: "Celebrate events in style",
+      title: "Private Bookings & Catering",
+      description: "Pre-orders, group functions, and private hire",
       link: "/services/private-bookings",
       image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
-      icon: Scissors,
-      title: "Barber & Grooming",
-      description: "Clean fades and trims",
-      link: "/services/barber-next-door",
-      image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=400"
-    },
-    {
       icon: Wind,
-      title: "Hookah Lounge",
-      description: "Flavored hookah on-site",
+      title: "Lifestyle Services",
+      description: "Hookah lounge, signature fragrances, barbershop, and social games",
       link: "/services/hookah-lounge",
       image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=400"
+    },
+    {
+      icon: Calendar,
+      title: "Game Nights (Coming Soon)",
+      description: "Chess, dominoes, and casual group games",
+      link: "/services/game-nights",
+      image: "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=400"
     }
   ];
 

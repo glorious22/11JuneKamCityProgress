@@ -11,39 +11,53 @@ const MenuPreview = () => {
 
   const featuredDishes = [
     {
-      name: "Grilled Chicken Suya",
+      name: "Beef Stew (355g)",
+      price: "R 133.65",
+      description: "Beef in a tomato and brinjal sauce with pap or rice and vegetables.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Grilled Chicken Suya"
+      alt: "Kamalo City - Beef Stew"
     },
     {
-      name: "Jollof Rice with Grilled Fish",
+      name: "Grilled Thomson",
+      price: "R 133.65",
+      description: "Seasoned grilled Thomson fish served with pap or rice and traditional vegetables.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Jollof Rice with Grilled Fish"
+      alt: "Kamalo City - Grilled Thomson"
     },
     {
-      name: "Fried Plantains",
+      name: "Fried Thomson",
+      price: "R 133.65",
+      description: "Fried Thomson fish served with pap or rice and vegetables.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Fried Plantains"
+      alt: "Kamalo City - Fried Thomson"
     },
     {
-      name: "Congo Goat Stew",
+      name: "Grilled Chicken Quarter Leg",
+      price: "R 146.50",
+      description: "Grilled chicken leg quarter with pap or rice and traditional vegetables.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Congo Goat Stew"
+      alt: "Kamalo City - Grilled Chicken Quarter Leg"
     },
     {
-      name: "Spicy Chicken Wings",
+      name: "Kapenta (Monday Special)",
+      price: "R 162.00",
+      description: "Fried kapenta (matemba) in tomato sauce, served with pap and vegetables.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Spicy Chicken Wings"
+      alt: "Kamalo City - Kapenta"
     },
     {
-      name: "Nigerian Puff-Puff",
+      name: "Ngolo (Monday Special)",
+      price: "R 162.00",
+      description: "Catfish cooked with green pepper sauce, served with pap and vegetables.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Nigerian Puff-Puff"
+      alt: "Kamalo City - Ngolo Catfish"
     },
     {
-      name: "Braised Oxtail",
+      name: "Hard Chicken",
+      price: "R 146.50",
+      description: "Traditional firm-textured chicken with pap or rice and vegetables.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Braised Oxtail"
+      alt: "Kamalo City - Hard Chicken"
     }
   ];
 
@@ -94,7 +108,7 @@ const MenuPreview = () => {
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Signature <span className="text-kamalo-red">Dishes</span>
+            Featured <span className="text-kamalo-red">Dishes</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our most beloved African dishes, crafted with authentic flavors and traditional recipes
@@ -121,6 +135,8 @@ const MenuPreview = () => {
                   <div className="absolute inset-0 bg-black/40"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="text-xl font-bold text-white">{featuredDishes[currentSlide].name}</h3>
+                    <p className="text-kamalo-red font-semibold">{featuredDishes[currentSlide].price}</p>
+                    <p className="text-gray-300 text-sm mt-1">{featuredDishes[currentSlide].description}</p>
                   </div>
                 </div>
               </div>
@@ -138,6 +154,8 @@ const MenuPreview = () => {
                     <div className="absolute inset-0 bg-black/40 hover:bg-black/20 transition duration-300"></div>
                     <div className="absolute bottom-4 left-4 right-4">
                       <h3 className="text-xl font-bold text-white">{dish.name}</h3>
+                      <p className="text-kamalo-red font-semibold">{dish.price}</p>
+                      <p className="text-gray-300 text-sm mt-1">{dish.description}</p>
                     </div>
                   </div>
                 ))}

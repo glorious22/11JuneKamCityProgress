@@ -52,11 +52,8 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
             Welcome to <span className="text-kamalo-red">Kamalo City</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
-            An African restaurant in the heart of Goodwood, Cape Town
-          </p>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience authentic African cuisine, a premium hookah lounge, live entertainment, and signature services — all under one roof.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Kamalo City is an African restaurant & lifestyle lounge based in Goodwood, Cape Town. Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

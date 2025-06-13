@@ -185,10 +185,12 @@ const Navbar = () => {
                   <Link to="/contact" className="block text-white hover:text-kamalo-red transition-colors py-3 text-base border-b border-gray-700" onClick={() => setIsOpen(false)}>
                     Contact
                   </Link>
-                  <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-kamalo-red transition-colors py-3 text-base border-b border-gray-700" onClick={() => setIsOpen(false)}>
+                  <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-kamalo-red transition-colors py-3 text-base border-b border-gray-700" onClick={() => setIsOpen(false)}>
+                    <MessageCircle className="w-5 h-5 mr-2" />
                     WhatsApp Group
                   </a>
-                  <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-kamalo-red transition-colors py-3 text-base" onClick={() => setIsOpen(false)}>
+                  <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-kamalo-red transition-colors py-3 text-base" onClick={() => setIsOpen(false)}>
+                    <Instagram className="w-5 h-5 mr-2" />
                     Instagram
                   </a>
                 </div>

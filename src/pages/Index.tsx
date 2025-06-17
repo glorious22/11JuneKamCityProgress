@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import IntroStory from "@/components/IntroStory";
+import TimelineSection from "@/components/TimelineSection";
 import ServicesPreview from "@/components/ServicesPreview";
 import MenuPreview from "@/components/MenuPreview";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -25,6 +26,7 @@ const Index = () => {
       <main>
         <Hero />
         <IntroStory />
+        <TimelineSection />
         <ServicesPreview />
         <MenuPreview />
         <TestimonialsSection />

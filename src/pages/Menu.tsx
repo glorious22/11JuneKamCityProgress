@@ -42,7 +42,7 @@ const Menu = () => {
       description: "Chargrilled whole Thomson fish, marinated with African herbs and spices. Served with your choice of pap or rice and a veg side.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Grilled Thomson",
-      badge: "Popular Pick"
+      badge: "House Special"
     },
     {
       id: 3,
@@ -70,7 +70,7 @@ const Menu = () => {
       description: "Smoky grilled chicken leg quarter, seasoned African-style. Served with pap or rice and traditional veg.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Grilled Chicken Quarter Leg",
-      badge: "Top Seller"
+      badge: "Highly Rated"
     },
 
     // Vegetable Sides
@@ -404,22 +404,15 @@ const Menu = () => {
     }
   ];
 
-  // Filter items based on active filter and current day for daily specials
-  const filteredItems = menuItems.filter(item => {
-    if (activeFilter === "all") {
-      // For daily specials, only show items for current day
-      if (item.category === "daily-specials") {
-        return item.day === currentDay;
-      }
-      return true;
-    }
-    
-    if (activeFilter === "daily-specials") {
-      return item.category === "daily-specials" && item.day === currentDay;
-    }
-    
-    return item.category === activeFilter;
-  });
+  // Get today's specials for the top section
+  const todaysSpecials = menuItems.filter(item => 
+    item.category === "daily-specials" && item.day === currentDay
+  );
+
+  // Filter items based on active filter
+  const filteredItems = activeFilter === "all" 
+    ? menuItems 
+    : menuItems.filter(item => item.category === activeFilter);
 
   const getCategoryDisplayName = (category: string) => {
     switch (category) {
@@ -452,6 +445,53 @@ const Menu = () => {
               </p>
             </div>
           </div>
+
+          {/* Today's Specials Section - Top Priority */}
+          {todaysSpecials.length > 0 && (
+            <div className="mb-16">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-kamalo-red mb-4">
+                  Today's Specials - {getDayDisplayName(currentDay)}
+                </h2>
+                <p className="text-gray-300">Available only today - don't miss out!</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                {todaysSpecials.map((item) => (
+                  <div 
+                    key={item.id} 
+                    className="bg-gradient-to-br from-kamalo-red/20 to-red-900/20 rounded-lg overflow-hidden border-2 border-kamalo-red hover:scale-105 transition duration-300 group"
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.alt}
+                        className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
+                      
+                      <div className="absolute top-4 left-4">
+                        <span className="text-xs text-white bg-kamalo-red px-3 py-1 rounded-full font-semibold">
+                          TODAY ONLY
+                        </span>
+                      </div>
+                      
+                      <div className="absolute bottom-4 right-4">
+                        <span className="text-lg font-bold text-white bg-black/70 px-3 py-1 rounded-full">
+                          {item.price}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-white mb-3">{item.name}</h3>
+                      <p className="text-gray-300 text-base leading-relaxed">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Sticky Filter Buttons */}
           <div className="sticky top-20 z-40 bg-kamalo-dark/95 backdrop-blur-sm py-4 mb-8">
@@ -504,19 +544,10 @@ const Menu = () => {
                     : "bg-gray-800 text-gray-300 hover:bg-gray-700"
                 }`}
               >
-                ⭐ Daily Specials ({getDayDisplayName(currentDay)})
+                ⭐ Daily Specials (All Days)
               </Button>
             </div>
           </div>
-
-          {/* Daily Specials Notice */}
-          {activeFilter === "daily-specials" && (
-            <div className="bg-kamalo-red/10 border border-kamalo-red rounded-lg p-4 mb-8">
-              <p className="text-center text-sm text-gray-300">
-                <strong>Today's Specials ({getDayDisplayName(currentDay)})</strong> - Daily specials are only available on their designated day. Come back tomorrow for different specials!
-              </p>
-            </div>
-          )}
 
           {/* Menu Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
@@ -539,8 +570,8 @@ const Menu = () => {
                     <div className="absolute top-4 left-4">
                       <span className="text-xs text-white bg-kamalo-red px-3 py-1 rounded-full font-semibold">
                         {item.badge.includes("Customer Favourite") && "🔥"} 
-                        {item.badge.includes("Popular") && "⭐"} 
-                        {item.badge.includes("Top Seller") && "❤️"} 
+                        {item.badge.includes("House Special") && "⭐"} 
+                        {item.badge.includes("Highly Rated") && "❤️"} 
                         {item.badge}
                       </span>
                     </div>
@@ -567,18 +598,6 @@ const Menu = () => {
               </div>
             ))}
           </div>
-
-          {/* No items message for daily specials */}
-          {activeFilter === "daily-specials" && filteredItems.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-xl text-gray-300 mb-4">
-                No special dishes available for {getDayDisplayName(currentDay)} today.
-              </p>
-              <p className="text-gray-400">
-                Check back on other days for our rotating daily specials!
-              </p>
-            </div>
-          )}
 
           {/* Bottom CTA Section */}
           <div className="text-center mt-16">

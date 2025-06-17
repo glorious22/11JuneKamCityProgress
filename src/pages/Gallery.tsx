@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import ImageModal from "@/components/ImageModal";
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -15,15 +16,78 @@ const Gallery = () => {
   }, []);
 
   const galleryItems = [
-    { id: 1, category: "food", title: "Grilled African Cuisine", image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Kamalo City - Grilled African cuisine platter" },
-    { id: 2, category: "food", title: "Traditional Stew", image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Kamalo City - Traditional African stew" },
-    { id: 3, category: "events", title: "Live Music Night", image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Kamalo City - Live music performance" },
-    { id: 4, category: "services", title: "Hookah Lounge", image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Kamalo City - Premium hookah lounge experience" },
-    { id: 5, category: "events", title: "Private Event", image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Kamalo City - Private event celebration" },
-    { id: 6, category: "services", title: "Barbershop Service", image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Kamalo City - Professional barbershop service" },
-    { id: 7, category: "food", title: "African Spices", image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Kamalo City - Traditional African spices and ingredients" },
-    { id: 8, category: "events", title: "Cultural Night", image: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Kamalo City - Cultural celebration event" },
-    { id: 9, category: "services", title: "Restaurant Interior", image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Kamalo City - Restaurant interior and ambiance" }
+    { 
+      id: 1, 
+      category: "food", 
+      title: "Grilled African Cuisine", 
+      caption: "Authentic grilled meats with traditional African spices",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600", 
+      alt: "Kamalo City - Grilled African cuisine platter" 
+    },
+    { 
+      id: 2, 
+      category: "food", 
+      title: "Traditional Stew", 
+      caption: "Rich, hearty stews prepared with ancestral recipes",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600", 
+      alt: "Kamalo City - Traditional African stew" 
+    },
+    { 
+      id: 3, 
+      category: "events", 
+      title: "Live Music Night", 
+      caption: "Friday night live performances featuring African artists",
+      image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600", 
+      alt: "Kamalo City - Live music performance" 
+    },
+    { 
+      id: 4, 
+      category: "atmosphere", 
+      title: "Hookah Lounge", 
+      caption: "Premium hookah experience in our comfortable lounge area",
+      image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=600", 
+      alt: "Kamalo City - Premium hookah lounge experience" 
+    },
+    { 
+      id: 5, 
+      category: "events", 
+      title: "Private Event", 
+      caption: "Celebrating special moments with friends and family",
+      image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600", 
+      alt: "Kamalo City - Private event celebration" 
+    },
+    { 
+      id: 6, 
+      category: "atmosphere", 
+      title: "Barbershop Service", 
+      caption: "Professional grooming services right next door",
+      image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=600", 
+      alt: "Kamalo City - Professional barbershop service" 
+    },
+    { 
+      id: 7, 
+      category: "food", 
+      title: "African Spices", 
+      caption: "Traditional spices and ingredients that create our authentic flavors",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600", 
+      alt: "Kamalo City - Traditional African spices and ingredients" 
+    },
+    { 
+      id: 8, 
+      category: "events", 
+      title: "Cultural Night", 
+      caption: "Celebrating African heritage through music and dance",
+      image: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600", 
+      alt: "Kamalo City - Cultural celebration event" 
+    },
+    { 
+      id: 9, 
+      category: "atmosphere", 
+      title: "Restaurant Interior", 
+      caption: "Warm, welcoming atmosphere that feels like home",
+      image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600", 
+      alt: "Kamalo City - Restaurant interior and ambiance" 
+    }
   ];
 
   const filteredItems = activeFilter === "all" 
@@ -79,14 +143,14 @@ const Gallery = () => {
               Events
             </Button>
             <Button
-              onClick={() => setActiveFilter("services")}
+              onClick={() => setActiveFilter("atmosphere")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg ${
-                activeFilter === "services" 
+                activeFilter === "atmosphere" 
                   ? "bg-kamalo-red text-white" 
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"
               }`}
             >
-              Services
+              Atmosphere
             </Button>
           </div>
 
@@ -98,16 +162,16 @@ const Gallery = () => {
                 className="bg-black/50 rounded-lg overflow-hidden hover:scale-105 hover:shadow-lg transition duration-300 group"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <img
+                  <ImageModal
                     src={item.image}
                     alt={item.alt}
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
                   <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-lg font-bold text-white">{item.title}</h3>
-                    <span className="text-sm text-kamalo-red capitalize">{item.category}</span>
+                    <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
+                    <p className="text-sm text-gray-300">{item.caption}</p>
+                    <span className="text-xs text-kamalo-red capitalize mt-1 block">{item.category}</span>
                   </div>
                 </div>
               </div>

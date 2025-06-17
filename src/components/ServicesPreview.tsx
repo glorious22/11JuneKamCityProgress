@@ -25,42 +25,42 @@ const ServicesPreview = () => {
     {
       icon: Music,
       title: "Live Entertainment",
-      description: "Music nights, DJs, and cultural showcases",
+      description: "Music nights, DJs, and cultural showcases every Friday and Saturday",
       link: "/services/live-entertainment",
       image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
       icon: Users,
       title: "Private Bookings",
-      description: "Pre-orders, group functions, and private hire",
+      description: "Full venue hire for birthdays, corporate events, and celebrations up to 80 guests",
       link: "/services/private-bookings",
       image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
       icon: Utensils,
       title: "Pre-Orders & Catering",
-      description: "Order ahead for pickup or enjoy our full dining experience",
+      description: "Order ahead for pickup or enjoy our full dining experience with catering options",
       link: "/services/pre-order-food",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
       icon: Wind,
       title: "Lifestyle Services",
-      description: "Hookah lounge, signature fragrances, barbershop, and game nights",
+      description: "Premium hookah lounge, signature fragrances, professional barbershop, and game nights",
       link: "/services/hookah-lounge",
       image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=400"
     }
   ];
 
   return (
-    <section ref={sectionRef} className="py-16 px-4 bg-gradient-to-b from-black to-kamalo-dark">
+    <section ref={sectionRef} className="py-16 px-4 bg-gradient-to-b from-kamalo-dark to-black">
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             More Than Just <span className="text-kamalo-red">Dining</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            More than food — discover the full Kamalo City experience
+            Discover the complete Kamalo City experience with entertainment, events, and lifestyle services
           </p>
         </div>
 

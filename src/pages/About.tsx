@@ -13,37 +13,17 @@ const About = () => {
     }
   }, []);
 
-  const timeline = [
-    {
-      year: "2021",
-      title: "The Beginning",
-      description: "Opened with a mission to bring authentic African food to Cape Town."
-    },
-    {
-      year: "2022", 
-      title: "Expansion",
-      description: "Added barbershop, live events, and music nights."
-    },
-    {
-      year: "2023",
-      title: "Cultural Hub",
-      description: "Became a cultural hotspot for locals and tourists."
-    },
-    {
-      year: "2024",
-      title: "City Recognition", 
-      description: "Grew in popularity, drawing attention across the city."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-kamalo-dark">
       <Navbar />
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-white">
-          {/* Header */}
+          {/* Header with Quote */}
           <div className="text-center mb-16">
-            <h1 className="text-3xl md:text-4xl font-bold text-kamalo-gold mb-8">
+            <blockquote className="text-2xl md:text-3xl font-serif italic text-kamalo-gold mb-8">
+              "Inspired by our ancestors, shared with the world."
+            </blockquote>
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-8">
               The Story of <span className="text-kamalo-red">Kamalo City</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -51,23 +31,43 @@ const About = () => {
             </p>
           </div>
           
-          {/* Timeline Section */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-semibold text-kamalo-red mb-8 text-center">Our Journey</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {timeline.map((milestone, index) => (
-                <div key={index} className="bg-black/50 rounded-lg p-6 border border-gray-800 hover:border-kamalo-red transition duration-300">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-kamalo-red mb-3">{milestone.year}</div>
-                    <h3 className="text-lg font-semibold text-white mb-3">{milestone.title}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">{milestone.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* Three-Part Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            {/* Our Roots */}
+            <section className="bg-black/50 rounded-lg p-8 border border-gray-800">
+              <h2 className="text-2xl font-bold text-kamalo-red mb-6">Our Roots</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Founded by Pitchou Ntumba and his wife, Kamalo City draws from deep African culinary traditions passed down through generations. Our recipes honor the authentic flavors of Central and West Africa.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                Every dish tells a story of heritage, community, and the rich cultural tapestry that defines African cuisine.
+              </p>
+            </section>
+
+            {/* Our Passion */}
+            <section className="bg-black/50 rounded-lg p-8 border border-gray-800">
+              <h2 className="text-2xl font-bold text-kamalo-red mb-6">Our Passion</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                We believe food is more than sustenance—it's culture, memory, and connection. Our team is passionate about creating an authentic African experience that goes beyond dining.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                From live music to community events, we celebrate the vibrant spirit of African hospitality in everything we do.
+              </p>
+            </section>
+
+            {/* Our Promise */}
+            <section className="bg-black/50 rounded-lg p-8 border border-gray-800">
+              <h2 className="text-2xl font-bold text-kamalo-red mb-6">Our Promise</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                We promise to deliver authentic flavors, warm hospitality, and an unforgettable cultural experience. Every guest becomes part of our extended family.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                Our commitment extends beyond the plate to creating a space where African culture thrives in Cape Town.
+              </p>
+            </section>
           </div>
 
-          {/* Founders Section */}
+          {/* Photo Section */}
           <section className="mb-16">
             <div className="md:flex md:gap-12 items-start">
               <div className="w-full md:w-1/3 mb-6 md:mb-0">
@@ -92,6 +92,18 @@ const About = () => {
             </div>
           </section>
 
+          {/* Trust Signal */}
+          <div className="text-center mb-16">
+            <div className="bg-gradient-to-r from-kamalo-red/20 to-kamalo-gold/20 rounded-lg p-6 border border-kamalo-red/30 inline-block">
+              <p className="text-kamalo-gold font-bold text-lg">
+                Customer-favourite since 2021
+              </p>
+              <p className="text-gray-300 text-sm mt-2">
+                Serving authentic African cuisine to Cape Town
+              </p>
+            </div>
+          </div>
+
           {/* Owner Quote */}
           <div className="mb-16">
             <div className="bg-gradient-to-r from-kamalo-red/20 to-kamalo-gold/20 rounded-lg p-8 border border-kamalo-red/30 text-center">
@@ -100,23 +112,6 @@ const About = () => {
               </blockquote>
               <cite className="text-kamalo-gold font-semibold">— Pitchou Ntumba, Founder</cite>
             </div>
-          </div>
-
-          {/* Philosophy & Vision */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            <section className="bg-black/50 rounded-lg p-8 border border-gray-800">
-              <h2 className="text-2xl font-semibold text-kamalo-red mb-6">Our Philosophy</h2>
-              <p className="text-gray-300 leading-relaxed text-base">
-                At Kamalo City, we believe in creating an authentic African dining experience that celebrates our rich cultural heritage. Our commitment to using traditional recipes and locally-sourced ingredients ensures that every dish tells a story of our continent's diverse culinary traditions.
-              </p>
-            </section>
-
-            <section className="bg-black/50 rounded-lg p-8 border border-gray-800">
-              <h2 className="text-2xl font-semibold text-kamalo-red mb-6">Our Vision</h2>
-              <p className="text-gray-300 leading-relaxed text-base">
-                We strive to be more than just a restaurant – we aim to be a cultural hub where food lovers can explore the rich tapestry of African cuisine. Our vision is to continue pushing culinary boundaries while preserving the authentic flavors that make our dishes unique.
-              </p>
-            </section>
           </div>
 
           {/* Customer Testimonial */}

@@ -3,6 +3,7 @@ import { Phone, MessageSquare, MapPin, Clock, Mail, Instagram } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ContactFormSection from "@/components/ContactFormSection";
 
 const Contact = () => {
   useEffect(() => {
@@ -66,25 +67,11 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Map Section */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-center mb-6">🗺️ Find Us</h2>
-            <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.1055656329913!2d18.546104776047663!3d-33.912682521333636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5b0726596af5%3A0x651107464f9fc317!2sKamalo%20City!5e0!3m2!1sen!2sza!4v1748888283939!5m2!1sen!2sza" 
-                width="100%" 
-                height="100%" 
-                style={{border:0}} 
-                allowFullScreen={true}
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Kamalo City Location"
-              ></iframe>
-            </div>
-          </div>
+          {/* Contact Form Section */}
+          <ContactFormSection />
 
           {/* Operating Hours & Social Media */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
             <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                 <Clock className="w-6 h-6 text-kamalo-red" />
@@ -133,7 +120,7 @@ const Contact = () => {
           </div>
 
           {/* Final CTA */}
-          <div className="text-center bg-black/50 rounded-lg p-8 border border-gray-800">
+          <div className="text-center bg-black/50 rounded-lg p-8 border border-gray-800 mt-12">
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Visit <span className="text-kamalo-red">Kamalo City</span>?
             </h2>

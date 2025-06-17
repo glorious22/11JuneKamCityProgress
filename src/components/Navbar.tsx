@@ -26,29 +26,29 @@ const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo/Brand */}
         <div>
-          <Link to="/" className="text-xl font-bold text-kamalo-gold hover:text-kamalo-red transition-colors">
+          <Link to="/" className="text-xl font-bold text-kamalo-gold hover:text-kamalo-red transition-colors duration-300">
             Kamalo City
           </Link>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="text-white hover:text-kamalo-red transition-colors text-base">
+          <Link to="/" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base">
             Home
           </Link>
           
-          <Link to="/menu" className="text-white hover:text-kamalo-red transition-colors text-base">
+          <Link to="/menu" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base">
             Menu
           </Link>
           
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center text-white hover:text-kamalo-red transition-colors focus:outline-none text-base">
+            <DropdownMenuTrigger className="flex items-center text-white hover:text-kamalo-red transition-colors duration-300 focus:outline-none text-base">
               Services
-              <ChevronDown className="ml-1 w-4 h-4" />
+              <ChevronDown className="ml-1 w-4 h-4 transition-transform duration-300" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-black/95 border-gray-800 mt-2">
               <DropdownMenuItem asChild>
@@ -93,22 +93,22 @@ const Navbar = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link to="/gallery" className="text-white hover:text-kamalo-red transition-colors text-base">
+          <Link to="/gallery" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base">
             Gallery
           </Link>
-          <Link to="/reservations" className="text-white hover:text-kamalo-red transition-colors text-base">
+          <Link to="/reservations" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base">
             Reservations
           </Link>
-          <Link to="/about" className="text-white hover:text-kamalo-red transition-colors text-base">
+          <Link to="/about" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base">
             About
           </Link>
-          <Link to="/contact" className="text-white hover:text-kamalo-red transition-colors text-base">
+          <Link to="/contact" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base">
             Contact
           </Link>
-          <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="text-white hover:text-kamalo-red transition-colors">
+          <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="text-white hover:text-kamalo-red transition-colors duration-300">
             <MessageCircle className="w-5 h-5" />
           </a>
-          <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="text-white hover:text-kamalo-red transition-colors">
+          <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="text-white hover:text-kamalo-red transition-colors duration-300">
             <Instagram className="w-5 h-5" />
           </a>
         </div>

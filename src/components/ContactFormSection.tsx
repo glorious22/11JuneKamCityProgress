@@ -5,6 +5,7 @@ import { MapPin, Phone, Clock } from "lucide-react";
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -14,7 +15,7 @@ const ContactFormSection = () => {
     // Simulate form submission
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
-    setFormData({ name: '', message: '' });
+    setFormData({ name: '', email: '', message: '' });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -25,12 +26,12 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-kamalo-dark">
+    <section className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
-            <h3 className="text-2xl font-bold text-white mb-6">Quick Contact</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Send us a Message</h3>
             {isSubmitted ? (
               <div className="bg-green-500/20 border border-green-500 rounded-lg p-6 text-center">
                 <p className="text-green-400 font-semibold">Thank you! We'll get back to you soon.</p>
@@ -46,6 +47,18 @@ const ContactFormSection = () => {
                     onChange={handleChange}
                     className="w-full p-3 bg-gray-800 rounded-lg text-white text-base border border-gray-700 focus:border-kamalo-red transition-colors"
                     placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="text-white block mb-2 text-base">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-gray-800 rounded-lg text-white text-base border border-gray-700 focus:border-kamalo-red transition-colors"
+                    placeholder="Your email"
                     required
                   />
                 </div>
@@ -70,7 +83,7 @@ const ContactFormSection = () => {
             )}
           </div>
 
-          {/* Map and Contact Info */}
+          {/* Contact Info and Map */}
           <div className="space-y-6">
             <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">

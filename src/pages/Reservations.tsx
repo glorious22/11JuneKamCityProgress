@@ -94,11 +94,11 @@ const Reservations = () => {
           {/* Header Section */}
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-kamalo-gold mb-6">
-              Host Your Next Celebration at Kamalo City
+              Host Your Special Event at Kamalo City, Cape Town
             </h1>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                Whether it's a birthday, dinner, or private function, Kamalo City brings flavour, vibe, and unforgettable energy to every event.
+                Looking for the perfect venue in Cape Town? Kamalo City offers intimate dinners, birthday parties, corporate events, and more. Enjoy authentic cuisine, vibrant ambiance, and excellent service. Book your table or venue today for an unforgettable experience.
               </p>
             </div>
           </div>

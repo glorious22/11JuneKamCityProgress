@@ -24,7 +24,7 @@ const Hero = () => {
   }, [heroImages.length]);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
       {/* Background image carousel */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
@@ -49,17 +49,17 @@ const Hero = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-white leading-tight">
             Welcome to <span className="text-kamalo-red">Kamalo City</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl lg:text-2xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
             Kamalo City is an African restaurant & lifestyle lounge based in Goodwood, Cape Town. Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8 px-4">
             <Button 
               asChild 
-              className="bg-kamalo-red hover:bg-red-600 text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto"
+              className="bg-kamalo-red hover:bg-red-600 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto touch-manipulation"
             >
               <Link to="/reservations">Book Your Table</Link>
             </Button>
@@ -67,23 +67,23 @@ const Hero = () => {
             <Button 
               asChild 
               variant="outline" 
-              className="border-2 border-kamalo-gold text-kamalo-gold hover:bg-kamalo-gold hover:text-black px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto"
+              className="border-2 border-kamalo-gold text-kamalo-gold hover:bg-kamalo-gold hover:text-black px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto touch-manipulation"
             >
               <Link to="/menu">Explore Our Menu</Link>
             </Button>
           </div>
           
-          <div className="text-gray-400">
-            <p className="text-base">📍 90 Voortrekker Road, Goodwood • 📞 +27 73 159 8909</p>
-            <p className="text-sm mt-2">Open 7 days a week: 11:00 AM - 11:00 PM</p>
+          <div className="text-gray-400 px-4">
+            <p className="text-sm md:text-base">📍 90 Voortrekker Road, Goodwood • 📞 +27 73 159 8909</p>
+            <p className="text-xs md:text-sm mt-2">Open 7 days a week: 11:00 AM - 11:00 PM</p>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <div className="w-1 h-2 md:h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

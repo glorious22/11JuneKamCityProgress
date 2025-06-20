@@ -1,6 +1,6 @@
-
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Utensils, Music, Users, Scissors, Wind, Award, Clock } from "lucide-react";
+import { Utensils, Music, Users, Scissors, Wind, Award, Clock, Calendar, Star, Phone } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -9,65 +9,112 @@ import {
 } from "@/components/ui/accordion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 
 const Services = () => {
-  const services = [
+  useEffect(() => {
+    document.title = "Our Services - Kamalo City | Complete African Experience";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Discover all services at Kamalo City: authentic dining, private events, live entertainment, hookah lounge, barbershop, and more in Cape Town.');
+    }
+  }, []);
+
+  const mainServices = [
     {
       id: 1,
-      title: "Food Service",
-      description: "Experience authentic African cuisine prepared with traditional recipes and fresh ingredients. Our main offering brings you the true taste of Africa.",
-      icon: Utensils,
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop",
+      title: "Private Event Venue Hire",
+      description: "Transform your celebration into an unforgettable experience. Full venue hire for birthdays, corporate events, and special occasions.",
+      icon: Users,
+      image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details: {
+        capacity: "Up to 80 seated guests",
+        includes: "Sound system, DJ booth, full catering options",
+        pricing: "Contact for custom packages",
+        contact: "+27 73 691 1461"
+      },
       featured: true
     },
     {
       id: 2,
-      title: "Pre-Orders",
-      description: "Order your favorite dishes in advance and have them ready for pickup. Delivery service coming soon to bring Kamalo City flavors directly to your door.",
-      icon: Clock,
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"
+      title: "Live Entertainment & Events",
+      description: "Experience vibrant African culture with live music, DJ sets, and cultural celebrations every Friday and Saturday.",
+      icon: Music,
+      image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details: {
+        schedule: "Friday & Saturday nights",
+        features: "Live bands, DJ performances, cultural shows",
+        booking: "VIP tables available",
+        contact: "+27 73 159 8909"
+      }
     },
     {
       id: 3,
-      title: "Live Entertainment",
-      description: "Enjoy exciting concerts, DJ performances, cultural nights, and special events. Experience the vibrant culture and energy of Kamalo City.",
-      icon: Music,
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop"
-    },
+      title: "Pre-Order & Catering Services",
+      description: "Skip the wait with our pre-order service. Perfect for office lunches, family dinners, and special occasions.",
+      icon: Utensils,
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details: {
+        availability: "All menu items available",
+        timing: "Ready within 20 minutes",
+        ordering: "WhatsApp or Uber Eats",
+        delivery: "Coming soon"
+      }
+    }
+  ];
+
+  const otherServices = [
     {
       id: 4,
-      title: "Private Bookings",
-      description: "Book our entire venue for your special occasions. Perfect for parties, birthdays, corporate events, and private celebrations.",
-      icon: Users,
-      image: "https://images.unsplash.com/photo-1473177104440-ffee2f376098?w=400&h=300&fit=crop"
+      title: "Professional Barbershop",
+      description: "Get a fresh cut for just R60. Professional barbers offering modern styles and classic cuts right next door.",
+      icon: Scissors,
+      image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details: {
+        price: "R60 flat rate",
+        hours: "9 AM - 9 PM daily",
+        services: "Haircuts, beard trimming, style consultation",
+        walkIns: "Welcome, or book ahead"
+      }
     },
     {
       id: 5,
-      title: "Barber Shop",
-      description: "Professional haircuts and grooming services located right next to the restaurant. Enjoy a fresh cut while you wait for your meal.",
-      icon: Scissors,
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=300&fit=crop"
+      title: "Premium Hookah Lounge",
+      description: "Relax with premium hookah in our ambient lounge. Multiple flavors available with music and drinks.",
+      icon: Wind,
+      image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details: {
+        ageLimit: "18+ only",
+        flavors: "Mint, apple, fruity blends",
+        atmosphere: "Live DJs, low lights",
+        hours: "Daily from 6 PM"
+      }
     },
     {
       id: 6,
-      title: "Perfumes for Sale",
-      description: "Discover our collection of unique and exotic perfumes available for purchase. Find your signature scent at Kamalo City.",
-      icon: Wind,
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=300&fit=crop"
+      title: "Exclusive Perfume Collection",
+      description: "Discover our curated selection of oil-based fragrances. Long-lasting scents inspired by top designers.",
+      icon: Star,
+      image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details: {
+        type: "Oil-based fragrances",
+        selection: "Men's and women's scents",
+        testing: "Available in-store",
+        location: "Inside barbershop area"
+      }
     },
     {
       id: 7,
-      title: "Hookah Pipes",
-      description: "Relax and unwind with our premium hookah and shisha selection. Perfect for socializing and enjoying a peaceful evening.",
-      icon: Wind,
-      image: "/lovable-uploads/e8bac841-0a55-4ef6-be6d-f24cbc468ab1.png"
-    },
-    {
-      id: 8,
-      title: "Game Nights – Coming Soon",
-      description: "Get ready for exciting gaming tournaments and event-style competitions. Stay tuned for more details on upcoming tournaments.",
+      title: "Game Nights",
+      description: "Coming soon! Pool tournaments, chess, dominoes, Uno, and more with prizes and late-night eats.",
       icon: Award,
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop",
+      image: "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details: {
+        status: "Coming Soon",
+        games: "Pool, chess, dominoes, Uno",
+        prizes: "Vouchers and rewards",
+        updates: "Follow @kamalo_city for announcements"
+      },
       comingSoon: true
     }
   ];
@@ -75,160 +122,219 @@ const Services = () => {
   const faqs = [
     {
       question: "What are your opening hours?",
-      answer: "We're open 7 days a week from 11:00 AM to 11:00 PM. Whether you're looking for lunch, dinner, or late-night entertainment, we're here to serve you."
+      answer: "We're open 7 days a week from 11:00 AM to 11:00 PM. Kitchen closes at 10:30 PM."
     },
     {
       question: "Do you take reservations?",
-      answer: "Yes! We highly recommend making reservations, especially for weekends and special events. You can book online through our reservations page or call us at +27 73 159 8909."
+      answer: "Yes! We highly recommend making reservations, especially for weekends and special events. Call us at +27 73 159 8909."
     },
     {
-      question: "What services do you offer besides dining?",
-      answer: "Kamalo City offers a complete experience including premium hookah service, a professional barbershop next door, exotic perfumes, live entertainment, and private event hosting."
+      question: "Can I book the entire venue for a private event?",
+      answer: "Absolutely! We offer full venue hire for up to 80 guests. Contact our events team at +27 73 691 1461 for packages."
     },
     {
       question: "Do you accommodate dietary restrictions?",
-      answer: "Absolutely! We offer vegetarian options and can accommodate various dietary needs. Please inform us about any allergies or special requirements when making your reservation."
+      answer: "Yes! We offer vegetarian options and can accommodate various dietary needs. Please inform us when making your reservation."
     },
     {
-      question: "Is there parking available?",
-      answer: "Yes, we have convenient parking available for our guests. We're located at 90 Voortrekker Road in Goodwood, Cape Town, with easy access and parking options."
-    },
-    {
-      question: "Do you host private events?",
-      answer: "Yes! We offer private event hosting for special occasions, celebrations, and corporate events. Contact us to discuss your event needs."
-    },
-    {
-      question: "What makes your hookah service special?",
-      answer: "We offer premium quality hookah with a variety of flavors in a comfortable and social environment. Our staff ensures a perfect hookah experience every time."
-    },
-    {
-      question: "How does the barbershop service work?",
-      answer: "Our professional barbershop is located right next to the restaurant. You can enjoy a meal and get a fresh haircut all in one visit. Walk-ins welcome or book ahead."
-    },
-    {
-      question: "What types of perfumes do you sell?",
-      answer: "We carry a curated selection of exotic and unique fragrances from various brands. Our staff can help you find the perfect scent for any occasion."
-    },
-    {
-      question: "Can I pre-order food for pickup?",
-      answer: "Yes! You can call us at +27 73 159 8909 to pre-order your favorite dishes. We'll have them ready for pickup at your specified time."
+      question: "Is parking available?",
+      answer: "Yes, we have convenient parking available at 90 Voortrekker Road, Goodwood, Cape Town."
     },
     {
       question: "What entertainment do you offer?",
-      answer: "We regularly host live music performances, DJ nights, cultural events, and special celebrations. Follow our social media for upcoming events and entertainment schedule."
-    },
-    {
-      question: "Do you offer catering services?",
-      answer: "We're exploring catering options for the future. Currently, we focus on our restaurant experience and private event hosting at our venue."
+      answer: "We host live music, DJ performances, and cultural events every Friday and Saturday. Follow our social media for the latest schedule."
     }
   ];
 
   return (
     <div className="min-h-screen bg-kamalo-dark text-white">
       <Navbar />
-      <div className="pt-24 px-6">
-        <div className="container mx-auto">
+      <main className="pt-24 px-4 pb-12">
+        <div className="max-w-7xl mx-auto">
+          {/* Header Section */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Our <span className="text-kamalo-red">Services</span>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              Our <span className="text-kamalo-red">Complete Experience</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover everything Kamalo City has to offer. From authentic African cuisine to entertainment, grooming, and unique shopping experiences.
+            <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Whether you're hosting a big event or just relaxing with friends — Kamalo City offers something for everyone. Explore our full range of services below.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {services.map((service) => {
-              const IconComponent = service.icon;
-              return (
-                <Card 
-                  key={service.id} 
-                  className={`bg-black/50 border-gray-800 hover:border-kamalo-red transition-all duration-300 ${
-                    service.featured ? 'lg:col-span-2' : ''
-                  } ${service.comingSoon ? 'opacity-80' : ''}`}
-                >
-                  <div className="relative overflow-hidden rounded-t-lg">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    {service.comingSoon && (
-                      <div className="absolute top-4 right-4 bg-kamalo-red text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        Coming Soon
-                      </div>
-                    )}
-                  </div>
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <IconComponent className="w-6 h-6 text-kamalo-red" />
-                      <CardTitle className="text-white text-xl">
+          {/* Main Services Section */}
+          <section className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-kamalo-red mb-4">Main Services</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Our core offerings that make Kamalo City the premier destination for dining, events, and entertainment in Cape Town.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+              {mainServices.map((service) => {
+                const IconComponent = service.icon;
+                return (
+                  <Card 
+                    key={service.id} 
+                    className={`bg-black/50 border-gray-800 hover:border-kamalo-red transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                      service.featured ? 'xl:col-span-2' : ''
+                    }`}
+                  >
+                    <div className="relative overflow-hidden rounded-t-lg">
+                      <img
+                        src={service.image}
+                        alt={`Kamalo City - ${service.title}`}
+                        className="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/40 hover:bg-black/20 transition duration-300"></div>
+                      <IconComponent className="absolute top-4 left-4 w-8 h-8 text-kamalo-red" />
+                    </div>
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-white text-lg md:text-xl">
                         {service.title}
                       </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <p className="text-gray-300 leading-relaxed mb-4 text-sm md:text-base">
+                        {service.description}
+                      </p>
+                      
+                      <Accordion type="single" collapsible>
+                        <AccordionItem value="details" className="border-gray-700">
+                          <AccordionTrigger className="text-kamalo-red hover:text-red-400 text-sm md:text-base">
+                            See Details
+                          </AccordionTrigger>
+                          <AccordionContent className="text-gray-300 space-y-2 text-sm md:text-base">
+                            {Object.entries(service.details).map(([key, value]) => (
+                              <div key={key} className="flex flex-col sm:flex-row sm:justify-between">
+                                <span className="font-semibold capitalize text-white">{key.replace(/([A-Z])/g, ' $1')}:</span>
+                                <span className="text-gray-300">{value}</span>
+                              </div>
+                            ))}
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
+
+          {/* Other Services Section */}
+          <section className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-kamalo-red mb-4">Additional Services</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Enhance your Kamalo City experience with our lifestyle and grooming services.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {otherServices.map((service) => {
+                const IconComponent = service.icon;
+                return (
+                  <Card 
+                    key={service.id} 
+                    className={`bg-black/50 border-gray-800 hover:border-kamalo-red transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                      service.comingSoon ? 'opacity-90' : ''
+                    }`}
+                  >
+                    <div className="relative overflow-hidden rounded-t-lg">
+                      <img
+                        src={service.image}
+                        alt={`Kamalo City - ${service.title}`}
+                        className="w-full h-40 md:h-48 object-cover hover:scale-110 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/40 hover:bg-black/20 transition duration-300"></div>
+                      <IconComponent className="absolute top-4 left-4 w-6 h-6 md:w-8 md:h-8 text-kamalo-red" />
+                      {service.comingSoon && (
+                        <div className="absolute top-4 right-4 bg-kamalo-red text-white px-2 py-1 rounded-full text-xs font-semibold">
+                          Coming Soon
+                        </div>
+                      )}
                     </div>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-gray-300 leading-relaxed">
-                      {service.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-white text-base md:text-lg">
+                        {service.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <p className="text-gray-300 leading-relaxed mb-4 text-sm">
+                        {service.description}
+                      </p>
+                      
+                      <Accordion type="single" collapsible>
+                        <AccordionItem value="details" className="border-gray-700">
+                          <AccordionTrigger className="text-kamalo-red hover:text-red-400 text-sm">
+                            See Details
+                          </AccordionTrigger>
+                          <AccordionContent className="text-gray-300 space-y-2 text-sm">
+                            {Object.entries(service.details).map(([key, value]) => (
+                              <div key={key} className="flex flex-col">
+                                <span className="font-semibold capitalize text-white text-xs">{key.replace(/([A-Z])/g, ' $1')}:</span>
+                                <span className="text-gray-300 text-xs">{value}</span>
+                              </div>
+                            ))}
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
 
           {/* FAQ Section */}
-          <div className="mb-16">
+          <section className="mb-16">
             <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-kamalo-red">
+                Frequently Asked Questions
+              </h2>
               <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem 
-                  value="faqs" 
-                  className="bg-black/50 rounded-lg border border-gray-800 data-[state=open]:border-kamalo-red transition-colors"
-                >
-                  <AccordionTrigger className="text-white hover:text-kamalo-red transition-colors text-left py-6 px-6 text-xl font-bold">
-                    Frequently Asked Questions
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                    <div className="space-y-4">
-                      {faqs.map((faq, index) => (
-                        <div key={index} className="border-b border-gray-700 last:border-b-0 pb-4 last:pb-0">
-                          <h4 className="text-white font-semibold mb-2">{faq.question}</h4>
-                          <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
+                {faqs.map((faq, index) => (
+                  <AccordionItem 
+                    key={index}
+                    value={`faq-${index}`}
+                    className="bg-black/50 rounded-lg border border-gray-800 data-[state=open]:border-kamalo-red transition-colors px-4 md:px-6"
+                  >
+                    <AccordionTrigger className="text-white hover:text-kamalo-red transition-colors text-left py-4 md:py-6 font-semibold text-sm md:text-base">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-300 pb-4 md:pb-6 leading-relaxed text-sm md:text-base">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
               </Accordion>
             </div>
-          </div>
+          </section>
 
-          <div className="text-center">
-            <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Ready to Experience <span className="text-kamalo-red">Kamalo City</span>?
-              </h2>
-              <p className="text-gray-300 mb-6">
-                Visit us at 90 Voortrekker Road, Goodwood, Cape Town. Open 7 days a week from 11:00 AM to 11:00 PM.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+27731598909"
-                  className="bg-kamalo-red text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold"
-                >
-                  Call Us: +27 73 159 8909
+          {/* Contact CTA */}
+          <section className="text-center bg-black/50 rounded-lg p-6 md:p-8 border border-gray-800">
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-4">
+              Ready to Experience <span className="text-kamalo-red">Kamalo City</span>?
+            </h2>
+            <p className="text-gray-300 mb-6 text-sm md:text-base max-w-2xl mx-auto">
+              Visit us at 90 Voortrekker Road, Goodwood, Cape Town. Open 7 days a week from 11:00 AM to 11:00 PM.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <Button asChild className="bg-kamalo-red hover:bg-red-700 text-white px-6 py-3 rounded-full hover:scale-105 hover:shadow-lg transition duration-300 text-sm md:text-base">
+                <a href="tel:+27731598909">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Us
                 </a>
-                <a
-                  href="/reservations"
-                  className="border border-kamalo-red text-kamalo-red px-6 py-3 rounded-lg hover:bg-kamalo-red hover:text-white transition-colors font-semibold"
-                >
-                  Make Reservation
-                </a>
-              </div>
+              </Button>
+              <Button asChild variant="outline" className="border-kamalo-red text-kamalo-red hover:bg-kamalo-red hover:text-white px-6 py-3 rounded-full hover:scale-105 hover:shadow-lg transition duration-300 text-sm md:text-base">
+                <a href="/reservations">Make Reservation</a>
+              </Button>
             </div>
-          </div>
+          </section>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );

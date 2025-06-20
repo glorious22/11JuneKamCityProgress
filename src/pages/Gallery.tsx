@@ -110,18 +110,8 @@ const Gallery = () => {
             </p>
           </div>
 
-          {/* Filter Buttons */}
+          {/* Filter Buttons - Removed "All Items" */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button
-              onClick={() => setActiveFilter("all")}
-              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
-                activeFilter === "all" 
-                  ? "bg-kamalo-red text-white" 
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-              }`}
-            >
-              All
-            </Button>
             <Button
               onClick={() => setActiveFilter("signature-dishes")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
@@ -164,14 +154,14 @@ const Gallery = () => {
             </Button>
           </div>
 
-          {/* Gallery Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Gallery Grid - 3 columns on desktop, 2 on mobile */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {filteredItems.map((item) => (
               <div 
                 key={item.id} 
-                className="bg-black/50 rounded-lg overflow-hidden hover:scale-105 hover:shadow-lg transition duration-300 group"
+                className="bg-black/50 rounded-lg overflow-hidden hover:scale-105 hover:shadow-lg transition duration-300 group border border-gray-800 hover:border-kamalo-red"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-48 md:h-64 overflow-hidden">
                   <ImageModal
                     src={item.image}
                     alt={item.alt}
@@ -179,8 +169,8 @@ const Gallery = () => {
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
                   <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-sm text-gray-300 leading-relaxed">{item.caption}</p>
+                    <h3 className="text-lg md:text-xl font-bold text-white mb-2">{item.title}</h3>
+                    <p className="text-xs md:text-sm text-gray-300 leading-relaxed">{item.caption}</p>
                     <span className="text-xs text-kamalo-red capitalize mt-2 block font-semibold">{item.category.replace('-', ' ')}</span>
                   </div>
                 </div>

@@ -467,203 +467,193 @@ const Menu = () => {
             </div>
           </div>
 
-          {/* Today's Specials Section - Top Priority */}
+          {/* Today's Special Section - Compact */}
           {todaysSpecials.length > 0 && (
             <div className="mb-16">
               <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-4">
-                  Today's Specials - {getDayDisplayName(currentDay)}
+                <h2 className="text-2xl md:text-3xl font-bold text-kamalo-red mb-4">
+                  Today's Special
                 </h2>
                 <p className="text-gray-300 text-lg">Available only today - don't miss out!</p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                {todaysSpecials.map((item) => (
-                  <div 
-                    key={item.id} 
-                    className="bg-gradient-to-br from-kamalo-red/20 to-red-900/20 rounded-lg overflow-hidden border-2 border-kamalo-red hover:scale-105 transition duration-300 group"
-                  >
-                    <div className="grid grid-cols-1 md:grid-cols-2 h-full">
-                      <div className="relative h-48 md:h-full overflow-hidden">
-                        <img
-                          src={item.image}
-                          alt={item.alt}
-                          className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
-                        
-                        <div className="absolute top-4 left-4">
-                          <span className="text-xs text-white bg-kamalo-red px-3 py-1 rounded-full font-semibold">
-                            TODAY ONLY
-                          </span>
-                        </div>
-                      </div>
-                      
-                      <div className="p-6 flex flex-col justify-between">
-                        <div>
-                          <h3 className="text-xl font-bold text-white mb-3">{item.name}</h3>
-                          <p className="text-gray-300 text-sm leading-relaxed mb-4">{item.description}</p>
-                        </div>
-                        <div className="text-right">
-                          <span className="text-2xl font-bold text-kamalo-red">
-                            {item.price}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Sticky Filter Buttons */}
-          <div className="sticky top-20 z-40 bg-kamalo-dark/95 backdrop-blur-sm py-4 mb-8">
-            <div className="flex flex-wrap justify-center gap-3 overflow-x-auto pb-2">
-              <Button
-                onClick={() => setActiveFilter("all")}
-                className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
-                  activeFilter === "all" 
-                    ? "bg-kamalo-red text-white" 
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                }`}
-              >
-                🍽️ All Items
-              </Button>
-              <Button
-                onClick={() => setActiveFilter("main")}
-                className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
-                  activeFilter === "main" 
-                    ? "bg-kamalo-red text-white" 
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                }`}
-              >
-                🥘 Main Dishes
-              </Button>
-              <Button
-                onClick={() => setActiveFilter("vegetable-sides")}
-                className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
-                  activeFilter === "vegetable-sides" 
-                    ? "bg-kamalo-red text-white" 
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                }`}
-              >
-                🥬 Vegetable Sides
-              </Button>
-              <Button
-                onClick={() => setActiveFilter("sides")}
-                className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
-                  activeFilter === "sides" 
-                    ? "bg-kamalo-red text-white" 
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                }`}
-              >
-                🍟 Sides
-              </Button>
-              <Button
-                onClick={() => setActiveFilter("daily-specials")}
-                className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap ${
-                  activeFilter === "daily-specials" 
-                    ? "bg-kamalo-red text-white" 
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                }`}
-              >
-                ⭐ Daily Specials
-              </Button>
-            </div>
-          </div>
-
-          {/* Category Header */}
-          {activeFilter !== "all" && (
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                {getCategoryDisplayName(activeFilter)}
-              </h2>
-              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                {getCategoryTagline(activeFilter)}
-              </p>
-            </div>
-          )}
-
-          {/* Menu Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-500">
-            {filteredItems.map((item) => (
-              <div 
-                key={item.id} 
-                className="bg-black/50 rounded-lg overflow-hidden hover:scale-105 hover:shadow-xl transition duration-300 group border border-gray-800 hover:border-kamalo-red"
-              >
+              <div className="max-w-2xl mx-auto bg-gradient-to-br from-kamalo-red/20 to-red-900/20 rounded-lg overflow-hidden border-2 border-kamalo-red mb-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 h-full">
                   <div className="relative h-48 md:h-full overflow-hidden">
                     <img
-                      src={item.image}
-                      alt={item.alt}
-                      className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                      src={todaysSpecials[0].image}
+                      alt={todaysSpecials[0].alt}
+                      className="w-full h-full object-cover"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
+                    <div className="absolute inset-0 bg-black/40"></div>
                     
-                    {/* Badge */}
-                    {item.badge && (
-                      <div className="absolute top-4 left-4">
-                        <span className="text-xs text-white bg-kamalo-red px-3 py-1 rounded-full font-semibold">
-                          {item.badge.includes("Customer Favourite") && "🔥"} 
-                          {item.badge.includes("House Special") && "⭐"} 
-                          {item.badge.includes("Chef Recommended") && "👨‍🍳"} 
-                          {item.badge}
-                        </span>
-                      </div>
-                    )}
-                    
-                    {/* Category */}
-                    <div className="absolute top-4 right-4">
-                      <span className="text-xs text-kamalo-red bg-black/70 px-2 py-1 rounded-full capitalize">
-                        {getCategoryDisplayName(item.category)}
+                    <div className="absolute top-4 left-4">
+                      <span className="text-xs text-white bg-kamalo-red px-3 py-1 rounded-full font-semibold">
+                        TODAY ONLY
                       </span>
                     </div>
                   </div>
                   
-                  <div className="p-6 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{item.name}</h3>
-                      <p className="text-gray-300 leading-relaxed mb-4">{item.description}</p>
-                    </div>
+                  <div className="p-6 flex flex-col justify-center">
+                    <h3 className="text-2xl font-bold text-white mb-3">{todaysSpecials[0].name}</h3>
+                    <p className="text-gray-300 text-base leading-relaxed mb-4">{todaysSpecials[0].description}</p>
                     <div className="text-right">
-                      <span className="text-2xl font-bold text-kamalo-red">
-                        {item.price}
+                      <span className="text-3xl font-bold text-kamalo-red">
+                        {todaysSpecials[0].price}
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
 
-          {/* Bottom CTA Section */}
-          <div className="text-center mt-16">
-            <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Ready to <span className="text-kamalo-red">Try It for Yourself</span>?
-              </h2>
-              <p className="text-gray-300 mb-6 text-lg">
-                Experience authentic African cuisine and traditional flavors at Kamalo City in Cape Town.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <div className="text-center">
                 <Button 
                   asChild 
-                  className="bg-kamalo-red hover:bg-red-600 text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
+                  className="bg-kamalo-red hover:bg-red-600 text-white px-8 py-3 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
                 >
-                  <Link to="/reservations">Book a Table</Link>
+                  <Link to="#full-menu">See Full Menu</Link>
                 </Button>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  className="border-kamalo-red text-kamalo-red hover:bg-kamalo-red hover:text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
+              </div>
+            </div>
+          )}
+
+          {/* Full Menu Section */}
+          <div id="full-menu">
+            {/* Filter Buttons - Removed "All Items" */}
+            <div className="sticky top-20 z-40 bg-kamalo-dark/95 backdrop-blur-sm py-4 mb-8">
+              <div className="flex flex-wrap justify-center gap-3 overflow-x-auto pb-2">
+                <Button
+                  onClick={() => setActiveFilter("main")}
+                  className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold ${
+                    activeFilter === "main" 
+                      ? "bg-kamalo-red text-white" 
+                      : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  }`}
                 >
-                  <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer">
-                    Order via WhatsApp
-                  </a>
+                  🥘 Main Dishes
                 </Button>
+                <Button
+                  onClick={() => setActiveFilter("vegetable-sides")}
+                  className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold ${
+                    activeFilter === "vegetable-sides" 
+                      ? "bg-kamalo-red text-white" 
+                      : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  }`}
+                >
+                  🥬 Vegetable Sides
+                </Button>
+                <Button
+                  onClick={() => setActiveFilter("sides")}
+                  className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold ${
+                    activeFilter === "sides" 
+                      ? "bg-kamalo-red text-white" 
+                      : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  }`}
+                >
+                  🍟 Sides
+                </Button>
+                <Button
+                  onClick={() => setActiveFilter("daily-specials")}
+                  className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold ${
+                    activeFilter === "daily-specials" 
+                      ? "bg-kamalo-red text-white" 
+                      : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  }`}
+                >
+                  ⭐ Daily Specials
+                </Button>
+              </div>
+            </div>
+
+            {/* Category Header */}
+            {activeFilter !== "all" && (
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  {getCategoryDisplayName(activeFilter)}
+                </h2>
+                <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+                  {getCategoryTagline(activeFilter)}
+                </p>
+              </div>
+            )}
+
+            {/* Menu Grid - 2 columns layout with images under dish name and price */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-500">
+              {filteredItems.map((item) => (
+                <div 
+                  key={item.id} 
+                  className="bg-black/50 rounded-lg overflow-hidden hover:scale-105 hover:shadow-xl transition duration-300 group border border-gray-800 hover:border-kamalo-red"
+                >
+                  <div className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-xl md:text-2xl font-bold text-white">{item.name}</h3>
+                      <span className="text-2xl font-bold text-kamalo-red ml-4">
+                        {item.price}
+                      </span>
+                    </div>
+                    
+                    <div className="relative h-48 overflow-hidden rounded-lg mb-4">
+                      <img
+                        src={item.image}
+                        alt={item.alt}
+                        className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
+                      
+                      {/* Badge */}
+                      {item.badge && (
+                        <div className="absolute top-4 left-4">
+                          <span className="text-xs text-white bg-kamalo-red px-3 py-1 rounded-full font-semibold">
+                            {item.badge.includes("Customer Favourite") && "🔥"} 
+                            {item.badge.includes("House Special") && "⭐"} 
+                            {item.badge.includes("Chef Recommended") && "👨‍🍳"} 
+                            {item.badge}
+                          </span>
+                        </div>
+                      )}
+                      
+                      {/* Category */}
+                      <div className="absolute top-4 right-4">
+                        <span className="text-xs text-kamalo-red bg-black/70 px-2 py-1 rounded-full capitalize">
+                          {getCategoryDisplayName(item.category)}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom CTA Section */}
+            <div className="text-center mt-16">
+              <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  Ready to <span className="text-kamalo-red">Try It for Yourself</span>?
+                </h2>
+                <p className="text-gray-300 mb-6 text-lg">
+                  Experience authentic African cuisine and traditional flavors at Kamalo City in Cape Town.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                  <Button 
+                    asChild 
+                    className="bg-kamalo-red hover:bg-red-600 text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
+                  >
+                    <Link to="/reservations">Book a Table</Link>
+                  </Button>
+                  <Button 
+                    asChild 
+                    variant="outline" 
+                    className="border-kamalo-red text-kamalo-red hover:bg-kamalo-red hover:text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
+                  >
+                    <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer">
+                      Order via WhatsApp
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

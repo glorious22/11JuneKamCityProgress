@@ -49,27 +49,30 @@ const Hero = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-white leading-tight">
-            Welcome to <span className="text-kamalo-red">Kamalo City</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight">
+            Kamalo City – <span className="text-kamalo-red">Africa's Heart</span> in Cape Town
           </h1>
-          <p className="text-base md:text-xl lg:text-2xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
-            Kamalo City is an African restaurant & lifestyle lounge based in Goodwood, Cape Town. Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof.
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-kamalo-gold mb-4 md:mb-6 font-serif italic leading-relaxed">
+            Authentic flavors. Vibrant culture. Unforgettable energy.
+          </h2>
+          <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
+            Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof in Goodwood, Cape Town.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8 px-4">
             <Button 
               asChild 
-              className="bg-kamalo-red hover:bg-red-600 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto touch-manipulation"
+              className="bg-kamalo-red hover:bg-red-600 text-white px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto touch-manipulation font-semibold"
             >
-              <Link to="/reservations">Book Your Table</Link>
+              <Link to="/reservations">Book a Table</Link>
             </Button>
             
             <Button 
               asChild 
               variant="outline" 
-              className="border-2 border-kamalo-gold text-kamalo-gold hover:bg-kamalo-gold hover:text-black px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto touch-manipulation"
+              className="border-2 border-kamalo-gold text-kamalo-gold hover:bg-kamalo-gold hover:text-black px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto touch-manipulation font-semibold"
             >
-              <Link to="/menu">Explore Our Menu</Link>
+              <Link to="/menu">View Menu</Link>
             </Button>
           </div>
           

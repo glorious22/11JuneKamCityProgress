@@ -23,33 +23,27 @@ const TimelineSection = () => {
   const timelineEvents = [
     {
       icon: Heart,
-      title: "The Vision Was Born",
-      description: "Inspired by ancestral traditions and modern flavors.",
-      year: "2020"
-    },
-    {
-      icon: Home,
-      title: "Doors Opened in Goodwood",
-      description: "Our flagship restaurant welcomed its first guests.",
-      year: "2021"
-    },
-    {
-      icon: Music,
-      title: "Community Gatherings Started",
-      description: "Events, music, and storytelling took center stage.",
+      title: "Rebirth from Rubble",
+      description: "The building was rundown and abandoned. The Kamalo City vision was born — construction began on a dream of an authentic African restaurant.",
       year: "2022"
     },
     {
-      icon: Sparkles,
-      title: "Expanded Our Experience",
-      description: "Launched hookah, barbershop, and lifestyle offerings.",
+      icon: Home,
+      title: "Grand Opening",
+      description: "The restaurant officially opened, serving traditional African meals. Locals and food lovers quickly embraced Kamalo as a hotspot for both food and connection.",
       year: "2023"
     },
     {
-      icon: Utensils,
-      title: "Still Growing Every Day",
-      description: "Driven by passion, powered by the people.",
+      icon: Music,
+      title: "Expansion & Events",
+      description: "Kamalo City grew into a full experience: live music, event hosting, birthday parties, and private dining. The restaurant also introduced barber services, hookah, and perfumes.",
       year: "2024"
+    },
+    {
+      icon: Sparkles,
+      title: "Culture Meets Lifestyle",
+      description: "Kamalo City continues evolving — serving not just food, but culture, legacy, and lifestyle. It has become a Cape Town staple for locals, visitors, and the African diaspora.",
+      year: "2025"
     }
   ];
 
@@ -85,7 +79,7 @@ const TimelineSection = () => {
                     <div className="bg-black/50 rounded-lg p-6 border border-gray-800 hover:border-kamalo-red transition-colors">
                       <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'justify-end' : 'justify-start'}`}>
                         <IconComponent className="w-6 h-6 text-kamalo-red" />
-                        <span className="text-kamalo-gold font-bold text-lg">{event.year}</span>
+                        <span className="text-kamalo-gold font-bold text-lg timeline-year">{event.year}</span>
                       </div>
                       <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
                       <p className="text-gray-300">{event.description}</p>
@@ -102,34 +96,28 @@ const TimelineSection = () => {
 
         {/* Mobile Timeline */}
         <div className="lg:hidden">
-          <div className="relative pl-8">
-            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-kamalo-red to-kamalo-gold"></div>
-            
-            <div className="space-y-8">
-              {timelineEvents.map((event, index) => {
-                const IconComponent = event.icon;
-                
-                return (
-                  <div 
-                    key={index} 
-                    className={`relative transition-all duration-1000 delay-${index * 200} ${
-                      isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-                    }`}
-                  >
-                    <div className="absolute left-[-2rem] w-4 h-4 bg-kamalo-red rounded-full border-4 border-kamalo-dark z-10"></div>
-                    
-                    <div className="bg-black/50 rounded-lg p-6 border border-gray-800 hover:border-kamalo-red transition-colors ml-4">
-                      <div className="flex items-center gap-3 mb-3">
-                        <IconComponent className="w-6 h-6 text-kamalo-red" />
-                        <span className="text-kamalo-gold font-bold text-lg">{event.year}</span>
-                      </div>
-                      <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
-                      <p className="text-gray-300">{event.description}</p>
+          <div className="space-y-8">
+            {timelineEvents.map((event, index) => {
+              const IconComponent = event.icon;
+              
+              return (
+                <div 
+                  key={index} 
+                  className={`timeline-item transition-all duration-1000 delay-${index * 200} ${
+                    isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+                  }`}
+                >
+                  <div className="bg-black/50 rounded-lg p-6 border border-gray-800 hover:border-kamalo-red transition-colors">
+                    <div className="flex items-center gap-3 mb-3">
+                      <IconComponent className="w-6 h-6 text-kamalo-red" />
+                      <span className="text-kamalo-gold font-bold text-lg timeline-year">{event.year}</span>
                     </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
+                    <p className="text-gray-300">{event.description}</p>
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

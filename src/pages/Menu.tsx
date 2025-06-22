@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFilter, setActiveFilter] = useState("main");
   const [currentDay, setCurrentDay] = useState("");
 
   useEffect(() => {
@@ -158,215 +158,7 @@ const Menu = () => {
       alt: "Kamalo City - Portion Rice"
     },
 
-    // Daily Specials - Monday
-    {
-      id: 15,
-      category: "daily-specials",
-      day: "monday",
-      name: "Kapenta",
-      price: "R 162.00",
-      description: "Lightly fried kapenta fish in tomato sauce. Served with pap and vegetables.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Kapenta",
-      badge: "Monday Only"
-    },
-    {
-      id: 16,
-      category: "daily-specials",
-      day: "monday",
-      name: "Ngolo (Cat Fish)",
-      price: "R 162.00",
-      description: "Slow-cooked catfish in a green pepper sauce. Comes with pap and veg of choice.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Ngolo Cat Fish",
-      badge: "Very Popular"
-    },
-
-    // Daily Specials - Tuesday
-    {
-      id: 17,
-      category: "daily-specials",
-      day: "tuesday",
-      name: "Cooked Pork Trotters",
-      price: "R 145.00",
-      description: "Soft, flavorful pork trotters cooked with traditional seasonings.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Cooked Pork Trotters",
-      badge: "Tuesday Only"
-    },
-    {
-      id: 18,
-      category: "daily-specials",
-      day: "tuesday",
-      name: "Fried Mabundu",
-      price: "R 120.00",
-      description: "Fried offal pieces with bold spices and crispy edges.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Fried Mabundu",
-      badge: "Tuesday Only"
-    },
-    {
-      id: 19,
-      category: "daily-specials",
-      day: "tuesday",
-      name: "Cooked Beans",
-      price: "R 95.00",
-      description: "Creamy, slow-cooked African-style beans.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Cooked Beans",
-      badge: "Tuesday Only"
-    },
-    {
-      id: 20,
-      category: "daily-specials",
-      day: "tuesday",
-      name: "Madesu",
-      price: "R 108.00",
-      description: "Hearty Congolese red beans in a thick, savory sauce.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Madesu",
-      badge: "Tuesday Only"
-    },
-
-    // Daily Specials - Wednesday
-    {
-      id: 21,
-      category: "daily-specials",
-      day: "wednesday",
-      name: "Fried Makayabu",
-      price: "R 108.00",
-      description: "Deep-fried salt-dried fish with bold, salty flavor.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Fried Makayabu",
-      badge: "Wednesday Only"
-    },
-    {
-      id: 22,
-      category: "daily-specials",
-      day: "wednesday",
-      name: "Fried Tilapia",
-      price: "R 135.00",
-      description: "Lightly spiced whole tilapia, pan-fried till crisp.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Fried Tilapia",
-      badge: "Wednesday Only"
-    },
-    {
-      id: 23,
-      category: "daily-specials",
-      day: "wednesday",
-      name: "Fumbwa with Dry Fish",
-      price: "R 108.00",
-      description: "Rich forest greens cooked with dry fish and palm oil.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Fumbwa with Dry Fish",
-      badge: "Wednesday Only"
-    },
-    {
-      id: 24,
-      category: "daily-specials",
-      day: "wednesday",
-      name: "Peanut Butter Sauce with Dry Spinach",
-      price: "R 95.00",
-      description: "Creamy peanut sauce mixed with sun-dried spinach leaves.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Peanut Butter Sauce with Dry Spinach",
-      badge: "Wednesday Only"
-    },
-
-    // Daily Specials - Thursday
-    {
-      id: 25,
-      category: "daily-specials",
-      day: "thursday",
-      name: "Slight Pan-Fried Binzo",
-      price: "R 125.00",
-      description: "Lightly crisped binzo with seasoning.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Slight Pan-Fried Binzo",
-      badge: "Thursday Only"
-    },
-    {
-      id: 26,
-      category: "daily-specials",
-      day: "thursday",
-      name: "Saka Madesu",
-      price: "R 108.00",
-      description: "Cassava leaves cooked in bean stew style.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Saka Madesu",
-      badge: "Thursday Only"
-    },
-    {
-      id: 27,
-      category: "daily-specials",
-      day: "thursday",
-      name: "Mupanda Worms",
-      price: "R 85.00",
-      description: "Fried edible mopane worms, crispy and protein-rich.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Mupanda Worms",
-      badge: "Thursday Only"
-    },
-    {
-      id: 28,
-      category: "daily-specials",
-      day: "thursday",
-      name: "Light Fried Pork Smoked Ribs",
-      price: "R 155.00",
-      description: "Charred pork ribs with a deep smoky flavor.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Light Fried Pork Smoked Ribs",
-      badge: "Thursday Only"
-    },
-    {
-      id: 29,
-      category: "daily-specials",
-      day: "thursday",
-      name: "Cassava Leaves with Beans",
-      price: "R 108.00",
-      description: "A wholesome mix of cassava greens and red beans.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Cassava Leaves with Beans",
-      badge: "Thursday Only"
-    },
-
-    // Daily Specials - Friday
-    {
-      id: 30,
-      category: "daily-specials",
-      day: "friday",
-      name: "Cooked Mukebuka Sauce",
-      price: "R 95.00",
-      description: "Rich and spicy sauce made from preserved fish.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Cooked Mukebuka Sauce",
-      badge: "Friday Only"
-    },
-    {
-      id: 31,
-      category: "daily-specials",
-      day: "friday",
-      name: "Cooked Beef Tripe (Mabumu)",
-      price: "R 125.00",
-      description: "Beef stomach slow-cooked until tender and rich.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Cooked Beef Tripe",
-      badge: "Friday Only"
-    },
-
-    // Daily Specials - Saturday
-    {
-      id: 32,
-      category: "daily-specials",
-      day: "saturday",
-      name: "Beef Sticks",
-      price: "R 40.50",
-      description: "Flame-grilled skewered beef, marinated and juicy. Great snack!",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Beef Sticks",
-      badge: "Saturday Only"
-    },
+    // Daily Specials - Saturday (Egusi Soup)
     {
       id: 33,
       category: "daily-specials",
@@ -377,41 +169,6 @@ const Menu = () => {
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Egusi Soup",
       badge: "Popular"
-    },
-
-    // Daily Specials - Sunday
-    {
-      id: 34,
-      category: "daily-specials",
-      day: "sunday",
-      name: "Liboke Ya Ngolo (Catfish in Leaves)",
-      price: "R 175.00",
-      description: "Catfish steamed in banana leaves with herbs and spices.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Liboke Ya Ngolo",
-      badge: "Sunday Only"
-    },
-    {
-      id: 35,
-      category: "daily-specials",
-      day: "sunday",
-      name: "Mutu Ya Ntaba",
-      price: "R 165.00",
-      description: "Traditional goat meat stew with hot spices.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Mutu Ya Ntaba",
-      badge: "Sunday Only"
-    },
-    {
-      id: 36,
-      category: "daily-specials",
-      day: "sunday",
-      name: "Goat in Hot Sauce",
-      price: "R 165.00",
-      description: "Spicy goat meat cooked in a bold chili-based sauce.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Goat in Hot Sauce",
-      badge: "Sunday Only"
     }
   ];
 
@@ -421,9 +178,7 @@ const Menu = () => {
   );
 
   // Filter items based on active filter
-  const filteredItems = activeFilter === "all" 
-    ? menuItems 
-    : menuItems.filter(item => item.category === activeFilter);
+  const filteredItems = menuItems.filter(item => item.category === activeFilter);
 
   const getCategoryDisplayName = (category: string) => {
     switch (category) {
@@ -445,31 +200,27 @@ const Menu = () => {
     }
   };
 
-  const getDayDisplayName = (day: string) => {
-    return day.charAt(0).toUpperCase() + day.slice(1);
-  };
-
   return (
     <div className="min-h-screen bg-kamalo-dark text-white">
       <Navbar />
       <main className="pt-24 px-4 pb-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="site-container">
           {/* Header Section */}
-          <div className="text-center mb-12">
+          <div className="text-center section-spacing">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Explore Our <span className="text-kamalo-red">Menu</span>
             </h1>
             
             <div className="max-w-4xl mx-auto mb-8">
               <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-                At Kamalo City, every dish celebrates African tradition. From rich stews to spicy rice dishes, our menu is packed with flavour, culture, and love.
+                Explore our menu filled with traditional dishes and local favorites. Authentic taste, unbeatable value.
               </p>
             </div>
           </div>
 
           {/* Today's Special Section - Compact */}
           {todaysSpecials.length > 0 && (
-            <div className="mb-16">
+            <div className="section-spacing">
               <div className="text-center mb-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-kamalo-red mb-4">
                   Today's Special
@@ -483,7 +234,7 @@ const Menu = () => {
                     <img
                       src={todaysSpecials[0].image}
                       alt={todaysSpecials[0].alt}
-                      className="w-full h-full object-cover"
+                      className="dish-image w-full h-full object-cover"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/40"></div>
@@ -508,19 +259,23 @@ const Menu = () => {
               </div>
 
               <div className="text-center">
-                <Button 
-                  asChild 
-                  className="bg-kamalo-red hover:bg-red-600 text-white px-8 py-3 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
-                >
+                <Button className="btn-ghost">
                   <Link to="#full-menu">See Full Menu</Link>
                 </Button>
               </div>
             </div>
           )}
 
+          {/* Menu Note */}
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-8 text-center">
+            <p className="text-gray-800 font-semibold">
+              📝 Vegetable sides all R67.50 • Daily Specials: R80 with pap, R90 with rice
+            </p>
+          </div>
+
           {/* Full Menu Section */}
           <div id="full-menu">
-            {/* Filter Buttons - Removed "All Items" */}
+            {/* Filter Buttons */}
             <div className="sticky top-20 z-40 bg-kamalo-dark/95 backdrop-blur-sm py-4 mb-8">
               <div className="flex flex-wrap justify-center gap-3 overflow-x-auto pb-2">
                 <Button
@@ -567,40 +322,30 @@ const Menu = () => {
             </div>
 
             {/* Category Header */}
-            {activeFilter !== "all" && (
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  {getCategoryDisplayName(activeFilter)}
-                </h2>
-                <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                  {getCategoryTagline(activeFilter)}
-                </p>
-              </div>
-            )}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {getCategoryDisplayName(activeFilter)}
+              </h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+                {getCategoryTagline(activeFilter)}
+              </p>
+            </div>
 
-            {/* Menu Grid - 2 columns layout with images under dish name and price */}
+            {/* Menu Grid - 2 columns layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-500">
               {filteredItems.map((item) => (
                 <div 
                   key={item.id} 
-                  className="bg-black/50 rounded-lg overflow-hidden hover:scale-105 hover:shadow-xl transition duration-300 group border border-gray-800 hover:border-kamalo-red"
+                  className="dish-card bg-[#fef9f3] text-gray-800"
                 >
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl md:text-2xl font-bold text-white">{item.name}</h3>
-                      <span className="text-2xl font-bold text-kamalo-red ml-4">
-                        {item.price}
-                      </span>
-                    </div>
-                    
-                    <div className="relative h-48 overflow-hidden rounded-lg mb-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                    <div className="relative h-48 overflow-hidden rounded-lg">
                       <img
                         src={item.image}
                         alt={item.alt}
-                        className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                        className="dish-image w-full h-full object-cover"
                         loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
                       
                       {/* Badge */}
                       {item.badge && (
@@ -613,16 +358,17 @@ const Menu = () => {
                           </span>
                         </div>
                       )}
-                      
-                      {/* Category */}
-                      <div className="absolute top-4 right-4">
-                        <span className="text-xs text-kamalo-red bg-black/70 px-2 py-1 rounded-full capitalize">
-                          {getCategoryDisplayName(item.category)}
-                        </span>
-                      </div>
                     </div>
                     
-                    <p className="text-gray-300 leading-relaxed">{item.description}</p>
+                    <div>
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="text-xl font-bold text-gray-800">{item.name}</h3>
+                        <span className="text-xl font-bold text-kamalo-red ml-4">
+                          {item.price}
+                        </span>
+                      </div>
+                      <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -638,17 +384,10 @@ const Menu = () => {
                   Experience authentic African cuisine and traditional flavors at Kamalo City in Cape Town.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                  <Button 
-                    asChild 
-                    className="bg-kamalo-red hover:bg-red-600 text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
-                  >
+                  <Button className="btn-primary">
                     <Link to="/reservations">Book a Table</Link>
                   </Button>
-                  <Button 
-                    asChild 
-                    variant="outline" 
-                    className="border-kamalo-red text-kamalo-red hover:bg-kamalo-red hover:text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
-                  >
+                  <Button className="btn-ghost">
                     <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer">
                       Order via WhatsApp
                     </a>

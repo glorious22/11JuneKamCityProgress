@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import ImageModal from "@/components/ImageModal";
 
 const Gallery = () => {
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFilter, setActiveFilter] = useState("signature-dishes");
 
   useEffect(() => {
     document.title = "Gallery - Kamalo City | Photos of Food, Events & Services";
@@ -90,27 +90,25 @@ const Gallery = () => {
     }
   ];
 
-  const filteredItems = activeFilter === "all" 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeFilter);
+  const filteredItems = galleryItems.filter(item => item.category === activeFilter);
 
   return (
     <div className="min-h-screen bg-kamalo-dark text-white">
       <Navbar />
       <main className="pt-24 px-4 pb-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="site-container">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-center">
             Our <span className="text-kamalo-red">Gallery</span>
           </h1>
           
-          <div className="max-w-4xl mx-auto text-center mb-12">
+          <div className="max-w-4xl mx-auto text-center section-spacing">
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
               Explore the vibrant world of Kamalo City through our collection of moments, 
               from delicious cuisine to exciting events and premium services.
             </p>
           </div>
 
-          {/* Filter Buttons - Removed "All Items" */}
+          {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button
               onClick={() => setActiveFilter("signature-dishes")}
@@ -154,24 +152,46 @@ const Gallery = () => {
             </Button>
           </div>
 
-          {/* Gallery Grid - 3 columns on desktop, 2 on mobile */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {/* Gallery Grid - Desktop: 3 columns, Mobile: 2 columns */}
+          <div className="gallery-grid-desktop">
             {filteredItems.map((item) => (
               <div 
                 key={item.id} 
-                className="bg-black/50 rounded-lg overflow-hidden hover:scale-105 hover:shadow-lg transition duration-300 group border border-gray-800 hover:border-kamalo-red"
+                className="card-hover bg-black/50 border border-gray-800 hover:border-kamalo-red"
               >
                 <div className="relative h-48 md:h-64 overflow-hidden">
                   <ImageModal
                     src={item.image}
                     alt={item.alt}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    className="w-full h-full object-cover hover:scale-110 transition duration-500"
                   />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
+                  <div className="absolute inset-0 bg-black/40 hover:bg-black/20 transition duration-300"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="text-lg md:text-xl font-bold text-white mb-2">{item.title}</h3>
                     <p className="text-xs md:text-sm text-gray-300 leading-relaxed">{item.caption}</p>
                     <span className="text-xs text-kamalo-red capitalize mt-2 block font-semibold">{item.category.replace('-', ' ')}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="gallery-grid-mobile">
+            {filteredItems.map((item) => (
+              <div 
+                key={item.id} 
+                className="card-hover bg-black/50 border border-gray-800 hover:border-kamalo-red"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <ImageModal
+                    src={item.image}
+                    alt={item.alt}
+                    className="w-full h-full object-cover hover:scale-110 transition duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/40 hover:bg-black/20 transition duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-sm font-bold text-white mb-1">{item.title}</h3>
+                    <p className="text-xs text-gray-300 leading-relaxed">{item.caption}</p>
                   </div>
                 </div>
               </div>
@@ -188,17 +208,10 @@ const Gallery = () => {
                 Ready to create your own memories? Visit us for authentic African cuisine and entertainment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  asChild 
-                  className="bg-kamalo-red hover:bg-red-600 text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
-                >
+                <Button className="btn-primary">
                   <a href="/reservations">Book Your Table</a>
                 </Button>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  className="border-kamalo-red text-kamalo-red hover:bg-kamalo-red hover:text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
-                >
+                <Button className="btn-ghost">
                   <a href="/contact">Visit Us Today</a>
                 </Button>
               </div>

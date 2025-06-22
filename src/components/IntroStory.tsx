@@ -23,32 +23,19 @@ const IntroStory = () => {
     <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-b from-kamalo-dark to-black">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image Section */}
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden">
-              <img 
-                src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Kamalo City - Authentic African cuisine and culture"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-black/30"></div>
-            </div>
-          </div>
-
           {/* Content Section */}
-          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Our Story: <span className="text-kamalo-red">Heritage Served Daily</span>
+              Our Story: <span className="text-kamalo-red">Rooted in Heritage</span>
             </h2>
             
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
-                Located in vibrant Goodwood, Cape Town, Kamalo City offers authentic African cuisine with warm hospitality. Experience traditional flavors and Ubuntu spirit where every guest becomes family.
+                Kamalo City was born from the rubble in 2022 — a once-forgotten space brought back to life with passion and purpose. More than just a restaurant, we are a cultural experience that honors the legacy of African ancestors in every plate we serve.
               </p>
               
               <p>
-                From our signature dishes crafted with traditional recipes to our premium hookah lounge and live entertainment, we bring the complete African cultural experience to Cape Town.
+                Through flavor, community, and history, we've created a vibrant hub for authentic African cuisine, culture, and celebration in the heart of Cape Town.
               </p>
             </div>
 
@@ -57,24 +44,37 @@ const IntroStory = () => {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-kamalo-red rounded-full mt-3 flex-shrink-0"></div>
                 <p className="text-gray-300">
-                  <span className="text-white font-semibold">Bringing ancestral recipes to Cape Town</span> – 
-                  Traditional flavors passed down through generations
+                  <span className="text-white font-semibold">From rubble to revival</span> – 
+                  Founded in 2022 with vision and determination
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-kamalo-red rounded-full mt-3 flex-shrink-0"></div>
                 <p className="text-gray-300">
-                  <span className="text-white font-semibold">Creating communal, cultural experiences</span> – 
-                  More than dining, it's about community and connection
+                  <span className="text-white font-semibold">Authentic African flavors</span> – 
+                  Modern experience with traditional recipes
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-kamalo-red rounded-full mt-3 flex-shrink-0"></div>
                 <p className="text-gray-300">
-                  <span className="text-white font-semibold">Blending tradition with modern hospitality</span> – 
-                  Authentic culture meets contemporary comfort
+                  <span className="text-white font-semibold">Complete cultural hub</span> – 
+                  Food, music, events, and lifestyle services
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Image Section */}
+          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden">
+              <img 
+                src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Kamalo City - Authentic African cuisine and culture"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/30"></div>
             </div>
           </div>
         </div>

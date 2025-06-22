@@ -77,10 +77,10 @@ const TestimonialsSection = () => {
 
   return (
     <section ref={sectionRef} className="py-16 px-4 bg-gradient-to-b from-kamalo-dark to-black">
-      <div className="max-w-7xl mx-auto">
+      <div className="site-container">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            What Our <span className="text-kamalo-red">Guests Say</span>
+            What Our <span className="text-kamalo-red">Customers Are Saying</span>
           </h2>
           <p className="text-xl text-gray-300">
             Real experiences from our valued guests

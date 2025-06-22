@@ -24,44 +24,52 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-          <Link to="/" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base lg:text-lg font-semibold">
+        <div className="hidden md:flex items-center space-x-4">
+          <Link to="/" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold">
             Home
           </Link>
           
-          <Link to="/menu" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base lg:text-lg font-semibold">
+          <Link to="/menu" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold">
             Menu
           </Link>
           
-          <Link to="/services" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base lg:text-lg font-semibold">
-            Services
-          </Link>
-
-          <Link to="/gallery" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base lg:text-lg font-semibold">
+          <Link to="/gallery" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold">
             Gallery
           </Link>
-          <Link to="/reservations" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base lg:text-lg font-semibold">
-            Reservations
+
+          <Link to="/about" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold">
+            About Us
           </Link>
-          <Link to="/about" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base lg:text-lg font-semibold">
-            About
+          
+          <Link to="/services" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold">
+            Services
           </Link>
-          <Link to="/contact" className="text-white hover:text-kamalo-red transition-colors duration-300 text-base lg:text-lg font-semibold">
+          
+          <Link to="/contact" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold">
             Contact
           </Link>
+
           <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="text-white hover:text-kamalo-red transition-colors duration-300">
-            <MessageCircle className="w-5 h-5 lg:w-6 lg:h-6" />
+            <MessageCircle className="w-4 h-4" />
           </a>
           <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="text-white hover:text-kamalo-red transition-colors duration-300">
-            <Instagram className="w-5 h-5 lg:w-6 lg:h-6" />
+            <Instagram className="w-4 h-4" />
           </a>
+
+          {/* Reservation Pill Button */}
+          <Link 
+            to="/reservations" 
+            className="bg-kamalo-red text-white px-5 py-2 rounded-full hover:bg-red-700 transition-all duration-300 font-semibold text-sm hover:scale-105 hover:shadow-lg ml-4"
+          >
+            Reserve
+          </Link>
         </div>
 
         {/* Mobile Menu */}
         <div className="md:hidden">
           <Drawer open={isOpen} onOpenChange={setIsOpen}>
             <DrawerTrigger asChild>
-              <button className="text-white p-2 hover:text-kamalo-red transition-colors touch-manipulation">
+              <button className="text-white p-2 hover:text-kamalo-red transition-colors touch-manipulation ml-2">
                 <Menu className="w-7 h-7" />
               </button>
             </DrawerTrigger>
@@ -84,19 +92,18 @@ const Navbar = () => {
                     Menu
                   </Link>
                   
-                  <Link to="/services" className="block text-white hover:text-kamalo-red transition-colors py-4 text-xl border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
-                    Services
-                  </Link>
-
                   <Link to="/gallery" className="block text-white hover:text-kamalo-red transition-colors py-4 text-xl border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
                     Gallery
                   </Link>
-                  <Link to="/reservations" className="block text-white hover:text-kamalo-red transition-colors py-4 text-xl border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
-                    Reservations
-                  </Link>
+
                   <Link to="/about" className="block text-white hover:text-kamalo-red transition-colors py-4 text-xl border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
-                    About
+                    About Us
                   </Link>
+                  
+                  <Link to="/services" className="block text-white hover:text-kamalo-red transition-colors py-4 text-xl border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                    Services
+                  </Link>
+                  
                   <Link to="/contact" className="block text-white hover:text-kamalo-red transition-colors py-4 text-xl border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
                     Contact
                   </Link>

@@ -20,7 +20,7 @@ export default {
     extend: {
       colors: {
         kamalo: {
-          red: "#ea384c",
+          red: "#8B0000", // Deep red primary color
           dark: "#1A1F2C",
           gold: "#FFD700",
         },
@@ -62,6 +62,9 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
       },
     },
   },

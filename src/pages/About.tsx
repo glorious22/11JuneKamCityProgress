@@ -9,30 +9,27 @@ const About = () => {
     document.title = "About Us - Kamalo City | Our Story & Mission";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Learn about Kamalo City founders Pitchou Ntumba and his wife, our mission to bring authentic African culture and cuisine to Cape Town.');
+      metaDescription.setAttribute('content', 'Learn about Kamalo City founders and our mission to bring authentic African culture and cuisine to Cape Town.');
     }
   }, []);
 
   return (
     <div className="min-h-screen bg-kamalo-dark">
       <Navbar />
-      <main className="pt-24 pb-16 px-4">
+      <main className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-white">
-          {/* Header with Quote */}
-          <div className="text-center mb-16">
-            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-serif italic text-kamalo-gold mb-8 leading-relaxed">
-              "Inspired by our ancestors, shared with the world."
-            </blockquote>
+          {/* Header */}
+          <div className="text-center mb-16 fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8">
-              Our <span className="text-kamalo-red">Story</span>
+              A Legacy <span className="text-kamalo-red">Brought to Life</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Kamalo City isn't just a restaurant. It's a celebration of African heritage, culture, and flavor. Our space was built for connection, tradition, and unforgettable experiences.
+              Kamalo City began in 2023 as a dream built from ruins. In just a few years, we've grown into a cultural landmark serving unforgettable food, music, and experiences.
             </p>
           </div>
           
           {/* 2-Column Section */}
-          <section className="mb-20">
+          <section className="mb-20 fade-in">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Image */}
               <div className="order-2 lg:order-1">
@@ -46,56 +43,78 @@ const About = () => {
               
               {/* Content */}
               <div className="order-1 lg:order-2">
-                <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6">Meet Our Founders</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6">Our Story</h2>
                 <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
                   <p>
-                    Born from the passion to bring ancestral flavors to the heart of Cape Town, Kamalo City merges authentic African food with a modern social experience. We serve as a cultural hub — where people gather, relax, and enjoy life.
+                    Kamalo City was born from the passion to bring ancestral flavors to the heart of Cape Town. We serve as a cultural hub — where people gather, relax, and enjoy life through authentic African cuisine and vibrant community experiences.
                   </p>
                   <p>
-                    Kamalo City was founded by Pitchou Ntumba and his wife, who together have created Cape Town's premier African dining and entertainment destination. Their combined vision and expertise in hospitality have transformed this space into a vibrant celebration of African cuisine and culture.
+                    Founded by Pitchou Ntumba and his wife, Kamalo City has evolved from a simple restaurant concept into Cape Town's premier African dining and entertainment destination. Their combined vision and expertise in hospitality have transformed this space into a vibrant celebration of African cuisine and culture.
                   </p>
                   <p>
-                    Under their leadership, Kamalo City has evolved into more than just a restaurant – it's a cultural hub where people come together to enjoy authentic African cuisine, premium shisha experiences, professional grooming services, and entertainment.
+                    Under their leadership, Kamalo City has become more than just a restaurant – it's a cultural hub where people come together to enjoy authentic African cuisine, premium experiences, and entertainment that honors our rich heritage.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Values Section (3 Blocks) */}
-          <section className="mb-20">
+          {/* Values Section */}
+          <section className="mb-20 fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Block 1 */}
-              <div className="bg-black/50 rounded-lg p-8 border border-gray-800 text-center">
+              <div className="bg-black/50 rounded-lg p-8 border border-gray-800 text-center card-hover">
                 <div className="text-4xl mb-4">🌍</div>
-                <h3 className="text-2xl font-bold text-kamalo-red mb-4">Cultural Pride</h3>
+                <h3 className="text-2xl font-bold text-kamalo-red mb-4">Authenticity</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  We honor African traditions through every detail — from our flavors to our atmosphere.
+                  Every dish tells a story rooted in culture. We honor African traditions through every detail.
                 </p>
               </div>
 
-              {/* Block 2 */}
-              <div className="bg-black/50 rounded-lg p-8 border border-gray-800 text-center">
-                <div className="text-4xl mb-4">🍲</div>
-                <h3 className="text-2xl font-bold text-kamalo-red mb-4">Authentic Cuisine</h3>
+              <div className="bg-black/50 rounded-lg p-8 border border-gray-800 text-center card-hover">
+                <div className="text-4xl mb-4">🤝</div>
+                <h3 className="text-2xl font-bold text-kamalo-red mb-4">Community</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Our meals are made with recipes passed down through generations.
+                  A gathering place for everyone. We create connections and celebrate together.
                 </p>
               </div>
 
-              {/* Block 3 */}
-              <div className="bg-black/50 rounded-lg p-8 border border-gray-800 text-center">
-                <div className="text-4xl mb-4">✅</div>
-                <h3 className="text-2xl font-bold text-kamalo-red mb-4">Consistent Quality</h3>
+              <div className="bg-black/50 rounded-lg p-8 border border-gray-800 text-center card-hover">
+                <div className="text-4xl mb-4">⭐</div>
+                <h3 className="text-2xl font-bold text-kamalo-red mb-4">Unmatched Quality</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  We focus on delivering excellence in every bite and every experience.
+                  Every detail is crafted with care. From ingredients to experience, we deliver excellence.
                 </p>
               </div>
             </div>
           </section>
 
+          {/* Timeline Section */}
+          <section className="mb-20 fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">Our Journey</h2>
+            <div className="max-w-4xl mx-auto">
+              <div className="timeline-item">
+                <div className="timeline-year">2023</div>
+                <h3 className="text-xl font-bold text-white mb-2">From Rubble to Rebirth</h3>
+                <p className="text-gray-300">Kamalo City officially opens. From rubble to revival, the vision became a vibrant reality.</p>
+              </div>
+
+              <div className="timeline-item">
+                <div className="timeline-year">2024</div>
+                <h3 className="text-xl font-bold text-white mb-2">Expansion & Growth</h3>
+                <p className="text-gray-300">Expanded services with event hosting, weekend entertainment, and unique menu offerings.</p>
+              </div>
+
+              <div className="timeline-item">
+                <div className="timeline-year">2025</div>
+                <h3 className="text-xl font-bold text-white mb-2">Cultural Landmark</h3>
+                <p className="text-gray-300">Cemented as a go-to destination for authentic African food, events, and community gatherings.</p>
+              </div>
+            </div>
+          </section>
+
           {/* Owner Quote */}
-          <div className="mb-16">
+          <div className="mb-16 fade-in">
             <div className="bg-gradient-to-r from-kamalo-red/20 to-kamalo-gold/20 rounded-lg p-8 border border-kamalo-red/30 text-center">
               <blockquote className="text-2xl md:text-3xl font-bold text-white mb-4 italic">
                 "We're not just a restaurant. Kamalo City is a celebration of African energy, flavour, and pride."
@@ -104,21 +123,8 @@ const About = () => {
             </div>
           </div>
 
-          {/* Customer Testimonial */}
-          <div className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-semibold text-kamalo-red mb-8 text-center">What Our Guests Say</h2>
-            <div className="bg-black/50 rounded-lg p-8 border border-gray-800 text-center">
-              <div className="max-w-4xl mx-auto">
-                <p className="text-xl text-gray-300 italic mb-4">
-                  "Real traditional mid-African cuisine restaurant with lovely atmosphere. Nice soft reclining furniture, pool table for relaxation. Owners are very forthcoming and friendly. Great vegetarian options and wheelchair accessible."
-                </p>
-                <cite className="text-kamalo-gold font-semibold">— Ludi Smit, Verified Customer</cite>
-              </div>
-            </div>
-          </div>
-
           {/* CTA Section */}
-          <section className="text-center bg-black/50 rounded-lg p-8 border border-gray-800">
+          <section className="text-center bg-black/50 rounded-lg p-8 border border-gray-800 fade-in">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Come Join the <span className="text-kamalo-red">Experience</span>
             </h2>
@@ -128,14 +134,13 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 asChild 
-                className="bg-kamalo-red hover:bg-red-600 text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
+                className="btn-primary text-lg px-8 py-4"
               >
                 <Link to="/reservations">Reserve a Table</Link>
               </Button>
               <Button 
                 asChild 
-                variant="outline" 
-                className="border-kamalo-red text-kamalo-red hover:bg-kamalo-red hover:text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold"
+                className="btn-ghost text-lg px-8 py-4"
               >
                 <Link to="/contact">Visit Us Today</Link>
               </Button>

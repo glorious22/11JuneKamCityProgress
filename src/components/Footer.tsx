@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-12 md:py-16">
+    <footer className="bg-black text-white py-12 md:py-16 african-pattern">
       <div className="site-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 text-center md:text-left">
           {/* Logo & Bio */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-kamalo-red">Kamalo City</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-kamalo-gold">Kamalo City</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Where Africa's rich heritage meets soulful cuisine. Join us for unforgettable food, festive events, and a vibrant cultural experience.
             </p>

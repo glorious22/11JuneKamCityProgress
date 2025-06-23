@@ -3,6 +3,7 @@ import "./App.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import BackToTop from "./components/BackToTop";
 import Index from "./pages/Index";
 import Menu from "./pages/Menu";
 import Services from "./pages/Services";
@@ -35,6 +36,7 @@ export default () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <BackToTop />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

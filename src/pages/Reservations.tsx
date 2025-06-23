@@ -10,18 +10,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const Reservations = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     phoneNumber: '',
-    email: '',
     date: '',
     time: '',
     guests: '2',
@@ -35,19 +28,6 @@ const Reservations = () => {
       metaDescription.setAttribute('content', 'Book your table at Kamalo City for authentic African cuisine and entertainment. Easy online reservations for dining, events, and private bookings in Cape Town.');
     }
   }, []);
-
-  const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-
-  const generateDates = () => {
-    const dates = [];
-    for (let i = 1; i <= 31; i++) {
-      dates.push(i);
-    }
-    return dates;
-  };
 
   const generateGuestNumbers = () => {
     const numbers = [];
@@ -76,7 +56,6 @@ const Reservations = () => {
     
 Name: ${formData.fullName}
 Phone: ${formData.phoneNumber}
-Email: ${formData.email}
 Date: ${formData.date}
 Time: ${formData.time}
 Guests: ${formData.guests}
@@ -86,65 +65,42 @@ Special Requests: ${formData.specialRequests || 'None'}`;
     window.open(whatsappUrl, '_blank');
   };
 
-  const faqs = [
-    {
-      question: "How many people can I book for?",
-      answer: "We can accommodate groups from 1 to 80 people. For larger private events, please call us directly."
-    },
-    {
-      question: "Do I need to pay upfront?",
-      answer: "No upfront payment required for regular dining reservations. Private events may require a deposit."
-    },
-    {
-      question: "Can I decorate the space?",
-      answer: "Yes! For private bookings, we allow decorations with some terms and conditions. Contact us to discuss your needs."
-    },
-    {
-      question: "What's included in a private booking?",
-      answer: "Private bookings include the venue, sound system, DJ booth, and full catering options. Contact us for detailed packages."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-kamalo-dark">
       <Navbar />
-      <main className="pt-24 pb-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <main className="pt-20 pb-20 px-4">
+        <div className="max-w-4xl mx-auto">
           {/* Header Section */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-kamalo-gold mb-6">
+          <div className="text-center mb-12 fade-in">
+            <h1 className="text-4xl md:text-5xl font-bold text-kamalo-gold mb-6">
               Reserve Your <span className="text-kamalo-red">Experience</span>
             </h1>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
-                Looking for the perfect venue in Cape Town? Kamalo City offers intimate dinners, birthday parties, corporate events, and more. Enjoy authentic cuisine, vibrant ambiance, and excellent service.
-              </p>
-            </div>
+            <p className="text-xl text-gray-300 leading-relaxed mb-8">
+              Book your table for authentic African cuisine, vibrant ambiance, and excellent service in Cape Town.
+            </p>
           </div>
 
           {/* Decorative Image */}
-          <div className="mb-12">
-            <div className="max-w-4xl mx-auto">
-              <div className="relative h-64 md:h-96 rounded-lg overflow-hidden bg-black/50 border border-gray-800">
-                <img 
-                  src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                  alt="Kamalo City - Restaurant venue for events and dining"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2">Experience Kamalo City</h3>
-                    <p className="text-lg">Authentic cuisine, vibrant atmosphere, unforgettable moments</p>
-                  </div>
+          <div className="mb-12 fade-in">
+            <div className="relative h-64 md:h-80 rounded-lg overflow-hidden bg-black/50 border border-gray-800">
+              <img 
+                src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Kamalo City - Restaurant venue for events and dining"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">Experience Kamalo City</h3>
+                  <p className="text-lg">Authentic cuisine, vibrant atmosphere, unforgettable moments</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Reservation Form */}
-          <div className="max-w-4xl mx-auto bg-black/50 rounded-lg p-8 border border-gray-700 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Book Your Table</h2>
+          <div className="bg-black/50 rounded-lg p-8 border border-gray-700 mb-12 fade-in">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">Book Your Table</h2>
             <p className="text-gray-300 mb-8 text-lg text-center">Open: 11:00 AM to 11:00 PM, 7 days a week</p>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -172,19 +128,6 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                     onChange={handleInputChange}
                     className="w-full p-4 bg-[#1A1F2C] text-white border border-gray-700 rounded-lg text-lg focus:border-kamalo-red transition-colors touch-manipulation"
                     placeholder="Your phone number"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="text-white block mb-3 text-lg font-semibold">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full p-4 bg-[#1A1F2C] text-white border border-gray-700 rounded-lg text-lg focus:border-kamalo-red transition-colors touch-manipulation"
-                    placeholder="Your email"
                     required
                   />
                 </div>
@@ -222,7 +165,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                   </Select>
                 </div>
 
-                <div>
+                <div className="md:col-span-2">
                   <label className="text-white block mb-3 text-lg font-semibold">Number of Guests</label>
                   <Select onValueChange={(value) => setFormData({...formData, guests: value})}>
                     <SelectTrigger className="w-full bg-[#1A1F2C] text-white border-gray-700 p-4 text-lg">
@@ -240,7 +183,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
               </div>
 
               <div>
-                <label className="text-white block mb-3 text-lg font-semibold">Special Requests</label>
+                <label className="text-white block mb-3 text-lg font-semibold">Special Requests (Optional)</label>
                 <textarea
                   name="specialRequests"
                   value={formData.specialRequests}
@@ -252,7 +195,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
 
               <Button 
                 type="submit" 
-                className="w-full bg-kamalo-red hover:bg-red-600 text-white py-5 text-xl font-semibold rounded-lg hover:scale-105 hover:shadow-lg transition duration-300 touch-manipulation"
+                className="w-full btn-primary py-5 text-xl font-semibold rounded-lg touch-manipulation"
               >
                 Book Now
               </Button>
@@ -263,42 +206,16 @@ Special Requests: ${formData.specialRequests || 'None'}`;
             </p>
           </div>
 
-          {/* FAQ Section */}
-          <div className="max-w-4xl mx-auto mb-12">
-            <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem 
-                value="faqs" 
-                className="bg-black/50 rounded-lg border border-gray-800 data-[state=open]:border-kamalo-red transition-colors"
-              >
-                <AccordionTrigger className="text-white hover:text-kamalo-red transition-colors text-left py-6 px-6 text-xl font-bold">
-                  ❓ Frequently Asked Questions
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6">
-                  <div className="space-y-4">
-                    {faqs.map((faq, index) => (
-                      <div key={index} className="border-b border-gray-700 last:border-b-0 pb-4 last:pb-0">
-                        <h4 className="text-white font-semibold mb-2 text-lg">{faq.question}</h4>
-                        <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                      </div>
-                    ))}
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-
-          {/* Final CTA */}
-          <div className="text-center">
-            <div className="max-w-2xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Reserve?</h2>
-              <p className="text-gray-300 mb-6 text-lg">Contact us now to secure your table or discuss private event options.</p>
-              <p className="text-gray-400 text-lg">
-                For special requirements or large groups, please call{" "}
-                <a href="tel:+27731598909" className="text-kamalo-gold hover:text-kamalo-red transition-colors font-semibold">
-                  +27 73 159 8909
-                </a>
-              </p>
-            </div>
+          {/* Contact Info */}
+          <div className="text-center fade-in">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Reserve?</h2>
+            <p className="text-gray-300 mb-6 text-lg">Contact us now to secure your table or discuss private event options.</p>
+            <p className="text-gray-400 text-lg">
+              For special requirements or large groups, please call{" "}
+              <a href="tel:+27731598909" className="text-kamalo-gold hover:text-kamalo-red transition-colors font-semibold">
+                +27 73 159 8909
+              </a>
+            </p>
           </div>
         </div>
       </main>

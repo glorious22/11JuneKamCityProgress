@@ -23,26 +23,20 @@ const TimelineSection = () => {
   const timelineEvents = [
     {
       icon: Heart,
-      title: "Rebirth from Rubble",
-      description: "The building was rundown and abandoned. The Kamalo City vision was born — construction began on a dream of an authentic African restaurant.",
-      year: "2022"
-    },
-    {
-      icon: Home,
-      title: "Grand Opening",
-      description: "The restaurant officially opened, serving traditional African meals. Locals and food lovers quickly embraced Kamalo as a hotspot for both food and connection.",
+      title: "From Rubble to Rebirth",
+      description: "Kamalo City officially opens after transforming a broken-down space into a vision of African culture and cuisine.",
       year: "2023"
     },
     {
       icon: Music,
-      title: "Expansion & Events",
-      description: "Kamalo City grew into a full experience: live music, event hosting, birthday parties, and private dining. The restaurant also introduced barber services, hookah, and perfumes.",
+      title: "Expansion & Growth",
+      description: "Introduced new services including hookah lounge, barbershop, game nights, and vibrant weekend events.",
       year: "2024"
     },
     {
       icon: Sparkles,
-      title: "Culture Meets Lifestyle",
-      description: "Kamalo City continues evolving — serving not just food, but culture, legacy, and lifestyle. It has become a Cape Town staple for locals, visitors, and the African diaspora.",
+      title: "Cultural Landmark",
+      description: "Became a recognized hub for authentic African food and experiences in Cape Town, attracting a growing community of loyal customers.",
       year: "2025"
     }
   ];
@@ -50,7 +44,7 @@ const TimelineSection = () => {
   return (
     <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-b from-black to-kamalo-dark">
       <div className="max-w-7xl mx-auto">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mb-16 transition-all duration-1000 fade-in ${isVisible ? 'visible' : ''}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Our <span className="text-kamalo-red">Journey</span>
           </h2>
@@ -71,12 +65,12 @@ const TimelineSection = () => {
               return (
                 <div 
                   key={index} 
-                  className={`relative flex items-center ${isLeft ? 'justify-start' : 'justify-end'} transition-all duration-1000 delay-${index * 200} ${
-                    isVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${isLeft ? '-translate-x-10' : 'translate-x-10'}`
+                  className={`relative flex items-center ${isLeft ? 'justify-start' : 'justify-end'} transition-all duration-1000 delay-${index * 200} fade-in ${
+                    isVisible ? 'visible' : ''
                   }`}
                 >
                   <div className={`w-5/12 ${isLeft ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                    <div className="bg-black/50 rounded-lg p-6 border border-gray-800 hover:border-kamalo-red transition-colors">
+                    <div className="bg-black/50 rounded-lg p-6 border border-gray-800 hover:border-kamalo-red transition-colors card-hover">
                       <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'justify-end' : 'justify-start'}`}>
                         <IconComponent className="w-6 h-6 text-kamalo-red" />
                         <span className="text-kamalo-gold font-bold text-lg timeline-year">{event.year}</span>
@@ -103,11 +97,11 @@ const TimelineSection = () => {
               return (
                 <div 
                   key={index} 
-                  className={`timeline-item transition-all duration-1000 delay-${index * 200} ${
-                    isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+                  className={`timeline-item transition-all duration-1000 delay-${index * 200} fade-in ${
+                    isVisible ? 'visible' : ''
                   }`}
                 >
-                  <div className="bg-black/50 rounded-lg p-6 border border-gray-800 hover:border-kamalo-red transition-colors">
+                  <div className="bg-black/50 rounded-lg p-6 border border-gray-800 hover:border-kamalo-red transition-colors card-hover">
                     <div className="flex items-center gap-3 mb-3">
                       <IconComponent className="w-6 h-6 text-kamalo-red" />
                       <span className="text-kamalo-gold font-bold text-lg timeline-year">{event.year}</span>

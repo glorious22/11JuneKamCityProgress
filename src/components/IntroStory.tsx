@@ -20,18 +20,18 @@ const IntroStory = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-b from-kamalo-dark to-black">
+    <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-b from-kamalo-dark to-black african-pattern">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content Section */}
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`transition-all duration-1000 fade-in ${isVisible ? 'visible' : ''}`}>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Our Story: <span className="text-kamalo-red">Rooted in Heritage</span>
             </h2>
             
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
-                Kamalo City was born from the rubble in 2022 — a once-forgotten space brought back to life with passion and purpose. More than just a restaurant, we are a cultural experience that honors the legacy of African ancestors in every plate we serve.
+                Kamalo City began in 2023 as a dream built from ruins. What was once an abandoned space transformed into a cultural hotspot. From our humble beginnings, we've grown into a thriving restaurant and venue — powered by love for food, music, and community.
               </p>
               
               <p>
@@ -44,8 +44,8 @@ const IntroStory = () => {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-kamalo-red rounded-full mt-3 flex-shrink-0"></div>
                 <p className="text-gray-300">
-                  <span className="text-white font-semibold">From rubble to revival</span> – 
-                  Founded in 2022 with vision and determination
+                  <span className="text-white font-semibold">From ruins to revival</span> – 
+                  Founded in 2023 with vision and determination
                 </p>
               </div>
               <div className="flex items-start gap-3">
@@ -66,7 +66,7 @@ const IntroStory = () => {
           </div>
 
           {/* Image Section */}
-          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`transition-all duration-1000 delay-300 fade-in ${isVisible ? 'visible' : ''}`}>
             <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden">
               <img 
                 src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800"

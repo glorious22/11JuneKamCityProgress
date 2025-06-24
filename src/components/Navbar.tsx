@@ -15,16 +15,19 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-between">
-        {/* Logo/Brand */}
-        <div>
-          <Link to="/" className="text-lg md:text-xl font-bold text-kamalo-gold hover:text-kamalo-red transition-colors duration-300">
-            Kamalo City
+      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between h-16">
+        {/* Logo */}
+        <div className="flex items-center">
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-kamalo-red rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-lg">KC</span>
+            </div>
+            <span className="text-kamalo-gold font-bold text-lg hidden sm:block">Kamalo City</span>
           </Link>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden md:flex items-center space-x-1">
           <Link to="/" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold px-3 py-2">
             Home
           </Link>
@@ -38,7 +41,7 @@ const Navbar = () => {
           </Link>
 
           <Link to="/about" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold px-3 py-2">
-            About Us
+            About
           </Link>
           
           <Link to="/services" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold px-3 py-2">
@@ -56,7 +59,7 @@ const Navbar = () => {
             <Instagram className="w-4 h-4" />
           </a>
 
-          {/* Reservation Pill Button - After Contact */}
+          {/* Reservation Pill Button */}
           <Link 
             to="/reservations" 
             className="bg-kamalo-red text-white px-5 py-2 rounded-full hover:bg-red-700 transition-all duration-300 font-semibold text-sm hover:scale-105 hover:shadow-lg ml-4"
@@ -97,7 +100,7 @@ const Navbar = () => {
                   </Link>
 
                   <Link to="/about" className="block text-white hover:text-kamalo-red transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
-                    About Us
+                    About
                   </Link>
                   
                   <Link to="/services" className="block text-white hover:text-kamalo-red transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>

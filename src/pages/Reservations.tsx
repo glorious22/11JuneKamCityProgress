@@ -96,9 +96,9 @@ Special Requests: ${formData.specialRequests || 'None'}`;
       <main className="pt-20 pb-20 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-kamalo-gold mb-6">
-              Reserve Your <span className="text-kamalo-red">Experience</span>
+              Reserve Your <span className="text-kamalo-red gold-underline">Experience</span>
             </h1>
             <div className="max-w-4xl mx-auto">
               <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
@@ -108,7 +108,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
           </div>
 
           {/* Decorative Image */}
-          <div className="mb-12">
+          <div className="mb-12" data-aos="fade-up" data-aos-delay="200">
             <div className="max-w-4xl mx-auto">
               <div className="relative h-64 md:h-96 rounded-lg overflow-hidden bg-black/50 border border-gray-800">
                 <img 
@@ -128,7 +128,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
           </div>
 
           {/* Reservation Form */}
-          <div className="max-w-4xl mx-auto bg-black/50 rounded-lg p-8 border border-gray-700 mb-12">
+          <div className="max-w-4xl mx-auto bg-black/50 rounded-lg p-8 border border-gray-700 mb-12" data-aos="fade-up" data-aos-delay="300">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Book Your Table</h2>
             <p className="text-gray-300 mb-8 text-lg text-center">Open: 11:00 AM to 11:00 PM, 7 days a week</p>
             
@@ -176,7 +176,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                 <div>
                   <label className="text-white block mb-3 text-lg font-semibold">Time</label>
                   <Select onValueChange={(value) => setFormData({...formData, time: value})}>
-                    <SelectTrigger className="w-full bg-[#1A1F2C] text-white border-gray-700 p-4 text-lg">
+                    <SelectTrigger className="w-full bg-[#1A1F2C] text-white border-gray-700 p-4 text-lg min-h-[56px]">
                       <SelectValue placeholder="Select time">
                         <div className="flex items-center">
                           <Clock className="mr-2 h-5 w-5" />
@@ -197,7 +197,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                 <div className="md:col-span-2">
                   <label className="text-white block mb-3 text-lg font-semibold">Number of Guests</label>
                   <Select onValueChange={(value) => setFormData({...formData, guests: value})}>
-                    <SelectTrigger className="w-full bg-[#1A1F2C] text-white border-gray-700 p-4 text-lg">
+                    <SelectTrigger className="w-full bg-[#1A1F2C] text-white border-gray-700 p-4 text-lg min-h-[56px]">
                       <SelectValue placeholder="Select number of guests" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1A1F2C] text-white border-gray-700">
@@ -224,7 +224,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
 
               <Button 
                 type="submit" 
-                className="w-full btn-primary py-5 text-xl font-semibold rounded-lg touch-manipulation"
+                className="w-full btn-primary py-5 text-xl font-semibold rounded-lg touch-manipulation mobile-button-spacing"
               >
                 Reserve Now
               </Button>
@@ -236,7 +236,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
           </div>
 
           {/* FAQ Section */}
-          <div className="max-w-4xl mx-auto mb-12">
+          <div className="max-w-4xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="400">
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem 
                 value="faqs" 
@@ -260,7 +260,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
           </div>
 
           {/* Final CTA */}
-          <div className="text-center">
+          <div className="text-center mobile-spacing" data-aos="fade-up" data-aos-delay="500">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Reserve?</h2>
               <p className="text-gray-300 mb-6 text-lg">Contact us now to secure your table or discuss private event options.</p>

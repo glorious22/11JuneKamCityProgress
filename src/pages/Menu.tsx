@@ -3,10 +3,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 
 const Menu = () => {
   const [activeFilter, setActiveFilter] = useState("main");
   const [currentDay, setCurrentDay] = useState("");
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
 
   useEffect(() => {
     document.title = "Menu - Kamalo City | Authentic African Cuisine";
@@ -21,106 +23,99 @@ const Menu = () => {
     setCurrentDay(days[today]);
   }, []);
 
+  const toggleAccordion = (day: string) => {
+    setOpenAccordion(openAccordion === day ? null : day);
+  };
+
   // Complete menu items with all data provided
   const menuItems = [
     // Main Dishes
     {
       id: 1,
       category: "main",
-      name: "Beef Stew (355g)",
-      description: "Tender beef chunks simmered in a rich tomato and brinjal sauce. Served with pap or rice and traditional vegetables.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Beef Stew",
-      badge: "Customer Favourite"
+      name: "Fried or Grilled Thomson",
+      description: "Fresh Thomson fish, seasoned with African herbs and spices. Served with your choice of pap or rice and traditional vegetables.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Grilled Thomson"
     },
     {
       id: 2,
       category: "main",
-      name: "Grilled Thomson",
-      description: "Chargrilled whole Thomson fish, marinated with African herbs and spices. Served with your choice of pap or rice and a veg side.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Grilled Thomson",
-      badge: "House Special"
+      name: "Beef Stew in Light Tomato and Brinjal Sauce",
+      description: "Tender beef chunks simmered in a rich tomato and brinjal sauce. Served with pap or rice and traditional vegetables.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Beef Stew"
     },
     {
       id: 3,
       category: "main",
-      name: "Grilled Pork (380g)",
-      description: "Juicy pork chops grilled to perfection. Comes with pap or rice and a traditional vegetable of your choice.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Grilled Pork",
-      badge: "Chef Recommended"
+      name: "Grilled Quarter Chicken Leg",
+      description: "Smoky grilled chicken leg quarter, seasoned African-style. Served with pap or rice and traditional veg.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Grilled Chicken Quarter Leg"
     },
     {
       id: 4,
       category: "main",
-      name: "Fried Thomson",
-      description: "Crispy-fried whole Thomson fish seasoned with aromatic spices. Served with pap or rice and traditional veg.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Fried Thomson"
-    },
-    {
-      id: 5,
-      category: "main",
-      name: "Grilled Chicken Quarter Leg",
-      description: "Smoky grilled chicken leg quarter, seasoned African-style. Served with pap or rice and traditional veg.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Grilled Chicken Quarter Leg"
+      name: "Grilled Pork Chops",
+      description: "Juicy pork chops grilled to perfection. Comes with pap or rice and a traditional vegetable of your choice.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Grilled Pork"
     },
 
     // Vegetable Sides
     {
-      id: 6,
+      id: 5,
       category: "vegetable-sides",
-      name: "Spinach",
-      description: "Steamed green spinach prepared with light seasoning.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Spinach"
-    },
-    {
-      id: 7,
-      category: "vegetable-sides",
-      name: "Ndunda",
-      description: "Earthy, nutrient-rich wild spinach — a Congolese classic.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Ndunda"
-    },
-    {
-      id: 8,
-      category: "vegetable-sides",
-      name: "Kasava Leaves",
+      name: "Cassava Leaves",
       description: "Creamy and flavorful cassava leaves slow-cooked with mild spices — a hearty traditional favourite.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Kasava Leaves"
+      alt: "Kamalo City - Cassava Leaves"
     },
     {
-      id: 9,
+      id: 6,
       category: "vegetable-sides",
-      name: "Ngai Ngai",
-      description: "Tangy and leafy hibiscus and roselle greens with a sharp bite.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Ngai Ngai"
-    },
-    {
-      id: 10,
-      category: "vegetable-sides",
-      name: "Matembele",
+      name: "Sweet Potato Leaves (Matembele)",
       description: "Sweet potato leaves cooked tender with a slightly nutty flavor.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Matembele"
     },
     {
-      id: 11,
+      id: 7,
+      category: "vegetable-sides",
+      name: "Ngai Ngai (Roselle Leaves)",
+      description: "Tangy and leafy hibiscus and roselle greens with a sharp bite.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Ngai Ngai"
+    },
+    {
+      id: 8,
+      category: "vegetable-sides",
+      name: "Ndunda (Wild Spinach)",
+      description: "Earthy, nutrient-rich wild spinach — a Congolese classic.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Ndunda"
+    },
+    {
+      id: 9,
       category: "vegetable-sides",
       name: "Repu",
       description: "Classic Congolese leafy green veg with a slightly bitter, robust taste.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Repu"
     },
+    {
+      id: 10,
+      category: "vegetable-sides",
+      name: "Green Spinach Sauce",
+      description: "Steamed green spinach prepared with light seasoning.",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Green Spinach"
+    },
 
     // Sides
     {
-      id: 12,
+      id: 11,
       category: "sides",
       name: "Portion Pap",
       description: "Traditional African maize porridge. Perfect with stews and grilled meats.",
@@ -128,7 +123,7 @@ const Menu = () => {
       alt: "Kamalo City - Portion Pap"
     },
     {
-      id: 13,
+      id: 12,
       category: "sides",
       name: "Shikwanga (Sour Pap)",
       description: "Fermented cassava wrap with a tangy edge — traditional and satisfying.",
@@ -136,7 +131,7 @@ const Menu = () => {
       alt: "Kamalo City - Shikwanga"
     },
     {
-      id: 14,
+      id: 13,
       category: "sides",
       name: "Portion Rice",
       description: "Fluffy white rice, ideal for soaking up rich sauces.",
@@ -198,10 +193,10 @@ const Menu = () => {
 
   const getCategoryTagline = (category: string) => {
     switch (category) {
-      case "main": return "Try our bold traditional mains crafted with authentic African spices";
-      case "vegetable-sides": return "Fresh, nutritious greens prepared the traditional way";
+      case "main": return "Served with pap or rice and traditional vegetables";
+      case "vegetable-sides": return "All vegetable sides are R40 each";
       case "sides": return "Perfect accompaniments to complete your meal";
-      case "daily-specials": return "Unique dishes available only on specific days";
+      case "daily-specials": return "All daily specials are R80 with pap or R90 with rice";
       default: return "";
     }
   };
@@ -216,9 +211,9 @@ const Menu = () => {
       <main className="pt-20 px-4 pb-12">
         <div className="site-container">
           {/* Header Section */}
-          <div className="text-center section-spacing">
+          <div className="text-center section-spacing" data-aos="fade-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Explore Our <span className="text-kamalo-red">Menu</span>
+              Explore Our <span className="text-kamalo-red gold-underline">Menu</span>
             </h1>
             
             <div className="max-w-4xl mx-auto mb-8">
@@ -229,15 +224,15 @@ const Menu = () => {
           </div>
 
           {/* Pricing Information Box */}
-          <div className="pricing-info">
-            <p><strong>All Daily Specials:</strong> R80 with pap or R90 with rice</p>
-            <p><strong>All Vegetable Sides:</strong> R40 each</p>
+          <div className="pricing-info" data-aos="fade-up" data-aos-delay="200">
+            <p><strong>All dishes served with pap (R80) or rice (R90)</strong></p>
+            <p><strong>All vegetable sides are R40 each</strong></p>
             <p className="note">*Note: Uber Eats prices may differ from in-restaurant prices.</p>
           </div>
 
-          {/* Today's Special Section - Compact */}
+          {/* Today's Special Section */}
           {todaysSpecials.length > 0 && (
-            <div className="section-spacing">
+            <div className="section-spacing" data-aos="fade-up" data-aos-delay="300">
               <div className="text-center mb-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-kamalo-red mb-4">
                   Today's Special - {getDayName(currentDay)}
@@ -311,7 +306,7 @@ const Menu = () => {
             </div>
 
             {/* Category Header */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-12" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 {getCategoryDisplayName(activeFilter)}
               </h2>
@@ -322,20 +317,42 @@ const Menu = () => {
 
             {/* Daily Specials Full Week Display */}
             {activeFilter === "daily-specials" && (
-              <div className="space-y-8 transition-all duration-500">
-                {Object.entries(dailySpecials).map(([day, specials]) => (
-                  <div key={day} className={`bg-black/50 rounded-lg p-6 border border-gray-800 ${day === currentDay ? 'border-kamalo-red bg-kamalo-red/10' : ''}`}>
-                    <h3 className={`text-2xl font-bold mb-4 ${day === currentDay ? 'text-kamalo-red' : 'text-white'}`}>
-                      {getDayName(day)} {day === currentDay && '(Today)'}
-                    </h3>
-                    <div className="space-y-3">
-                      {specials.map((special, index) => (
-                        <div key={index} className="border-l-4 border-kamalo-red pl-4">
-                          <h4 className="text-lg font-semibold text-white">{special.name}</h4>
-                          <p className="text-gray-300 text-sm">{special.description}</p>
+              <div className="space-y-4 transition-all duration-500">
+                {Object.entries(dailySpecials).map(([day, specials], index) => (
+                  <div 
+                    key={day} 
+                    className="accordion-item"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                  >
+                    <button
+                      onClick={() => toggleAccordion(day)}
+                      className="accordion-header w-full"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className={`text-2xl font-bold ${day === currentDay ? 'text-kamalo-red' : 'text-white'}`}>
+                          {getDayName(day)} {day === currentDay && '(Today)'}
+                        </span>
+                      </div>
+                      <ChevronDown 
+                        className={`accordion-icon w-6 h-6 text-kamalo-red ${
+                          openAccordion === day ? 'open' : ''
+                        }`}
+                      />
+                    </button>
+                    
+                    {openAccordion === day && (
+                      <div className="accordion-content">
+                        <div className="space-y-3">
+                          {specials.map((special, index) => (
+                            <div key={index} className="border-l-4 border-kamalo-red pl-4">
+                              <h4 className="text-lg font-semibold text-white">{special.name}</h4>
+                              <p className="text-gray-300 text-sm">{special.description}</p>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -344,10 +361,12 @@ const Menu = () => {
             {/* Regular Menu Items */}
             {activeFilter !== "daily-specials" && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-500">
-                {filteredItems.map((item) => (
+                {filteredItems.map((item, index) => (
                   <div 
                     key={item.id} 
                     className="dish-card"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                       <div className="relative h-48 overflow-hidden rounded-lg">
@@ -357,18 +376,6 @@ const Menu = () => {
                           className="dish-image w-full h-full object-cover"
                           loading="lazy"
                         />
-                        
-                        {/* Badge */}
-                        {item.badge && (
-                          <div className="absolute top-4 left-4">
-                            <span className="text-xs text-white bg-kamalo-red px-3 py-1 rounded-full font-semibold">
-                              {item.badge.includes("Customer Favourite") && "🔥"} 
-                              {item.badge.includes("House Special") && "⭐"} 
-                              {item.badge.includes("Chef Recommended") && "👨‍🍳"} 
-                              {item.badge}
-                            </span>
-                          </div>
-                        )}
                       </div>
                       
                       <div>
@@ -382,7 +389,7 @@ const Menu = () => {
             )}
 
             {/* Bottom CTA Section */}
-            <div className="text-center mt-16">
+            <div className="text-center mt-16 mobile-spacing" data-aos="fade-up">
               <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                   Ready to <span className="text-kamalo-red">Try It for Yourself</span>?
@@ -391,7 +398,7 @@ const Menu = () => {
                   Experience authentic African cuisine and traditional flavors at Kamalo City in Cape Town.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                  <Button className="btn-primary">
+                  <Button className="btn-primary mobile-button-spacing">
                     <Link to="/reservations">Book a Table</Link>
                   </Button>
                   <Button className="btn-ghost">

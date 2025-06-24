@@ -21,7 +21,6 @@ const Reservations = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     phoneNumber: '',
-    email: '',
     date: '',
     time: '',
     guests: '2',
@@ -35,19 +34,6 @@ const Reservations = () => {
       metaDescription.setAttribute('content', 'Book your table at Kamalo City for authentic African cuisine and entertainment. Easy online reservations for dining, events, and private bookings in Cape Town.');
     }
   }, []);
-
-  const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-
-  const generateDates = () => {
-    const dates = [];
-    for (let i = 1; i <= 31; i++) {
-      dates.push(i);
-    }
-    return dates;
-  };
 
   const generateGuestNumbers = () => {
     const numbers = [];
@@ -76,7 +62,6 @@ const Reservations = () => {
     
 Name: ${formData.fullName}
 Phone: ${formData.phoneNumber}
-Email: ${formData.email}
 Date: ${formData.date}
 Time: ${formData.time}
 Guests: ${formData.guests}
@@ -108,7 +93,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
   return (
     <div className="min-h-screen bg-kamalo-dark">
       <Navbar />
-      <main className="pt-24 pb-20 px-4">
+      <main className="pt-20 pb-20 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-12">
@@ -177,19 +162,6 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                 </div>
 
                 <div>
-                  <label className="text-white block mb-3 text-lg font-semibold">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full p-4 bg-[#1A1F2C] text-white border border-gray-700 rounded-lg text-lg focus:border-kamalo-red transition-colors touch-manipulation"
-                    placeholder="Your email"
-                    required
-                  />
-                </div>
-
-                <div>
                   <label className="text-white block mb-3 text-lg font-semibold">Date</label>
                   <input
                     type="date"
@@ -222,7 +194,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                   </Select>
                 </div>
 
-                <div>
+                <div className="md:col-span-2">
                   <label className="text-white block mb-3 text-lg font-semibold">Number of Guests</label>
                   <Select onValueChange={(value) => setFormData({...formData, guests: value})}>
                     <SelectTrigger className="w-full bg-[#1A1F2C] text-white border-gray-700 p-4 text-lg">
@@ -252,9 +224,9 @@ Special Requests: ${formData.specialRequests || 'None'}`;
 
               <Button 
                 type="submit" 
-                className="w-full bg-kamalo-red hover:bg-red-600 text-white py-5 text-xl font-semibold rounded-lg hover:scale-105 hover:shadow-lg transition duration-300 touch-manipulation"
+                className="w-full btn-primary py-5 text-xl font-semibold rounded-lg touch-manipulation"
               >
-                Book Now
+                Reserve Now
               </Button>
             </form>
 

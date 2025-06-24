@@ -8,9 +8,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 text-center md:text-left">
           {/* Logo & Bio */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-kamalo-red">Kamalo City</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-kamalo-gold">Kamalo City</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Where Africa's rich heritage meets soulful cuisine. Join us for unforgettable food, festive events, and a vibrant cultural experience.
+              Where rich African heritage meets unforgettable flavor. Come for the taste — stay for the vibe.
             </p>
             <div className="flex items-start justify-center md:justify-start space-x-3">
               <Clock className="w-6 h-6 mt-1 text-kamalo-red flex-shrink-0" />
@@ -53,6 +53,12 @@ const Footer = () => {
                   <p>Western Cape, South Africa</p>
                 </div>
               </div>
+              <div className="flex items-center justify-center md:justify-start space-x-3">
+                <span className="text-kamalo-red">📧</span>
+                <a href="mailto:kamalocity@outlook.com" className="hover:text-kamalo-red transition-colors touch-manipulation font-semibold">
+                  kamalocity@outlook.com
+                </a>
+              </div>
               <div className="flex justify-center md:justify-start gap-4 mt-4">
                 <a
                   href="https://instagram.com/kamalo_city"
@@ -78,7 +84,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400 text-base mb-4">© 2025 Kamalo City. All rights reserved.</p>
           <p className="text-kamalo-red mb-6 text-lg font-semibold">
-            More exciting things are coming to Kamalo City soon!
+            Whether you're here to dine, unwind, or celebrate — Kamalo City is where every moment becomes a memory.
           </p>
           <div>
             <Link 

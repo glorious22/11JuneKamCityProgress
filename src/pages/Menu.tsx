@@ -28,7 +28,6 @@ const Menu = () => {
       id: 1,
       category: "main",
       name: "Beef Stew (355g)",
-      price: "R 133.65",
       description: "Tender beef chunks simmered in a rich tomato and brinjal sauce. Served with pap or rice and traditional vegetables.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Beef Stew",
@@ -38,7 +37,6 @@ const Menu = () => {
       id: 2,
       category: "main",
       name: "Grilled Thomson",
-      price: "R 133.65",
       description: "Chargrilled whole Thomson fish, marinated with African herbs and spices. Served with your choice of pap or rice and a veg side.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Grilled Thomson",
@@ -48,7 +46,6 @@ const Menu = () => {
       id: 3,
       category: "main",
       name: "Grilled Pork (380g)",
-      price: "R 133.65",
       description: "Juicy pork chops grilled to perfection. Comes with pap or rice and a traditional vegetable of your choice.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Grilled Pork",
@@ -58,7 +55,6 @@ const Menu = () => {
       id: 4,
       category: "main",
       name: "Fried Thomson",
-      price: "R 133.65",
       description: "Crispy-fried whole Thomson fish seasoned with aromatic spices. Served with pap or rice and traditional veg.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Fried Thomson"
@@ -67,7 +63,6 @@ const Menu = () => {
       id: 5,
       category: "main",
       name: "Grilled Chicken Quarter Leg",
-      price: "R 146.50",
       description: "Smoky grilled chicken leg quarter, seasoned African-style. Served with pap or rice and traditional veg.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Grilled Chicken Quarter Leg"
@@ -78,7 +73,6 @@ const Menu = () => {
       id: 6,
       category: "vegetable-sides",
       name: "Spinach",
-      price: "R 67.50",
       description: "Steamed green spinach prepared with light seasoning.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Spinach"
@@ -87,7 +81,6 @@ const Menu = () => {
       id: 7,
       category: "vegetable-sides",
       name: "Ndunda",
-      price: "R 67.50",
       description: "Earthy, nutrient-rich wild spinach — a Congolese classic.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Ndunda"
@@ -96,7 +89,6 @@ const Menu = () => {
       id: 8,
       category: "vegetable-sides",
       name: "Kasava Leaves",
-      price: "R 67.50",
       description: "Creamy and flavorful cassava leaves slow-cooked with mild spices — a hearty traditional favourite.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Kasava Leaves"
@@ -105,7 +97,6 @@ const Menu = () => {
       id: 9,
       category: "vegetable-sides",
       name: "Ngai Ngai",
-      price: "R 67.50",
       description: "Tangy and leafy hibiscus and roselle greens with a sharp bite.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Ngai Ngai"
@@ -114,7 +105,6 @@ const Menu = () => {
       id: 10,
       category: "vegetable-sides",
       name: "Matembele",
-      price: "R 67.50",
       description: "Sweet potato leaves cooked tender with a slightly nutty flavor.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Matembele"
@@ -123,7 +113,6 @@ const Menu = () => {
       id: 11,
       category: "vegetable-sides",
       name: "Repu",
-      price: "R 67.50",
       description: "Classic Congolese leafy green veg with a slightly bitter, robust taste.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Repu"
@@ -134,7 +123,6 @@ const Menu = () => {
       id: 12,
       category: "sides",
       name: "Portion Pap",
-      price: "R 13.50",
       description: "Traditional African maize porridge. Perfect with stews and grilled meats.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Portion Pap"
@@ -143,7 +131,6 @@ const Menu = () => {
       id: 13,
       category: "sides",
       name: "Shikwanga (Sour Pap)",
-      price: "R 33.75",
       description: "Fermented cassava wrap with a tangy edge — traditional and satisfying.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Shikwanga"
@@ -152,30 +139,49 @@ const Menu = () => {
       id: 14,
       category: "sides",
       name: "Portion Rice",
-      price: "R 54.00",
       description: "Fluffy white rice, ideal for soaking up rich sauces.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Portion Rice"
-    },
-
-    // Daily Specials - Saturday (Egusi Soup)
-    {
-      id: 33,
-      category: "daily-specials",
-      day: "saturday",
-      name: "Egusi Soup",
-      price: "R 108.00",
-      description: "A rich West African melon seed soup with deep, nutty flavors and savory meat, perfect for Saturday indulgence.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Egusi Soup",
-      badge: "Popular"
     }
   ];
 
+  // Daily specials data
+  const dailySpecials = {
+    monday: [
+      { name: "Fried Kapenta (Matemba) in Light Tomato Sauce", description: "Traditional small fish in savory tomato sauce" },
+      { name: "Cooked Ngolo with Green Pepper Sauce", description: "Catfish prepared with aromatic green pepper sauce" }
+    ],
+    tuesday: [
+      { name: "Cooked Pork Trotters", description: "Tender pork trotters slow-cooked to perfection" },
+      { name: "Fried Mabundu", description: "Traditional preparation of organ meat" },
+      { name: "Cooked Beans/Madesu", description: "Hearty beans cooked with traditional spices" }
+    ],
+    wednesday: [
+      { name: "Fried Makayabu with Green Pepper Onion Relish", description: "Dried fish with fresh pepper and onion" },
+      { name: "Fried Tilapia", description: "Fresh tilapia fish, perfectly seasoned and fried" },
+      { name: "Fumbwa with Dry Fish", description: "Traditional wild spinach with dried fish" }
+    ],
+    thursday: [
+      { name: "Light Fried Pork Smock Ribs", description: "Tender pork ribs with light seasoning" },
+      { name: "Fried Mopane Worms (Mbinzo)", description: "Traditional protein-rich delicacy" },
+      { name: "Saka Madesu", description: "Cassava leaves cooked with beans" }
+    ],
+    friday: [
+      { name: "Cooked Beef Trips (Mabumu)", description: "Traditional beef tripe preparation" },
+      { name: "Cooked Mukekuba in Light Tomato Sauce", description: "Fish cooked in aromatic tomato sauce" }
+    ],
+    saturday: [
+      { name: "Egusi Soup", description: "Rich West African melon seed soup with deep, nutty flavors" },
+      { name: "Cooked Beef Trips (Mabumu)", description: "Traditional beef tripe preparation" }
+    ],
+    sunday: [
+      { name: "Mutu Ya Ntaba (Goat Head in Hot Sauce)", description: "Traditional goat head preparation in spicy sauce" },
+      { name: "Liboke Ya Ngolo (Cut Fish)", description: "Fish prepared in traditional banana leaf style" }
+    ]
+  };
+
   // Get today's specials for the top section
-  const todaysSpecials = menuItems.filter(item => 
-    item.category === "daily-specials" && item.day === currentDay
-  );
+  const todaysSpecials = dailySpecials[currentDay as keyof typeof dailySpecials] || [];
 
   // Filter items based on active filter
   const filteredItems = menuItems.filter(item => item.category === activeFilter);
@@ -200,10 +206,14 @@ const Menu = () => {
     }
   };
 
+  const getDayName = (day: string) => {
+    return day.charAt(0).toUpperCase() + day.slice(1);
+  };
+
   return (
     <div className="min-h-screen bg-kamalo-dark text-white">
       <Navbar />
-      <main className="pt-24 px-4 pb-12">
+      <main className="pt-20 px-4 pb-12">
         <div className="site-container">
           {/* Header Section */}
           <div className="text-center section-spacing">
@@ -218,65 +228,44 @@ const Menu = () => {
             </div>
           </div>
 
+          {/* Pricing Information Box */}
+          <div className="pricing-info">
+            <p><strong>All Daily Specials:</strong> R80 with pap or R90 with rice</p>
+            <p><strong>All Vegetable Sides:</strong> R40 each</p>
+            <p className="note">*Note: Uber Eats prices may differ from in-restaurant prices.</p>
+          </div>
+
           {/* Today's Special Section - Compact */}
           {todaysSpecials.length > 0 && (
             <div className="section-spacing">
               <div className="text-center mb-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-kamalo-red mb-4">
-                  Today's Special
+                  Today's Special - {getDayName(currentDay)}
                 </h2>
                 <p className="text-gray-300 text-lg">Available only today - don't miss out!</p>
               </div>
               
-              <div className="max-w-2xl mx-auto bg-gradient-to-br from-kamalo-red/20 to-red-900/20 rounded-lg overflow-hidden border-2 border-kamalo-red mb-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 h-full">
-                  <div className="relative h-48 md:h-full overflow-hidden">
-                    <img
-                      src={todaysSpecials[0].image}
-                      alt={todaysSpecials[0].alt}
-                      className="dish-image w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/40"></div>
-                    
-                    <div className="absolute top-4 left-4">
-                      <span className="text-xs text-white bg-kamalo-red px-3 py-1 rounded-full font-semibold">
-                        TODAY ONLY
-                      </span>
-                    </div>
+              <div className="max-w-4xl mx-auto space-y-4 mb-8">
+                {todaysSpecials.map((special, index) => (
+                  <div key={index} className="todays-special">
+                    <h3 className="text-xl font-bold text-white mb-2">{special.name}</h3>
+                    <p className="text-gray-300">{special.description}</p>
                   </div>
-                  
-                  <div className="p-6 flex flex-col justify-center">
-                    <h3 className="text-2xl font-bold text-white mb-3">{todaysSpecials[0].name}</h3>
-                    <p className="text-gray-300 text-base leading-relaxed mb-4">{todaysSpecials[0].description}</p>
-                    <div className="text-right">
-                      <span className="text-3xl font-bold text-kamalo-red">
-                        {todaysSpecials[0].price}
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
 
               <div className="text-center">
                 <Button className="btn-ghost">
-                  <Link to="#full-menu">See Full Menu</Link>
+                  <a href="#full-menu">See Full Menu</a>
                 </Button>
               </div>
             </div>
           )}
 
-          {/* Menu Note */}
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-8 text-center">
-            <p className="text-gray-800 font-semibold">
-              📝 Vegetable sides all R67.50 • Daily Specials: R80 with pap, R90 with rice
-            </p>
-          </div>
-
           {/* Full Menu Section */}
           <div id="full-menu">
             {/* Filter Buttons */}
-            <div className="sticky top-20 z-40 bg-kamalo-dark/95 backdrop-blur-sm py-4 mb-8">
+            <div className="sticky top-16 z-40 bg-kamalo-dark/95 backdrop-blur-sm py-4 mb-8">
               <div className="flex flex-wrap justify-center gap-3 overflow-x-auto pb-2">
                 <Button
                   onClick={() => setActiveFilter("main")}
@@ -331,48 +320,66 @@ const Menu = () => {
               </p>
             </div>
 
-            {/* Menu Grid - 2 columns layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-500">
-              {filteredItems.map((item) => (
-                <div 
-                  key={item.id} 
-                  className="dish-card bg-[#fef9f3] text-gray-800"
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-                    <div className="relative h-48 overflow-hidden rounded-lg">
-                      <img
-                        src={item.image}
-                        alt={item.alt}
-                        className="dish-image w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                      
-                      {/* Badge */}
-                      {item.badge && (
-                        <div className="absolute top-4 left-4">
-                          <span className="text-xs text-white bg-kamalo-red px-3 py-1 rounded-full font-semibold">
-                            {item.badge.includes("Customer Favourite") && "🔥"} 
-                            {item.badge.includes("House Special") && "⭐"} 
-                            {item.badge.includes("Chef Recommended") && "👨‍🍳"} 
-                            {item.badge}
-                          </span>
+            {/* Daily Specials Full Week Display */}
+            {activeFilter === "daily-specials" && (
+              <div className="space-y-8 transition-all duration-500">
+                {Object.entries(dailySpecials).map(([day, specials]) => (
+                  <div key={day} className={`bg-black/50 rounded-lg p-6 border border-gray-800 ${day === currentDay ? 'border-kamalo-red bg-kamalo-red/10' : ''}`}>
+                    <h3 className={`text-2xl font-bold mb-4 ${day === currentDay ? 'text-kamalo-red' : 'text-white'}`}>
+                      {getDayName(day)} {day === currentDay && '(Today)'}
+                    </h3>
+                    <div className="space-y-3">
+                      {specials.map((special, index) => (
+                        <div key={index} className="border-l-4 border-kamalo-red pl-4">
+                          <h4 className="text-lg font-semibold text-white">{special.name}</h4>
+                          <p className="text-gray-300 text-sm">{special.description}</p>
                         </div>
-                      )}
-                    </div>
-                    
-                    <div>
-                      <div className="flex justify-between items-start mb-2">
-                        <h3 className="text-xl font-bold text-gray-800">{item.name}</h3>
-                        <span className="text-xl font-bold text-kamalo-red ml-4">
-                          {item.price}
-                        </span>
-                      </div>
-                      <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>
+                      ))}
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
+
+            {/* Regular Menu Items */}
+            {activeFilter !== "daily-specials" && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-500">
+                {filteredItems.map((item) => (
+                  <div 
+                    key={item.id} 
+                    className="dish-card"
+                  >
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                      <div className="relative h-48 overflow-hidden rounded-lg">
+                        <img
+                          src={item.image}
+                          alt={item.alt}
+                          className="dish-image w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                        
+                        {/* Badge */}
+                        {item.badge && (
+                          <div className="absolute top-4 left-4">
+                            <span className="text-xs text-white bg-kamalo-red px-3 py-1 rounded-full font-semibold">
+                              {item.badge.includes("Customer Favourite") && "🔥"} 
+                              {item.badge.includes("House Special") && "⭐"} 
+                              {item.badge.includes("Chef Recommended") && "👨‍🍳"} 
+                              {item.badge}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                      
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-800 mb-2">{item.name}</h3>
+                        <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* Bottom CTA Section */}
             <div className="text-center mt-16">

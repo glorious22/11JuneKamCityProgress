@@ -44,8 +44,8 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90"></div>
+      {/* Background overlay with African pattern */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90 african-pattern"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -53,24 +53,23 @@ const Hero = () => {
             Kamalo City – <span className="text-kamalo-red">Africa's Heart</span> in Cape Town
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl text-kamalo-gold mb-4 md:mb-6 font-serif italic leading-relaxed">
-            Authentic flavors. Vibrant culture. Unforgettable energy.
+            Where rich African heritage meets unforgettable flavor
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
-            Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof in Goodwood, Cape Town.
+            Come for the taste — stay for the vibe. Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof in Goodwood, Cape Town.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8 px-4">
             <Button 
               asChild 
-              className="bg-kamalo-red hover:bg-red-600 text-white px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto touch-manipulation font-semibold"
+              className="btn-primary px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold"
             >
               <Link to="/reservations">Book a Table</Link>
             </Button>
             
             <Button 
               asChild 
-              variant="outline" 
-              className="border-2 border-kamalo-gold text-kamalo-gold hover:bg-kamalo-gold hover:text-black px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto touch-manipulation font-semibold"
+              className="btn-ghost px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold"
             >
               <Link to="/menu">View Menu</Link>
             </Button>

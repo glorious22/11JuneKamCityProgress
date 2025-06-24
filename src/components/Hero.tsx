@@ -24,7 +24,7 @@ const Hero = () => {
   }, [heroImages.length]);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
       {/* Background image carousel */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
@@ -44,41 +44,39 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* African pattern overlay */}
-      <div className="absolute inset-0 african-pattern"></div>
-      
       {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-        <div className={`transition-all duration-1000 fade-in ${isVisible ? 'visible' : ''}`}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-            Kamalo City
+        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight">
+            Kamalo City – <span className="text-kamalo-red">Africa's Heart</span> in Cape Town
           </h1>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl text-kamalo-gold mb-6 font-serif italic leading-relaxed">
-            Where rich African heritage meets unforgettable flavor
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-kamalo-gold mb-4 md:mb-6 font-serif italic leading-relaxed">
+            Authentic flavors. Vibrant culture. Unforgettable energy.
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Come for the taste — stay for the vibe. Experience authentic African cuisine, culture, and community in the heart of Cape Town.
+          <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
+            Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof in Goodwood, Cape Town.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8 px-4">
             <Button 
               asChild 
-              className="btn-primary text-lg px-8 py-4 w-full sm:w-auto"
+              className="bg-kamalo-red hover:bg-red-600 text-white px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto touch-manipulation font-semibold"
             >
               <Link to="/reservations">Book a Table</Link>
             </Button>
             
             <Button 
               asChild 
-              className="btn-ghost text-lg px-8 py-4 w-full sm:w-auto"
+              variant="outline" 
+              className="border-2 border-kamalo-gold text-kamalo-gold hover:bg-kamalo-gold hover:text-black px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full hover:scale-105 hover:shadow-lg transition duration-300 w-full sm:w-auto touch-manipulation font-semibold"
             >
               <Link to="/menu">View Menu</Link>
             </Button>
           </div>
           
-          <div className="text-gray-400">
+          <div className="text-gray-400 px-4">
             <p className="text-sm md:text-base">📍 90 Voortrekker Road, Goodwood • 📞 +27 73 159 8909</p>
             <p className="text-xs md:text-sm mt-2">Open 7 days a week: 11:00 AM - 11:00 PM</p>
           </div>
@@ -86,9 +84,9 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <div className="w-1 h-2 md:h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

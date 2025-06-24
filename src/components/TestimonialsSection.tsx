@@ -78,7 +78,7 @@ const TestimonialsSection = () => {
   return (
     <section ref={sectionRef} className="py-16 px-4 bg-gradient-to-b from-kamalo-dark to-black">
       <div className="site-container">
-        <div className={`text-center mb-12 transition-all duration-1000 fade-in ${isVisible ? 'visible' : ''}`}>
+        <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             What Our <span className="text-kamalo-red">Customers Are Saying</span>
           </h2>
@@ -87,7 +87,7 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className={`relative max-w-4xl mx-auto transition-all duration-1000 delay-300 fade-in ${isVisible ? 'visible' : ''}`}>
+        <div className={`relative max-w-4xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="bg-black/50 rounded-lg p-8 border border-gray-800 min-h-[300px] flex items-center">
             <div className="w-full text-center">
               <div className="flex justify-center mb-4">
@@ -117,22 +117,20 @@ const TestimonialsSection = () => {
             </div>
           </div>
 
-          {/* Navigation buttons - positioned outside the content area */}
-          <div className="flex justify-center mt-8 gap-4">
-            <button
-              onClick={prevSlide}
-              className="bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            
-            <button
-              onClick={nextSlide}
-              className="bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
+          {/* Navigation buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
 
           {/* Dots indicator */}
           <div className="flex justify-center mt-6 gap-2">

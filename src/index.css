@@ -80,28 +80,10 @@
     @apply border-border;
   }
 
-  /* REMOVE ALL HORIZONTAL LINES AND GLITCHES */
-  hr {
-    display: none !important;
-  }
-
-  *::before,
-  *::after {
-    border: none !important;
-    border-top: none !important;
-    border-bottom: none !important;
-  }
-
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     touch-action: manipulation;
-    /* Lock zoom on mobile except for input fields */
-    -ms-touch-action: manipulation;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
   }
 
   body {
@@ -124,11 +106,6 @@
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
-    /* Allow zoom on input fields */
-    -webkit-user-scalable: yes;
-    -moz-user-scalable: yes;
-    -ms-user-scalable: yes;
-    user-scalable: yes;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -162,19 +139,9 @@
     padding: 60px 20px;
   }
 
-  /* Section spacing - NO GAPS */
+  /* Section spacing */
   .section-spacing {
     margin-bottom: 60px;
-  }
-
-  .section-padding {
-    padding: 60px 0;
-  }
-
-  @media (max-width: 768px) {
-    .section-padding {
-      padding: 40px 0;
-    }
   }
 
   /* Button hover animations */
@@ -443,6 +410,17 @@
     100% { box-shadow: 0 0 0 0 rgba(139, 0, 0, 0); }
   }
 
+  /* Collapsible service details */
+  .service-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .service-details.open {
+    max-height: 500px;
+  }
+
   /* Mobile carousel fixes */
   @media (max-width: 768px) {
     .carousel-arrows {
@@ -477,6 +455,17 @@
     }
     60% {
       transform: translateY(-5px);
+    }
+  }
+
+  /* Section padding improvements */
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 768px) {
+    .section-padding {
+      padding: 40px 0;
     }
   }
 

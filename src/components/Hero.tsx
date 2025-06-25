@@ -25,7 +25,7 @@ const Hero = () => {
   }, [heroImages.length]);
 
   const scrollToNext = () => {
-    const nextSection = document.querySelector('#about');
+    const nextSection = document.querySelector('#intro-story');
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -33,7 +33,7 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image carousel - NO LINES OR GLITCHES */}
+      {/* Background image carousel */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
           <div
@@ -52,7 +52,7 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* Clean gradient overlay - NO LINES */}
+      {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" data-aos="fade-up">

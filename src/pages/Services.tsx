@@ -26,13 +26,7 @@ const Services = () => {
       id: "private-events",
       title: "Private Events",
       summary: "Host your celebration in our vibrant African setting",
-      details: [
-        "Venue accommodates up to 80 guests",
-        "Flexible rental hours - contact us to discuss",
-        "Full catering options available",
-        "Sound system and DJ booth included",
-        "Decorations allowed with terms and conditions"
-      ],
+      description: "Our venue accommodates up to 80 guests for private events, parties, and gatherings. Rental hours are flexible – contact us directly to discuss your needs. We provide full catering, sound system, and can accommodate decorations with terms and conditions.",
       icon: Users,
       image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
@@ -40,13 +34,7 @@ const Services = () => {
       id: "live-entertainment",
       title: "Live Entertainment",
       summary: "Experience authentic African music and performances",
-      details: [
-        "Live DJs every Saturday",
-        "Some Friday night performances",
-        "Traditional African drumming",
-        "Weekend performances with energy and authenticity",
-        "Interested in performing? Contact our team"
-      ],
+      description: "Enjoy authentic African music every Saturday – and some Fridays too. Experience live DJs, traditional African drumming, and weekend performances that bring energy and authenticity. Interested in performing? Reach out to our team to join the lineup.",
       icon: Music,
       image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
@@ -54,13 +42,7 @@ const Services = () => {
       id: "pre-orders-catering",
       title: "Pre-Orders & Catering",
       summary: "Order ahead or let us cater your next event",
-      details: [
-        "Order your favorite meals in advance",
-        "Full catering services for events",
-        "Corporate event catering",
-        "Party and special occasion catering",
-        "Contact us for custom orders"
-      ],
+      description: "Order your favorite meals in advance or let us cater your next event. For custom orders or event inquiries, contact us directly. We offer full catering services for corporate events, parties, and special occasions.",
       icon: Utensils,
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
@@ -71,13 +53,7 @@ const Services = () => {
       id: "barbershop",
       title: "Barbershop on Site",
       summary: "Professional cuts while you dine",
-      details: [
-        "R60 per cut",
-        "Male clients only",
-        "Open daily from 11am",
-        "Professional styling in relaxed atmosphere",
-        "Freshen up while you wait for your order"
-      ],
+      description: "R60 per cut. Male clients only. Open daily from 11am. Freshen up at our in-house barber while you wait for your order or during events. Professional styling in a relaxed atmosphere.",
       icon: Scissors,
       image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
@@ -85,13 +61,7 @@ const Services = () => {
       id: "perfume-shop",
       title: "Signature Scents",
       summary: "Curated African-inspired fragrances",
-      details: [
-        "Bold, African-inspired fragrances",
-        "Long-lasting, oil-based perfumes",
-        "Designer-inspired collections",
-        "Test any fragrance before purchase",
-        "Discover your new favorite scent"
-      ],
+      description: "Explore our curated collection of bold, African-inspired fragrances. Long-lasting, oil-based perfumes inspired by the world's top designers. Test any fragrance and discover your new favorite.",
       icon: Wind,
       image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
@@ -99,13 +69,7 @@ const Services = () => {
       id: "hookah-station",
       title: "Hookah Lounge",
       summary: "Premium hookah experience daily from 6 PM",
-      details: [
-        "Must be 18+",
-        "Flavors vary daily",
-        "Available throughout operating hours",
-        "Premium mint, apple, and fruity blends",
-        "Ambient lounge with live DJs"
-      ],
+      description: "Must be 18+. Flavors vary daily. Available throughout our operating hours. Premium hookah experience with mint, apple, and fruity blends in our ambient lounge with live DJs and flowing drinks.",
       icon: Wind,
       image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
@@ -113,13 +77,7 @@ const Services = () => {
       id: "game-nights",
       title: "Game Nights & Recreation",
       summary: "Pool, games, and good vibes",
-      details: [
-        "Pool tables available",
-        "Open to all guests",
-        "Pool, Uno, chess, dominoes",
-        "Prizes and late-night eats",
-        "Game nights coming soon with exciting prizes"
-      ],
+      description: "Unwind with pool tables and chill vibes. Open to all guests – come through with friends! Pool, Uno, chess, dominoes with prizes and late-night eats. Game nights are coming soon with exciting prizes.",
       icon: Award,
       image: "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
@@ -131,27 +89,29 @@ const Services = () => {
 
     if (isCollapsible) {
       return (
-        <div className="accordion-item" data-aos="fade-up">
+        <div className="bg-black/50 rounded-lg border border-gray-800 hover:border-kamalo-red transition-all duration-300">
           <button
             onClick={() => toggleDetails(service.id)}
-            className="accordion-header w-full"
+            className="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-kamalo-red rounded-lg"
           >
-            <div className="flex items-center gap-4">
-              <IconComponent className="w-8 h-8 text-kamalo-red flex-shrink-0" />
-              <div className="text-left">
-                <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
-                <p className="text-gray-300 text-sm">{service.summary}</p>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <IconComponent className="w-8 h-8 text-kamalo-red flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
+                  <p className="text-gray-300 text-sm">{service.summary}</p>
+                </div>
               </div>
+              <ChevronDown 
+                className={`w-6 h-6 text-kamalo-red transition-transform duration-300 ${
+                  isOpen ? 'rotate-180' : ''
+                }`}
+              />
             </div>
-            <ChevronDown 
-              className={`accordion-icon w-6 h-6 text-kamalo-red ${
-                isOpen ? 'open' : ''
-              }`}
-            />
           </button>
           
           {isOpen && (
-            <div className="accordion-content">
+            <div className="px-6 pb-6 border-t border-gray-700 mt-4 pt-4">
               <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
                 <img 
                   src={service.image}
@@ -161,14 +121,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
               </div>
-              <ul className="space-y-2">
-                {service.details.map((detail: string, index: number) => (
-                  <li key={index} className="text-gray-300 flex items-start">
-                    <span className="text-kamalo-red mr-2">•</span>
-                    {detail}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-gray-300 leading-relaxed">{service.description}</p>
             </div>
           )}
         </div>
@@ -176,7 +129,7 @@ const Services = () => {
     }
 
     return (
-      <Card className="card-hover bg-black/50 border-gray-800 hover:border-kamalo-red" data-aos="fade-up">
+      <Card className="card-hover bg-black/50 border-gray-800 hover:border-kamalo-red">
         <div className="relative overflow-hidden rounded-t-lg">
           <img
             src={service.image}
@@ -196,14 +149,9 @@ const Services = () => {
           <p className="text-gray-300 leading-relaxed text-base mb-4">
             {service.summary}
           </p>
-          <ul className="space-y-1">
-            {service.details.slice(0, 3).map((detail: string, index: number) => (
-              <li key={index} className="text-gray-400 text-sm flex items-start">
-                <span className="text-kamalo-red mr-2">•</span>
-                {detail}
-              </li>
-            ))}
-          </ul>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            {service.description}
+          </p>
         </CardContent>
       </Card>
     );
@@ -215,9 +163,9 @@ const Services = () => {
       <main className="pt-24 px-4 pb-12">
         <div className="site-container">
           {/* Header Section */}
-          <div className="text-center section-spacing" data-aos="fade-up">
+          <div className="text-center section-spacing">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Our <span className="text-kamalo-red gold-underline">Services</span>
+              Our <span className="text-kamalo-red">Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               More than a restaurant – Kamalo City is a full experience.
@@ -225,7 +173,7 @@ const Services = () => {
           </div>
 
           {/* Toggle Selector */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="200">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <Button
               onClick={() => setActiveToggle("main")}
               className={`px-8 py-4 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold text-lg ${
@@ -251,11 +199,9 @@ const Services = () => {
           {/* Main Services Section */}
           {activeToggle === "main" && (
             <section className="section-spacing">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {mainServices.map((service, index) => (
-                  <div key={service.id} data-aos="fade-up" data-aos-delay={index * 100}>
-                    <ServiceCard service={service} />
-                  </div>
+              <div className="services-grid">
+                {mainServices.map((service) => (
+                  <ServiceCard key={service.id} service={service} />
                 ))}
               </div>
             </section>
@@ -265,17 +211,15 @@ const Services = () => {
           {activeToggle === "other" && (
             <section className="section-spacing">
               <div className="space-y-4">
-                {otherServices.map((service, index) => (
-                  <div key={service.id} data-aos="fade-up" data-aos-delay={index * 100}>
-                    <ServiceCard service={service} isCollapsible={true} />
-                  </div>
+                {otherServices.map((service) => (
+                  <ServiceCard key={service.id} service={service} isCollapsible={true} />
                 ))}
               </div>
             </section>
           )}
 
           {/* Contact CTA */}
-          <section className="text-center bg-black/50 rounded-lg p-8 border border-gray-800 mobile-spacing" data-aos="fade-up">
+          <section className="text-center bg-black/50 rounded-lg p-8 border border-gray-800">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to Experience <span className="text-kamalo-red">Kamalo City</span>?
             </h2>
@@ -283,8 +227,8 @@ const Services = () => {
               Visit us at 90 Voortrekker Road, Goodwood, Cape Town. Open 7 days a week from 11:00 AM to 11:00 PM.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button className="btn-primary mobile-button-spacing">
-                <a href="tel:+27731598909" className="flex items-center">
+              <Button className="btn-primary">
+                <a href="tel:+27731598909">
                   <Phone className="w-5 h-5 mr-2" />
                   Call Us
                 </a>

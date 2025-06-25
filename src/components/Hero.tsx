@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,15 +23,8 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
-  const scrollToNext = () => {
-    const nextSection = document.querySelector('#intro-story');
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
       {/* Background image carousel */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
@@ -52,13 +44,13 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+      {/* Background overlay with African pattern */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90 african-pattern"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" data-aos="fade-up">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight">
-            Kamalo City – <span className="text-kamalo-red gold-underline">Africa's Heart</span> in Cape Town
+            Kamalo City – <span className="text-kamalo-red">Africa's Heart</span> in Cape Town
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl text-kamalo-gold mb-4 md:mb-6 font-serif italic leading-relaxed">
             Where rich African heritage meets unforgettable flavor
@@ -91,16 +83,11 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <button 
-        onClick={scrollToNext}
-        className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator text-white hover:text-kamalo-gold transition-colors cursor-pointer"
-        aria-label="Scroll to next section"
-      >
-        <div className="flex flex-col items-center">
-          <span className="text-xs mb-2 opacity-75">Scroll Down</span>
-          <ChevronDown className="w-6 h-6" />
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <div className="w-1 h-2 md:h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
         </div>
-      </button>
+      </div>
     </section>
   );
 };

@@ -4,16 +4,11 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="site-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 text-center md:text-left">
           {/* Logo & Bio */}
-          <div data-aos="fade-up">
-            <div className="flex items-center justify-center md:justify-start mb-4">
-              <div className="w-12 h-12 bg-kamalo-red rounded-full flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-xl">KC</span>
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-kamalo-gold">Kamalo City</h3>
-            </div>
+          <div>
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-kamalo-gold">Kamalo City</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Where rich African heritage meets unforgettable flavor. Come for the taste — stay for the vibe.
             </p>
@@ -28,7 +23,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div>
             <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red">Quick Links</h3>
             <div className="space-y-3 text-base">
               <Link to="/" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Home</Link>
@@ -41,7 +36,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div data-aos="fade-up" data-aos-delay="400">
+          <div>
             <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red">Contact Info</h3>
             <div className="space-y-3 text-base">
               <div className="flex items-center justify-center md:justify-start space-x-3">
@@ -86,7 +81,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center" data-aos="fade-up" data-aos-delay="600">
+        <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400 text-base mb-4">© 2025 Kamalo City. All rights reserved.</p>
           <p className="text-kamalo-red mb-6 text-lg font-semibold">
             Whether you're here to dine, unwind, or celebrate — Kamalo City is where every moment becomes a memory.

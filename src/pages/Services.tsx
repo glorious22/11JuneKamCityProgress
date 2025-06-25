@@ -23,28 +23,60 @@ const Services = () => {
 
   const mainServices = [
     {
-      id: "private-events",
-      title: "Private Events",
-      summary: "Host your celebration in our vibrant African setting",
-      description: "Our venue accommodates up to 80 guests for private events, parties, and gatherings. Rental hours are flexible – contact us directly to discuss your needs. We provide full catering, sound system, and can accommodate decorations with terms and conditions.",
-      icon: Users,
-      image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600"
+      id: "restaurant-dining",
+      title: "Restaurant Dining",
+      summary: "Enjoy our authentic African cuisine in a warm, welcoming atmosphere.",
+      description: "Experience traditional and modern African recipes served with friendly, family-style service in our comfortable dining space.",
+      details: [
+        "Sit-down meals with full menu",
+        "Traditional & modern African recipes", 
+        "Friendly, family-style service",
+        "Open 7 days a week, 11:00 AM - 11:00 PM"
+      ],
+      icon: Utensils,
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "live-entertainment",
       title: "Live Entertainment",
-      summary: "Experience authentic African music and performances",
-      description: "Enjoy authentic African music every Saturday – and some Fridays too. Experience live DJs, traditional African drumming, and weekend performances that bring energy and authenticity. Interested in performing? Reach out to our team to join the lineup.",
+      summary: "Experience music, dance, and energy every weekend.",
+      description: "Enjoy authentic African music, DJs, and traditional performances that bring energy and cultural authenticity to your dining experience.",
+      details: [
+        "DJs and traditional performers",
+        "Cultural showcases and live music",
+        "Friday and Saturday night entertainment",
+        "Special guest appearances"
+      ],
       icon: Music,
       image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      id: "pre-orders-catering",
-      title: "Pre-Orders & Catering",
-      summary: "Order ahead or let us cater your next event",
-      description: "Order your favorite meals in advance or let us cater your next event. For custom orders or event inquiries, contact us directly. We offer full catering services for corporate events, parties, and special occasions.",
-      icon: Utensils,
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
+      id: "game-nights",
+      title: "Game Nights",
+      summary: "Relax and have fun with pool, karaoke, and good vibes.",
+      description: "Unwind with friends in our recreational area featuring pool tables and entertainment options for a complete social experience.",
+      details: [
+        "Pool tables and casual play",
+        "Karaoke setup on selected nights",
+        "Available Thursday–Sunday",
+        "Perfect for groups and socializing"
+      ],
+      icon: Award,
+      image: "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      id: "venue-hire",
+      title: "Venue Hire",
+      summary: "Book our unique space for your private events and functions.",
+      description: "Host your special occasions in our vibrant African setting with full catering and event support for memorable celebrations.",
+      details: [
+        "Ideal for parties, dinners, small events",
+        "Custom décor and music allowed",
+        "Flexible layout options",
+        "Accommodates up to 80 guests"
+      ],
+      icon: Users,
+      image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ];
 
@@ -74,12 +106,12 @@ const Services = () => {
       image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      id: "game-nights",
-      title: "Game Nights & Recreation",
-      summary: "Pool, games, and good vibes",
-      description: "Unwind with pool tables and chill vibes. Open to all guests – come through with friends! Pool, Uno, chess, dominoes with prizes and late-night eats. Game nights are coming soon with exciting prizes.",
-      icon: Award,
-      image: "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=600"
+      id: "pre-orders-catering",
+      title: "Pre-Orders & Catering",
+      summary: "Order ahead or let us cater your next event",
+      description: "Order your favorite meals in advance or let us cater your next event. For custom orders or event inquiries, contact us directly. We offer full catering services for corporate events, parties, and special occasions.",
+      icon: Utensils,
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ];
 
@@ -89,71 +121,90 @@ const Services = () => {
 
     if (isCollapsible) {
       return (
-        <div className="bg-black/50 rounded-lg border border-gray-800 hover:border-kamalo-red transition-all duration-300">
-          <button
-            onClick={() => toggleDetails(service.id)}
-            className="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-kamalo-red rounded-lg"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <IconComponent className="w-8 h-8 text-kamalo-red flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
-                  <p className="text-gray-300 text-sm">{service.summary}</p>
-                </div>
-              </div>
+        <div className="bg-white rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+          <div className="relative h-48 overflow-hidden rounded-t-lg">
+            <img 
+              src={service.image}
+              alt={`Kamalo City - ${service.title}`}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-black/40"></div>
+            <IconComponent className="absolute top-4 left-4 w-8 h-8 text-white" />
+          </div>
+          
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-gray-800 mb-2">{service.title}</h3>
+            <p className="text-gray-600 text-sm mb-4">{service.summary}</p>
+            
+            <button
+              onClick={() => toggleDetails(service.id)}
+              className="w-full bg-kamalo-red text-white px-4 py-2 rounded-full hover:bg-red-600 transition-colors font-semibold flex items-center justify-center gap-2"
+            >
+              Details
               <ChevronDown 
-                className={`w-6 h-6 text-kamalo-red transition-transform duration-300 ${
+                className={`w-4 h-4 transition-transform duration-300 ${
                   isOpen ? 'rotate-180' : ''
                 }`}
               />
-            </div>
-          </button>
-          
-          {isOpen && (
-            <div className="px-6 pb-6 border-t border-gray-700 mt-4 pt-4">
-              <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                <img 
-                  src={service.image}
-                  alt={`Kamalo City - ${service.title}`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/40"></div>
+            </button>
+            
+            {isOpen && (
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <p className="text-gray-600 leading-relaxed">{service.description}</p>
               </div>
-              <p className="text-gray-300 leading-relaxed">{service.description}</p>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       );
     }
 
     return (
-      <Card className="card-hover bg-black/50 border-gray-800 hover:border-kamalo-red">
-        <div className="relative overflow-hidden rounded-t-lg">
+      <div className="bg-white rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+        <div className="relative h-48 overflow-hidden rounded-t-lg">
           <img
             src={service.image}
             alt={`Kamalo City - ${service.title}`}
-            className="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"
+            className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-black/40 hover:bg-black/20 transition duration-300"></div>
-          <IconComponent className="absolute top-4 left-4 w-8 h-8 text-kamalo-red" />
+          <IconComponent className="absolute top-4 left-4 w-8 h-8 text-white" />
         </div>
-        <CardHeader className="pb-4">
-          <CardTitle className="text-white text-xl md:text-2xl">
-            {service.title}
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="pt-0">
-          <p className="text-gray-300 leading-relaxed text-base mb-4">
-            {service.summary}
-          </p>
-          <p className="text-gray-400 text-sm leading-relaxed">
-            {service.description}
-          </p>
-        </CardContent>
-      </Card>
+        
+        <div className="p-6">
+          <h3 className="text-xl font-bold text-gray-800 mb-2">{service.title}</h3>
+          <p className="text-gray-600 text-sm mb-4">{service.summary}</p>
+          
+          <button
+            onClick={() => toggleDetails(service.id)}
+            className="w-full bg-kamalo-red text-white px-4 py-2 rounded-full hover:bg-red-600 transition-colors font-semibold flex items-center justify-center gap-2"
+          >
+            Details
+            <ChevronDown 
+              className={`w-4 h-4 transition-transform duration-300 ${
+                openDetails === service.id ? 'rotate-180' : ''
+              }`}
+            />
+          </button>
+          
+          {openDetails === service.id && (
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <p className="text-gray-600 leading-relaxed mb-4">{service.description}</p>
+              {service.details && (
+                <ul className="space-y-2">
+                  {service.details.map((detail: string, index: number) => (
+                    <li key={index} className="flex items-start gap-2 text-gray-600 text-sm">
+                      <span className="text-kamalo-red font-bold">•</span>
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
     );
   };
 
@@ -199,7 +250,11 @@ const Services = () => {
           {/* Main Services Section */}
           {activeToggle === "main" && (
             <section className="section-spacing">
-              <div className="services-grid">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Main Services</h2>
+                <p className="text-lg text-gray-300">Explore the core experiences that define Kamalo City.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {mainServices.map((service) => (
                   <ServiceCard key={service.id} service={service} />
                 ))}
@@ -210,7 +265,11 @@ const Services = () => {
           {/* Other Services Section - Collapsible */}
           {activeToggle === "other" && (
             <section className="section-spacing">
-              <div className="space-y-4">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Other Services</h2>
+                <p className="text-lg text-gray-300">Additional amenities and experiences available at Kamalo City.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {otherServices.map((service) => (
                   <ServiceCard key={service.id} service={service} isCollapsible={true} />
                 ))}

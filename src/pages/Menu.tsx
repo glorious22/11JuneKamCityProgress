@@ -145,7 +145,7 @@ const Menu = () => {
   // Daily specials data
   const dailySpecials = {
     monday: [
-      { name: "Fried Kapenta (Matemba) in tomato sauce", description: "Traditional small fish in savory tomato sauce" },
+      { name: "Fried Kapenta (Matemba) in light tomato sauce", description: "Traditional small fish in savory tomato sauce" },
       { name: "Cooked Ngolo with green pepper sauce", description: "Catfish prepared with aromatic green pepper sauce" }
     ],
     tuesday: [
@@ -214,8 +214,8 @@ const Menu = () => {
 
           {/* Pricing Information Box */}
           <div className="bg-white rounded-lg p-6 text-center mb-8 max-w-4xl mx-auto">
-            <p className="text-gray-800 mb-2"><strong>All Daily Specials:</strong> R80 with pap or R90 with rice</p>
-            <p className="text-gray-800 mb-2"><strong>All Vegetable Sides:</strong> R40 each</p>
+            <p className="text-gray-800 mb-2"><strong>All Daily Specials are R80 with pap or R90 with rice</strong></p>
+            <p className="text-gray-800 mb-2"><strong>All Vegetable Sides are R40 each</strong></p>
             <p className="text-gray-600 text-sm">
               <em>*Note: Uber Eats prices may differ from in-restaurant pricing.</em>
             </p>
@@ -283,28 +283,31 @@ const Menu = () => {
             <div className="mb-8">
               <div className="bg-white rounded-lg p-4 text-center mb-8">
                 <p className="text-gray-800 font-bold">Daily Specials: R80 with pap / R90 with rice</p>
+                <p className="text-gray-600 text-sm mt-2">
+                  <em>*Uber Eats prices may differ from in-restaurant pricing.</em>
+                </p>
               </div>
               
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {Object.entries(dailySpecials).map(([day, specials]) => (
                   <div 
                     key={day} 
-                    className={`daily-card rounded-lg p-6 border-2 transition-all duration-300 ${
+                    className={`bg-white rounded-lg p-6 shadow-lg transition-all duration-300 ${
                       day === currentDay 
-                        ? 'bg-kamalo-red/20 border-kamalo-red highlighted' 
-                        : 'bg-black/50 border-gray-800 hover:border-kamalo-red'
+                        ? 'ring-4 ring-kamalo-red ring-opacity-50 bg-red-50' 
+                        : 'hover:shadow-xl'
                     }`}
                   >
                     <h4 className={`text-2xl font-bold mb-4 ${
-                      day === currentDay ? 'text-kamalo-red' : 'text-white'
+                      day === currentDay ? 'text-kamalo-red' : 'text-gray-800'
                     }`}>
                       {getDayName(day)} {day === currentDay && '(Today)'}
                     </h4>
                     <ul className="space-y-3">
                       {specials.map((special, index) => (
                         <li key={index} className="border-l-4 border-kamalo-red pl-4">
-                          <h5 className="text-lg font-semibold text-white">{special.name}</h5>
-                          <p className="text-gray-300 text-sm">{special.description}</p>
+                          <h5 className="text-lg font-semibold text-gray-800">{special.name}</h5>
+                          <p className="text-gray-600 text-sm">{special.description}</p>
                         </li>
                       ))}
                     </ul>

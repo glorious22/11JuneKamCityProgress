@@ -28,41 +28,41 @@ const Menu = () => {
       id: 1,
       category: "main",
       name: "Grilled Thomson",
-      description: "Well-seasoned grilled masabanker fish served with pap or rice and traditional veg.",
+      description: "Well-seasoned grilled fish served with pap or rice and a side of veg.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Grilled Thomson"
     },
     {
       id: 2,
       category: "main",
-      name: "Beef Stew",
-      description: "Light tomato and brinjal beef stew with pap or rice and veg.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Beef Stew"
-    },
-    {
-      id: 3,
-      category: "main",
-      name: "Grilled Chicken Quarter Leg",
-      description: "Tender quarter leg grilled and served with veg and starch.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Grilled Chicken Quarter Leg"
-    },
-    {
-      id: 4,
-      category: "main",
       name: "Fried Thomson",
-      description: "Fried masabanker fish, seasoned and served traditionally.",
+      description: "Crispy fried Thomson fish with pap or rice and traditional veg.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Fried Thomson"
     },
     {
-      id: 5,
+      id: 3,
+      category: "main",
+      name: "Beef Stew",
+      description: "Classic African-style beef in a tomato and brinjal sauce.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Beef Stew"
+    },
+    {
+      id: 4,
       category: "main",
       name: "Grilled Pork Chops",
-      description: "Juicy pork chops with rice or pap and veg.",
+      description: "Succulent pork grilled and paired with your choice of side.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Grilled Pork Chops"
+    },
+    {
+      id: 5,
+      category: "main",
+      name: "Grilled Chicken Quarter Leg",
+      description: "Juicy quarter chicken grilled and served with pap or rice.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Grilled Chicken Quarter Leg"
     },
 
     // Sides
@@ -70,25 +70,25 @@ const Menu = () => {
       id: 6,
       category: "sides",
       name: "Portion Pap",
-      description: "Soft white pap served warm.",
+      description: "Traditional pap served in a hearty portion.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Portion Pap"
     },
     {
       id: 7,
       category: "sides",
-      name: "Portion Rice",
-      description: "Long-grain rice.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Portion Rice"
+      name: "Shikwanga (Sour Pap)",
+      description: "Fermented cassava for an authentic taste.",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Shikwanga"
     },
     {
       id: 8,
       category: "sides",
-      name: "Shikwanga",
-      description: "Traditional sour pap (fermented).",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Shikwanga"
+      name: "Portion Rice",
+      description: "Soft, fluffy rice perfect with any dish.",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Portion Rice"
     },
 
     // Vegetable Sides
@@ -96,7 +96,7 @@ const Menu = () => {
       id: 9,
       category: "vegetable-sides",
       name: "Cassava Leaves (Pondu)",
-      description: "Traditional cassava leaves cooked with authentic spices.",
+      description: "Stewed cassava leaves with spices.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Cassava Leaves"
     },
@@ -104,76 +104,76 @@ const Menu = () => {
       id: 10,
       category: "vegetable-sides",
       name: "Sweet Potato Leaves (Matembele)",
-      description: "Nutritious sweet potato leaves prepared traditionally.",
+      description: "Tender sweet potato leaves sautéed in traditional style.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Matembele"
     },
     {
       id: 11,
       category: "vegetable-sides",
-      name: "Green Spinach Sauce",
-      description: "Fresh spinach prepared with light seasoning.",
+      name: "Ngai Ngai (Roselle Leaves)",
+      description: "Slightly sour greens packed with nutrients.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Green Spinach"
+      alt: "Kamalo City - Ngai Ngai"
     },
     {
       id: 12,
       category: "vegetable-sides",
-      name: "Ngai Ngai (Roselle Leaves)",
-      description: "Tangy roselle leaves with distinctive flavor.",
+      name: "Ndunda (Wild Spinach)",
+      description: "Bold-flavoured wild spinach, steamed to perfection.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Ngai Ngai"
+      alt: "Kamalo City - Ndunda"
     },
     {
       id: 13,
       category: "vegetable-sides",
       name: "Repu",
-      description: "Traditional leafy greens with robust taste.",
+      description: "Earthy green vegetable — a local favourite.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Repu"
     },
     {
       id: 14,
       category: "vegetable-sides",
-      name: "Ndunda (Wild Spinach)",
-      description: "Nutrient-rich wild spinach, a Congolese classic.",
+      name: "Green Spinach Sauce",
+      description: "Smooth, rich spinach-based traditional sauce.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Ndunda"
+      alt: "Kamalo City - Green Spinach"
     }
   ];
 
   // Daily specials data
   const dailySpecials = {
     monday: [
-      { name: "Fried Kapenta (Matemba) in light tomato sauce", description: "Traditional small fish in savory tomato sauce" },
-      { name: "Cooked Ngolo with green pepper sauce", description: "Catfish prepared with aromatic green pepper sauce" }
+      { name: "Fried Kapenta (Matemba)", description: "Fried small fish in a tomato sauce." },
+      { name: "Ngolo (Catfish)", description: "Tender catfish with light green pepper sauce." }
     ],
     tuesday: [
-      { name: "Cooked Pork Trotters", description: "Tender pork trotters slow-cooked to perfection" },
-      { name: "Fried Mabundu", description: "Traditional preparation of organ meat" },
-      { name: "Cooked Beans/Madesu", description: "Hearty beans cooked with traditional spices" }
+      { name: "Cooked Pork Trotters", description: "Tender pork trotters slow-cooked to perfection." },
+      { name: "Fried Mabundu", description: "Traditional preparation of organ meat." },
+      { name: "Cooked Beans/Madesu", description: "Hearty beans cooked with traditional spices." }
     ],
     wednesday: [
-      { name: "Fried Makayabu with Green Pepper Onion Relish", description: "Dried fish with fresh pepper and onion" },
-      { name: "Fried Tilapia", description: "Fresh tilapia fish, perfectly seasoned and fried" },
-      { name: "Fumbwa with Dry Fish", description: "Traditional wild spinach with dried fish" }
+      { name: "Fried Makayabu with Green Pepper Onion Relish", description: "Dried fish with fresh pepper and onion." },
+      { name: "Fried Tilapia", description: "Fresh tilapia fish, perfectly seasoned and fried." },
+      { name: "Fumbwa with Dry Fish", description: "Traditional wild spinach with dried fish." }
     ],
     thursday: [
-      { name: "Light Fried Pork Smock Ribs", description: "Tender pork ribs with light seasoning" },
-      { name: "Fried Mopane Worms (Mbinzo)", description: "Traditional protein-rich delicacy" },
-      { name: "Saka Madesu", description: "Cassava leaves cooked with beans" }
+      { name: "Light Fried Pork Smock Ribs", description: "Tender pork ribs with light seasoning." },
+      { name: "Fried Mopane Worms (Mbinzo)", description: "Traditional protein-rich delicacy." },
+      { name: "Saka Madesu", description: "Cassava leaves cooked with beans." }
     ],
     friday: [
-      { name: "Cooked Beef Trips (Mabumu)", description: "Traditional beef tripe preparation" },
-      { name: "Cooked Mukekuba in Light Tomato Sauce", description: "Fish cooked in aromatic tomato sauce" }
+      { name: "Cooked Beef Trips (Mabumu)", description: "Traditional beef tripe preparation." },
+      { name: "Cooked Mukekuba in Light Tomato Sauce", description: "Fish cooked in aromatic tomato sauce." }
     ],
     saturday: [
-      { name: "Egusi Soup", description: "Rich West African melon seed soup with deep, nutty flavors" },
-      { name: "Cooked Beef Trips (Mabumu)", description: "Traditional beef tripe preparation" }
+      { name: "Egusi Soup", description: "Rich West African melon seed soup with deep, nutty flavors." },
+      { name: "Cooked Beef Trips (Mabumu)", description: "Traditional beef tripe preparation." }
     ],
     sunday: [
-      { name: "Mutu Ya Ntaba (Goat Head in Hot Sauce)", description: "Traditional goat head preparation in spicy sauce" },
-      { name: "Liboke Ya Ngolo (Cut Fish)", description: "Fish prepared in traditional banana leaf style" }
+      { name: "Mutu Ya Ntaba (Goat Head in Hot Sauce)", description: "Traditional goat head preparation in spicy sauce." },
+      { name: "Liboke Ya Ngolo (Cut Fish)", description: "Fish prepared in traditional banana leaf style." }
     ]
   };
 
@@ -209,15 +209,6 @@ const Menu = () => {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
               Authentic African cuisine crafted with traditional recipes and bold flavors
-            </p>
-          </div>
-
-          {/* Pricing Information Box */}
-          <div className="bg-white rounded-lg p-6 text-center mb-8 max-w-4xl mx-auto">
-            <p className="text-gray-800 mb-2"><strong>All Daily Specials are R80 with pap or R90 with rice</strong></p>
-            <p className="text-gray-800 mb-2"><strong>All Vegetable Sides are R40 each</strong></p>
-            <p className="text-gray-600 text-sm">
-              <em>*Note: Uber Eats prices may differ from in-restaurant pricing.</em>
             </p>
           </div>
 
@@ -265,29 +256,42 @@ const Menu = () => {
             </Button>
           </div>
 
-          {/* Category Header */}
+          {/* Category Header with Pricing Info */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               {getCategoryDisplayName(activeFilter)}
             </h2>
+            
+            {/* Pricing Information */}
             {activeFilter === "main" && (
-              <p className="text-lg text-gray-300">Served with pap or rice and traditional vegetables</p>
+              <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto">
+                <p className="text-gray-800 font-bold">Dishes served with pap (R80) or rice (R90).</p>
+              </div>
             )}
+            
+            {activeFilter === "sides" && (
+              <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto">
+                <p className="text-gray-800 font-bold">Add any side to complete your meal.</p>
+              </div>
+            )}
+            
             {activeFilter === "vegetable-sides" && (
-              <p className="text-lg text-gray-300">All vegetable sides are R40 each</p>
+              <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto">
+                <p className="text-gray-800 font-bold">All vegetables are R40. Choose your favourite traditional side.</p>
+              </div>
+            )}
+            
+            {activeFilter === "daily-specials" && (
+              <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto">
+                <p className="text-gray-800 font-bold">All Daily Specials are R80 with pap or R90 with rice.</p>
+                <p className="text-kamalo-gold text-sm mt-2 font-semibold">*Today's Specials are shown first when you click Daily Specials.*</p>
+              </div>
             )}
           </div>
 
           {/* Daily Specials Full Week Display */}
           {activeFilter === "daily-specials" && (
             <div className="mb-8">
-              <div className="bg-white rounded-lg p-4 text-center mb-8">
-                <p className="text-gray-800 font-bold">Daily Specials: R80 with pap / R90 with rice</p>
-                <p className="text-gray-600 text-sm mt-2">
-                  <em>*Uber Eats prices may differ from in-restaurant pricing.</em>
-                </p>
-              </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {Object.entries(dailySpecials).map(([day, specials]) => (
                   <div 
@@ -303,14 +307,14 @@ const Menu = () => {
                     }`}>
                       {getDayName(day)} {day === currentDay && '(Today)'}
                     </h4>
-                    <ul className="space-y-3">
+                    <div className="space-y-3">
                       {specials.map((special, index) => (
-                        <li key={index} className="border-l-4 border-kamalo-red pl-4">
-                          <h5 className="text-lg font-semibold text-gray-800">{special.name}</h5>
+                        <div key={index} className="bg-gray-50 rounded-lg p-4 border-l-4 border-kamalo-red">
+                          <h5 className="text-lg font-semibold text-gray-800 mb-1">{special.name}</h5>
                           <p className="text-gray-600 text-sm">{special.description}</p>
-                        </li>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -319,7 +323,7 @@ const Menu = () => {
 
           {/* Regular Menu Items - White Block Cards */}
           {activeFilter !== "daily-specials" && (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {filteredItems.map((item) => (
                 <div 
                   key={item.id} 
@@ -334,9 +338,9 @@ const Menu = () => {
                     />
                   </div>
                   
-                  <div className="p-4">
-                    <h3 className="text-lg font-bold text-gray-800 mb-2">{item.name}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-800 mb-3">{item.name}</h3>
+                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               ))}

@@ -44,7 +44,7 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* Clean background overlay without patterns */}
+      {/* Clean background overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">

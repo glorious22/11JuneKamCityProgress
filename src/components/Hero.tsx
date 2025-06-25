@@ -44,8 +44,8 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* Background overlay with African pattern */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90 african-pattern"></div>
+      {/* Clean background overlay without patterns */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -82,7 +82,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Simple scroll indicator */}
       <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-white/50 rounded-full flex justify-center">
           <div className="w-1 h-2 md:h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>

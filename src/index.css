@@ -387,6 +387,20 @@
     100% { box-shadow: 0 0 0 0 rgba(139, 0, 0, 0); }
   }
 
+  /* Daily specials cards */
+  .daily-card {
+    transition: all 0.3s ease;
+  }
+
+  .daily-card.highlighted {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { box-shadow: 0 0 10px rgba(139, 0, 0, 0.5); }
+    to { box-shadow: 0 0 20px rgba(139, 0, 0, 0.8); }
+  }
+
   /* Collapsible service details */
   .service-details {
     max-height: 0;

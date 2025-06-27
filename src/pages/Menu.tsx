@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [activeFilter, setActiveFilter] = useState("main");
-  const [currentDay, setCurrentDay] = useState("");
 
   useEffect(() => {
     document.title = "Menu - Kamalo City | Authentic African Cuisine";
@@ -14,11 +13,6 @@ const Menu = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Explore our authentic African menu featuring traditional dishes, grilled meats, stews, and vegetable sides at Kamalo City in Cape Town.');
     }
-
-    // Get current day for daily specials
-    const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-    const today = new Date().getDay();
-    setCurrentDay(days[today]);
   }, []);
 
   // Complete menu items with all data provided
@@ -30,7 +24,8 @@ const Menu = () => {
       name: "Grilled Thomson",
       description: "Well-seasoned grilled fish served with pap or rice and a side of veg.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Grilled Thomson"
+      alt: "Kamalo City - Grilled Thomson",
+      tag: "⭐ Customer Favorite"
     },
     {
       id: 2,
@@ -46,7 +41,8 @@ const Menu = () => {
       name: "Beef Stew",
       description: "Classic African-style beef in a tomato and brinjal sauce.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Beef Stew"
+      alt: "Kamalo City - Beef Stew",
+      tag: "🔥 Chef's Pick"
     },
     {
       id: 4,
@@ -142,46 +138,219 @@ const Menu = () => {
     }
   ];
 
-  // Daily specials data
-  const dailySpecials = {
-    monday: [
-      { name: "Fried Kapenta (Matemba)", description: "Fried small fish in a tomato sauce." },
-      { name: "Ngolo (Catfish)", description: "Tender catfish with light green pepper sauce." }
-    ],
-    tuesday: [
-      { name: "Cooked Pork Trotters", description: "Tender pork trotters slow-cooked to perfection." },
-      { name: "Fried Mabundu", description: "Traditional preparation of organ meat." },
-      { name: "Cooked Beans/Madesu", description: "Hearty beans cooked with traditional spices." }
-    ],
-    wednesday: [
-      { name: "Fried Makayabu with Green Pepper Onion Relish", description: "Dried fish with fresh pepper and onion." },
-      { name: "Fried Tilapia", description: "Fresh tilapia fish, perfectly seasoned and fried." },
-      { name: "Fumbwa with Dry Fish", description: "Traditional wild spinach with dried fish." }
-    ],
-    thursday: [
-      { name: "Light Fried Pork Smock Ribs", description: "Tender pork ribs with light seasoning." },
-      { name: "Fried Mopane Worms (Mbinzo)", description: "Traditional protein-rich delicacy." },
-      { name: "Saka Madesu", description: "Cassava leaves cooked with beans." }
-    ],
-    friday: [
-      { name: "Cooked Beef Trips (Mabumu)", description: "Traditional beef tripe preparation." },
-      { name: "Cooked Mukekuba in Light Tomato Sauce", description: "Fish cooked in aromatic tomato sauce." }
-    ],
-    saturday: [
-      { name: "Egusi Soup", description: "Rich West African melon seed soup with deep, nutty flavors." },
-      { name: "Cooked Beef Trips (Mabumu)", description: "Traditional beef tripe preparation." }
-    ],
-    sunday: [
-      { name: "Mutu Ya Ntaba (Goat Head in Hot Sauce)", description: "Traditional goat head preparation in spicy sauce." },
-      { name: "Liboke Ya Ngolo (Cut Fish)", description: "Fish prepared in traditional banana leaf style." }
-    ]
-  };
+  // Daily specials data - individual dishes
+  const dailySpecials = [
+    // Monday
+    {
+      id: 15,
+      category: "daily-specials",
+      name: "Fried Kapenta (Matemba) in Light Tomato Sauce",
+      description: "Served with veg",
+      day: "Monday",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Fried Kapenta"
+    },
+    {
+      id: 16,
+      category: "daily-specials",
+      name: "Cooked Ngolo with Light Green Pepper Sauce",
+      description: "Served with veg",
+      day: "Monday",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Cooked Ngolo"
+    },
 
-  // Get today's specials for highlighting
-  const todaysSpecials = dailySpecials[currentDay as keyof typeof dailySpecials] || [];
+    // Tuesday
+    {
+      id: 17,
+      category: "daily-specials",
+      name: "Cooked Pork Trotters (Makoso)",
+      description: "Served with veg",
+      day: "Tuesday",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Pork Trotters"
+    },
+    {
+      id: 18,
+      category: "daily-specials",
+      name: "Fried Mabundu",
+      description: "Traditional preparation of organ meat",
+      day: "Tuesday",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Fried Mabundu"
+    },
+    {
+      id: 19,
+      category: "daily-specials",
+      name: "Cooked Beans (Madesu)",
+      description: "Traditional Congolese beans cooked in rich sauce",
+      day: "Tuesday",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Cooked Beans"
+    },
+    {
+      id: 20,
+      category: "daily-specials",
+      name: "Rougf",
+      description: "Fried seasoned meat cuts, classic Tuesday treat",
+      day: "Tuesday",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Rougf"
+    },
+
+    // Wednesday
+    {
+      id: 21,
+      category: "daily-specials",
+      name: "Fried Makayabu with Green Pepper Onion Relish",
+      description: "Fried salt fish with pepper onion relish",
+      day: "Wednesday",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Fried Makayabu"
+    },
+    {
+      id: 22,
+      category: "daily-specials",
+      name: "Fried Tilapia",
+      description: "Lightly seasoned tilapia, crispy fried",
+      day: "Wednesday",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Fried Tilapia",
+      tag: "⭐ Customer Favorite"
+    },
+    {
+      id: 23,
+      category: "daily-specials",
+      name: "Fumbwa with Dry Fish",
+      description: "Wild spinach in peanut sauce with dry fish",
+      day: "Wednesday",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Fumbwa"
+    },
+    {
+      id: 24,
+      category: "daily-specials",
+      name: "Peanut Butter Sauce with Dry Spinach",
+      description: "Dried spinach cooked in creamy peanut butter sauce",
+      day: "Wednesday",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Peanut Butter Sauce"
+    },
+
+    // Thursday
+    {
+      id: 25,
+      category: "daily-specials",
+      name: "Light Fried Pork Smock Ribs",
+      description: "Lightly fried smoky pork ribs, crispy outside, tender inside",
+      day: "Thursday",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Pork Smock Ribs"
+    },
+    {
+      id: 26,
+      category: "daily-specials",
+      name: "Slight Pinfried Mbinzo",
+      description: "Mopane worms pan-fried with light seasoning",
+      day: "Thursday",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Mbinzo"
+    },
+    {
+      id: 27,
+      category: "daily-specials",
+      name: "Mupanda Worms",
+      description: "Traditional protein-rich delicacy",
+      day: "Thursday",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Mupanda Worms"
+    },
+    {
+      id: 28,
+      category: "daily-specials",
+      name: "Saka Madesu",
+      description: "Beans and cassava leaves, rich in flavor",
+      day: "Thursday",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Saka Madesu"
+    },
+    {
+      id: 29,
+      category: "daily-specials",
+      name: "Cassava Leaves with Beans",
+      description: "Cassava leaves stewed with seasoned beans. Traditional Congolese favorite",
+      day: "Thursday",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Cassava Leaves with Beans"
+    },
+
+    // Friday
+    {
+      id: 30,
+      category: "daily-specials",
+      name: "Cooked Mukebuka Sauce",
+      description: "Mukebuka fish in a light tomato sauce",
+      day: "Friday",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Mukebuka Sauce"
+    },
+    {
+      id: 31,
+      category: "daily-specials",
+      name: "Cooked Beef Trips (Mabumu)",
+      description: "Richly spiced beef tripe stew",
+      day: "Friday",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Beef Trips"
+    },
+
+    // Saturday
+    {
+      id: 32,
+      category: "daily-specials",
+      name: "Egusi Soup",
+      description: "Ground melon seed soup cooked with beef",
+      day: "Saturday",
+      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Egusi Soup",
+      tag: "🔥 Chef's Pick"
+    },
+    {
+      id: 33,
+      category: "daily-specials",
+      name: "Cooked Beef Trips (Mabumu)",
+      description: "Rich beef tripe stew",
+      day: "Saturday",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Beef Trips Saturday"
+    },
+
+    // Sunday
+    {
+      id: 34,
+      category: "daily-specials",
+      name: "Liboke Ya Ngolo (Cat Fish)",
+      description: "Steamed catfish wrapped in banana leaves with traditional spices",
+      day: "Sunday",
+      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Liboke Ya Ngolo"
+    },
+    {
+      id: 35,
+      category: "daily-specials",
+      name: "Mutu Ya Ntaba (Goat Head in Hot Sauce)",
+      description: "Spicy goat head stew served the traditional way",
+      day: "Sunday",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Kamalo City - Mutu Ya Ntaba",
+      tag: "⭐ Customer Favorite"
+    }
+  ];
 
   // Filter items based on active filter
-  const filteredItems = menuItems.filter(item => item.category === activeFilter);
+  const filteredItems = activeFilter === "daily-specials" 
+    ? dailySpecials 
+    : menuItems.filter(item => item.category === activeFilter);
 
   const getCategoryDisplayName = (category: string) => {
     switch (category) {
@@ -191,10 +360,6 @@ const Menu = () => {
       case "daily-specials": return "Daily Specials";
       default: return category;
     }
-  };
-
-  const getDayName = (day: string) => {
-    return day.charAt(0).toUpperCase() + day.slice(1);
   };
 
   return (
@@ -262,7 +427,19 @@ const Menu = () => {
               {getCategoryDisplayName(activeFilter)}
             </h2>
             
-            {/* Pricing Information */}
+            {/* Daily Specials specific header */}
+            {activeFilter === "daily-specials" && (
+              <div className="mb-8">
+                <p className="text-lg text-gray-300 mb-4">
+                  <em>(Note: Uber Eats prices are higher than in-restaurant prices.)</em>
+                </p>
+                <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto">
+                  <p className="text-gray-800 font-bold">All Daily Specials are R80 with pap or R90 with rice.</p>
+                </div>
+              </div>
+            )}
+            
+            {/* Pricing Information for other sections */}
             {activeFilter === "main" && (
               <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto">
                 <p className="text-gray-800 font-bold">Dishes served with pap (R80) or rice (R90).</p>
@@ -280,72 +457,45 @@ const Menu = () => {
                 <p className="text-gray-800 font-bold">All vegetables are R40. Choose your favourite traditional side.</p>
               </div>
             )}
-            
-            {activeFilter === "daily-specials" && (
-              <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto">
-                <p className="text-gray-800 font-bold">All Daily Specials are R80 with pap or R90 with rice.</p>
-                <p className="text-kamalo-gold text-sm mt-2 font-semibold">*Today's Specials are shown first when you click Daily Specials.*</p>
-              </div>
-            )}
           </div>
 
-          {/* Daily Specials Full Week Display */}
-          {activeFilter === "daily-specials" && (
-            <div className="mb-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {Object.entries(dailySpecials).map(([day, specials]) => (
-                  <div 
-                    key={day} 
-                    className={`bg-white rounded-lg p-6 shadow-lg transition-all duration-300 ${
-                      day === currentDay 
-                        ? 'ring-4 ring-kamalo-red ring-opacity-50 bg-red-50' 
-                        : 'hover:shadow-xl'
-                    }`}
-                  >
-                    <h4 className={`text-2xl font-bold mb-4 ${
-                      day === currentDay ? 'text-kamalo-red' : 'text-gray-800'
-                    }`}>
-                      {getDayName(day)} {day === currentDay && '(Today)'}
-                    </h4>
-                    <div className="space-y-3">
-                      {specials.map((special, index) => (
-                        <div key={index} className="bg-gray-50 rounded-lg p-4 border-l-4 border-kamalo-red">
-                          <h5 className="text-lg font-semibold text-gray-800 mb-1">{special.name}</h5>
-                          <p className="text-gray-600 text-sm">{special.description}</p>
-                        </div>
-                      ))}
-                    </div>
+          {/* Menu Items - White Block Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            {filteredItems.map((item) => (
+              <div 
+                key={item.id} 
+                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative"
+              >
+                {/* Day label for daily specials */}
+                {activeFilter === "daily-specials" && 'day' in item && (
+                  <div className="absolute top-3 right-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold z-10">
+                    {item.day}
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Regular Menu Items - White Block Cards */}
-          {activeFilter !== "daily-specials" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {filteredItems.map((item) => (
-                <div 
-                  key={item.id} 
-                  className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.alt}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">{item.name}</h3>
-                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
-                  </div>
+                )}
+                
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
-              ))}
-            </div>
-          )}
+                
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <h3 className="text-xl font-bold text-gray-800">{item.name}</h3>
+                    {item.tag && (
+                      <span className="bg-yellow-400 text-gray-800 text-xs px-2 py-1 rounded-full font-bold">
+                        {item.tag}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
 
           {/* Bottom CTA Section */}
           <div className="text-center">

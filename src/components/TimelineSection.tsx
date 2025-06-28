@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Utensils, Home, Music, Sparkles, Heart } from "lucide-react";
+import { Utensils, Home, Music, Sparkles } from "lucide-react";
 
 const TimelineSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,27 +22,21 @@ const TimelineSection = () => {
 
   const timelineEvents = [
     {
-      icon: Heart,
-      title: "Rebirth from Rubble",
-      description: "The building was rundown and abandoned. The Kamalo City vision was born — construction began on a dream of an authentic African restaurant.",
-      year: "2022"
-    },
-    {
       icon: Home,
-      title: "Grand Opening",
-      description: "The restaurant officially opened, serving traditional African meals. Locals and food lovers quickly embraced Kamalo as a hotspot for both food and connection.",
+      title: "Rebuilt and Opened",
+      description: "From abandoned space to cultural hotspot — Kamalo City opened its doors with a vision of authentic African dining.",
       year: "2023"
     },
     {
       icon: Music,
-      title: "Expansion & Events",
-      description: "Kamalo City grew into a full experience: live music, event hosting, birthday parties, and private dining. The restaurant also introduced barber services, hookah, and perfumes.",
+      title: "Launched Events and Live Entertainment",
+      description: "Expanded with weekend entertainment, private event hosting, and additional lifestyle services including barbershop and hookah.",
       year: "2024"
     },
     {
       icon: Sparkles,
-      title: "Culture Meets Lifestyle",
-      description: "Kamalo City continues evolving — serving not just food, but culture, legacy, and lifestyle. It has become a Cape Town staple for locals, visitors, and the African diaspora.",
+      title: "Became Top Destination",
+      description: "Established as Cape Town's premier African dining and entertainment venue, beloved by locals and visitors alike.",
       year: "2025"
     }
   ];
@@ -51,11 +45,12 @@ const TimelineSection = () => {
     <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-b from-black to-kamalo-dark">
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
             Our <span className="text-kamalo-red">Journey</span>
           </h2>
+          <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From vision to reality, discover the milestones that shaped Kamalo City into Cape Town's premier African dining destination.
+            From vision to reality, discover the milestones that shaped Kamalo City.
           </p>
         </div>
 
@@ -76,7 +71,7 @@ const TimelineSection = () => {
                   }`}
                 >
                   <div className={`w-5/12 ${isLeft ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                    <div className="bg-black/50 rounded-lg p-6 border border-gray-800 hover:border-kamalo-red transition-colors">
+                    <div className="timeline-item">
                       <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'justify-end' : 'justify-start'}`}>
                         <IconComponent className="w-6 h-6 text-kamalo-red" />
                         <span className="text-kamalo-gold font-bold text-lg timeline-year">{event.year}</span>
@@ -107,14 +102,12 @@ const TimelineSection = () => {
                     isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
                   }`}
                 >
-                  <div className="bg-black/50 rounded-lg p-6 border border-gray-800 hover:border-kamalo-red transition-colors">
-                    <div className="flex items-center gap-3 mb-3">
-                      <IconComponent className="w-6 h-6 text-kamalo-red" />
-                      <span className="text-kamalo-gold font-bold text-lg timeline-year">{event.year}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
-                    <p className="text-gray-300">{event.description}</p>
+                  <div className="flex items-center gap-3 mb-3">
+                    <IconComponent className="w-6 h-6 text-kamalo-red" />
+                    <span className="text-kamalo-gold font-bold text-lg timeline-year">{event.year}</span>
                   </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
+                  <p className="text-gray-300">{event.description}</p>
                 </div>
               );
             })}

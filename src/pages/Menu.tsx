@@ -42,7 +42,7 @@ const Menu = () => {
       description: "Classic African-style beef in a tomato and brinjal sauce.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Beef Stew",
-      tag: "🌟 Customer Favourite"
+      tag: "🔥 Chef's Pick"
     },
     {
       id: 4,
@@ -218,7 +218,7 @@ const Menu = () => {
       day: "Wednesday",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Fried Tilapia",
-      tag: "🌟 Customer Favourite"
+      tag: "⭐ Customer Favorite"
     },
     {
       id: 23,
@@ -344,7 +344,8 @@ const Menu = () => {
       description: "Spicy goat head stew served the traditional way",
       day: "Sunday",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Mutu Ya Ntaba"
+      alt: "Kamalo City - Mutu Ya Ntaba",
+      tag: "⭐ Customer Favorite"
     }
   ];
 
@@ -364,16 +365,25 @@ const Menu = () => {
   };
 
   return (
-    <div className="min-h-screen bg-kamalo-dark text-white">
+    <div className="min-h-screen bg-kamalo-cream text-gray-800">
       <Navbar />
-      <main className="pt-20 px-4 pb-12" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+      <main className="pt-20 px-4 pb-12 tribal-pattern">
         <div className="max-w-7xl mx-auto">
+          {/* Pricing Info Block - Top of Page */}
+          <div className="pricing-info max-w-4xl mx-auto mb-12">
+            <h2 className="text-2xl font-bold text-kamalo-red mb-4">Menu Pricing Information</h2>
+            <p><strong>All Daily Specials are R80 with pap or R90 with rice</strong></p>
+            <p><strong>All Vegetable Sides are R40</strong></p>
+            <p className="note">*Note: In-restaurant prices differ from Uber Eats pricing.</p>
+          </div>
+
           {/* Header Section */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif">
               Explore Our <span className="text-kamalo-red">Menu</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
               Authentic African cuisine crafted with traditional recipes and bold flavors
             </p>
           </div>
@@ -385,7 +395,7 @@ const Menu = () => {
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold ${
                 activeFilter === "main" 
                   ? "bg-kamalo-red text-white" 
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
               }`}
             >
               Main Dishes
@@ -395,7 +405,7 @@ const Menu = () => {
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold ${
                 activeFilter === "sides" 
                   ? "bg-kamalo-red text-white" 
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
               }`}
             >
               Sides
@@ -405,7 +415,7 @@ const Menu = () => {
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold ${
                 activeFilter === "vegetable-sides" 
                   ? "bg-kamalo-red text-white" 
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
               }`}
             >
               Vegetable Sides
@@ -415,16 +425,16 @@ const Menu = () => {
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold ${
                 activeFilter === "daily-specials" 
                   ? "bg-kamalo-red text-white" 
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
               }`}
             >
               Daily Specials
             </Button>
           </div>
 
-          {/* Category Header with Pricing Info */}
+          {/* Category Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-serif">
               {getCategoryDisplayName(activeFilter)}
             </h2>
             <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
@@ -432,85 +442,44 @@ const Menu = () => {
             {/* Daily Specials specific header */}
             {activeFilter === "daily-specials" && (
               <div className="mb-8">
-                <p className="text-lg text-gray-300 mb-4">
+                <p className="text-lg text-gray-600 mb-4">
                   <em>(Note: Uber Eats prices are higher than in-restaurant prices.)</em>
                 </p>
-                <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto">
+                <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto border border-kamalo-gold">
                   <p className="text-gray-800 font-bold">All Daily Specials are R80 with pap or R90 with rice.</p>
                 </div>
               </div>
             )}
-            
-            {/* Pricing Information for other sections */}
-            {activeFilter === "main" && (
-              <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto">
-                <p className="text-gray-800 font-bold">Dishes served with pap (R80) or rice (R90).</p>
-              </div>
-            )}
-            
-            {activeFilter === "sides" && (
-              <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto">
-                <p className="text-gray-800 font-bold">Add any side to complete your meal.</p>
-              </div>
-            )}
-            
-            {activeFilter === "vegetable-sides" && (
-              <div className="bg-white rounded-lg p-4 text-center mb-8 max-w-2xl mx-auto">
-                <p className="text-gray-800 font-bold">All vegetables are R40. Choose your favourite traditional side.</p>
-              </div>
-            )}
           </div>
 
-          {/* Menu Items - White Block Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12" style={{ gap: '24px' }}>
+          {/* Menu Items - Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {filteredItems.map((item) => (
               <div 
                 key={item.id} 
-                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative"
-                style={{ borderRadius: '12px' }}
+                className="dish-card relative scroll-reveal"
               >
                 {/* Day label for daily specials */}
                 {activeFilter === "daily-specials" && 'day' in item && (
-                  <div 
-                    className="absolute top-3 right-3 z-10"
-                    style={{
-                      backgroundColor: '#FFD700',
-                      color: '#2C2C2C',
-                      fontSize: '0.75rem',
-                      padding: '4px 10px',
-                      borderRadius: '999px',
-                      fontWeight: '600'
-                    }}
-                  >
+                  <div className="day-label">
                     {item.day}
                   </div>
                 )}
                 
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden rounded-lg mb-4">
                   <img
                     src={item.image}
                     alt={item.alt}
                     className="w-full h-full object-cover"
-                    style={{ objectFit: 'cover' }}
                     loading="lazy"
                   />
                 </div>
                 
-                <div className="p-6">
+                <div>
                   <div className="flex items-center gap-2 mb-3">
                     <h3 className="text-xl font-bold text-gray-800">{item.name}</h3>
                     {item.tag && (
-                      <span 
-                        style={{
-                          backgroundColor: '#FFD700',
-                          color: '#2C2C2C',
-                          fontSize: '0.75rem',
-                          padding: '2px 8px',
-                          borderRadius: '999px',
-                          marginLeft: '6px',
-                          fontWeight: 'bold'
-                        }}
-                      >
+                      <span className="dish-tag">
                         {item.tag}
                       </span>
                     )}
@@ -523,29 +492,32 @@ const Menu = () => {
 
           {/* Bottom CTA Section */}
           <div className="text-center">
-            <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <div className="bg-white rounded-lg p-8 border border-gray-300 shadow-lg">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-serif">
                 Ready to <span className="text-kamalo-red">Try It for Yourself</span>?
               </h2>
-              <p className="text-gray-300 mb-6 text-lg">
+              <p className="text-gray-600 mb-6 text-lg">
                 Experience authentic African cuisine and traditional flavors at Kamalo City in Cape Town.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <Button className="btn-primary">
-                  <Link to="/reservations">Book a Table</Link>
-                </Button>
-                <Button className="btn-ghost">
-                  <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer">
-                    Order via WhatsApp
-                  </a>
-                </Button>
+                <Link to="/reservations" className="btn-primary">
+                  Book a Table
+                </Link>
+                <a 
+                  href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-ghost"
+                >
+                  Order via WhatsApp
+                </a>
               </div>
             </div>
           </div>
 
           {/* Final Disclaimer */}
           <div className="text-center mt-8">
-            <p className="text-gray-400 italic text-sm">
+            <p className="text-gray-500 italic text-sm">
               *Note: In-restaurant prices differ from Uber Eats pricing.
             </p>
           </div>

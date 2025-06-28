@@ -24,7 +24,7 @@ const Hero = () => {
   }, [heroImages.length]);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background image carousel */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
@@ -44,19 +44,19 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* Clean background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90"></div>
+      {/* Tribal pattern overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90 tribal-pattern"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '80px' }}>
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight font-serif">
             Kamalo City – <span className="text-kamalo-red">Africa's Heart</span> in Cape Town
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl text-kamalo-gold mb-4 md:mb-6 font-serif italic leading-relaxed">
-            Where rich African heritage meets unforgettable flavor
+            A taste of Africa. A story in every bite.
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
-            Come for the taste — stay for the vibe. Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof in Goodwood, Cape Town.
+            Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof in Goodwood, Cape Town.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8 px-4">

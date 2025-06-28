@@ -20,9 +20,12 @@ export default {
     extend: {
       colors: {
         kamalo: {
-          red: "#8B0000", // Deep red primary color
+          red: "#7B1E1E", // Updated primary maroon color
           dark: "#1A1F2C",
           gold: "#FFD700",
+          green: "#28A745",
+          orange: "#CC5500",
+          cream: "#FAF3EB",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -64,7 +67,22 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        sans: ['Lato', 'system-ui', 'sans-serif'],
+        serif: ['Montserrat', 'Georgia', 'serif'],
+      },
+      animation: {
+        'fade-up': 'fadeUp 0.6s ease-out',
+        'scale-in': 'scaleIn 0.3s ease-out',
+      },
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.9)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
       },
     },
   },

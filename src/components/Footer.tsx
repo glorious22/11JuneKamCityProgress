@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-12 md:py-16">
+    <footer className="bg-black text-white py-12 md:py-16 footer-tribal">
       <div className="site-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 text-center md:text-left">
           {/* Logo & Bio */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-kamalo-gold">Kamalo City</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-kamalo-gold font-serif">Kamalo City</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Where rich African heritage meets unforgettable flavor. Come for the taste — stay for the vibe.
             </p>
@@ -24,7 +24,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red">Quick Links</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red font-serif">Quick Links</h3>
             <div className="space-y-3 text-base">
               <Link to="/" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Home</Link>
               <Link to="/menu" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Menu</Link>
@@ -37,7 +37,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red">Contact Info</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red font-serif">Contact Info</h3>
             <div className="space-y-3 text-base">
               <div className="flex items-center justify-center md:justify-start space-x-3">
                 <Phone className="w-5 h-5 text-kamalo-red flex-shrink-0" />
@@ -65,6 +65,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-pink-500 hover:text-pink-400 transition-colors touch-manipulation"
+                  aria-label="Follow us on Instagram"
                 >
                   <Instagram className="w-8 h-8" />
                 </a>
@@ -73,6 +74,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-500 hover:text-green-400 transition-colors touch-manipulation"
+                  aria-label="Join our WhatsApp group"
                 >
                   <MessageCircle className="w-8 h-8" />
                 </a>
@@ -96,6 +98,28 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Structured Data for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          "name": "Kamalo City",
+          "description": "Authentic African cuisine and entertainment venue in Cape Town",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "90 Voortrekker Road",
+            "addressLocality": "Goodwood",
+            "addressRegion": "Western Cape",
+            "addressCountry": "South Africa"
+          },
+          "telephone": "+27731598909",
+          "openingHours": "Mo-Su 11:00-23:00",
+          "servesCuisine": "African",
+          "priceRange": "$$",
+          "url": "https://kamalocity.co.za"
+        })}
+      </script>
     </footer>
   );
 };

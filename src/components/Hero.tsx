@@ -44,8 +44,8 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* Tribal pattern overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90 tribal-pattern"></div>
+      {/* Clean background overlay - removed tribal pattern */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '80px' }}>
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>

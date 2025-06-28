@@ -42,7 +42,7 @@ const Menu = () => {
       description: "Classic African-style beef in a tomato and brinjal sauce.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Beef Stew",
-      tag: "🔥 Chef's Pick"
+      tag: "🌟 Customer Favourite"
     },
     {
       id: 4,
@@ -58,7 +58,8 @@ const Menu = () => {
       name: "Grilled Chicken Quarter Leg",
       description: "Juicy quarter chicken grilled and served with pap or rice.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Grilled Chicken Quarter Leg"
+      alt: "Kamalo City - Grilled Chicken Quarter Leg",
+      tag: "🔥 Most Popular"
     },
 
     // Sides
@@ -148,7 +149,8 @@ const Menu = () => {
       description: "Served with veg",
       day: "Monday",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Fried Kapenta"
+      alt: "Kamalo City - Fried Kapenta",
+      tag: "✅ Chef's Recommendation"
     },
     {
       id: 16,
@@ -216,7 +218,7 @@ const Menu = () => {
       day: "Wednesday",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Fried Tilapia",
-      tag: "⭐ Customer Favorite"
+      tag: "🌟 Customer Favourite"
     },
     {
       id: 23,
@@ -313,7 +315,7 @@ const Menu = () => {
       day: "Saturday",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Kamalo City - Egusi Soup",
-      tag: "🔥 Chef's Pick"
+      tag: "🔥 Most Popular"
     },
     {
       id: 33,
@@ -342,8 +344,7 @@ const Menu = () => {
       description: "Spicy goat head stew served the traditional way",
       day: "Sunday",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Kamalo City - Mutu Ya Ntaba",
-      tag: "⭐ Customer Favorite"
+      alt: "Kamalo City - Mutu Ya Ntaba"
     }
   ];
 
@@ -365,7 +366,7 @@ const Menu = () => {
   return (
     <div className="min-h-screen bg-kamalo-dark text-white">
       <Navbar />
-      <main className="pt-20 px-4 pb-12">
+      <main className="pt-20 px-4 pb-12" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-12">
@@ -426,6 +427,7 @@ const Menu = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               {getCategoryDisplayName(activeFilter)}
             </h2>
+            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
             
             {/* Daily Specials specific header */}
             {activeFilter === "daily-specials" && (
@@ -460,15 +462,26 @@ const Menu = () => {
           </div>
 
           {/* Menu Items - White Block Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12" style={{ gap: '24px' }}>
             {filteredItems.map((item) => (
               <div 
                 key={item.id} 
                 className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative"
+                style={{ borderRadius: '12px' }}
               >
                 {/* Day label for daily specials */}
                 {activeFilter === "daily-specials" && 'day' in item && (
-                  <div className="absolute top-3 right-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold z-10">
+                  <div 
+                    className="absolute top-3 right-3 z-10"
+                    style={{
+                      backgroundColor: '#FFD700',
+                      color: '#2C2C2C',
+                      fontSize: '0.75rem',
+                      padding: '4px 10px',
+                      borderRadius: '999px',
+                      fontWeight: '600'
+                    }}
+                  >
                     {item.day}
                   </div>
                 )}
@@ -478,6 +491,7 @@ const Menu = () => {
                     src={item.image}
                     alt={item.alt}
                     className="w-full h-full object-cover"
+                    style={{ objectFit: 'cover' }}
                     loading="lazy"
                   />
                 </div>
@@ -486,7 +500,17 @@ const Menu = () => {
                   <div className="flex items-center gap-2 mb-3">
                     <h3 className="text-xl font-bold text-gray-800">{item.name}</h3>
                     {item.tag && (
-                      <span className="bg-yellow-400 text-gray-800 text-xs px-2 py-1 rounded-full font-bold">
+                      <span 
+                        style={{
+                          backgroundColor: '#FFD700',
+                          color: '#2C2C2C',
+                          fontSize: '0.75rem',
+                          padding: '2px 8px',
+                          borderRadius: '999px',
+                          marginLeft: '6px',
+                          fontWeight: 'bold'
+                        }}
+                      >
                         {item.tag}
                       </span>
                     )}
@@ -517,6 +541,13 @@ const Menu = () => {
                 </Button>
               </div>
             </div>
+          </div>
+
+          {/* Final Disclaimer */}
+          <div className="text-center mt-8">
+            <p className="text-gray-400 italic text-sm">
+              *Note: In-restaurant prices differ from Uber Eats pricing.
+            </p>
           </div>
         </div>
       </main>

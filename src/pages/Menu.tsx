@@ -15,7 +15,7 @@ const Menu = () => {
     }
   }, []);
 
-  // Complete menu items with all data provided
+  // Complete menu items with authentic Flickr images
   const menuItems = [
     // Main Dishes
     {
@@ -23,7 +23,7 @@ const Menu = () => {
       category: "main",
       name: "Grilled Thomson",
       description: "Well-seasoned grilled fish served with pap or rice and a side of traditional vegetables.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597433763_939cd52ca4_c.jpg",
       alt: "Kamalo City - Grilled Thomson",
       tag: "⭐ Customer Favorite"
     },
@@ -32,7 +32,7 @@ const Menu = () => {
       category: "main",
       name: "Fried Thomson",
       description: "Crispy fried Thomson fish with pap or rice and traditional vegetables.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597433763_939cd52ca4_c.jpg",
       alt: "Kamalo City - Fried Thomson"
     },
     {
@@ -49,7 +49,7 @@ const Menu = () => {
       category: "main",
       name: "Grilled Pork Chops",
       description: "Succulent pork grilled to perfection and paired with your choice of side.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597531350_4a42d68b4b_c.jpg",
       alt: "Kamalo City - Grilled Pork Chops"
     },
     {
@@ -68,7 +68,7 @@ const Menu = () => {
       category: "sides",
       name: "Portion Pap",
       description: "Traditional pap served in a hearty portion, perfect with any dish.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54575491336_19b4c1f9b5_c.jpg",
       alt: "Kamalo City - Portion Pap"
     },
     {
@@ -76,7 +76,7 @@ const Menu = () => {
       category: "sides",
       name: "Shikwanga (Sour Pap)",
       description: "Fermented cassava for an authentic traditional taste experience.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54575695344_661a80be0d_c.jpg",
       alt: "Kamalo City - Shikwanga"
     },
     {
@@ -134,12 +134,12 @@ const Menu = () => {
       category: "vegetable-sides",
       name: "Green Spinach Sauce",
       description: "Smooth, rich spinach-based traditional sauce.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54574632582_07c0a392a4_c.jpg",
       alt: "Kamalo City - Green Spinach"
     }
   ];
 
-  // Daily specials data - individual dishes
+  // Daily specials data with authentic Flickr images
   const dailySpecials = [
     // Monday
     {
@@ -158,7 +158,7 @@ const Menu = () => {
       name: "Cooked Ngolo with Light Green Pepper Sauce",
       description: "Catfish cooked with light green pepper sauce, served with vegetables.",
       day: "Monday",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54575880180_28fbf65f2c_c.jpg",
       alt: "Kamalo City - Cooked Ngolo"
     },
 
@@ -187,7 +187,7 @@ const Menu = () => {
       name: "Cooked Beans (Madesu)",
       description: "Traditional Congolese beans cooked in rich, flavorful sauce.",
       day: "Tuesday",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597514875_cea4fd204a_c.jpg",
       alt: "Kamalo City - Cooked Beans"
     },
     {
@@ -216,7 +216,7 @@ const Menu = () => {
       name: "Fried Tilapia",
       description: "Lightly seasoned tilapia, crispy fried to golden perfection.",
       day: "Wednesday",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597519455_cd8dd45ce7_c.jpg",
       alt: "Kamalo City - Fried Tilapia",
       tag: "⭐ Customer Favorite"
     },
@@ -264,7 +264,7 @@ const Menu = () => {
       name: "Mupanda Worms",
       description: "Traditional protein-rich delicacy prepared with care.",
       day: "Thursday",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597424033_290a663f5e_c.jpg",
       alt: "Kamalo City - Mupanda Worms"
     },
     {
@@ -273,7 +273,7 @@ const Menu = () => {
       name: "Saka Madesu",
       description: "Beans and cassava leaves, rich in flavor and tradition.",
       day: "Thursday",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597519365_372da75c04_c.jpg",
       alt: "Kamalo City - Saka Madesu"
     },
     {
@@ -282,7 +282,7 @@ const Menu = () => {
       name: "Cassava Leaves with Beans",
       description: "Cassava leaves stewed with seasoned beans, a traditional Congolese favorite.",
       day: "Thursday",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597519365_372da75c04_c.jpg",
       alt: "Kamalo City - Cassava Leaves with Beans"
     },
 
@@ -313,7 +313,7 @@ const Menu = () => {
       name: "Egusi Soup",
       description: "Ground melon seed soup cooked with beef, a weekend favorite.",
       day: "Saturday",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597416804_c3e1b0acc7_c.jpg",
       alt: "Kamalo City - Egusi Soup",
       tag: "🔥 Most Popular"
     },
@@ -334,7 +334,7 @@ const Menu = () => {
       name: "Liboke Ya Ngolo (Cat Fish)",
       description: "Steamed catfish wrapped in banana leaves with traditional spices.",
       day: "Sunday",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54575880180_28fbf65f2c_c.jpg",
       alt: "Kamalo City - Liboke Ya Ngolo"
     },
     {

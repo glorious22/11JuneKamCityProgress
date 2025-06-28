@@ -1,6 +1,7 @@
 import { Music, Users, Utensils, Wind } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import ScrollReveal from "./ScrollReveal";
 
 const ServicesPreview = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,63 +54,26 @@ const ServicesPreview = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-16 px-4 bg-gradient-to-b from-kamalo-dark to-black">
-      <div className="max-w-7xl mx-auto">
-        <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            More Than Just <span className="text-kamalo-red">Dining</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the complete Kamalo City experience with entertainment, events, and lifestyle services
-          </p>
-        </div>
-
-        <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {/* Mobile: Horizontal scroll */}
-          <div className="md:hidden">
-            <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory">
-              {services.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <div
-                    key={index}
-                    className="min-w-[280px] bg-black/50 rounded-lg overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-300 snap-start"
-                  >
-                    <div className="relative h-40 overflow-hidden">
-                      <img 
-                        src={service.image}
-                        alt={`Kamalo City - ${service.title}`}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-black/40"></div>
-                      <IconComponent className="absolute top-4 left-4 w-6 h-6 text-kamalo-red" />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                      <Link
-                        to={service.link}
-                        className="inline-block bg-kamalo-red text-white px-4 py-2 rounded-full hover:bg-red-600 transition-colors text-sm font-semibold"
-                      >
-                        Learn More
-                      </Link>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+    <section ref={sectionRef} className="section-spacing bg-gradient-to-b from-kamalo-dark to-black tribal-pattern">
+      <div className="max-w-7xl mx-auto px-4">
+        <ScrollReveal>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-serif">
+              More Than Just <span className="text-kamalo-red">Dining</span>
+            </h2>
+            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the complete Kamalo City experience with entertainment, events, and lifestyle services
+            </p>
           </div>
+        </ScrollReveal>
 
-          {/* Desktop: 2x2 grid */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
-            {services.map((service, index) => {
-              const IconComponent = service.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-black/50 rounded-lg overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-300 hover:scale-105 hover:shadow-lg group"
-                >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {services.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <ScrollReveal key={index} delay={index * 200}>
+                <div className="bg-black/50 rounded-lg overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-300 hover:scale-105 hover:shadow-lg group">
                   <div className="relative h-48 overflow-hidden">
                     <img 
                       src={service.image}
@@ -121,7 +85,7 @@ const ServicesPreview = () => {
                     <IconComponent className="absolute top-4 left-4 w-8 h-8 text-kamalo-red" />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-3 font-serif">{service.title}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
                     <Link
                       to={service.link}
@@ -131,19 +95,21 @@ const ServicesPreview = () => {
                     </Link>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </ScrollReveal>
+            );
+          })}
         </div>
 
-        <div className="text-center mt-12">
-          <Link
-            to="/services"
-            className="inline-block bg-transparent border-2 border-kamalo-red text-kamalo-red px-8 py-3 rounded-full hover:bg-kamalo-red hover:text-white transition-all duration-300 font-semibold hover:scale-105 hover:shadow-lg"
-          >
-            View All Services
-          </Link>
-        </div>
+        <ScrollReveal delay={600}>
+          <div className="text-center mt-12">
+            <Link
+              to="/services"
+              className="btn-ghost"
+            >
+              View All Services
+            </Link>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

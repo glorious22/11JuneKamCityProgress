@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ScrollReveal from "./ScrollReveal";
 
 const FAQ = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -57,18 +58,21 @@ const FAQ = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 px-6 bg-gradient-to-b from-black to-kamalo-dark">
-      <div className="container mx-auto max-w-4xl">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Frequently Asked <span className="text-kamalo-red">Questions</span>
-          </h2>
-          <p className="text-xl text-gray-300">
-            Everything you need to know about your Kamalo City experience
-          </p>
-        </div>
+    <section ref={sectionRef} className="section-spacing bg-gradient-to-b from-black to-kamalo-dark tribal-pattern">
+      <div className="container mx-auto max-w-4xl px-4">
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-serif">
+              Frequently Asked <span className="text-kamalo-red">Questions</span>
+            </h2>
+            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+            <p className="text-xl text-gray-300">
+              Everything you need to know about your Kamalo City experience
+            </p>
+          </div>
+        </ScrollReveal>
 
-        <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <ScrollReveal delay={300}>
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
@@ -85,7 +89,7 @@ const FAQ = () => {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

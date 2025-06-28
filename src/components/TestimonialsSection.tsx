@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 const TestimonialsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -27,13 +28,6 @@ const TestimonialsSection = () => {
       rating: 5,
       text: "The food is absolutely great and the service is 5-star 👌💯.",
       image: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=100"
-    },
-    {
-      name: "Kabareng Aubrey Moselelane",
-      type: "Dine In - Dinner",
-      rating: 5,
-      text: "Kid-friendliness: It's kids friendly.",
-      image: "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=100"
     },
     {
       name: "Baptiste Cibangu",
@@ -76,94 +70,99 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-16 px-4 bg-gradient-to-b from-kamalo-dark to-black">
+    <section ref={sectionRef} className="section-spacing bg-gradient-to-b from-kamalo-dark to-black">
       <div className="site-container">
-        <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            What Our <span className="text-kamalo-red">Customers Are Saying</span>
-          </h2>
-          <p className="text-xl text-gray-300">
-            Real experiences from our valued guests
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
+              What Our <span className="text-kamalo-red">Customers Are Saying</span>
+            </h2>
+            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+            <p className="text-xl text-gray-300">
+              Real experiences from our valued guests
+            </p>
+          </div>
+        </ScrollReveal>
 
-        <div className={`relative max-w-4xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="bg-black/50 rounded-lg p-8 border border-gray-800 min-h-[300px] flex items-center">
-            <div className="w-full text-center">
-              <div className="flex justify-center mb-4">
-                {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-kamalo-gold fill-current" />
-                ))}
-              </div>
-              
-              <blockquote className="text-xl md:text-2xl text-white mb-6 leading-relaxed">
-                "{testimonials[currentSlide].text}"
-              </blockquote>
-              
-              <div className="flex items-center justify-center gap-4">
-                <img
-                  src={testimonials[currentSlide].image}
-                  alt={`${testimonials[currentSlide].name} - Kamalo City customer`}
-                  className="w-16 h-16 rounded-full object-cover"
-                  loading="lazy"
-                />
-                <div>
-                  <p className="text-kamalo-red font-semibold text-lg">
-                    {testimonials[currentSlide].name}
-                  </p>
-                  <p className="text-gray-400 text-sm">{testimonials[currentSlide].type}</p>
+        <ScrollReveal delay={300}>
+          <div className="relative max-w-4xl mx-auto">
+            <div className="bg-black/50 rounded-lg p-8 border border-gray-800 min-h-[300px] flex items-center">
+              <div className="w-full text-center">
+                <div className="flex justify-center mb-4">
+                  {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 text-kamalo-gold fill-current" />
+                  ))}
+                </div>
+                
+                <blockquote className="text-xl md:text-2xl text-white mb-6 leading-relaxed">
+                  "{testimonials[currentSlide].text}"
+                </blockquote>
+                
+                <div className="flex items-center justify-center gap-4">
+                  <img
+                    src={testimonials[currentSlide].image}
+                    alt={`${testimonials[currentSlide].name} - Kamalo City customer`}
+                    className="w-16 h-16 rounded-full object-cover"
+                    loading="lazy"
+                  />
+                  <div>
+                    <p className="text-kamalo-red font-semibold text-lg">
+                      {testimonials[currentSlide].name}
+                    </p>
+                    <p className="text-gray-400 text-sm">{testimonials[currentSlide].type}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Desktop Navigation buttons */}
-          <div className="hidden md:block">
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
-
-          {/* Mobile Navigation buttons */}
-          <div className="carousel-arrows md:hidden">
-            <button
-              onClick={prevSlide}
-              className="carousel-arrow hover:bg-red-600 text-white transition-all duration-300"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            
-            <button
-              onClick={nextSlide}
-              className="carousel-arrow hover:bg-red-600 text-white transition-all duration-300"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
-
-          {/* Dots indicator */}
-          <div className="flex justify-center mt-6 gap-2">
-            {testimonials.map((_, index) => (
+            {/* Desktop Navigation buttons */}
+            <div className="hidden md:block">
               <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-kamalo-red' : 'bg-gray-600'
-                }`}
-              />
-            ))}
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Mobile Navigation buttons */}
+            <div className="carousel-arrows md:hidden">
+              <button
+                onClick={prevSlide}
+                className="carousel-arrow hover:bg-red-600 text-white transition-all duration-300"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              
+              <button
+                onClick={nextSlide}
+                className="carousel-arrow hover:bg-red-600 text-white transition-all duration-300"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Dots indicator */}
+            <div className="flex justify-center mt-6 gap-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-kamalo-red' : 'bg-gray-600'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

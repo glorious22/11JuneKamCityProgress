@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import ImageModal from "@/components/ImageModal";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState("food");
@@ -100,10 +101,10 @@ const Gallery = () => {
       alt: "Kamalo City - Weekend entertainment" 
     },
 
-    // Ambience Category
+    // Services Category
     { 
       id: 11, 
-      category: "ambience", 
+      category: "services", 
       title: "Restaurant Interior", 
       caption: "Warm, welcoming atmosphere that feels like home with authentic African décor",
       image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600", 
@@ -111,7 +112,7 @@ const Gallery = () => {
     },
     { 
       id: 12, 
-      category: "ambience", 
+      category: "services", 
       title: "Premium Hookah Lounge", 
       caption: "Relaxing hookah experience in our comfortable lounge with ambient lighting",
       image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=600", 
@@ -119,24 +120,6 @@ const Gallery = () => {
     },
     { 
       id: 13, 
-      category: "ambience", 
-      title: "Dining Area", 
-      caption: "Comfortable seating areas perfect for intimate dinners and group gatherings",
-      image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Dining area" 
-    },
-    { 
-      id: 14, 
-      category: "ambience", 
-      title: "VIP Section", 
-      caption: "Exclusive VIP area for special occasions and private dining experiences",
-      image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - VIP section" 
-    },
-
-    // Services Category
-    { 
-      id: 15, 
       category: "services", 
       title: "Professional Barbershop", 
       caption: "Expert grooming services with traditional and modern styling techniques",
@@ -144,7 +127,7 @@ const Gallery = () => {
       alt: "Kamalo City - Professional barbershop service" 
     },
     { 
-      id: 16, 
+      id: 14, 
       category: "services", 
       title: "Game Area", 
       caption: "Pool tables and recreational activities for entertainment",
@@ -152,7 +135,7 @@ const Gallery = () => {
       alt: "Kamalo City - Game area with pool table" 
     },
     { 
-      id: 17, 
+      id: 15, 
       category: "services", 
       title: "Perfume Collection", 
       caption: "Curated selection of premium African-inspired fragrances",
@@ -160,7 +143,7 @@ const Gallery = () => {
       alt: "Kamalo City - Perfume collection" 
     },
     { 
-      id: 18, 
+      id: 16, 
       category: "services", 
       title: "Event Setup", 
       caption: "Professional event setup and catering services for private functions",
@@ -175,7 +158,6 @@ const Gallery = () => {
     switch (category) {
       case "food": return "Food & Cuisine";
       case "events": return "Events & Entertainment";
-      case "ambience": return "Ambience & Interior";
       case "services": return "Services & Amenities";
       default: return category;
     }
@@ -184,115 +166,114 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-kamalo-dark text-white">
       <Navbar />
-      <main className="pt-24 px-4 pb-12">
+      <main className="pt-24 px-4 pb-12 tribal-pattern">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
-              Our <span className="text-kamalo-red">Gallery</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
-              Explore the vibrant world of Kamalo City through our collection of moments, 
-              from delicious cuisine to exciting events and premium services.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 font-serif">
+                Our <span className="text-kamalo-red">Gallery</span>
+              </h1>
+              <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                Explore the vibrant world of Kamalo City through our collection of moments, 
+                from delicious cuisine to exciting events and premium services.
+              </p>
+            </div>
+          </ScrollReveal>
 
-          {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button
-              onClick={() => setActiveFilter("food")}
-              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
-                activeFilter === "food" 
-                  ? "bg-kamalo-red text-white" 
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-              }`}
-            >
-              🍽️ Food & Cuisine
-            </Button>
-            <Button
-              onClick={() => setActiveFilter("events")}
-              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
-                activeFilter === "events" 
-                  ? "bg-kamalo-red text-white" 
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-              }`}
-            >
-              🎉 Events & Entertainment
-            </Button>
-            <Button
-              onClick={() => setActiveFilter("ambience")}
-              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
-                activeFilter === "ambience" 
-                  ? "bg-kamalo-red text-white" 
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-              }`}
-            >
-              🏛️ Ambience & Interior
-            </Button>
-            <Button
-              onClick={() => setActiveFilter("services")}
-              className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
-                activeFilter === "services" 
-                  ? "bg-kamalo-red text-white" 
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-              }`}
-            >
-              ⚡ Services & Amenities
-            </Button>
-          </div>
+          {/* Filter Buttons - 3 buttons as requested */}
+          <ScrollReveal delay={200}>
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <Button
+                onClick={() => setActiveFilter("food")}
+                className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
+                  activeFilter === "food" 
+                    ? "bg-kamalo-red text-white" 
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                }`}
+              >
+                🍽️ Food
+              </Button>
+              <Button
+                onClick={() => setActiveFilter("events")}
+                className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
+                  activeFilter === "events" 
+                    ? "bg-kamalo-red text-white" 
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                }`}
+              >
+                🎉 Events
+              </Button>
+              <Button
+                onClick={() => setActiveFilter("services")}
+                className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
+                  activeFilter === "services" 
+                    ? "bg-kamalo-red text-white" 
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                }`}
+              >
+                ⚡ Services
+              </Button>
+            </div>
+          </ScrollReveal>
 
           {/* Category Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              {getCategoryDisplayName(activeFilter)}
-            </h2>
-          </div>
+          <ScrollReveal delay={300}>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-serif">
+                {getCategoryDisplayName(activeFilter)}
+              </h2>
+              <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+            </div>
+          </ScrollReveal>
 
-          {/* Gallery Grid - Desktop: 3 columns, Mobile: 2 columns */}
+          {/* Gallery Grid - 3 columns desktop, 2 columns mobile */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
-            {filteredItems.map((item) => (
-              <div 
-                key={item.id} 
-                className="bg-black/50 rounded-lg overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-300 hover:scale-105 hover:shadow-lg group"
-              >
-                <div className="relative h-48 md:h-64 overflow-hidden">
-                  <ImageModal
-                    src={item.image}
-                    alt={item.alt}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-lg md:text-xl font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-xs md:text-sm text-gray-300 leading-relaxed">{item.caption}</p>
-                    <span className="text-xs text-kamalo-red capitalize mt-2 block font-semibold">
-                      {item.category.replace('-', ' ')}
-                    </span>
+            {filteredItems.map((item, index) => (
+              <ScrollReveal key={item.id} delay={index * 100}>
+                <div className="bg-black/50 rounded-lg overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-300 hover:scale-105 hover:shadow-lg group">
+                  <div className="relative h-48 md:h-64 overflow-hidden">
+                    <ImageModal
+                      src={item.image}
+                      alt={item.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-lg md:text-xl font-bold text-white mb-2">{item.title}</h3>
+                      <p className="text-xs md:text-sm text-gray-300 leading-relaxed">{item.caption}</p>
+                      <span className="text-xs text-kamalo-red capitalize mt-2 block font-semibold">
+                        {item.category.replace('-', ' ')}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 
           {/* CTA Section */}
-          <div className="text-center">
-            <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Experience <span className="text-kamalo-red">Kamalo City</span> Today
-              </h2>
-              <p className="text-gray-300 mb-6 text-lg">
-                Ready to create your own memories? Visit us for authentic African cuisine and entertainment.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="btn-primary">
-                  <a href="/reservations">Book Your Table</a>
-                </Button>
-                <Button className="btn-ghost">
-                  <a href="/contact">Visit Us Today</a>
-                </Button>
+          <ScrollReveal delay={600}>
+            <div className="text-center">
+              <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-serif">
+                  Experience <span className="text-kamalo-red">Kamalo City</span> Today
+                </h2>
+                <p className="text-gray-300 mb-6 text-lg">
+                  Ready to create your own memories? Visit us for authentic African cuisine and entertainment.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button className="btn-primary">
+                    <a href="/reservations">Book Your Table</a>
+                  </Button>
+                  <Button className="btn-ghost">
+                    <a href="/contact">Visit Us Today</a>
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </main>
       <Footer />

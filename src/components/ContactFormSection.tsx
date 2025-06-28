@@ -5,7 +5,10 @@ import { MapPin, Phone, Clock } from "lucide-react";
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    phone: '',
+    date: '',
+    time: '',
+    guests: '',
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -15,7 +18,7 @@ const ContactFormSection = () => {
     // Simulate form submission
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: '', phone: '', date: '', time: '', guests: '', message: '' });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -29,9 +32,9 @@ const ContactFormSection = () => {
     <section className="py-12 md:py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-          {/* Contact Form */}
+          {/* Contact Form - Remove email field */}
           <div className="bg-black/50 rounded-lg p-6 md:p-8 border border-gray-800">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">Send us a Message</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 font-serif">Send us a Message</h3>
             {isSubmitted ? (
               <div className="bg-green-500/20 border border-green-500 rounded-lg p-6 text-center">
                 <p className="text-green-400 font-semibold text-lg">Thank you! We'll get back to you soon.</p>
@@ -51,16 +54,50 @@ const ContactFormSection = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-white block mb-3 text-base md:text-lg font-semibold">Email</label>
+                  <label className="text-white block mb-3 text-base md:text-lg font-semibold">Phone</label>
                   <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
                     onChange={handleChange}
                     className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white text-base md:text-lg border border-gray-700 focus:border-kamalo-red transition-colors touch-manipulation"
-                    placeholder="Your email"
+                    placeholder="Your phone number"
                     required
                   />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div>
+                    <label className="text-white block mb-3 text-base md:text-lg font-semibold">Date</label>
+                    <input
+                      type="date"
+                      name="date"
+                      value={formData.date}
+                      onChange={handleChange}
+                      className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white text-base md:text-lg border border-gray-700 focus:border-kamalo-red transition-colors touch-manipulation"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-white block mb-3 text-base md:text-lg font-semibold">Time</label>
+                    <input
+                      type="time"
+                      name="time"
+                      value={formData.time}
+                      onChange={handleChange}
+                      className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white text-base md:text-lg border border-gray-700 focus:border-kamalo-red transition-colors touch-manipulation"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-white block mb-3 text-base md:text-lg font-semibold">Guests</label>
+                    <input
+                      type="number"
+                      name="guests"
+                      value={formData.guests}
+                      onChange={handleChange}
+                      className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white text-base md:text-lg border border-gray-700 focus:border-kamalo-red transition-colors touch-manipulation"
+                      placeholder="2"
+                      min="1"
+                    />
+                  </div>
                 </div>
                 <div>
                   <label className="text-white block mb-3 text-base md:text-lg font-semibold">Message</label>
@@ -70,7 +107,6 @@ const ContactFormSection = () => {
                     onChange={handleChange}
                     className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white h-32 md:h-40 text-base md:text-lg border border-gray-700 focus:border-kamalo-red transition-colors resize-none touch-manipulation"
                     placeholder="Your message"
-                    required
                   ></textarea>
                 </div>
                 <Button 
@@ -86,7 +122,7 @@ const ContactFormSection = () => {
           {/* Contact Info and Map */}
           <div className="space-y-6">
             <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-4 flex items-center gap-2">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-4 flex items-center gap-2 font-serif">
                 <MapPin className="w-6 h-6 text-kamalo-red" />
                 Visit Us
               </h3>

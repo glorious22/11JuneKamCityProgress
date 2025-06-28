@@ -16,43 +16,46 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-between mobile-nav-content">
-        {/* Logo/Brand */}
-        <div>
-          <Link to="/" className="text-lg md:text-xl font-bold text-kamalo-gold hover:text-kamalo-red transition-colors duration-300">
+        {/* Logo/Brand with Favicon */}
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 bg-kamalo-red rounded-full flex items-center justify-center">
+            <span className="text-white font-bold text-sm">K</span>
+          </div>
+          <Link to="/" className="text-lg md:text-xl font-bold text-kamalo-gold hover:text-kamalo-red transition-colors duration-300 font-serif">
             Kamalo City
           </Link>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-2">
-          <Link to="/" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold px-3 py-2">
+          <Link to="/" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
             Home
           </Link>
           
-          <Link to="/menu" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold px-3 py-2">
+          <Link to="/menu" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
             Menu
           </Link>
           
-          <Link to="/gallery" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold px-3 py-2">
+          <Link to="/gallery" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
             Gallery
           </Link>
 
-          <Link to="/about" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold px-3 py-2">
+          <Link to="/about" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
             About
           </Link>
           
-          <Link to="/services" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold px-3 py-2">
+          <Link to="/services" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
             Services
           </Link>
           
-          <Link to="/contact" className="text-white hover:text-kamalo-red transition-colors duration-300 text-sm font-semibold px-3 py-2">
+          <Link to="/contact" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
             Contact
           </Link>
 
-          <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="text-white hover:text-kamalo-red transition-colors duration-300 p-2">
+          <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="text-white hover:text-kamalo-green transition-colors duration-300 p-2 hover:scale-110">
             <MessageCircle className="w-4 h-4" />
           </a>
-          <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="text-white hover:text-kamalo-red transition-colors duration-300 p-2">
+          <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400 transition-colors duration-300 p-2 hover:scale-110">
             <Instagram className="w-4 h-4" />
           </a>
 
@@ -75,7 +78,7 @@ const Navbar = () => {
             </DrawerTrigger>
             <DrawerContent className="bg-kamalo-dark border-gray-800 max-h-[85vh]">
               <DrawerHeader className="flex justify-between items-center border-b border-gray-700 pb-4">
-                <DrawerTitle className="text-white text-xl">Menu</DrawerTitle>
+                <DrawerTitle className="text-white text-xl font-serif">Menu</DrawerTitle>
                 <DrawerClose asChild>
                   <button className="text-white p-2 hover:text-kamalo-red transition-colors touch-manipulation">
                     <X className="w-6 h-6" />

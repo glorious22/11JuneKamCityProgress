@@ -13,28 +13,28 @@ const TestimonialsSection = () => {
       type: "Dine In",
       rating: 5,
       text: "Amazing African restaurant. I love to be there again and again for their lovely food, clean environments, live music and great service.",
-      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100"
+      image: "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg"
     },
     {
       name: "Ludi Smit",
       type: "Takeaway",
       rating: 5,
       text: "This is a real traditional mid-African cuisine restaurant. Lovely atmosphere, soft reclining furniture, even a pool table. Owners are very forthcoming and friendly.",
-      image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=100"
+      image: "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg"
     },
     {
       name: "Emmanuel Ndachengedzwa",
       type: "Dine In - Lunch",
       rating: 5,
       text: "The food is absolutely great and the service is 5-star 👌💯.",
-      image: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=100"
+      image: "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg"
     },
     {
       name: "Baptiste Cibangu",
       type: "Local Guide",
       rating: 5,
       text: "Food: 5/5 | Service: 5/5 | Atmosphere: 5/5",
-      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100"
+      image: "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg"
     }
   ];
 

@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
 import WhatsAppFloat from "./components/WhatsAppFloat";
+import GoogleTranslate from "./components/GoogleTranslate";
 import Index from "./pages/Index";
 import Menu from "./pages/Menu";
 import Services from "./pages/Services";
@@ -39,6 +40,7 @@ export default () => (
         </Routes>
         <BackToTop />
         <WhatsAppFloat />
+        <GoogleTranslate />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

@@ -89,7 +89,7 @@ const Services = () => {
         "Walk-in service available",
         "Fresh cuts in relaxed atmosphere"
       ],
-      image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://live.staticflickr.com/65535/54575453046_73d8f83024_c.jpg"
     },
     {
       id: "perfume-collection",
@@ -104,6 +104,36 @@ const Services = () => {
         "Unique African-inspired blends"
       ],
       image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      id: "pre-order-catering",
+      title: "Pre-Order & Catering",
+      summary: "Order your dish in advance and we'll have it ready within 20 minutes. Pick-up only — no delivery available yet.",
+      icon: "📦",
+      details: [
+        "Order ahead for quick pickup",
+        "Ready within 20 minutes",
+        "Pick-up only service",
+        "Full catering for events",
+        "Custom menu planning available"
+      ],
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      id: "game-nights",
+      title: "Game Nights",
+      summary: "We're preparing game nights with pool tournaments, card games, and more. Coming soon — stay tuned!",
+      icon: "🎯",
+      details: [
+        "Pool tournaments",
+        "Card games and board games",
+        "Weekly competitions with prizes",
+        "Social gaming atmosphere",
+        "Perfect for groups and friends"
+      ],
+      image: "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=600",
+      tag: "🚀 Coming Soon",
+      comingSoon: true
     }
   ];
 
@@ -130,9 +160,13 @@ const Services = () => {
             {services.map((service, index) => (
               <ScrollReveal key={service.id} delay={index * 200}>
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 relative">
-                  {/* Tag for popular service */}
+                  {/* Tag for popular service or coming soon */}
                   {service.tag && (
-                    <div className="absolute top-3 right-3 bg-kamalo-gold text-gray-800 px-3 py-1 rounded-full text-xs font-bold z-10">
+                    <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold z-10 ${
+                      service.comingSoon 
+                        ? 'bg-blue-500 text-white' 
+                        : 'bg-kamalo-gold text-gray-800'
+                    }`}>
                       {service.tag}
                     </div>
                   )}

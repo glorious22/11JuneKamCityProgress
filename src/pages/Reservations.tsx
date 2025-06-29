@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Calendar, Clock } from "lucide-react";
+import { Calendar, Clock, Users, Phone, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -27,6 +27,7 @@ const Reservations = () => {
     guests: '2',
     specialRequests: ''
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     document.title = "Make a Reservation - Kamalo City | Book Your Table";
@@ -59,6 +60,22 @@ const Reservations = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitted(true);
+    
+    // Show success message for 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      // Reset form
+      setFormData({
+        fullName: '',
+        phoneNumber: '',
+        date: '',
+        time: '',
+        guests: '2',
+        specialRequests: ''
+      });
+    }, 3000);
+
     const message = `Hello! I would like to make a reservation:
     
 Name: ${formData.fullName}
@@ -111,10 +128,134 @@ Special Requests: ${formData.specialRequests || 'None'}`;
             </div>
           </ScrollReveal>
 
-          {/* Decorative Image */}
+          {/* Two-Column Layout: Form + Media */}
           <ScrollReveal delay={200}>
-            <div className="mb-12">
-              <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+              {/* Left Column: Reservation Form */}
+              <div className="bg-black/50 rounded-lg p-8 border border-gray-700">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center font-serif">Book Your Table</h2>
+                <p className="text-gray-300 mb-8 text-lg text-center">Open: 11:00 AM to 11:00 PM, 7 days a week</p>
+                
+                {/* Success Message */}
+                {isSubmitted && (
+                  <div className="bg-green-500/20 border border-green-500 rounded-lg p-6 text-center mb-6 animate-fade-up">
+                    <p className="text-green-400 font-semibold text-lg">Reservation request sent! We'll confirm within 2 hours.</p>
+                  </div>
+                )}
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Name Field with Icon */}
+                  <div className="relative">
+                    <User className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <input
+                      type="text"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleInputChange}
+                      className="w-full pl-12 pr-4 py-4 bg-[#1A1F2C] text-white rounded-full text-lg focus:border-kamalo-red transition-colors touch-manipulation border-0 focus:ring-2 focus:ring-kamalo-red"
+                      placeholder="Full Name"
+                      required
+                    />
+                  </div>
+
+                  {/* Phone Field with Icon */}
+                  <div className="relative">
+                    <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <input
+                      type="tel"
+                      name="phoneNumber"
+                      value={formData.phoneNumber}
+                      onChange={handleInputChange}
+                      className="w-full pl-12 pr-4 py-4 bg-[#1A1F2C] text-white rounded-full text-lg focus:border-kamalo-red transition-colors touch-manipulation border-0 focus:ring-2 focus:ring-kamalo-red"
+                      placeholder="Phone Number"
+                      required
+                    />
+                  </div>
+
+                  {/* Date Picker with Icon */}
+                  <div className="relative">
+                    <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
+                    <input
+                      type="date"
+                      name="date"
+                      value={formData.date}
+                      onChange={handleInputChange}
+                      className="w-full pl-12 pr-4 py-4 bg-[#1A1F2C] text-white rounded-full text-lg focus:border-kamalo-red transition-colors touch-manipulation border-0 focus:ring-2 focus:ring-kamalo-red"
+                      required
+                    />
+                  </div>
+
+                  {/* Time Dropdown with Icon */}
+                  <div className="relative">
+                    <Clock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
+                    <Select onValueChange={(value) => setFormData({...formData, time: value})}>
+                      <SelectTrigger className="w-full pl-12 pr-4 py-4 bg-[#1A1F2C] text-white rounded-full border-0 focus:ring-2 focus:ring-kamalo-red text-lg">
+                        <SelectValue placeholder="Select time" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#1A1F2C] text-white border-gray-700 rounded-lg">
+                        {timeSlots.map((time) => (
+                          <SelectItem key={time} value={time} className="hover:bg-gray-700 rounded-md">
+                            {time}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  {/* Guests Dropdown with Icon */}
+                  <div className="relative">
+                    <Users className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
+                    <Select onValueChange={(value) => setFormData({...formData, guests: value})}>
+                      <SelectTrigger className="w-full pl-12 pr-4 py-4 bg-[#1A1F2C] text-white rounded-full border-0 focus:ring-2 focus:ring-kamalo-red text-lg">
+                        <SelectValue placeholder="Number of guests" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#1A1F2C] text-white border-gray-700 rounded-lg max-h-60">
+                        {generateGuestNumbers().slice(0, 20).map((num) => (
+                          <SelectItem key={num} value={num.toString()} className="hover:bg-gray-700 rounded-md">
+                            {num} {num === 1 ? 'Guest' : 'Guests'}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  {/* Special Requests */}
+                  <div>
+                    <textarea
+                      name="specialRequests"
+                      value={formData.specialRequests}
+                      onChange={handleInputChange}
+                      className="w-full p-4 bg-[#1A1F2C] text-white rounded-lg h-32 text-lg focus:border-kamalo-red transition-colors resize-none touch-manipulation border-0 focus:ring-2 focus:ring-kamalo-red"
+                      placeholder="Special requests or dietary requirements"
+                    ></textarea>
+                  </div>
+
+                  <Button 
+                    type="submit" 
+                    className="w-full btn-primary py-5 text-xl font-semibold rounded-full touch-manipulation"
+                    disabled={isSubmitted}
+                  >
+                    {isSubmitted ? 'Sending...' : 'Reserve Now'}
+                  </Button>
+                </form>
+
+                {/* Alternative Contact Link */}
+                <div className="text-center mt-6">
+                  <p className="text-gray-400 mb-4">Or contact us directly:</p>
+                  <a 
+                    href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-500 hover:text-green-400 transition-colors font-semibold"
+                  >
+                    WhatsApp Group Chat
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Media Block */}
+              <div className="space-y-6">
+                {/* Main Image Placeholder */}
                 <div className="relative h-64 md:h-96 rounded-lg overflow-hidden bg-black/50 border border-gray-800">
                   <img 
                     src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -129,117 +270,19 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                     </div>
                   </div>
                 </div>
+
+                {/* Additional Info Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
+                    <h4 className="text-lg font-bold text-kamalo-gold mb-2">Capacity</h4>
+                    <p className="text-gray-300">Up to 80 guests for private events</p>
+                  </div>
+                  <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
+                    <h4 className="text-lg font-bold text-kamalo-gold mb-2">Hours</h4>
+                    <p className="text-gray-300">11:00 AM - 11:00 PM daily</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </ScrollReveal>
-
-          {/* Reservation Form - Remove email field */}
-          <ScrollReveal delay={300}>
-            <div className="max-w-4xl mx-auto bg-black/50 rounded-lg p-8 border border-gray-700 mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center font-serif">Book Your Table</h2>
-              <p className="text-gray-300 mb-8 text-lg text-center">Open: 11:00 AM to 11:00 PM, 7 days a week</p>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Two columns on desktop */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="text-white block mb-3 text-lg font-semibold">Full Name</label>
-                    <input
-                      type="text"
-                      name="fullName"
-                      value={formData.fullName}
-                      onChange={handleInputChange}
-                      className="w-full p-4 bg-[#1A1F2C] text-white border border-gray-700 rounded-lg text-lg focus:border-kamalo-red transition-colors touch-manipulation"
-                      placeholder="Your full name"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="text-white block mb-3 text-lg font-semibold">Phone Number</label>
-                    <input
-                      type="tel"
-                      name="phoneNumber"
-                      value={formData.phoneNumber}
-                      onChange={handleInputChange}
-                      className="w-full p-4 bg-[#1A1F2C] text-white border border-gray-700 rounded-lg text-lg focus:border-kamalo-red transition-colors touch-manipulation"
-                      placeholder="Your phone number"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="text-white block mb-3 text-lg font-semibold">Date</label>
-                    <input
-                      type="date"
-                      name="date"
-                      value={formData.date}
-                      onChange={handleInputChange}
-                      className="w-full p-4 bg-[#1A1F2C] text-white border border-gray-700 rounded-lg text-lg focus:border-kamalo-red transition-colors touch-manipulation"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="text-white block mb-3 text-lg font-semibold">Time</label>
-                    <Select onValueChange={(value) => setFormData({...formData, time: value})}>
-                      <SelectTrigger className="w-full bg-[#1A1F2C] text-white border-gray-700 p-4 text-lg">
-                        <SelectValue placeholder="Select time">
-                          <div className="flex items-center">
-                            <Clock className="mr-2 h-5 w-5" />
-                            <span>Select time</span>
-                          </div>
-                        </SelectValue>
-                      </SelectTrigger>
-                      <SelectContent className="bg-[#1A1F2C] text-white border-gray-700">
-                        {timeSlots.map((time) => (
-                          <SelectItem key={time} value={time} className="hover:bg-gray-700">
-                            {time}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="md:col-span-2">
-                    <label className="text-white block mb-3 text-lg font-semibold">Number of Guests</label>
-                    <Select onValueChange={(value) => setFormData({...formData, guests: value})}>
-                      <SelectTrigger className="w-full bg-[#1A1F2C] text-white border-gray-700 p-4 text-lg">
-                        <SelectValue placeholder="Select number of guests" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-[#1A1F2C] text-white border-gray-700">
-                        {generateGuestNumbers().map((num) => (
-                          <SelectItem key={num} value={num.toString()} className="hover:bg-gray-700">
-                            {num} {num === 1 ? 'Guest' : 'Guests'}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="text-white block mb-3 text-lg font-semibold">Special Requests</label>
-                  <textarea
-                    name="specialRequests"
-                    value={formData.specialRequests}
-                    onChange={handleInputChange}
-                    className="w-full p-4 bg-[#1A1F2C] text-white border border-gray-700 rounded-lg h-32 text-lg focus:border-kamalo-red transition-colors resize-none touch-manipulation"
-                    placeholder="Any special requests or dietary requirements?"
-                  ></textarea>
-                </div>
-
-                <Button 
-                  type="submit" 
-                  className="w-full btn-primary py-5 text-xl font-semibold rounded-lg touch-manipulation"
-                >
-                  Reserve Now
-                </Button>
-              </form>
-
-              <p className="text-gray-400 text-center mt-6 text-lg">
-                We'll confirm your booking within 2 hours. For urgent bookings, call us directly.
-              </p>
             </div>
           </ScrollReveal>
 

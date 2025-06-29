@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
-import WhatsAppFloat from "./components/WhatsAppFloat";
+import LanguageFloat from "./components/WhatsAppFloat";
 import GoogleTranslate from "./components/GoogleTranslate";
 import Index from "./pages/Index";
 import Menu from "./pages/Menu";
@@ -13,11 +13,6 @@ import Reservations from "./pages/Reservations";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
-
-// Menu sub-pages
-import DailySpecials from "./pages/menu/DailySpecials";
-import VegetableSides from "./pages/menu/VegetableSides";
-import Sides from "./pages/menu/Sides";
 
 const queryClient = new QueryClient();
 
@@ -29,9 +24,6 @@ export default () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/menu" element={<Menu />} />
-          <Route path="/menu/daily-specials" element={<DailySpecials />} />
-          <Route path="/menu/vegetable-sides" element={<VegetableSides />} />
-          <Route path="/menu/sides" element={<Sides />} />
           <Route path="/services" element={<Services />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/reservations" element={<Reservations />} />
@@ -39,7 +31,7 @@ export default () => (
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <BackToTop />
-        <WhatsAppFloat />
+        <LanguageFloat />
         <GoogleTranslate />
       </BrowserRouter>
     </TooltipProvider>

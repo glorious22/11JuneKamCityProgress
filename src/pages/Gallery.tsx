@@ -182,38 +182,47 @@ const Gallery = () => {
             </div>
           </ScrollReveal>
 
-          {/* Filter Buttons - 3 buttons as requested */}
+          {/* Filter Toggle Buttons with Enhanced Styling */}
           <ScrollReveal delay={200}>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <Button
                 onClick={() => setActiveFilter("food")}
-                className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
+                className={`px-8 py-4 rounded-full transition-all duration-300 font-semibold text-lg relative overflow-hidden ${
                   activeFilter === "food" 
-                    ? "bg-kamalo-red text-white" 
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                    ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"
                 }`}
               >
-                🍽️ Food
+                <span className="relative z-10">🍽️ Food</span>
+                {activeFilter === "food" && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-kamalo-red to-red-600 animate-pulse"></div>
+                )}
               </Button>
               <Button
                 onClick={() => setActiveFilter("events")}
-                className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
+                className={`px-8 py-4 rounded-full transition-all duration-300 font-semibold text-lg relative overflow-hidden ${
                   activeFilter === "events" 
-                    ? "bg-kamalo-red text-white" 
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                    ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"
                 }`}
               >
-                🎉 Events
+                <span className="relative z-10">🎉 Events</span>
+                {activeFilter === "events" && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-kamalo-red to-red-600 animate-pulse"></div>
+                )}
               </Button>
               <Button
                 onClick={() => setActiveFilter("services")}
-                className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg font-semibold ${
+                className={`px-8 py-4 rounded-full transition-all duration-300 font-semibold text-lg relative overflow-hidden ${
                   activeFilter === "services" 
-                    ? "bg-kamalo-red text-white" 
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                    ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"
                 }`}
               >
-                ⚡ Services
+                <span className="relative z-10">⚡ Services</span>
+                {activeFilter === "services" && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-kamalo-red to-red-600 animate-pulse"></div>
+                )}
               </Button>
             </div>
           </ScrollReveal>
@@ -228,11 +237,11 @@ const Gallery = () => {
             </div>
           </ScrollReveal>
 
-          {/* Gallery Grid - 3 columns desktop, 2 columns mobile with improved spacing */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+          {/* Enhanced Gallery Grid - 3 columns desktop, 2 columns mobile with improved spacing */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {filteredItems.map((item, index) => (
               <ScrollReveal key={item.id} delay={index * 100}>
-                <div className="bg-black/50 rounded-lg overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-300 hover:scale-105 hover:shadow-lg group">
+                <div className="bg-black/50 rounded-xl overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
                   <div className="relative h-48 md:h-64 overflow-hidden">
                     <ImageModal
                       src={item.image}

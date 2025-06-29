@@ -1,12 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const IntroStory = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,7 +26,7 @@ const IntroStory = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
-            {t('story.title')}
+            Our Story: From Rubble to <span className="text-kamalo-red">Rhythm</span>
           </h2>
           <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-8"></div>
           

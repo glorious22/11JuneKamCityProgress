@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
-  const { t } = useTranslation();
 
   const heroImages = [
     "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1920",
@@ -49,16 +47,16 @@ const Hero = () => {
       {/* Clean background overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '120px' }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '80px' }}>
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight font-serif">
-            {t('hero.title')}
+            Kamalo City
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl text-kamalo-gold mb-4 md:mb-6 font-serif italic leading-relaxed">
-            {t('hero.subtitle')}
+            A Taste of Africa. A Story in Every Bite.
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
-            {t('hero.description')}
+            Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof in Goodwood, Cape Town.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8 px-4">
@@ -66,20 +64,20 @@ const Hero = () => {
               asChild 
               className="btn-primary px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold"
             >
-              <Link to="/reservations">{t('hero.bookTable')}</Link>
+              <Link to="/reservations">Book a Table</Link>
             </Button>
             
             <Button 
               asChild 
               className="btn-ghost px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold"
             >
-              <Link to="/menu">{t('hero.viewMenu')}</Link>
+              <Link to="/menu">View Menu</Link>
             </Button>
           </div>
           
           <div className="text-gray-400 px-4">
-            <p className="text-sm md:text-base">📍 {t('hero.address')} • 📞 {t('hero.phone')}</p>
-            <p className="text-xs md:text-sm mt-2">{t('hero.hours')}</p>
+            <p className="text-sm md:text-base">📍 90 Voortrekker Road, Goodwood • 📞 +27 73 159 8909</p>
+            <p className="text-xs md:text-sm mt-2">Open 7 days a week: 11:00 AM - 11:00 PM</p>
           </div>
         </div>
       </div>

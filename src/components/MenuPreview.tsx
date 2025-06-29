@@ -13,7 +13,6 @@ const MenuPreview = () => {
   const featuredDishes = [
     {
       name: "Beef Stew",
-      price: "R 80 with pap / R 90 with rice",
       description: "Beef in a tomato and brinjal sauce with pap or rice and vegetables.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
       alt: "Kamalo City - Beef Stew",
@@ -21,7 +20,6 @@ const MenuPreview = () => {
     },
     {
       name: "Grilled Thomson",
-      price: "R 80 with pap / R 90 with rice",
       description: "Seasoned grilled Thomson fish served with pap or rice and traditional vegetables.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
       alt: "Kamalo City - Grilled Thomson",
@@ -29,14 +27,12 @@ const MenuPreview = () => {
     },
     {
       name: "Fried Thomson",
-      price: "R 80 with pap / R 90 with rice",
       description: "Fried Thomson fish served with pap or rice and vegetables.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
       alt: "Kamalo City - Fried Thomson"
     },
     {
       name: "Grilled Chicken Quarter Leg",
-      price: "R 80 with pap / R 90 with rice",
       description: "Grilled chicken leg quarter with pap or rice and traditional vegetables.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
       alt: "Kamalo City - Grilled Chicken Quarter Leg",
@@ -44,14 +40,12 @@ const MenuPreview = () => {
     },
     {
       name: "Kapenta (Monday Special)",
-      price: "R 80 with pap / R 90 with rice",
       description: "Fried kapenta (matemba) in tomato sauce, served with pap and vegetables.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
       alt: "Kamalo City - Kapenta"
     },
     {
       name: "Egusi Soup (Saturday Special)",
-      price: "R 80 with pap / R 90 with rice",
       description: "Ground melon seed soup cooked with beef, a weekend favorite.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
       alt: "Kamalo City - Egusi Soup",
@@ -135,7 +129,6 @@ const MenuPreview = () => {
                   <div className="absolute inset-0 bg-black/40"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="text-xl font-bold text-white mb-2">{featuredDishes[currentSlide].name}</h3>
-                    <p className="text-kamalo-gold font-semibold mb-1">{featuredDishes[currentSlide].price}</p>
                     <p className="text-gray-300 text-sm">{featuredDishes[currentSlide].description}</p>
                     {featuredDishes[currentSlide].tag && (
                       <span className="dish-tag mt-2">{featuredDishes[currentSlide].tag}</span>
@@ -161,7 +154,6 @@ const MenuPreview = () => {
                     <div className="absolute inset-0 bg-black/40 hover:bg-black/20 transition duration-300"></div>
                     <div className="absolute bottom-4 left-4 right-4">
                       <h3 className="text-xl font-bold text-white mb-2">{dish.name}</h3>
-                      <p className="text-kamalo-gold font-semibold mb-1">{dish.price}</p>
                       <p className="text-gray-300 text-sm">{dish.description}</p>
                       {dish.tag && (
                         <span className="dish-tag mt-2">{dish.tag}</span>
@@ -219,8 +211,17 @@ const MenuPreview = () => {
           </div>
         </div>
 
+        {/* Price Note Below Preview */}
+        <div className="text-center mt-8 mb-8">
+          <div className="bg-white rounded-lg p-4 border-2 border-kamalo-gold max-w-2xl mx-auto">
+            <p className="text-lg font-semibold" style={{ color: '#4B1E1E' }}>
+              All Daily Specials are R80 with pap or R90 with rice
+            </p>
+          </div>
+        </div>
+
         <ScrollReveal delay={600}>
-          <div className="text-center mt-12">
+          <div className="text-center">
             <Link to="/menu" className="btn-primary">
               View Full Menu
             </Link>

@@ -167,14 +167,14 @@
 
   /* Enhanced CTA Button Styling with Hover Effects */
   .btn-primary {
-    background: linear-gradient(135deg, #2D6A4F, #E36414);
+    background: linear-gradient(135deg, #8B0000, #FFD700);
     border-radius: 50px;
     padding: 14px 28px;
     color: white;
     border: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(45, 106, 79, 0.3);
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
     text-decoration: none;
     display: inline-block;
     text-align: center;
@@ -201,18 +201,17 @@
   }
 
   .btn-primary:hover {
-    background: linear-gradient(135deg, #1F4A37, #B8500F);
+    background: linear-gradient(135deg, #660000, #E6C200);
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(45, 106, 79, 0.4), 0 0 20px rgba(227, 100, 20, 0.3);
+    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.3);
     color: white;
-    animation: glow 1s ease-in-out;
   }
 
   /* Ghost button styling with enhanced hover */
   .btn-ghost {
     background: transparent;
-    border: 2px solid #2D6A4F;
-    color: #2D6A4F;
+    border: 2px solid #8B0000;
+    color: #8B0000;
     border-radius: 50px;
     padding: 14px 28px;
     font-weight: 600;
@@ -231,7 +230,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #2D6A4F;
+    background: #8B0000;
     transition: left 0.3s ease;
     z-index: -1;
   }
@@ -243,7 +242,7 @@
   .btn-ghost:hover {
     color: white;
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(45, 106, 79, 0.3);
+    box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3);
   }
 
   /* Service Cards with Consistent Styling */
@@ -263,7 +262,7 @@
   .service-card:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    border-color: #2D6A4F;
+    border-color: #8B0000;
   }
 
   .service-card .service-icon {
@@ -309,11 +308,11 @@
 
   /* Timeline styling */
   .timeline-item {
-    border-left: 4px solid #2D6A4F;
+    border-left: 4px solid #8B0000;
     padding-left: 20px;
     margin-bottom: 30px;
     position: relative;
-    background: linear-gradient(135deg, rgba(45, 106, 79, 0.05), rgba(227, 100, 20, 0.05));
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.05), rgba(255, 215, 0, 0.05));
     border-radius: 8px;
     padding: 20px;
   }
@@ -325,12 +324,12 @@
     top: 20px;
     width: 12px;
     height: 12px;
-    background: #2D6A4F;
+    background: #8B0000;
     border-radius: 50%;
   }
 
   .timeline-year {
-    color: #E36414;
+    color: #FFD700;
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 8px;
@@ -339,10 +338,10 @@
   /* Enhanced tribal pattern overlay */
   .tribal-pattern {
     background-image: 
-      linear-gradient(45deg, rgba(45, 106, 79, 0.05) 25%, transparent 25%),
-      linear-gradient(-45deg, rgba(45, 106, 79, 0.05) 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, rgba(227, 100, 20, 0.05) 75%),
-      linear-gradient(-45deg, transparent 75%, rgba(227, 100, 20, 0.05) 75%);
+      linear-gradient(45deg, rgba(139, 0, 0, 0.05) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(139, 0, 0, 0.05) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(255, 215, 0, 0.05) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(255, 215, 0, 0.05) 75%);
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
   }
@@ -352,7 +351,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #2D6A4F;
+    background: #8B0000;
     color: white;
     border: none;
     border-radius: 50%;
@@ -363,7 +362,7 @@
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(45, 106, 79, 0.3);
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
   }
 
   .back-to-top.visible {
@@ -372,9 +371,8 @@
   }
 
   .back-to-top:hover {
-    background: #1F4A37;
+    background: #660000;
     transform: scale(1.1);
-    animation: glow 0.5s ease-in-out;
   }
 
   /* WhatsApp floating button */
@@ -420,7 +418,6 @@
   .footer-icon-btn:hover {
     transform: scale(1.1);
     color: white;
-    animation: glow 0.5s ease-in-out;
   }
 
   /* Lightbox styles */
@@ -465,7 +462,7 @@
     .carousel-arrow {
       position: static;
       transform: none;
-      background: rgba(45, 106, 79, 0.8);
+      background: rgba(139, 0, 0, 0.8);
       border-radius: 50%;
       width: 40px;
       height: 40px;
@@ -480,10 +477,10 @@
   /* Footer tribal pattern */
   .footer-tribal {
     background-image: 
-      linear-gradient(30deg, rgba(45, 106, 79, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(45, 106, 79, 0.1) 87.5%, rgba(45, 106, 79, 0.1)),
-      linear-gradient(150deg, rgba(45, 106, 79, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(45, 106, 79, 0.1) 87.5%, rgba(45, 106, 79, 0.1)),
-      linear-gradient(30deg, rgba(227, 100, 20, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(227, 100, 20, 0.05) 87.5%, rgba(227, 100, 20, 0.05)),
-      linear-gradient(150deg, rgba(227, 100, 20, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(227, 100, 20, 0.05) 87.5%, rgba(227, 100, 20, 0.05));
+      linear-gradient(30deg, rgba(139, 0, 0, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(139, 0, 0, 0.1) 87.5%, rgba(139, 0, 0, 0.1)),
+      linear-gradient(150deg, rgba(139, 0, 0, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(139, 0, 0, 0.1) 87.5%, rgba(139, 0, 0, 0.1)),
+      linear-gradient(30deg, rgba(255, 215, 0, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 215, 0, 0.05) 87.5%, rgba(255, 215, 0, 0.05)),
+      linear-gradient(150deg, rgba(255, 215, 0, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 215, 0, 0.05) 87.5%, rgba(255, 215, 0, 0.05));
     background-size: 80px 140px;
   }
 
@@ -514,10 +511,10 @@
 
   /* Reservation form enhancements */
   .reservation-form {
-    background: linear-gradient(135deg, rgba(250, 243, 235, 0.1), rgba(45, 106, 79, 0.05));
+    background: linear-gradient(135deg, rgba(250, 243, 235, 0.1), rgba(139, 0, 0, 0.05));
     border-radius: 16px;
     padding: 32px;
-    border: 1px solid rgba(227, 100, 20, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.2);
   }
 
   .form-field-icon {
@@ -541,7 +538,7 @@
 
   .form-input-with-icon:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #2D6A4F;
+    box-shadow: 0 0 0 2px #8B0000;
     background: rgba(26, 31, 44, 0.9);
   }
 
@@ -561,20 +558,15 @@
     }
   }
 
-  /* Dish tag styling */
+  /* Dish tag styling - improved visibility */
   .dish-tag {
     display: inline-block;
-    background: #E36414;
-    color: white;
+    background: #FFD700;
+    color: #2C2C2C;
     font-size: 0.75rem;
     padding: 4px 8px;
     border-radius: 12px;
     font-weight: bold;
-  }
-
-  /* Glow animation */
-  @keyframes glow {
-    0% { box-shadow: 0 0 5px rgba(45, 106, 79, 0.5); }
-    100% { box-shadow: 0 0 20px rgba(45, 106, 79, 0.8), 0 0 30px rgba(227, 100, 20, 0.6); }
+    border: 1px solid #E6C200;
   }
 }

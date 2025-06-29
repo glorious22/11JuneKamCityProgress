@@ -20,11 +20,9 @@ export default {
     extend: {
       colors: {
         kamalo: {
-          red: "#7B1E1E", // Primary maroon color
+          red: "#8B0000", // Original deep red/maroon
           dark: "#1A1F2C",
-          gold: "#FFD700",
-          green: "#2D6A4F", // New deep green accent
-          orange: "#E36414", // New burnt orange accent
+          gold: "#FFD700", // Original gold
           cream: "#FAF3EB",
         },
         border: "hsl(var(--border))",
@@ -73,7 +71,6 @@ export default {
       animation: {
         'fade-up': 'fadeUp 0.6s ease-out',
         'scale-in': 'scaleIn 0.3s ease-out',
-        'glow': 'glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         fadeUp: {
@@ -83,10 +80,6 @@ export default {
         scaleIn: {
           '0%': { opacity: '0', transform: 'scale(0.9)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
-        },
-        glow: {
-          '0%': { boxShadow: '0 0 5px rgba(45, 106, 79, 0.5)' },
-          '100%': { boxShadow: '0 0 20px rgba(45, 106, 79, 0.8), 0 0 30px rgba(227, 100, 20, 0.6)' },
         },
       },
     },

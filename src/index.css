@@ -138,12 +138,22 @@
   .site-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 80px 20px;
   }
 
   /* Section spacing - consistent throughout */
   .section-spacing {
-    padding: 60px 0;
+    padding: 80px 0;
+  }
+
+  @media (max-width: 768px) {
+    .site-container {
+      padding: 60px 15px;
+    }
+
+    .section-spacing {
+      padding: 60px 0;
+    }
   }
 
   /* Remove default hr styling */
@@ -151,17 +161,7 @@
     display: none;
   }
 
-  /* Button hover animations */
-  .btn-hover {
-    transition: all 0.3s ease;
-  }
-
-  .btn-hover:hover {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Primary button styling */
+  /* Enhanced CTA Button Styling with Hover Effects */
   .btn-primary {
     background: linear-gradient(135deg, #7B1E1E, #A52A2A);
     border-radius: 50px;
@@ -174,6 +174,26 @@
     text-decoration: none;
     display: inline-block;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
   }
 
   .btn-primary:hover {
@@ -183,7 +203,7 @@
     color: white;
   }
 
-  /* Ghost button styling */
+  /* Ghost button styling with enhanced hover */
   .btn-ghost {
     background: transparent;
     border: 2px solid #7B1E1E;
@@ -195,10 +215,27 @@
     text-decoration: none;
     display: inline-block;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-ghost::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #7B1E1E;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  .btn-ghost:hover::before {
+    left: 0;
   }
 
   .btn-ghost:hover {
-    background-color: #7B1E1E;
     color: white;
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 8px 20px rgba(123, 30, 30, 0.3);
@@ -222,26 +259,6 @@
       min-height: 44px;
       min-width: 44px;
     }
-
-    .site-container {
-      padding: 32px 15px;
-    }
-
-    .section-spacing {
-      padding: 40px 0;
-    }
-  }
-
-  /* Fade in animations */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease;
-  }
-
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
   }
 
   /* Timeline styling */
@@ -273,53 +290,7 @@
     margin-bottom: 8px;
   }
 
-  /* Grid layouts */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
-
-  .gallery-grid-desktop {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .gallery-grid-mobile {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  @media (max-width: 768px) {
-    .gallery-grid-desktop {
-      display: none;
-    }
-    
-    .services-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .gallery-grid-mobile {
-      display: none;
-    }
-  }
-
-  /* Menu dish card styling - removed as we're using inline styles for better control */
-
-  /* African pattern background */
-  .african-pattern {
-    background-image: 
-      radial-gradient(circle at 25% 25%, rgba(123, 30, 30, 0.1) 2px, transparent 2px),
-      radial-gradient(circle at 75% 75%, rgba(255, 215, 0, 0.1) 2px, transparent 2px);
-    background-size: 50px 50px;
-  }
-
-  /* Tribal pattern overlay - kept for other sections but removed from hero */
+  /* Enhanced tribal pattern overlay */
   .tribal-pattern {
     background-image: 
       linear-gradient(45deg, rgba(123, 30, 30, 0.05) 25%, transparent 25%),
@@ -359,167 +330,97 @@
     transform: scale(1.1);
   }
 
-  /* WhatsApp floating button */
-  .whatsapp-float {
+  /* Language Float Button */
+  .language-float {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    background: #25D366;
-    color: white;
+    z-index: 1000;
+  }
+
+  .language-float-button {
+    background: #FFD700;
+    color: #2C2C2C;
     border: none;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     cursor: pointer;
     transition: all 0.3s ease;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
+    gap: 2px;
   }
 
-  .whatsapp-float:hover {
-    background: #128C7E;
+  .language-float-button:hover {
+    background: #E6C200;
     transform: scale(1.1);
+  }
+
+  .language-code {
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .language-float-dropdown {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 8px;
+    min-width: 150px;
+    border: 1px solid #E5E7EB;
+  }
+
+  .language-float-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+  }
+
+  .language-float-option:hover {
+    background-color: #F3F4F6;
+  }
+
+  .language-float-option.active {
+    background-color: #7B1E1E;
     color: white;
   }
 
-  /* Pricing info box */
-  .pricing-info {
-    background: #FAF3EB;
-    border: 2px solid #FFD700;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 30px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+  .flag {
+    font-size: 16px;
   }
 
-  .pricing-info p {
-    margin: 8px 0;
-    font-weight: 600;
-    color: #2C2C2C;
-  }
-
-  .pricing-info .note {
-    font-size: 0.85rem;
-    color: #666;
-    font-weight: 400;
-    margin-top: 12px;
-  }
-
-  /* Service tags and badges */
-  .service-tag {
-    background-color: #FFD700;
-    color: #2C2C2C;
-    font-size: 0.75rem;
-    padding: 4px 12px;
-    border-radius: 999px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 4px;
-  }
-
-  .dish-tag {
-    background-color: #FFD700;
-    color: #2C2C2C;
-    font-size: 0.75rem;
-    padding: 2px 8px;
-    border-radius: 999px;
-    margin-left: 6px;
-    font-weight: bold;
-    display: inline-block;
-  }
-
-  /* Day labels for daily specials */
-  .day-label {
-    background-color: #FFD700;
-    color: #2C2C2C;
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-weight: 600;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 10;
-  }
-
-  /* Daily specials cards */
-  .daily-card {
+  /* Footer icon buttons */
+  .footer-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
     transition: all 0.3s ease;
-    position: relative;
+    text-decoration: none;
   }
 
-  /* Collapsible service details */
-  .service-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  .service-details.open {
-    max-height: 500px;
-  }
-
-  /* Mobile carousel fixes */
-  @media (max-width: 768px) {
-    .carousel-arrows {
-      position: static;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-    
-    .carousel-arrow {
-      position: static;
-      transform: none;
-      background: rgba(123, 30, 30, 0.8);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      border: none;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
-  /* Scroll reveal animations */
-  .scroll-reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-  }
-
-  .scroll-reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Navbar mobile fixes */
-  @media (max-width: 768px) {
-    .mobile-nav {
-      padding: 8px 0;
-    }
-    
-    .mobile-nav-content {
-      padding: 0 16px;
-    }
-  }
-
-  /* Footer tribal pattern */
-  .footer-tribal {
-    background-image: 
-      linear-gradient(30deg, rgba(123, 30, 30, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(123, 30, 30, 0.1) 87.5%, rgba(123, 30, 30, 0.1)),
-      linear-gradient(150deg, rgba(123, 30, 30, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(123, 30, 30, 0.1) 87.5%, rgba(123, 30, 30, 0.1)),
-      linear-gradient(30deg, rgba(255, 215, 0, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 215, 0, 0.05) 87.5%, rgba(255, 215, 0, 0.05)),
-      linear-gradient(150deg, rgba(255, 215, 0, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 215, 0, 0.05) 87.5%, rgba(255, 215, 0, 0.05));
-    background-size: 80px 140px;
+  .footer-icon-btn:hover {
+    transform: scale(1.1);
+    color: white;
   }
 
   /* Lightbox styles */
@@ -548,6 +449,54 @@
     max-width: 90vw;
     max-height: 90vh;
     object-fit: contain;
+    border-radius: 8px;
+  }
+
+  /* Mobile carousel fixes */
+  @media (max-width: 768px) {
+    .carousel-arrows {
+      position: static;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .carousel-arrow {
+      position: static;
+      transform: none;
+      background: rgba(123, 30, 30, 0.8);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      border: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /* Footer tribal pattern */
+  .footer-tribal {
+    background-image: 
+      linear-gradient(30deg, rgba(123, 30, 30, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(123, 30, 30, 0.1) 87.5%, rgba(123, 30, 30, 0.1)),
+      linear-gradient(150deg, rgba(123, 30, 30, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(123, 30, 30, 0.1) 87.5%, rgba(123, 30, 30, 0.1)),
+      linear-gradient(30deg, rgba(255, 215, 0, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 215, 0, 0.05) 87.5%, rgba(255, 215, 0, 0.05)),
+      linear-gradient(150deg, rgba(255, 215, 0, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 215, 0, 0.05) 87.5%, rgba(255, 215, 0, 0.05));
+    background-size: 80px 140px;
+  }
+
+  /* Scroll reveal animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   /* Structured data and SEO improvements */

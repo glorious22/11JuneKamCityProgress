@@ -1,7 +1,7 @@
-import { Globe } from "lucide-react";
-import { useState } from "react";
+import { useState } from 'react';
+import { Globe } from 'lucide-react';
 
-const LanguageFloat = () => {
+const LanguageToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('EN');
 
@@ -21,10 +21,10 @@ const LanguageFloat = () => {
   };
 
   return (
-    <div className="language-float">
+    <div className="language-toggle">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="language-float-button"
+        className="language-toggle-button"
         aria-label="Change language"
       >
         <Globe className="w-6 h-6" />
@@ -32,12 +32,12 @@ const LanguageFloat = () => {
       </button>
       
       {isOpen && (
-        <div className="language-float-dropdown">
+        <div className="language-dropdown">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
-              className={`language-float-option ${currentLanguage === lang.code ? 'active' : ''}`}
+              className={`language-option ${currentLanguage === lang.code ? 'active' : ''}`}
             >
               <span className="flag">{lang.flag}</span>
               <span className="name">{lang.name}</span>
@@ -49,4 +49,4 @@ const LanguageFloat = () => {
   );
 };
 
-export default LanguageFloat;
+export default LanguageToggle;

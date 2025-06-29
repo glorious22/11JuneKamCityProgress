@@ -228,7 +228,7 @@ const Gallery = () => {
             </div>
           </ScrollReveal>
 
-          {/* Gallery Grid - 3 columns desktop, 2 columns mobile */}
+          {/* Gallery Grid - 3 columns desktop, 2 columns mobile with improved spacing */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
             {filteredItems.map((item, index) => (
               <ScrollReveal key={item.id} delay={index * 100}>

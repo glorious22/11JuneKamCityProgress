@@ -1,6 +1,6 @@
-import { Instagram, Menu, X, MessageCircle } from "lucide-react";
+import { Instagram, Menu, X, MessageCircle, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Drawer,
   DrawerClose,
@@ -12,9 +12,21 @@ import {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800 transition-all duration-300">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg' : 'bg-black/95 backdrop-blur-sm'
+    } border-b border-gray-800`}>
       <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-between mobile-nav-content">
         {/* Logo/Brand with Favicon */}
         <div className="flex items-center gap-3">

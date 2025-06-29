@@ -1,4 +1,4 @@
-import { Clock, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
+import { Clock, Phone, MapPin, Instagram, MessageCircle, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -35,16 +35,10 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info with Icon Buttons */}
           <div>
             <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red font-serif">Contact Info</h3>
-            <div className="space-y-3 text-base">
-              <div className="flex items-center justify-center md:justify-start space-x-3">
-                <Phone className="w-5 h-5 text-kamalo-red flex-shrink-0" />
-                <a href="tel:+27731598909" className="hover:text-kamalo-red transition-colors touch-manipulation font-semibold">
-                  +27 73 159 8909
-                </a>
-              </div>
+            <div className="space-y-4 text-base">
               <div className="flex items-start justify-center md:justify-start space-x-3">
                 <MapPin className="w-5 h-5 text-kamalo-red mt-1 flex-shrink-0" />
                 <div>
@@ -53,30 +47,40 @@ const Footer = () => {
                   <p>Western Cape, South Africa</p>
                 </div>
               </div>
-              <div className="flex items-center justify-center md:justify-start space-x-3">
-                <span className="text-kamalo-red">📧</span>
-                <a href="mailto:kamalocity@outlook.com" className="hover:text-kamalo-red transition-colors touch-manipulation font-semibold">
-                  kamalocity@outlook.com
+              
+              {/* Icon Button Row */}
+              <div className="flex justify-center md:justify-start gap-4 mt-6">
+                <a
+                  href="tel:+27731598909"
+                  className="footer-icon-btn bg-kamalo-red hover:bg-red-600"
+                  aria-label="Call us"
+                >
+                  <Phone className="w-5 h-5" />
                 </a>
-              </div>
-              <div className="flex justify-center md:justify-start gap-4 mt-4">
+                <a
+                  href="mailto:kamalocity@outlook.com"
+                  className="footer-icon-btn bg-blue-600 hover:bg-blue-700"
+                  aria-label="Email us"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
                 <a
                   href="https://instagram.com/kamalo_city"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-pink-500 hover:text-pink-400 transition-colors touch-manipulation"
+                  className="footer-icon-btn bg-pink-500 hover:bg-pink-600"
                   aria-label="Follow us on Instagram"
                 >
-                  <Instagram className="w-8 h-8" />
+                  <Instagram className="w-5 h-5" />
                 </a>
                 <a
                   href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green-500 hover:text-green-400 transition-colors touch-manipulation"
+                  className="footer-icon-btn bg-green-500 hover:bg-green-600"
                   aria-label="Join our WhatsApp group"
                 >
-                  <MessageCircle className="w-8 h-8" />
+                  <MessageCircle className="w-5 h-5" />
                 </a>
               </div>
             </div>

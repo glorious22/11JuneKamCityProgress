@@ -9,15 +9,15 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-12 md:py-16 footer-tribal">
       <div className="site-container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-8 text-center md:text-left">
           {/* Logo & Bio */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-kamalo-gold font-serif">Kamalo City</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-kamalo-gold font-serif">Welcome to Kamalo City</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               {t('footer.description')}
             </p>
             <div className="flex items-start justify-center md:justify-start space-x-3">
-              <Clock className="w-6 h-6 mt-1 text-kamalo-red flex-shrink-0" />
+              <Clock className="w-6 h-6 mt-1 text-kamalo-orange flex-shrink-0" />
               <div className="text-base">
                 <p className="font-semibold">{t('footer.hours')}</p>
                 <p className="text-kamalo-gold font-bold">{t('footer.openHours')}</p>
@@ -26,25 +26,25 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links & Contact Info Combined */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red font-serif">{t('footer.quickLinks')}</h3>
-            <div className="space-y-3 text-base">
-              <Link to="/" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.home')}</Link>
-              <Link to="/menu" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.menu')}</Link>
-              <Link to="/services" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.services')}</Link>
-              <Link to="/gallery" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.gallery')}</Link>
-              <Link to="/about" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.about')}</Link>
-              <Link to="/contact" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.contact')}</Link>
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-orange font-serif">{t('footer.quickLinks')}</h3>
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="space-y-3 text-base">
+                <Link to="/" className="block hover:text-kamalo-orange transition-colors touch-manipulation font-semibold">{t('nav.home')}</Link>
+                <Link to="/menu" className="block hover:text-kamalo-orange transition-colors touch-manipulation font-semibold">{t('nav.menu')}</Link>
+                <Link to="/services" className="block hover:text-kamalo-orange transition-colors touch-manipulation font-semibold">{t('nav.services')}</Link>
+              </div>
+              <div className="space-y-3 text-base">
+                <Link to="/gallery" className="block hover:text-kamalo-orange transition-colors touch-manipulation font-semibold">{t('nav.gallery')}</Link>
+                <Link to="/about" className="block hover:text-kamalo-orange transition-colors touch-manipulation font-semibold">{t('nav.about')}</Link>
+                <Link to="/contact" className="block hover:text-kamalo-orange transition-colors touch-manipulation font-semibold">{t('nav.contact')}</Link>
+              </div>
             </div>
-          </div>
 
-          {/* Contact Info with Icon Buttons */}
-          <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red font-serif">{t('footer.contactInfo')}</h3>
             <div className="space-y-4 text-base">
               <div className="flex items-start justify-center md:justify-start space-x-3">
-                <MapPin className="w-5 h-5 text-kamalo-red mt-1 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-kamalo-green mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-semibold">90 Voortrekker Road</p>
                   <p>Goodwood, Cape Town</p>
@@ -56,7 +56,7 @@ const Footer = () => {
               <div className="flex justify-center md:justify-start gap-4 mt-6">
                 <a
                   href="tel:+27731598909"
-                  className="footer-icon-btn bg-kamalo-red hover:bg-red-600"
+                  className="footer-icon-btn bg-kamalo-green hover:bg-green-600"
                   aria-label="Call us"
                 >
                   <Phone className="w-5 h-5" />
@@ -98,7 +98,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400 text-base mb-4">{t('footer.copyright')}</p>
-          <p className="text-kamalo-red mb-6 text-lg font-semibold">
+          <p className="text-kamalo-orange mb-6 text-lg font-semibold">
             {t('footer.tagline')}
           </p>
           <div>

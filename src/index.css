@@ -87,6 +87,8 @@
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     touch-action: manipulation;
+    /* Prevent zoom on Microsoft Edge */
+    -ms-touch-action: manipulation;
   }
 
   body {
@@ -100,6 +102,8 @@
     -ms-overflow-style: -ms-autohiding-scrollbar;
     /* Prevent zoom on input focus */
     -webkit-text-size-adjust: 100%;
+    /* Prevent page dragging */
+    overscroll-behavior: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -163,14 +167,14 @@
 
   /* Enhanced CTA Button Styling with Hover Effects */
   .btn-primary {
-    background: linear-gradient(135deg, #7B1E1E, #A52A2A);
+    background: linear-gradient(135deg, #2D6A4F, #E36414);
     border-radius: 50px;
-    padding: 12px 24px;
+    padding: 14px 28px;
     color: white;
     border: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(123, 30, 30, 0.3);
+    box-shadow: 0 4px 15px rgba(45, 106, 79, 0.3);
     text-decoration: none;
     display: inline-block;
     text-align: center;
@@ -197,9 +201,9 @@
   }
 
   .btn-primary:hover {
-    background: linear-gradient(135deg, #5A1616, #7B1E1E);
+    background: linear-gradient(135deg, #1F4A37, #B8500F);
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(123, 30, 30, 0.4);
+    box-shadow: 0 8px 25px rgba(45, 106, 79, 0.4), 0 0 20px rgba(227, 100, 20, 0.3);
     color: white;
     animation: glow 1s ease-in-out;
   }
@@ -207,10 +211,10 @@
   /* Ghost button styling with enhanced hover */
   .btn-ghost {
     background: transparent;
-    border: 2px solid #7B1E1E;
-    color: #7B1E1E;
+    border: 2px solid #2D6A4F;
+    color: #2D6A4F;
     border-radius: 50px;
-    padding: 12px 24px;
+    padding: 14px 28px;
     font-weight: 600;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -227,7 +231,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #7B1E1E;
+    background: #2D6A4F;
     transition: left 0.3s ease;
     z-index: -1;
   }
@@ -239,7 +243,7 @@
   .btn-ghost:hover {
     color: white;
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(123, 30, 30, 0.3);
+    box-shadow: 0 8px 20px rgba(45, 106, 79, 0.3);
   }
 
   /* Service Cards with Consistent Styling */
@@ -248,7 +252,7 @@
     border-radius: 12px;
     padding: 24px;
     height: 100%;
-    min-height: 320px;
+    min-height: 380px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border: 1px solid #E5E7EB;
@@ -259,7 +263,7 @@
   .service-card:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    border-color: #7B1E1E;
+    border-color: #2D6A4F;
   }
 
   .service-card .service-icon {
@@ -305,11 +309,11 @@
 
   /* Timeline styling */
   .timeline-item {
-    border-left: 4px solid #7B1E1E;
+    border-left: 4px solid #2D6A4F;
     padding-left: 20px;
     margin-bottom: 30px;
     position: relative;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(123, 30, 30, 0.05));
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.05), rgba(227, 100, 20, 0.05));
     border-radius: 8px;
     padding: 20px;
   }
@@ -321,12 +325,12 @@
     top: 20px;
     width: 12px;
     height: 12px;
-    background: #7B1E1E;
+    background: #2D6A4F;
     border-radius: 50%;
   }
 
   .timeline-year {
-    color: #7B1E1E;
+    color: #E36414;
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 8px;
@@ -335,10 +339,10 @@
   /* Enhanced tribal pattern overlay */
   .tribal-pattern {
     background-image: 
-      linear-gradient(45deg, rgba(123, 30, 30, 0.05) 25%, transparent 25%),
-      linear-gradient(-45deg, rgba(123, 30, 30, 0.05) 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, rgba(255, 215, 0, 0.05) 75%),
-      linear-gradient(-45deg, transparent 75%, rgba(255, 215, 0, 0.05) 75%);
+      linear-gradient(45deg, rgba(45, 106, 79, 0.05) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(45, 106, 79, 0.05) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(227, 100, 20, 0.05) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(227, 100, 20, 0.05) 75%);
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
   }
@@ -348,7 +352,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #7B1E1E;
+    background: #2D6A4F;
     color: white;
     border: none;
     border-radius: 50%;
@@ -359,7 +363,7 @@
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(123, 30, 30, 0.3);
+    box-shadow: 0 4px 15px rgba(45, 106, 79, 0.3);
   }
 
   .back-to-top.visible {
@@ -368,7 +372,7 @@
   }
 
   .back-to-top:hover {
-    background: #5A1616;
+    background: #1F4A37;
     transform: scale(1.1);
     animation: glow 0.5s ease-in-out;
   }
@@ -461,7 +465,7 @@
     .carousel-arrow {
       position: static;
       transform: none;
-      background: rgba(123, 30, 30, 0.8);
+      background: rgba(45, 106, 79, 0.8);
       border-radius: 50%;
       width: 40px;
       height: 40px;
@@ -476,18 +480,18 @@
   /* Footer tribal pattern */
   .footer-tribal {
     background-image: 
-      linear-gradient(30deg, rgba(123, 30, 30, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(123, 30, 30, 0.1) 87.5%, rgba(123, 30, 30, 0.1)),
-      linear-gradient(150deg, rgba(123, 30, 30, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(123, 30, 30, 0.1) 87.5%, rgba(123, 30, 30, 0.1)),
-      linear-gradient(30deg, rgba(255, 215, 0, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 215, 0, 0.05) 87.5%, rgba(255, 215, 0, 0.05)),
-      linear-gradient(150deg, rgba(255, 215, 0, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 215, 0, 0.05) 87.5%, rgba(255, 215, 0, 0.05));
+      linear-gradient(30deg, rgba(45, 106, 79, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(45, 106, 79, 0.1) 87.5%, rgba(45, 106, 79, 0.1)),
+      linear-gradient(150deg, rgba(45, 106, 79, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(45, 106, 79, 0.1) 87.5%, rgba(45, 106, 79, 0.1)),
+      linear-gradient(30deg, rgba(227, 100, 20, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(227, 100, 20, 0.05) 87.5%, rgba(227, 100, 20, 0.05)),
+      linear-gradient(150deg, rgba(227, 100, 20, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(227, 100, 20, 0.05) 87.5%, rgba(227, 100, 20, 0.05));
     background-size: 80px 140px;
   }
 
-  /* Scroll reveal animations */
+  /* Scroll reveal animations - REMOVED heavy animations */
   .scroll-reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
   }
 
   .scroll-reveal.revealed {
@@ -510,10 +514,10 @@
 
   /* Reservation form enhancements */
   .reservation-form {
-    background: linear-gradient(135deg, rgba(250, 243, 235, 0.1), rgba(123, 30, 30, 0.05));
+    background: linear-gradient(135deg, rgba(250, 243, 235, 0.1), rgba(45, 106, 79, 0.05));
     border-radius: 16px;
     padding: 32px;
-    border: 1px solid rgba(255, 215, 0, 0.2);
+    border: 1px solid rgba(227, 100, 20, 0.2);
   }
 
   .form-field-icon {
@@ -537,11 +541,40 @@
 
   .form-input-with-icon:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #7B1E1E;
+    box-shadow: 0 0 0 2px #2D6A4F;
     background: rgba(26, 31, 44, 0.9);
   }
 
   .form-input-with-icon::placeholder {
     color: #9CA3AF;
+  }
+
+  /* Mobile navbar fixes */
+  .mobile-nav-content {
+    height: 60px;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-nav-content {
+      height: 50px;
+      padding: 8px 16px;
+    }
+  }
+
+  /* Dish tag styling */
+  .dish-tag {
+    display: inline-block;
+    background: #E36414;
+    color: white;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+  }
+
+  /* Glow animation */
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(45, 106, 79, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(45, 106, 79, 0.8), 0 0 30px rgba(227, 100, 20, 0.6); }
   }
 }

@@ -33,10 +33,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-between mobile-nav-content">
         {/* Logo/Brand with Favicon */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-kamalo-red rounded-full flex items-center justify-center">
+          <div className="w-8 h-8 bg-kamalo-green rounded-full flex items-center justify-center">
             <span className="text-white font-bold text-sm">K</span>
           </div>
-          <Link to="/" className="text-lg md:text-xl font-bold text-kamalo-gold hover:text-kamalo-red transition-colors duration-300 font-serif">
+          <Link to="/" className="text-lg md:text-xl font-bold text-kamalo-gold hover:text-kamalo-orange transition-colors duration-300 font-serif">
             Kamalo City
           </Link>
         </div>
@@ -67,7 +67,7 @@ const Navbar = () => {
             {t('nav.contact')}
           </Link>
 
-          <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="text-white hover:text-kamalo-green transition-colors duration-300 p-2 hover:scale-110">
+          <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-400 transition-colors duration-300 p-2 hover:scale-110">
             <MessageCircle className="w-4 h-4" />
           </a>
           <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400 transition-colors duration-300 p-2 hover:scale-110">
@@ -80,7 +80,7 @@ const Navbar = () => {
           {/* Reservation Pill Button */}
           <Link 
             to="/reservations" 
-            className="bg-kamalo-red text-white px-5 py-2 rounded-full hover:bg-red-700 transition-all duration-300 font-semibold text-sm hover:scale-105 hover:shadow-lg ml-4"
+            className="bg-kamalo-green text-white px-5 py-2 rounded-full hover:bg-kamalo-orange transition-all duration-300 font-semibold text-sm hover:scale-105 hover:shadow-lg ml-4"
           >
             {t('nav.reserve')}
           </Link>
@@ -90,7 +90,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <Drawer open={isOpen} onOpenChange={setIsOpen}>
             <DrawerTrigger asChild>
-              <button className="text-white p-2 hover:text-kamalo-red transition-colors touch-manipulation ml-2">
+              <button className="text-white p-2 hover:text-kamalo-orange transition-colors touch-manipulation">
                 <Menu className="w-6 h-6" />
               </button>
             </DrawerTrigger>
@@ -98,34 +98,34 @@ const Navbar = () => {
               <DrawerHeader className="flex justify-between items-center border-b border-gray-700 pb-4">
                 <DrawerTitle className="text-white text-xl font-serif">Menu</DrawerTitle>
                 <DrawerClose asChild>
-                  <button className="text-white p-2 hover:text-kamalo-red transition-colors touch-manipulation">
+                  <button className="text-white p-2 hover:text-kamalo-orange transition-colors touch-manipulation">
                     <X className="w-6 h-6" />
                   </button>
                 </DrawerClose>
               </DrawerHeader>
               <div className="p-4 space-y-2 flex flex-col h-full overflow-y-auto">
                 <div className="flex-1 space-y-2 overflow-y-auto">
-                  <Link to="/" className="block text-white hover:text-kamalo-red transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/" className="block text-white hover:text-kamalo-orange transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
                     {t('nav.home')}
                   </Link>
                   
-                  <Link to="/menu" className="block text-white hover:text-kamalo-red transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/menu" className="block text-white hover:text-kamalo-orange transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
                     {t('nav.menu')}
                   </Link>
                   
-                  <Link to="/gallery" className="block text-white hover:text-kamalo-red transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/gallery" className="block text-white hover:text-kamalo-orange transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
                     {t('nav.gallery')}
                   </Link>
 
-                  <Link to="/about" className="block text-white hover:text-kamalo-red transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/about" className="block text-white hover:text-kamalo-orange transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
                     {t('nav.about')}
                   </Link>
                   
-                  <Link to="/services" className="block text-white hover:text-kamalo-red transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/services" className="block text-white hover:text-kamalo-orange transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
                     {t('nav.services')}
                   </Link>
                   
-                  <Link to="/contact" className="block text-white hover:text-kamalo-red transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/contact" className="block text-white hover:text-kamalo-orange transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
                     {t('nav.contact')}
                   </Link>
                   
@@ -149,7 +149,7 @@ const Navbar = () => {
                 <div className="pt-4 border-t border-gray-700">
                   <Link 
                     to="/reservations" 
-                    className="block w-full bg-kamalo-red text-white px-6 py-4 rounded-full hover:bg-red-700 transition-colors font-semibold text-center hover:scale-105 hover:shadow-lg transition duration-300 text-lg touch-manipulation"
+                    className="block w-full bg-kamalo-green text-white px-6 py-4 rounded-full hover:bg-kamalo-orange transition-colors font-semibold text-center hover:scale-105 hover:shadow-lg transition duration-300 text-lg touch-manipulation"
                     onClick={() => setIsOpen(false)}
                   >
                     {t('nav.reserve')}

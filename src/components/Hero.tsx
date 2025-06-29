@@ -49,7 +49,7 @@ const Hero = () => {
       {/* Clean background overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '80px' }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '120px' }}>
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight font-serif">
             {t('hero.title')}

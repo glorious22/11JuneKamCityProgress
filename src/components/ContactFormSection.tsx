@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, User, Calendar, Users } from "lucide-react";
 
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
@@ -32,8 +32,8 @@ const ContactFormSection = () => {
     <section className="py-12 md:py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-          {/* Contact Form - Remove email field */}
-          <div className="bg-black/50 rounded-lg p-6 md:p-8 border border-gray-800">
+          {/* Contact Form - Remove email field, add icons */}
+          <div className="bg-black/50 rounded-lg p-6 md:p-8 border border-gray-800 reservation-form">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 font-serif">Send us a Message</h3>
             {isSubmitted ? (
               <div className="bg-green-500/20 border border-green-500 rounded-lg p-6 text-center">
@@ -41,77 +41,76 @@ const ContactFormSection = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="text-white block mb-3 text-base md:text-lg font-semibold">Name</label>
+                <div className="relative">
+                  <User className="form-field-icon" />
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white text-base md:text-lg border border-gray-700 focus:border-kamalo-red transition-colors touch-manipulation"
-                    placeholder="Your name"
+                    className="form-input-with-icon w-full p-4 md:p-5 text-base md:text-lg transition-colors touch-manipulation"
+                    placeholder="👤 Your name"
                     required
                   />
                 </div>
-                <div>
-                  <label className="text-white block mb-3 text-base md:text-lg font-semibold">Phone</label>
+                <div className="relative">
+                  <Phone className="form-field-icon" />
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white text-base md:text-lg border border-gray-700 focus:border-kamalo-red transition-colors touch-manipulation"
-                    placeholder="Your phone number"
+                    className="form-input-with-icon w-full p-4 md:p-5 text-base md:text-lg transition-colors touch-manipulation"
+                    placeholder="📞 Your phone number"
                     required
                   />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div>
-                    <label className="text-white block mb-3 text-base md:text-lg font-semibold">Date</label>
+                  <div className="relative">
+                    <Calendar className="form-field-icon" />
                     <input
                       type="date"
                       name="date"
                       value={formData.date}
                       onChange={handleChange}
-                      className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white text-base md:text-lg border border-gray-700 focus:border-kamalo-red transition-colors touch-manipulation"
+                      className="form-input-with-icon w-full p-4 md:p-5 text-base md:text-lg transition-colors touch-manipulation"
                     />
                   </div>
-                  <div>
-                    <label className="text-white block mb-3 text-base md:text-lg font-semibold">Time</label>
+                  <div className="relative">
+                    <Clock className="form-field-icon" />
                     <input
                       type="time"
                       name="time"
                       value={formData.time}
                       onChange={handleChange}
-                      className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white text-base md:text-lg border border-gray-700 focus:border-kamalo-red transition-colors touch-manipulation"
+                      className="form-input-with-icon w-full p-4 md:p-5 text-base md:text-lg transition-colors touch-manipulation"
                     />
                   </div>
-                  <div>
-                    <label className="text-white block mb-3 text-base md:text-lg font-semibold">Guests</label>
+                  <div className="relative">
+                    <Users className="form-field-icon" />
                     <input
                       type="number"
                       name="guests"
                       value={formData.guests}
                       onChange={handleChange}
-                      className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white text-base md:text-lg border border-gray-700 focus:border-kamalo-red transition-colors touch-manipulation"
-                      placeholder="2"
+                      className="form-input-with-icon w-full p-4 md:p-5 text-base md:text-lg transition-colors touch-manipulation"
+                      placeholder="🗓️ 2"
                       min="1"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="text-white block mb-3 text-base md:text-lg font-semibold">Message</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white h-32 md:h-40 text-base md:text-lg border border-gray-700 focus:border-kamalo-red transition-colors resize-none touch-manipulation"
+                    className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white h-32 md:h-40 text-base md:text-lg border border-gray-700 focus:border-kamalo-green transition-colors resize-none touch-manipulation"
                     placeholder="Your message"
                   ></textarea>
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-kamalo-red hover:bg-red-600 text-white py-4 md:py-5 hover:scale-105 hover:shadow-lg transition duration-300 text-base md:text-lg font-semibold touch-manipulation"
+                  className="w-full bg-kamalo-green hover:bg-kamalo-orange text-white py-4 md:py-5 hover:scale-105 hover:shadow-lg transition duration-300 text-base md:text-lg font-semibold touch-manipulation rounded-full"
                 >
                   Get in Touch
                 </Button>
@@ -123,7 +122,7 @@ const ContactFormSection = () => {
           <div className="space-y-6">
             <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
               <h3 className="text-xl md:text-2xl font-bold text-white mb-4 flex items-center gap-2 font-serif">
-                <MapPin className="w-6 h-6 text-kamalo-red" />
+                <MapPin className="w-6 h-6 text-kamalo-green" />
                 Visit Us
               </h3>
               <div className="space-y-4 text-gray-300 text-base md:text-lg">
@@ -132,13 +131,13 @@ const ContactFormSection = () => {
                   <p>90 Voortrekker Road, Goodwood, Cape Town</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Phone className="w-5 h-5 text-kamalo-red" />
-                  <a href="tel:+27731598909" className="hover:text-kamalo-red transition-colors touch-manipulation font-semibold">
+                  <Phone className="w-5 h-5 text-kamalo-green" />
+                  <a href="tel:+27731598909" className="hover:text-kamalo-green transition-colors touch-manipulation font-semibold">
                     +27 73 159 8909
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-kamalo-red" />
+                  <Clock className="w-5 h-5 text-kamalo-green" />
                   <span className="font-semibold">Open 7 days: 11:00 AM - 11:00 PM</span>
                 </div>
               </div>

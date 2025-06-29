@@ -3,7 +3,6 @@ import { ChevronDown } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import ScrollReveal from "@/components/ScrollReveal";
 
 const Services = () => {
   const [openDetails, setOpenDetails] = useState<string | null>(null);
@@ -143,108 +142,102 @@ const Services = () => {
       <main className="pt-24 px-4 pb-12 tribal-pattern">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif">
-                Our Main <span className="text-kamalo-red">Services</span>
-              </h1>
-              <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Explore what makes Kamalo City more than a restaurant.
-              </p>
-            </div>
-          </ScrollReveal>
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif">
+              Our Main <span className="text-kamalo-green">Services</span>
+            </h1>
+            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Explore what makes Kamalo City more than a restaurant.
+            </p>
+          </div>
 
-          {/* Services Grid - 2 columns desktop, 1 column mobile */}
+          {/* Services Grid - 2 columns desktop, 1 column mobile with consistent heights */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {services.map((service, index) => (
-              <ScrollReveal key={service.id} delay={index * 200}>
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 relative">
-                  {/* Tag for popular service or coming soon */}
-                  {service.tag && (
-                    <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold z-10 ${
-                      service.comingSoon 
-                        ? 'bg-blue-500 text-white' 
-                        : 'bg-kamalo-gold text-gray-800'
-                    }`}>
-                      {service.tag}
-                    </div>
-                  )}
-                  
-                  {/* Service Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={service.image}
-                      alt={`Kamalo City - ${service.title}`}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute top-4 left-4 text-3xl">
-                      {service.icon}
-                    </div>
+              <div key={service.id} className="service-card">
+                {/* Tag for popular service or coming soon */}
+                {service.tag && (
+                  <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold z-10 ${
+                    service.comingSoon 
+                      ? 'bg-blue-500 text-white' 
+                      : 'bg-kamalo-gold text-gray-800'
+                  }`}>
+                    {service.tag}
                   </div>
+                )}
+                
+                {/* Service Image */}
+                <div className="relative h-48 overflow-hidden rounded-lg mb-6">
+                  <img
+                    src={service.image}
+                    alt={`Kamalo City - ${service.title}`}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="absolute top-4 left-4 text-3xl service-icon">
+                    {service.icon}
+                  </div>
+                </div>
+                
+                {/* Service Content */}
+                <div className="flex flex-col flex-grow">
+                  <h3 className="service-title">{service.title}</h3>
+                  <p className="service-description">{service.summary}</p>
                   
-                  {/* Service Content */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-800 mb-3 font-serif">{service.title}</h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{service.summary}</p>
-                    
-                    {/* Details Button */}
-                    <button
-                      onClick={() => toggleDetails(service.id)}
-                      className="w-full border-2 border-kamalo-gold text-kamalo-red px-6 py-3 rounded-full hover:bg-kamalo-gold hover:text-gray-800 transition-all duration-300 font-semibold flex items-center justify-center gap-2 min-h-[44px]"
-                    >
-                      {openDetails === service.id ? 'Hide Details' : 'Details'}
-                      <ChevronDown 
-                        className={`w-4 h-4 transition-transform duration-300 ${
-                          openDetails === service.id ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-                    
-                    {/* Collapsible Details */}
-                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                      openDetails === service.id ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
-                    }`}>
-                      <div className="pt-4 border-t border-gray-200">
-                        <ul className="space-y-2">
-                          {service.details.map((detail, index) => (
-                            <li key={index} className="flex items-start gap-2 text-gray-600">
-                              <span className="text-kamalo-red font-bold mt-1">•</span>
-                              <span>{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                  {/* Details Button */}
+                  <button
+                    onClick={() => toggleDetails(service.id)}
+                    className="w-full border-2 border-kamalo-green text-kamalo-green px-6 py-3 rounded-full hover:bg-kamalo-green hover:text-white transition-all duration-300 font-semibold flex items-center justify-center gap-2 min-h-[44px] mt-auto"
+                  >
+                    {openDetails === service.id ? 'Hide Details' : 'Details'}
+                    <ChevronDown 
+                      className={`w-4 h-4 transition-transform duration-300 ${
+                        openDetails === service.id ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                  
+                  {/* Collapsible Details */}
+                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                    openDetails === service.id ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="pt-4 border-t border-gray-200">
+                      <ul className="space-y-2">
+                        {service.details.map((detail, index) => (
+                          <li key={index} className="flex items-start gap-2 text-gray-600">
+                            <span className="text-kamalo-green font-bold mt-1">•</span>
+                            <span>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
-              </ScrollReveal>
+              </div>
             ))}
           </div>
 
           {/* Contact CTA */}
-          <ScrollReveal delay={600}>
-            <div className="text-center bg-black/50 rounded-lg p-8 border border-gray-800">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-serif">
-                Ready to Experience <span className="text-kamalo-red">Kamalo City</span>?
-              </h2>
-              <p className="text-gray-300 mb-6 text-lg max-w-2xl mx-auto">
-                Visit us at 90 Voortrekker Road, Goodwood, Cape Town. Open 7 days a week from 11:00 AM to 11:00 PM.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <Button className="btn-primary min-h-[44px]">
-                  <a href="tel:+27731598909" className="flex items-center gap-2">
-                    📞 Call Us
-                  </a>
-                </Button>
-                <Button className="btn-ghost min-h-[44px]">
-                  <a href="/reservations">Make Reservation</a>
-                </Button>
-              </div>
+          <div className="text-center bg-black/50 rounded-lg p-8 border border-gray-800">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-serif">
+              Ready to Experience <span className="text-kamalo-green">Kamalo City</span>?
+            </h2>
+            <p className="text-gray-300 mb-6 text-lg max-w-2xl mx-auto">
+              Visit us at 90 Voortrekker Road, Goodwood, Cape Town. Open 7 days a week from 11:00 AM to 11:00 PM.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <Button className="btn-primary min-h-[44px]">
+                <a href="tel:+27731598909" className="flex items-center gap-2">
+                  📞 Call Us
+                </a>
+              </Button>
+              <Button className="btn-ghost min-h-[44px]">
+                <a href="/reservations">Make Reservation</a>
+              </Button>
             </div>
-          </ScrollReveal>
+          </div>
         </div>
       </main>
       <Footer />

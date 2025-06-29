@@ -85,8 +85,8 @@ export default {
           '100%': { opacity: '1', transform: 'scale(1)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 5px rgba(123, 30, 30, 0.5)' },
-          '100%': { boxShadow: '0 0 20px rgba(123, 30, 30, 0.8), 0 0 30px rgba(123, 30, 30, 0.6)' },
+          '0%': { boxSha dow: '0 0 5px rgba(45, 106, 79, 0.5)' },
+          '100%': { boxShadow: '0 0 20px rgba(45, 106, 79, 0.8), 0 0 30px rgba(227, 100, 20, 0.6)' },
         },
       },
     },

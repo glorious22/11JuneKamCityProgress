@@ -21,7 +21,7 @@ const About = () => {
       <Navbar />
       <main className="pt-20 pb-16 px-4 tribal-pattern">
         <div className="max-w-7xl mx-auto text-white">
-          {/* Header - Removed top quote as requested */}
+          {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif">
               {t('about.title')}
@@ -35,7 +35,7 @@ const About = () => {
           {/* Shortened Our Story Section */}
           <section className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6 font-serif">{t('about.ourStoryTitle')}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-kamalo-green mb-6 font-serif">{t('about.ourStoryTitle')}</h2>
               <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-8"></div>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 {t('about.ourStoryDescription')}
@@ -58,7 +58,7 @@ const About = () => {
               
               {/* Content */}
               <div className="order-1 lg:order-2">
-                <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6 font-serif">{t('about.foundersTitle')}</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-kamalo-green mb-6 font-serif">{t('about.foundersTitle')}</h2>
                 <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
                   <p>
                     {t('about.foundersDescription')}
@@ -71,7 +71,7 @@ const About = () => {
           {/* Experience Kamalo City Video Section */}
           <section className="mb-20 tribal-pattern bg-black/30 rounded-lg p-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6 font-serif">
+              <h2 className="text-3xl md:text-4xl font-bold text-kamalo-green mb-6 font-serif">
                 {t('about.experienceTitle')}
               </h2>
               <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-8"></div>
@@ -85,7 +85,7 @@ const About = () => {
               <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
                 <div className="absolute inset-0 bg-black/50 rounded-lg border border-gray-800 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <div className="w-20 h-20 bg-kamalo-red rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-20 h-20 bg-kamalo-green rounded-full flex items-center justify-center mx-auto mb-4">
                       <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                       </svg>
@@ -130,7 +130,7 @@ const About = () => {
 
           {/* Founder Quote */}
           <div className="mb-16">
-            <div className="bg-gradient-to-r from-kamalo-red/20 to-kamalo-gold/20 rounded-lg p-8 border border-kamalo-red/30 text-center">
+            <div className="bg-gradient-to-r from-kamalo-green/20 to-kamalo-orange/20 rounded-lg p-8 border border-kamalo-green/30 text-center">
               <blockquote className="text-2xl md:text-3xl font-bold text-white mb-4 italic font-serif">
                 "{t('story.quote')}"
               </blockquote>
@@ -142,7 +142,7 @@ const About = () => {
           <section className="mb-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
-                <div className="text-3xl md:text-4xl font-bold text-kamalo-red mb-2">2+</div>
+                <div className="text-3xl md:text-4xl font-bold text-kamalo-green mb-2">2+</div>
                 <div className="text-gray-300">{t('about.statsYears')}</div>
               </div>
               <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
@@ -150,7 +150,7 @@ const About = () => {
                 <div className="text-gray-300">{t('about.statsGuests')}</div>
               </div>
               <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
-                <div className="text-3xl md:text-4xl font-bold text-kamalo-red mb-2">7</div>
+                <div className="text-3xl md:text-4xl font-bold text-kamalo-green mb-2">7</div>
                 <div className="text-gray-300">{t('about.statsDays')}</div>
               </div>
               <div className="bg-black/50 rounded-lg p-6 border border-gray-800">

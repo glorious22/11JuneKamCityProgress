@@ -386,7 +386,7 @@ const Menu = () => {
           {/* Header Section */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif" style={{ color: '#4B1E1E' }}>
-              Explore Our <span className="text-kamalo-red">Menu</span>
+              Explore Our <span className="text-kamalo-green">Menu</span>
             </h1>
             <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
             <p className="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto" style={{ color: '#2C2C2C' }}>
@@ -400,7 +400,7 @@ const Menu = () => {
               onClick={() => setActiveFilter("main")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "main" 
-                  ? "bg-kamalo-red text-white" 
+                  ? "bg-kamalo-green text-white" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -410,7 +410,7 @@ const Menu = () => {
               onClick={() => setActiveFilter("sides")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "sides" 
-                  ? "bg-kamalo-red text-white" 
+                  ? "bg-kamalo-green text-white" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -420,7 +420,7 @@ const Menu = () => {
               onClick={() => setActiveFilter("vegetable-sides")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "vegetable-sides" 
-                  ? "bg-kamalo-red text-white" 
+                  ? "bg-kamalo-green text-white" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -430,7 +430,7 @@ const Menu = () => {
               onClick={() => setActiveFilter("daily-specials")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "daily-specials" 
-                  ? "bg-kamalo-red text-white" 
+                  ? "bg-kamalo-green text-white" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -475,8 +475,8 @@ const Menu = () => {
                   <div 
                     className="absolute top-3 right-3 z-10"
                     style={{
-                      backgroundColor: '#FFD700',
-                      color: '#2C2C2C',
+                      backgroundColor: '#E36414',
+                      color: 'white',
                       fontSize: '0.75rem',
                       padding: '4px 10px',
                       borderRadius: '999px',
@@ -516,8 +516,8 @@ const Menu = () => {
                     {item.tag && (
                       <span 
                         style={{
-                          backgroundColor: '#FFD700',
-                          color: '#2C2C2C',
+                          backgroundColor: '#2D6A4F',
+                          color: 'white',
                           fontSize: '0.75rem',
                           padding: '2px 8px',
                           borderRadius: '999px',
@@ -550,7 +550,7 @@ const Menu = () => {
           <div className="text-center">
             <div className="bg-white rounded-lg p-8 border-2 border-gray-300 shadow-lg">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 font-serif" style={{ color: '#4B1E1E' }}>
-                Ready to <span className="text-kamalo-red">Try It for Yourself</span>?
+                Ready to <span className="text-kamalo-green">Try It for Yourself</span>?
               </h2>
               <p className="mb-6 text-lg" style={{ color: '#374151' }}>
                 Experience authentic African cuisine and traditional flavors at Kamalo City in Cape Town.

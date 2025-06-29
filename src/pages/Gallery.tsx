@@ -170,55 +170,46 @@ const Gallery = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 font-serif">
-              Our <span className="text-kamalo-green">Gallery</span>
+              Our <span className="text-kamalo-red">Gallery</span>
             </h1>
-            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+            <div className="tribal-divider max-w-md mx-auto mb-6"></div>
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
               Explore the vibrant world of Kamalo City through our collection of moments, 
               from delicious cuisine to exciting events and premium services.
             </p>
           </div>
 
-          {/* Filter Toggle Buttons with Enhanced Styling */}
+          {/* Filter Toggle Buttons - 3 toggles: Food, Events, Services */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button
               onClick={() => setActiveFilter("food")}
               className={`px-8 py-4 rounded-full transition-all duration-300 font-semibold text-lg relative overflow-hidden ${
                 activeFilter === "food" 
-                  ? "bg-kamalo-green text-white shadow-lg transform scale-105" 
+                  ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"
               }`}
             >
               <span className="relative z-10">🍽️ Food</span>
-              {activeFilter === "food" && (
-                <div className="absolute inset-0 bg-gradient-to-r from-kamalo-green to-kamalo-orange animate-pulse"></div>
-              )}
             </Button>
             <Button
               onClick={() => setActiveFilter("events")}
               className={`px-8 py-4 rounded-full transition-all duration-300 font-semibold text-lg relative overflow-hidden ${
                 activeFilter === "events" 
-                  ? "bg-kamalo-green text-white shadow-lg transform scale-105" 
+                  ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"
               }`}
             >
               <span className="relative z-10">🎉 Events</span>
-              {activeFilter === "events" && (
-                <div className="absolute inset-0 bg-gradient-to-r from-kamalo-green to-kamalo-orange animate-pulse"></div>
-              )}
             </Button>
             <Button
               onClick={() => setActiveFilter("services")}
               className={`px-8 py-4 rounded-full transition-all duration-300 font-semibold text-lg relative overflow-hidden ${
                 activeFilter === "services" 
-                  ? "bg-kamalo-green text-white shadow-lg transform scale-105" 
+                  ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"
               }`}
             >
               <span className="relative z-10">⚡ Services</span>
-              {activeFilter === "services" && (
-                <div className="absolute inset-0 bg-gradient-to-r from-kamalo-green to-kamalo-orange animate-pulse"></div>
-              )}
             </Button>
           </div>
 
@@ -227,13 +218,13 @@ const Gallery = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-serif">
               {getCategoryDisplayName(activeFilter)}
             </h2>
-            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+            <div className="tribal-divider max-w-md mx-auto mb-6"></div>
           </div>
 
-          {/* Enhanced Gallery Grid - 3 columns desktop, 2 columns mobile with improved spacing */}
+          {/* Gallery Grid - 3 columns desktop, 2 columns mobile */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {filteredItems.map((item, index) => (
-              <div key={item.id} className="bg-black/50 rounded-xl overflow-hidden border border-gray-800 hover:border-kamalo-green transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
+              <div key={item.id} className="bg-black/50 rounded-xl overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
                 <div className="relative h-48 md:h-64 overflow-hidden">
                   <ImageModal
                     src={item.image}
@@ -244,7 +235,7 @@ const Gallery = () => {
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="text-lg md:text-xl font-bold text-white mb-2">{item.title}</h3>
                     <p className="text-xs md:text-sm text-gray-300 leading-relaxed">{item.caption}</p>
-                    <span className="text-xs text-kamalo-orange capitalize mt-2 block font-semibold">
+                    <span className="text-xs text-kamalo-gold capitalize mt-2 block font-semibold">
                       {item.category.replace('-', ' ')}
                     </span>
                   </div>
@@ -257,13 +248,13 @@ const Gallery = () => {
           <div className="text-center">
             <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-serif">
-                Experience <span className="text-kamalo-green">Kamalo City</span> Today
+                Experience <span className="text-kamalo-red">Kamalo City</span> Today
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
                 Ready to create your own memories? Visit us for authentic African cuisine and entertainment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="btn-primary">
+                <Button className="btn-primary cta-with-icon">
                   <a href="/reservations">Book Your Table</a>
                 </Button>
                 <Button className="btn-ghost">

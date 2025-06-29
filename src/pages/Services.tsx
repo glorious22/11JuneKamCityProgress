@@ -144,18 +144,18 @@ const Services = () => {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif">
-              Our Main <span className="text-kamalo-green">Services</span>
+              Our Main <span className="text-kamalo-red">Services</span>
             </h1>
-            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+            <div className="tribal-divider max-w-md mx-auto mb-6"></div>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Explore what makes Kamalo City more than a restaurant.
             </p>
           </div>
 
-          {/* Services Grid - 2 columns desktop, 1 column mobile with consistent heights */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {/* Services Grid - 2 columns desktop, 1 column mobile with equal heights */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 equal-height-grid">
             {services.map((service, index) => (
-              <div key={service.id} className="service-card">
+              <div key={service.id} className="service-card bg-black/50 text-white border-gray-800 hover:border-kamalo-red">
                 {/* Tag for popular service or coming soon */}
                 {service.tag && (
                   <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold z-10 ${
@@ -183,13 +183,13 @@ const Services = () => {
                 
                 {/* Service Content */}
                 <div className="flex flex-col flex-grow">
-                  <h3 className="service-title">{service.title}</h3>
-                  <p className="service-description">{service.summary}</p>
+                  <h3 className="service-title text-white">{service.title}</h3>
+                  <p className="service-description text-gray-300">{service.summary}</p>
                   
                   {/* Details Button */}
                   <button
                     onClick={() => toggleDetails(service.id)}
-                    className="w-full border-2 border-kamalo-green text-kamalo-green px-6 py-3 rounded-full hover:bg-kamalo-green hover:text-white transition-all duration-300 font-semibold flex items-center justify-center gap-2 min-h-[44px] mt-auto"
+                    className="w-full border-2 border-kamalo-red text-kamalo-red px-6 py-3 rounded-full hover:bg-kamalo-red hover:text-white transition-all duration-300 font-semibold flex items-center justify-center gap-2 min-h-[44px] mt-auto"
                   >
                     {openDetails === service.id ? 'Hide Details' : 'Details'}
                     <ChevronDown 
@@ -203,11 +203,11 @@ const Services = () => {
                   <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
                     openDetails === service.id ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
                   }`}>
-                    <div className="pt-4 border-t border-gray-200">
+                    <div className="pt-4 border-t border-gray-700">
                       <ul className="space-y-2">
                         {service.details.map((detail, index) => (
-                          <li key={index} className="flex items-start gap-2 text-gray-600">
-                            <span className="text-kamalo-green font-bold mt-1">•</span>
+                          <li key={index} className="flex items-start gap-2 text-gray-300">
+                            <span className="text-kamalo-red font-bold mt-1">•</span>
                             <span>{detail}</span>
                           </li>
                         ))}
@@ -222,13 +222,13 @@ const Services = () => {
           {/* Contact CTA */}
           <div className="text-center bg-black/50 rounded-lg p-8 border border-gray-800">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-serif">
-              Ready to Experience <span className="text-kamalo-green">Kamalo City</span>?
+              Ready to Experience <span className="text-kamalo-red">Kamalo City</span>?
             </h2>
             <p className="text-gray-300 mb-6 text-lg max-w-2xl mx-auto">
               Visit us at 90 Voortrekker Road, Goodwood, Cape Town. Open 7 days a week from 11:00 AM to 11:00 PM.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button className="btn-primary min-h-[44px]">
+              <Button className="btn-primary min-h-[44px] cta-with-icon">
                 <a href="tel:+27731598909" className="flex items-center gap-2">
                   📞 Call Us
                 </a>

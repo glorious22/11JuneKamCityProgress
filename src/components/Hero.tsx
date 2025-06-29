@@ -44,17 +44,21 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* Clean background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90"></div>
+      {/* Enhanced background overlay with tribal pattern */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90 tribal-pattern"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '80px' }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '100px' }}>
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight font-serif">
-            Kamalo City
+            Welcome to <span className="text-kamalo-gold">Kamalo City</span>
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl text-kamalo-gold mb-4 md:mb-6 font-serif italic leading-relaxed">
-            A Taste of Africa. A Story in Every Bite.
+            Where Africa Eats, Sings, and Thrives.
           </h2>
+          
+          {/* Tribal divider */}
+          <div className="tribal-divider max-w-md mx-auto mb-6"></div>
+          
           <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
             Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof in Goodwood, Cape Town.
           </p>
@@ -62,7 +66,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8 px-4">
             <Button 
               asChild 
-              className="btn-primary px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold"
+              className="btn-primary px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold cta-with-icon"
             >
               <Link to="/reservations">Book a Table</Link>
             </Button>
@@ -82,10 +86,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Simple scroll indicator */}
+      {/* Enhanced scroll indicator */}
       <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-2 md:h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+        <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-kamalo-gold rounded-full flex justify-center">
+          <div className="w-1 h-2 md:h-3 bg-kamalo-gold rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

@@ -5,12 +5,14 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-12 md:py-16 footer-tribal">
       <div className="site-container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-8 text-center md:text-left">
-          {/* Logo & Bio */}
+        {/* 3-column layout: About | Services | Contact */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 text-center md:text-left">
+          
+          {/* About Column */}
           <div>
             <h3 className="text-xl md:text-2xl font-bold mb-4 text-kamalo-gold font-serif">Welcome to Kamalo City</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Where rich African heritage meets unforgettable flavor. Come for the taste — stay for the vibe.
+              Where Africa eats, sings, and thrives. Experience authentic cuisine, vibrant culture, and unforgettable moments in the heart of Cape Town.
             </p>
             <div className="flex items-start justify-center md:justify-start space-x-3">
               <Clock className="w-6 h-6 mt-1 text-kamalo-red flex-shrink-0" />
@@ -22,23 +24,28 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links & Contact Info Combined */}
+          {/* Services Column */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red font-serif">Quick Links</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red font-serif">Our Services</h3>
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="space-y-3 text-base">
-                <Link to="/" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Home</Link>
-                <Link to="/menu" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Menu</Link>
-                <Link to="/services" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Services</Link>
+                <Link to="/menu" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">🍽️ Dining</Link>
+                <Link to="/services" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">💨 Hookah</Link>
+                <Link to="/services" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">✂️ Barbershop</Link>
               </div>
               <div className="space-y-3 text-base">
-                <Link to="/gallery" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Gallery</Link>
-                <Link to="/about" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">About</Link>
-                <Link to="/contact" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Contact</Link>
+                <Link to="/services" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">🎉 Events</Link>
+                <Link to="/services" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">🧴 Perfumes</Link>
+                <Link to="/gallery" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">📸 Gallery</Link>
               </div>
             </div>
+          </div>
 
-            <div className="space-y-4 text-base">
+          {/* Contact Column */}
+          <div>
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-gold font-serif">Contact & Location</h3>
+            
+            <div className="space-y-4 text-base mb-6">
               <div className="flex items-start justify-center md:justify-start space-x-3">
                 <MapPin className="w-5 h-5 text-kamalo-gold mt-1 flex-shrink-0" />
                 <div>
@@ -47,45 +54,48 @@ const Footer = () => {
                   <p>Western Cape, South Africa</p>
                 </div>
               </div>
+            </div>
               
-              {/* Icon Button Row */}
-              <div className="flex justify-center md:justify-start gap-4 mt-6">
-                <a
-                  href="tel:+27731598909"
-                  className="footer-icon-btn bg-kamalo-red hover:bg-red-700"
-                  aria-label="Call us"
-                >
-                  <Phone className="w-5 h-5" />
-                </a>
-                <a
-                  href="mailto:kamalocity@outlook.com"
-                  className="footer-icon-btn bg-blue-600 hover:bg-blue-700"
-                  aria-label="Email us"
-                >
-                  <Mail className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://instagram.com/kamalo_city"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-icon-btn bg-pink-500 hover:bg-pink-600"
-                  aria-label="Follow us on Instagram"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-icon-btn bg-green-500 hover:bg-green-600"
-                  aria-label="Join our WhatsApp group"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                </a>
-              </div>
+            {/* Social Media Icon Row */}
+            <div className="flex justify-center md:justify-start gap-4 mt-6">
+              <a
+                href="tel:+27731598909"
+                className="footer-icon-btn bg-kamalo-red hover:bg-red-700"
+                aria-label="Call us"
+              >
+                <Phone className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:kamalocity@outlook.com"
+                className="footer-icon-btn bg-blue-600 hover:bg-blue-700"
+                aria-label="Email us"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+              <a
+                href="https://instagram.com/kamalo_city"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-icon-btn bg-pink-500 hover:bg-pink-600"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-icon-btn bg-green-500 hover:bg-green-600"
+                aria-label="Join our WhatsApp group"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
+
+        {/* Tribal divider */}
+        <div className="tribal-divider mb-8"></div>
 
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400 text-base mb-4">© 2025 Kamalo City. All rights reserved.</p>
@@ -95,7 +105,7 @@ const Footer = () => {
           <div>
             <Link 
               to="/reservations" 
-              className="btn-primary inline-block touch-manipulation"
+              className="btn-primary inline-block touch-manipulation cta-with-icon"
             >
               Book Now
             </Link>

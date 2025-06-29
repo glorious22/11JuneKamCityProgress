@@ -28,7 +28,7 @@ const Navbar = () => {
       isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg' : 'bg-black/95 backdrop-blur-sm'
     } border-b border-gray-800`}>
       <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-between mobile-nav-content">
-        {/* Brand - Centered on mobile */}
+        {/* Brand - Centered on mobile, left on desktop */}
         <div className="flex items-center justify-center flex-1 md:flex-none md:justify-start">
           <Link to="/" className="text-lg md:text-xl font-bold text-kamalo-gold hover:text-white transition-colors duration-300 font-serif">
             Kamalo City
@@ -71,7 +71,7 @@ const Navbar = () => {
           {/* Reservation Pill Button */}
           <Link 
             to="/reservations" 
-            className="bg-kamalo-red text-white px-5 py-2 rounded-full hover:bg-red-700 transition-all duration-300 font-semibold text-sm hover:scale-105 hover:shadow-lg ml-4"
+            className="bg-kamalo-red text-white px-5 py-2 rounded-full hover:bg-red-700 transition-all duration-300 font-semibold text-sm hover:scale-105 hover:shadow-lg ml-4 cta-with-icon"
           >
             Reserve
           </Link>

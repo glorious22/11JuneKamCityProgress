@@ -83,11 +83,9 @@
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    /* Disable zoom on mobile */
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     touch-action: manipulation;
-    /* Prevent zoom on Microsoft Edge */
     -ms-touch-action: manipulation;
   }
 
@@ -100,9 +98,7 @@
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    /* Prevent zoom on input focus */
     -webkit-text-size-adjust: 100%;
-    /* Prevent page dragging */
     overscroll-behavior: none;
   }
 
@@ -251,12 +247,13 @@
     border-radius: 12px;
     padding: 24px;
     height: 100%;
-    min-height: 380px;
+    min-height: 420px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border: 1px solid #E5E7EB;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
 
   .service-card:hover {
@@ -346,6 +343,25 @@
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
   }
 
+  /* Tribal divider elements */
+  .tribal-divider {
+    background-image: 
+      repeating-linear-gradient(
+        90deg,
+        #8B0000 0px,
+        #8B0000 2px,
+        transparent 2px,
+        transparent 8px,
+        #FFD700 8px,
+        #FFD700 10px,
+        transparent 10px,
+        transparent 16px
+      );
+    height: 4px;
+    width: 100%;
+    margin: 20px 0;
+  }
+
   /* Back to top button */
   .back-to-top {
     position: fixed;
@@ -373,6 +389,7 @@
   .back-to-top:hover {
     background: #660000;
     transform: scale(1.1);
+    animation: pulse-glow 1s ease-in-out;
   }
 
   /* WhatsApp floating button */
@@ -400,6 +417,7 @@
     background: #128C7E;
     transform: scale(1.1);
     color: white;
+    animation: pulse-glow 1s ease-in-out;
   }
 
   /* Footer icon buttons */
@@ -558,15 +576,62 @@
     }
   }
 
-  /* Dish tag styling - improved visibility */
+  /* Enhanced dish tag styling */
   .dish-tag {
     display: inline-block;
-    background: #FFD700;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
     color: #2C2C2C;
     font-size: 0.75rem;
-    padding: 4px 8px;
-    border-radius: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid #E6C200;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Enhanced menu badge visibility */
+  .menu-badge {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #2C2C2C;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 15px;
     font-weight: bold;
     border: 1px solid #E6C200;
+    box-shadow: 0 2px 6px rgba(255, 215, 0, 0.4);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  /* CTA icon animations */
+  .cta-with-icon {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-with-icon::after {
+    content: '🍽️';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) translateX(30px);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .cta-with-icon:hover::after {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+  }
+
+  /* Equal height grid system */
+  .equal-height-grid {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+
+  .equal-height-grid > * {
+    display: flex;
+    flex-direction: column;
   }
 }

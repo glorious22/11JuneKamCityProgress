@@ -23,24 +23,31 @@ const About = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif">
               A Legacy <span className="text-kamalo-red">Brought to Life</span>
             </h1>
-            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-8"></div>
+            <div className="tribal-divider max-w-md mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Kamalo City was born from rubble and rebuilt with purpose. Since 2023, we've grown into a destination for food, music, and community spirit.
             </p>
           </div>
           
-          {/* Our Story Section - Shortened */}
+          {/* Our Story Section - Shortened and chunked */}
           <section className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6 font-serif">Our Story</h2>
-              <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Kamalo City was born from the rubble of an abandoned space and reborn in 2023 with rhythm, flavor, and purpose. Today, we are a hub for African celebration, cuisine, and connection.
-              </p>
+              <div className="tribal-divider max-w-md mx-auto mb-8"></div>
+              
+              {/* Chunked paragraphs - 2-3 lines each */}
+              <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-300 leading-relaxed">
+                <p>
+                  Kamalo City was born from the rubble of an abandoned space and reborn in 2023 with rhythm, flavor, and purpose.
+                </p>
+                <p>
+                  Today, we are a hub for African celebration, cuisine, and connection in the heart of Cape Town.
+                </p>
+              </div>
             </div>
           </section>
 
-          {/* Meet the Founders Section - Shortened copy */}
+          {/* Meet the Founders Section - Trimmed to 2 lines max */}
           <section className="mb-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Image */}
@@ -58,20 +65,23 @@ const About = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6 font-serif">Meet Our Founders</h2>
                 <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
                   <p>
-                    Founded by two friends with a love for culture, Kamalo City grew from a dream into one of Cape Town's hidden gems.
+                    Founded by Pitchou Ntumba and his wife, Kamalo City grew from a dream into one of Cape Town's hidden gems.
+                  </p>
+                  <p>
+                    Their combined vision and expertise have transformed this space into a vibrant celebration of African cuisine and culture.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Experience Kamalo City Video Section */}
+          {/* Kamalo's Journey Video Section */}
           <section className="mb-20 tribal-pattern bg-black/30 rounded-lg p-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6 font-serif">
-                Experience Kamalo City
+                Kamalo's Journey
               </h2>
-              <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-8"></div>
+              <div className="tribal-divider max-w-md mx-auto mb-8"></div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 Watch how Kamalo City came to life through food, music, and community.
               </p>
@@ -95,37 +105,85 @@ const About = () => {
             </div>
           </section>
 
-          {/* Timeline Section */}
+          {/* Timeline Section - Moved from homepage */}
           <section className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
                 Our <span className="text-kamalo-red">Journey</span>
               </h2>
-              <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+              <div className="tribal-divider max-w-md mx-auto mb-6"></div>
             </div>
 
-            <div className="space-y-8">
-              <div className="timeline-item">
-                <div className="timeline-year">2023</div>
-                <h3 className="text-xl font-bold text-white mb-2">Rebuilt and Opened</h3>
-                <p className="text-gray-300">From abandoned space to cultural hotspot — Kamalo City opened its doors with a vision of authentic African dining.</p>
+            {/* Desktop Timeline - Horizontal */}
+            <div className="hidden lg:block relative">
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-kamalo-red to-kamalo-gold"></div>
+              
+              <div className="space-y-16">
+                {[
+                  {
+                    year: "2023",
+                    title: "Rebuilt and Opened",
+                    description: "From abandoned space to cultural hotspot — Kamalo City opened its doors with a vision of authentic African dining.",
+                    isLeft: true
+                  },
+                  {
+                    year: "2024", 
+                    title: "Launched Events and Live Entertainment",
+                    description: "Expanded with weekend entertainment, private event hosting, and additional lifestyle services including barbershop and hookah.",
+                    isLeft: false
+                  },
+                  {
+                    year: "2025",
+                    title: "Became Top Destination", 
+                    description: "Established as Cape Town's premier African dining and entertainment venue, beloved by locals and visitors alike.",
+                    isLeft: true
+                  }
+                ].map((event, index) => (
+                  <div key={index} className={`relative flex items-center ${event.isLeft ? 'justify-start' : 'justify-end'}`}>
+                    <div className={`w-5/12 ${event.isLeft ? 'text-right pr-8' : 'text-left pl-8'}`}>
+                      <div className="timeline-item">
+                        <div className="timeline-year">{event.year}</div>
+                        <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
+                        <p className="text-gray-300">{event.description}</p>
+                      </div>
+                    </div>
+                    
+                    {/* Center dot with tribal texture */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-kamalo-red rounded-full border-4 border-kamalo-dark z-10"></div>
+                  </div>
+                ))}
               </div>
+            </div>
 
-              <div className="timeline-item">
-                <div className="timeline-year">2024</div>
-                <h3 className="text-xl font-bold text-white mb-2">Launched Events and Live Entertainment</h3>
-                <p className="text-gray-300">Expanded with weekend entertainment, private event hosting, and additional lifestyle services including barbershop and hookah.</p>
-              </div>
-
-              <div className="timeline-item">
-                <div className="timeline-year">2025</div>
-                <h3 className="text-xl font-bold text-white mb-2">Became Top Destination</h3>
-                <p className="text-gray-300">Established as Cape Town's premier African dining and entertainment venue, beloved by locals and visitors alike.</p>
-              </div>
+            {/* Mobile Timeline - Vertical */}
+            <div className="lg:hidden space-y-8">
+              {[
+                {
+                  year: "2023",
+                  title: "Rebuilt and Opened",
+                  description: "From abandoned space to cultural hotspot — Kamalo City opened its doors with a vision of authentic African dining."
+                },
+                {
+                  year: "2024",
+                  title: "Launched Events and Live Entertainment", 
+                  description: "Expanded with weekend entertainment, private event hosting, and additional lifestyle services including barbershop and hookah."
+                },
+                {
+                  year: "2025",
+                  title: "Became Top Destination",
+                  description: "Established as Cape Town's premier African dining and entertainment venue, beloved by locals and visitors alike."
+                }
+              ].map((event, index) => (
+                <div key={index} className="timeline-item">
+                  <div className="timeline-year">{event.year}</div>
+                  <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
+                  <p className="text-gray-300">{event.description}</p>
+                </div>
+              ))}
             </div>
           </section>
 
-          {/* Founder Quote */}
+          {/* Founder Quote - Blockquote style */}
           <div className="mb-16">
             <div className="bg-gradient-to-r from-kamalo-red/20 to-kamalo-gold/20 rounded-lg p-8 border border-kamalo-red/30 text-center">
               <blockquote className="text-2xl md:text-3xl font-bold text-white mb-4 italic font-serif">
@@ -166,7 +224,7 @@ const About = () => {
               Ready to be part of the Kamalo City experience? Visit us and taste the passion in every dish.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/reservations" className="btn-primary">
+              <Link to="/reservations" className="btn-primary cta-with-icon">
                 Reserve a Table
               </Link>
               <Link to="/contact" className="btn-ghost">

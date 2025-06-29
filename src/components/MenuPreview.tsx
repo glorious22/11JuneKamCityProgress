@@ -20,7 +20,7 @@ const MenuPreview = () => {
     },
     {
       name: "Grilled Thomson",
-      description: "Seasoned grilled Thomson fish served with pap or rice and traditional vegetables.",
+      description: "Seasoned grilled fish served with pap or rice and traditional vegetables.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
       alt: "Kamalo City - Grilled Thomson",
       tag: "⭐ Customer Favorite"
@@ -103,7 +103,7 @@ const MenuPreview = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif" style={{ color: '#4B1E1E' }}>
               Featured <span className="text-kamalo-red">Dishes</span>
             </h2>
-            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+            <div className="tribal-divider max-w-md mx-auto mb-6"></div>
             <p className="text-xl max-w-3xl mx-auto" style={{ color: '#2C2C2C' }}>
               Discover our most beloved African dishes, crafted with authentic flavors and traditional recipes
             </p>
@@ -131,7 +131,7 @@ const MenuPreview = () => {
                     <h3 className="text-xl font-bold text-white mb-2">{featuredDishes[currentSlide].name}</h3>
                     <p className="text-gray-300 text-sm">{featuredDishes[currentSlide].description}</p>
                     {featuredDishes[currentSlide].tag && (
-                      <span className="dish-tag mt-2">{featuredDishes[currentSlide].tag}</span>
+                      <span className="menu-badge mt-2 inline-block">{featuredDishes[currentSlide].tag}</span>
                     )}
                   </div>
                 </div>
@@ -140,7 +140,7 @@ const MenuPreview = () => {
           </div>
 
           {/* Desktop: Show 3 slides */}
-          <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-6 equal-height-grid">
             {getVisibleSlides().map((dish, index) => (
               <ScrollReveal key={`${currentSlide}-${index}`} delay={index * 200}>
                 <div className="flex-1 bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -156,7 +156,7 @@ const MenuPreview = () => {
                       <h3 className="text-xl font-bold text-white mb-2">{dish.name}</h3>
                       <p className="text-gray-300 text-sm">{dish.description}</p>
                       {dish.tag && (
-                        <span className="dish-tag mt-2">{dish.tag}</span>
+                        <span className="menu-badge mt-2 inline-block">{dish.tag}</span>
                       )}
                     </div>
                   </div>
@@ -165,22 +165,24 @@ const MenuPreview = () => {
             ))}
           </div>
 
-          {/* Navigation buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 opacity-80 hover:opacity-100 z-10"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 opacity-80 hover:opacity-100 z-10"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+          {/* Navigation buttons - Desktop only */}
+          <div className="hidden md:block">
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 opacity-80 hover:opacity-100 z-10"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 opacity-80 hover:opacity-100 z-10"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
 
-          {/* Mobile Navigation buttons */}
+          {/* Mobile Navigation buttons - Below carousel */}
           <div className="carousel-arrows md:hidden">
             <button
               onClick={prevSlide}
@@ -211,18 +213,22 @@ const MenuPreview = () => {
           </div>
         </div>
 
-        {/* Price Note Below Preview */}
+        {/* Price Note Below Preview - Enhanced styling */}
         <div className="text-center mt-8 mb-8">
-          <div className="bg-white rounded-lg p-4 border-2 border-kamalo-gold max-w-2xl mx-auto">
+          <div className="bg-white rounded-lg p-6 border-2 border-kamalo-gold max-w-3xl mx-auto shadow-lg">
+            <h3 className="text-lg font-bold mb-2" style={{ color: '#4B1E1E' }}>Menu Pricing</h3>
             <p className="text-lg font-semibold" style={{ color: '#4B1E1E' }}>
               All Daily Specials are R80 with pap or R90 with rice
+            </p>
+            <p className="text-base mt-2" style={{ color: '#6B7280' }}>
+              All Vegetable Sides are R40
             </p>
           </div>
         </div>
 
         <ScrollReveal delay={600}>
           <div className="text-center">
-            <Link to="/menu" className="btn-primary">
+            <Link to="/menu" className="btn-primary cta-with-icon">
               View Full Menu
             </Link>
           </div>

@@ -119,7 +119,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-kamalo-gold mb-6 font-serif">
                 Reserve Your <span className="text-kamalo-red">Experience</span>
               </h1>
-              <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+              <div className="tribal-divider max-w-md mx-auto mb-6"></div>
               <div className="max-w-4xl mx-auto">
                 <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
                   Looking for the perfect venue in Cape Town? Kamalo City offers intimate dinners, birthday parties, corporate events, and more. Enjoy authentic cuisine, vibrant ambiance, and excellent service.
@@ -128,10 +128,10 @@ Special Requests: ${formData.specialRequests || 'None'}`;
             </div>
           </ScrollReveal>
 
-          {/* Two-Column Layout: Form + Media */}
+          {/* Two-Column Layout: Form + Sidebar */}
           <ScrollReveal delay={200}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-              {/* Left Column: Reservation Form */}
+              {/* Left Column: Reservation Form - Fields: Name, Phone, Date, Time, Guests only */}
               <div className="bg-black/50 rounded-lg p-8 border border-gray-700">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center font-serif">Book Your Table</h2>
                 <p className="text-gray-300 mb-8 text-lg text-center">Open: 11:00 AM to 11:00 PM, 7 days a week</p>
@@ -232,7 +232,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
 
                   <Button 
                     type="submit" 
-                    className="w-full btn-primary py-5 text-xl font-semibold rounded-full touch-manipulation"
+                    className="w-full btn-primary py-5 text-xl font-semibold rounded-full touch-manipulation cta-with-icon"
                     disabled={isSubmitted}
                   >
                     {isSubmitted ? 'Sending...' : 'Reserve Now'}
@@ -253,9 +253,18 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                 </div>
               </div>
 
-              {/* Right Column: Media Block */}
+              {/* Right Column: Sidebar with Social Proof/Testimonial + Info */}
               <div className="space-y-6">
-                {/* Main Image Placeholder */}
+                {/* Social Proof/Testimonial Block */}
+                <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
+                  <h3 className="text-xl font-bold text-kamalo-gold mb-4 font-serif">What Our Guests Say</h3>
+                  <blockquote className="text-gray-300 italic mb-4">
+                    "Amazing African restaurant. I love to be there again and again for their lovely food, clean environments, live music and great service."
+                  </blockquote>
+                  <cite className="text-kamalo-red font-semibold">— HM Baloji, Verified Guest</cite>
+                </div>
+
+                {/* Main Image */}
                 <div className="relative h-64 md:h-96 rounded-lg overflow-hidden bg-black/50 border border-gray-800">
                   <img 
                     src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -280,6 +289,14 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                   <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
                     <h4 className="text-lg font-bold text-kamalo-gold mb-2">Hours</h4>
                     <p className="text-gray-300">11:00 AM - 11:00 PM daily</p>
+                  </div>
+                </div>
+
+                {/* Map Container - Prepared for future embed */}
+                <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
+                  <h4 className="text-lg font-bold text-kamalo-gold mb-4">Find Us</h4>
+                  <div className="h-32 bg-gray-800 rounded-lg flex items-center justify-center">
+                    <p className="text-gray-400">📍 90 Voortrekker Road, Goodwood, Cape Town</p>
                   </div>
                 </div>
               </div>

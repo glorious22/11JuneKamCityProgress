@@ -27,29 +27,33 @@ const ServicesPreview = () => {
       icon: Music,
       title: "Live Entertainment",
       description: "Music nights, DJs, and cultural showcases every Friday and Saturday",
-      link: "/services/live-entertainment",
-      image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400"
+      link: "/services",
+      image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400",
+      serviceIcon: "🎉"
     },
     {
       icon: Users,
       title: "Private Bookings",
       description: "Full venue hire for birthdays, corporate events, and celebrations up to 80 guests",
-      link: "/services/private-bookings",
-      image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400"
+      link: "/services",
+      image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400",
+      serviceIcon: "🎲"
     },
     {
       icon: Utensils,
       title: "Pre-Orders & Catering",
       description: "Order ahead for pickup or enjoy our full dining experience with catering options",
-      link: "/services/pre-order-food",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400"
+      link: "/services",
+      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      serviceIcon: "📦"
     },
     {
       icon: Wind,
       title: "Lifestyle Services",
       description: "Premium hookah lounge, signature fragrances, professional barbershop, and game nights",
-      link: "/services/hookah-lounge",
-      image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=400"
+      link: "/services",
+      image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=400",
+      serviceIcon: "💨"
     }
   ];
 
@@ -61,20 +65,20 @@ const ServicesPreview = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-serif">
               More Than Just <span className="text-kamalo-red">Dining</span>
             </h2>
-            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
+            <div className="tribal-divider max-w-md mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover the complete Kamalo City experience with entertainment, events, and lifestyle services
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 equal-height-grid">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <ScrollReveal key={index} delay={index * 200}>
-                <div className="bg-black/50 rounded-lg overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-300 hover:scale-105 hover:shadow-lg group">
-                  <div className="relative h-48 overflow-hidden">
+                <div className="service-card bg-black/50 text-white border-gray-800 hover:border-kamalo-red">
+                  <div className="relative h-48 overflow-hidden rounded-lg mb-6">
                     <img 
                       src={service.image}
                       alt={`Kamalo City - ${service.title}`}
@@ -82,14 +86,17 @@ const ServicesPreview = () => {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
-                    <IconComponent className="absolute top-4 left-4 w-8 h-8 text-kamalo-red" />
+                    <div className="absolute top-4 left-4 text-3xl service-icon">
+                      {service.serviceIcon}
+                    </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-3 font-serif">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
+                  
+                  <div className="flex flex-col flex-grow">
+                    <h3 className="service-title text-white">{service.title}</h3>
+                    <p className="service-description text-gray-300">{service.description}</p>
                     <Link
                       to={service.link}
-                      className="inline-block bg-kamalo-red text-white px-6 py-3 rounded-full hover:bg-red-600 transition-all duration-300 font-semibold hover:scale-105 hover:shadow-lg"
+                      className="inline-block bg-kamalo-red text-white px-6 py-3 rounded-full hover:bg-red-600 transition-all duration-300 font-semibold hover:scale-105 hover:shadow-lg mt-auto text-center cta-with-icon"
                     >
                       Learn More
                     </Link>

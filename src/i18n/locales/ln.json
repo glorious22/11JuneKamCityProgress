@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "home": "Ndako",
+    "menu": "Menu",
+    "gallery": "Galerie",
+    "about": "Na Tina",
+    "services": "Misala",
+    "contact": "Kokutana",
+    "reserve": "Kobomba"
+  },
+  "hero": {
+    "title": "Kamalo City – Motema ya Afrika na Cape Town",
+    "subtitle": "Elengi ya Afrika. Lisolo na kati ya bilei nyonso.",
+    "description": "Yeba bilei ya solo ya Afrika, ndunda ya bonkoko, shisha ya malamu, kobongisa nzoto, mpe masano ya mpokwa — nyonso na se ya ndako moko na Goodwood, Cape Town.",
+    "bookTable": "Bomba Mesa",
+    "viewMenu": "Tala Menu",
+    "address": "90 Voortrekker Road, Goodwood",
+    "phone": "+27 73 159 8909",
+    "hours": "Efungwami mikolo 7 na poso: 11:00 AM - 11:00 PM"
+  },
+  "story": {
+    "title": "Lisolo na Biso: Kobanda na Mabanga tii na Rythme",
+    "description1": "Kamalo City ebandaki na 2023 lokola esika ya mimeseno epai wapi libula ya Afrika ekutanaka na elengi oyo ekobosanaka te. Lelo, ezali moko ya bisika ya kolia oyo bato balingaka mingi na Cape Town.",
+    "description2": "Oyo ezalaki kala mabanga esalemi lisusu na ntina — kosala esika ya esengo mpo na bilei, miziki, mpe molimo ya lisanga oyo epesaka lokumu na bakoko na biso na bilei nyonso oyo tosalaka.",
+    "point1": "Kobanda na mabanga tii na kobongola — Ekelelamaki na 2023 na emoniseli mpe mokano",
+    "point2": "Bilei ya solo ya Afrika — Mayele ya sika na bilei ya bonkoko",
+    "point3": "Esika mobimba ya mimeseno — Bilei, miziki, makambo, mpe misala ya bomoi",
+    "quote": "Kobanda na mabanga tii na rythme: esalemaki lisusu na 2023, lelo Kamalo City ezali kobeta na elengi, lisanga mpe molimo.",
+    "founder": "Pitchou Ntumba, Mokeli"
+  },
+  "timeline": {
+    "title": "Mobembo na Biso",
+    "description": "Kobanda na emoniseli tii na bosolo, yeba makambo oyo esalaki Kamalo City.",
+    "2023": {
+      "title": "Esalemaki Lisusu mpe Efungwamaki",
+      "description": "Kobanda na esika oyo etikamaki tii na esika ya mimeseno — Kamalo City efungolaki bikuke na biso na emoniseli ya kolia ya solo ya Afrika."
+    },
+    "2024": {
+      "title": "Kobanda Makambo mpe Masano ya Bomoi",
+      "description": "Kokola na masano ya mpokwa, kosala makambo ya bato moke, mpe misala mosusu ya bomoi na kati na ye salon ya suki mpe shisha."
+    },
+    "2025": {
+      "title": "Ekomaki Esika ya Liboso",
+      "description": "Etelemi lokola esika ya liboso ya kolia mpe masano ya Afrika na Cape Town, oyo bato ya mboka mpe bapaya balingaka."
+    }
+  },
+  "services": {
+    "title": "Koleka Kaka Kolia",
+    "description": "Yeba mayele mobimba ya Kamalo City na masano, makambo, mpe misala ya bomoi",
+    "viewAll": "Tala Misala Nyonso",
+    "liveEntertainment": {
+      "title": "Masano ya Bomoi",
+      "description": "Butu ya miziki, ba-DJ, mpe bimoniseli ya mimeseno jumanne mpe sabato nyonso"
+    },
+    "privateBookings": {
+      "title": "Kobomba ya Bato Moke",
+      "description": "Kobomba esika mobimba mpo na mbotama, makambo ya mosala, mpe masepeli tii na bato 80"
+    },
+    "preOrders": {
+      "title": "Kotinda Liboso mpe Kosala Bilei",
+      "description": "Tinda liboso mpo na kozwa to sepela na mayele na biso mobimba ya kolia na makoki ya kosala bilei"
+    },
+    "lifestyle": {
+      "title": "Misala ya Bomoi",
+      "description": "Esika ya shisha ya malamu, banzela ya solo, salon ya suki ya mayele, mpe butu ya masano"
+    }
+  },
+  "menu": {
+    "title": "Bilei ya Motuya",
+    "description": "Yeba bilei na biso ya Afrika oyo bato balingaka mingi, esalemaki na bilei ya solo mpe bilei ya bonkoko",
+    "viewFull": "Tala Menu Mobimba",
+    "pricing": {
+      "title": "Sango ya Ntalo ya Menu",
+      "dailySpecials": "Bilei nyonso ya mokolo ezali R80 na pap to R90 na loso",
+      "vegetableSides": "Ndunda nyonso ezali R40",
+      "note": "*Keba: Ntalo na ndako ekeseni na ntalo ya Uber Eats."
+    }
+  },
+  "testimonials": {
+    "title": "Oyo Bakiliya na Biso Balobi",
+    "description": "Makambo ya solo ya bapesi na biso ya motuya"
+  },
+  "gallery": {
+    "title": "Galerie na Biso",
+    "description": "Tala mokili ya esengo ya Kamalo City na lisanga na biso ya bantango, kobanda na bilei ya elengi tii na makambo ya esengo mpe misala ya malamu.",
+    "food": "Bilei",
+    "events": "Makambo",
+    "services": "Misala",
+    "experience": "Sepela Kamalo City Lelo",
+    "experienceDescription": "Omisala kosala makundoli na yo moko? Yaka epai na biso mpo na bilei ya solo ya Afrika mpe masano.",
+    "bookTable": "Bomba Mesa na Yo",
+    "visitToday": "Yaka Lelo"
+  },
+  "faq": {
+    "title": "Mituna oyo Batunaka Mingi",
+    "description": "Nyonso oyo osengeli koyeba na ntina ya mayele na yo ya Kamalo City"
+  },
+  "footer": {
+    "description": "Esika epai wapi libula ya Afrika ya malamu ekutanaka na elengi oyo ekobosanaka te. Yaka mpo na elengi — tikala mpo na esengo.",
+    "quickLinks": "Bakokano ya Nokinoki",
+    "contactInfo": "Sango ya Kokutana",
+    "hours": "Mikolo 7 na poso",
+    "openHours": "11:00 AM - 11:00 PM",
+    "kitchenNote": "Cuisine ekangamaka na 10:30 PM",
+    "copyright": "© 2025 Kamalo City. Makoki nyonso ebombami.",
+    "tagline": "Soki oyei awa mpo na kolia, kopema, to kosepela — Kamalo City ezali esika epai wapi ntango nyonso ekomaka makundoli.",
+    "bookNow": "Bomba Sik'oyo"
+  },
+  "reservations": {
+    "title": "Bomba Mayele na Yo",
+    "description": "Ozali koluka esika ya malamu na Cape Town? Kamalo City epesaka bilei ya bato moke, bafeti ya mbotama, makambo ya mosala, mpe makambo mosusu. Sepela bilei ya solo, esengo ya makasi, mpe mosala ya malamu.",
+    "bookTable": "Bomba Mesa na Yo",
+    "openHours": "Efungwami: 11:00 AM tii 11:00 PM, mikolo 7 na poso",
+    "fullName": "Kombo Mobimba",
+    "phoneNumber": "Nimero ya Telefone",
+    "date": "Mokolo",
+    "time": "Ntango",
+    "guests": "Motango ya Bapesi",
+    "specialRequests": "Bosenga ya Ndenge Mosusu",
+    "reserveNow": "Bomba Sik'oyo",
+    "sending": "Kotinda...",
+    "successMessage": "Bosenga ya kobomba etindami! Tokondima na kati ya ngonga 2.",
+    "confirmationNote": "Tokondima kobomba na yo na kati ya ngonga 2. Mpo na kobomba ya nokinoki, benga biso mbala moko.",
+    "alternativeContact": "To kutana na biso mbala moko:",
+    "whatsappGroup": "Lisanga ya WhatsApp",
+    "faqTitle": "Mituna oyo Batunaka Mingi",
+    "readyToReserve": "Omisala Kobomba?",
+    "contactDescription": "Kutana na biso sik'oyo mpo na kobatela mesa na yo to kosolola na ntina ya makoki ya makambo ya bato moke.",
+    "specialRequirementsNote": "Mpo na bosenga ya ndenge mosusu to bituluku ya minene, benga"
+  },
+  "about": {
+    "quote": "Epesami mayele na bakoko na biso, ekabolami na mokili.",
+    "title": "Libula oyo Epesami Bomoi",
+    "description": "Kamalo City ebotamaki na mabanga mpe esalemaki lisusu na ntina. Kobanda na 2023, tokoli mpo na kokoma esika ya bilei, miziki, mpe molimo ya lisanga.",
+    "foundersTitle": "Boyeba Bakeli na Biso",
+    "foundersDescription1": "Ebotamaki na mposa ya komema bilei ya bakoko na motema ya Cape Town, Kamalo City esangisaka bilei ya solo ya Afrika na mayele ya sika ya lisanga. Tosalaka lokola esika ya mimeseno — epai wapi bato basanganaka, bapemaka, mpe basepelaka na bomoi.",
+    "foundersDescription2": "Kamalo City ekelami na Pitchou Ntumba mpe mwasi na ye, oyo elongo basalaki esika ya liboso ya kolia mpe masano ya Afrika na Cape Town. Emoniseli na bango ya elongo mpe mayele na bango ya koyamba bapesi esalaki esika oyo ekoma masepeli ya makasi ya bilei mpe mimeseno ya Afrika.",
+    "foundersDescription3": "Na se ya bokambi na bango, Kamalo City ekoli koleka kaka ndako ya kolia — ezali esika ya mimeseno epai wapi bato basanganaka mpo na kosepela na bilei ya solo ya Afrika, mayele ya shisha ya malamu, misala ya kobongisa nzoto ya mayele, mpe masano.",
+    "statsYears": "Mibu ya Mosala",
+    "statsGuests": "Bapesi ya Esengo",
+    "statsDays": "Mikolo ya Kofungwama",
+    "statsCapacity": "Motango ya Minene",
+    "ctaTitle": "Yaka Kosangana na Mayele",
+    "ctaDescription": "Omisala kozala na kati ya mayele ya Kamalo City? Yaka epai na biso mpe lela mposa na bilei nyonso.",
+    "reserveTable": "Bomba Mesa",
+    "visitToday": "Yaka Lelo"
+  },
+  "contact": {
+    "title": "Tosangana",
+    "description": "Osengeli nzela? Olingi kosala kobomba? Tozali awa mpo na kosalisa yo — kutana na biso ntango nyonso.",
+    "callUs": "Benga Biso",
+    "chatWhatsApp": "Solola na WhatsApp",
+    "emailUs": "Tindela Biso Email",
+    "address": "Adresse",
+    "operatingHours": "Bantango ya Mosala",
+    "mondayToSunday": "Lundi – Dimanche:",
+    "kitchenCloses": "Cuisine ekangamaka na 10:30 PM",
+    "followUs": "Landa Biso",
+    "instagram": "Instagram",
+    "whatsappGroup": "Lisanga ya WhatsApp",
+    "joinCommunity": "Sangana na lisanga na biso",
+    "readyToVisit": "Omisala Koya na Kamalo City?",
+    "visitDescription": "Sala kobomba to kende kaka mpo na mayele ya kolia ya solo ya Afrika na Cape Town.",
+    "makeReservation": "Sala Kobomba",
+    "whatsappUs": "WhatsApp Biso"
+  },
+  "common": {
+    "learnMore": "Yeba Mingi",
+    "bookNow": "Bomba Sik'oyo",
+    "callNow": "Benga Sik'oyo",
+    "viewMore": "Tala Mingi",
+    "getDirections": "Zwa Nzela",
+    "orderNow": "Tinda Sik'oyo"
+  }
+}

@@ -1,7 +1,11 @@
 import { Clock, Phone, MapPin, Instagram, MessageCircle, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import LanguageToggle from './LanguageToggle';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-black text-white py-12 md:py-16 footer-tribal">
       <div className="site-container">
@@ -10,34 +14,34 @@ const Footer = () => {
           <div>
             <h3 className="text-xl md:text-2xl font-bold mb-4 text-kamalo-gold font-serif">Kamalo City</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Where rich African heritage meets unforgettable flavor. Come for the taste — stay for the vibe.
+              {t('footer.description')}
             </p>
             <div className="flex items-start justify-center md:justify-start space-x-3">
               <Clock className="w-6 h-6 mt-1 text-kamalo-red flex-shrink-0" />
               <div className="text-base">
-                <p className="font-semibold">7 days a week</p>
-                <p className="text-kamalo-gold font-bold">11:00 AM - 11:00 PM</p>
-                <p className="text-gray-400 mt-2 text-sm">Kitchen closes at 10:30 PM</p>
+                <p className="font-semibold">{t('footer.hours')}</p>
+                <p className="text-kamalo-gold font-bold">{t('footer.openHours')}</p>
+                <p className="text-gray-400 mt-2 text-sm">{t('footer.kitchenNote')}</p>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red font-serif">Quick Links</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red font-serif">{t('footer.quickLinks')}</h3>
             <div className="space-y-3 text-base">
-              <Link to="/" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Home</Link>
-              <Link to="/menu" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Menu</Link>
-              <Link to="/services" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Services</Link>
-              <Link to="/gallery" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Gallery</Link>
-              <Link to="/about" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">About</Link>
-              <Link to="/contact" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">Contact</Link>
+              <Link to="/" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.home')}</Link>
+              <Link to="/menu" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.menu')}</Link>
+              <Link to="/services" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.services')}</Link>
+              <Link to="/gallery" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.gallery')}</Link>
+              <Link to="/about" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.about')}</Link>
+              <Link to="/contact" className="block hover:text-kamalo-red transition-colors touch-manipulation font-semibold">{t('nav.contact')}</Link>
             </div>
           </div>
 
           {/* Contact Info with Icon Buttons */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red font-serif">Contact Info</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-kamalo-red font-serif">{t('footer.contactInfo')}</h3>
             <div className="space-y-4 text-base">
               <div className="flex items-start justify-center md:justify-start space-x-3">
                 <MapPin className="w-5 h-5 text-kamalo-red mt-1 flex-shrink-0" />
@@ -83,21 +87,26 @@ const Footer = () => {
                   <MessageCircle className="w-5 h-5" />
                 </a>
               </div>
+
+              {/* Language Toggle in Footer */}
+              <div className="flex justify-center md:justify-start mt-6">
+                <LanguageToggle />
+              </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-gray-400 text-base mb-4">© 2025 Kamalo City. All rights reserved.</p>
+          <p className="text-gray-400 text-base mb-4">{t('footer.copyright')}</p>
           <p className="text-kamalo-red mb-6 text-lg font-semibold">
-            Whether you're here to dine, unwind, or celebrate — Kamalo City is where every moment becomes a memory.
+            {t('footer.tagline')}
           </p>
           <div>
             <Link 
               to="/reservations" 
               className="btn-primary inline-block touch-manipulation"
             >
-              Book Now
+              {t('footer.bookNow')}
             </Link>
           </div>
         </div>

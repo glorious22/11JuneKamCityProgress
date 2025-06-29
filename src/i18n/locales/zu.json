@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "home": "Ikhaya",
+    "menu": "Imenyu",
+    "gallery": "Igalari",
+    "about": "Ngathi",
+    "services": "Izinsizakalo",
+    "contact": "Xhumana",
+    "reserve": "Bhuka"
+  },
+  "hero": {
+    "title": "Kamalo City – Inhliziyo ye-Afrika eThekwini",
+    "subtitle": "Ukunambitha kwe-Afrika. Indaba kuyo yonke into oyidlayo.",
+    "description": "Thola ukudla kwangempela kwe-Afrika, imifino yendabuko, i-hookah ephezulu, ukuzilungisa, kanye nokuzijabulisa ngeempelaveki — konke ngaphansi kophahla olulodwa eGoodwood, eKapa.",
+    "bookTable": "Bhuka Itafula",
+    "viewMenu": "Buka Imenyu",
+    "address": "90 Voortrekker Road, Goodwood",
+    "phone": "+27 73 159 8909",
+    "hours": "Kuvuliwe izinsuku ezi-7 ngeviki: 11:00 AM - 11:00 PM"
+  },
+  "story": {
+    "title": "Indaba Yethu: Kusuka Emabhodlweni Kuya Esigqini",
+    "description1": "I-Kamalo City yaqala ngo-2023 njengesikhungo samasiko lapho ilifa le-Afrika lihlangana nokunambitha okungakhohlakali. Namuhla, yenye yezindawo zokudla ezithandwa kakhulu eKapa.",
+    "description2": "Lokho okwakuyimabhodlo kwakhiwa ngenjongo — ukudala indawo eshisayo yokudla, umculo, kanye nomoya womphakathi ohlonipha okhokho bethu kuyo yonke imidla esiyiphakayo.",
+    "point1": "Kusuka emabhodlweni kuya ekuvuseleleni — Yasungulwa ngo-2023 ngombono nokuzimisela",
+    "point2": "Ukunambitha kwangempela kwe-Afrika — Ulwazi lwesimanje ngamaresiphi endabuko",
+    "point3": "Isikhungo esiphelele samasiko — Ukudla, umculo, imicimbi, nezinsizakalo zempilo",
+    "quote": "Kusuka emabhodlweni kuya esigqini: yavuselelwa ngo-2023, namuhla i-Kamalo City ishaya ngokunambitha, umphakathi nomphefumulo.",
+    "founder": "Pitchou Ntumba, Umsunguli"
+  },
+  "timeline": {
+    "title": "Uhambo Lwethu",
+    "description": "Kusuka embonweni kuya eqinisweni, thola izinyathelo ezakha i-Kamalo City.",
+    "2023": {
+      "title": "Yakhiwa Kabusha Yavulwa",
+      "description": "Kusuka endaweni eyayishiyiwe kuya endaweni eshisayo yamasiko — i-Kamalo City yavula iminyango yayo ngombono wokudla kwangempela kwe-Afrika."
+    },
+    "2024": {
+      "title": "Yaqalisa Imicimbi Nokuzijabulisa Okuphilayo",
+      "description": "Yandiswa ngokuzijabulisa ngeempelaveki, ukuhlela imicimbi yangasese, nezinsizakalo zempilo ezengeziwe okubandakanya isaluni yezinwele ne-hookah."
+    },
+    "2025": {
+      "title": "Yaba Yindawo Ephambili",
+      "description": "Yasungulwa njengendawo ephambili yokudla nokuzijabulisa kwe-Afrika eKapa, ethandwa abantu bendawo nezivakashi."
+    }
+  },
+  "services": {
+    "title": "Ngaphezu Kokudla Nje",
+    "description": "Thola ulwazi oluphelele lwe-Kamalo City ngokuzijabulisa, imicimbi, nezinsizakalo zempilo",
+    "viewAll": "Buka Zonke Izinsizakalo",
+    "liveEntertainment": {
+      "title": "Ukuzijabulisa Okuphilayo",
+      "description": "Ubusuku bomculo, ama-DJ, nemibukiso yamasiko ngoLwesihlanu noMgqibelo"
+    },
+    "privateBookings": {
+      "title": "Ukubhuka Kwangasese",
+      "description": "Ukuqasha indawo yonke yeminyhadala, imicimbi yebhizinisi, nemigubho kuya kuzivakashi ezingama-80"
+    },
+    "preOrders": {
+      "title": "Uku-oda Kwangaphambili Nokusebenzela",
+      "description": "Oda kwangaphambili ukuze uzokuthatha noma ujabulele ulwazi lwethu oluphelele lokudla nezinketho zokusebenzela"
+    },
+    "lifestyle": {
+      "title": "Izinsizakalo Zempilo",
+      "description": "Isaluni ye-hookah ephezulu, amakha akhethekile, isaluni yezinwele yobuchwepheshe, nobusuku bemidlalo"
+    }
+  },
+  "menu": {
+    "title": "Ukudla Okuvelele",
+    "description": "Thola ukudla kwethu kwe-Afrika okuthandwa kakhulu, okwenziwe ngokunambitha kwangempela namaresiphi endabuko",
+    "viewFull": "Buka Imenyu Ephelele",
+    "pricing": {
+      "title": "Ulwazi Lwentengo Yemenyu",
+      "dailySpecials": "Konke Ukudla Kosuku kuyi-R80 ne-pap noma R90 ne-rayisi",
+      "vegetableSides": "Zonke Izingxenye Zemifino ziyi-R40",
+      "note": "*Qaphela: Amanani endlini ahlukile kumanani e-Uber Eats."
+    }
+  },
+  "testimonials": {
+    "title": "Lokho Amakhasimende Ethu Akushoyo",
+    "description": "Ulwazi lwangempela oluvela kuzivakashi zethu ezibalulekile"
+  },
+  "gallery": {
+    "title": "Igalari Yethu",
+    "description": "Hlola umhlaba oshisayo we-Kamalo City ngeqoqo lethu lezikhathi, kusuka ekudleni okumnandi kuya emicimbini eshisayo nezinsizakalo eziphezulu.",
+    "food": "Ukudla",
+    "events": "Imicimbi",
+    "services": "Izinsizakalo",
+    "experience": "Zijabulise i-Kamalo City Namuhla",
+    "experienceDescription": "Ukulungele ukudala izinkumbulo zakho? Sivakashele ukuze uthole ukudla kwangempela kwe-Afrika nokuzijabulisa.",
+    "bookTable": "Bhuka Itafula Lakho",
+    "visitToday": "Vakashela Namuhla"
+  },
+  "faq": {
+    "title": "Imibuzo Ebuzwa Njalo",
+    "description": "Konke okudingeka ukwazi ngolwazi lwakho lwe-Kamalo City"
+  },
+  "footer": {
+    "description": "Lapho ilifa elinotyebi le-Afrika lihlangana nokunambitha okungakhohlakali. Woza ngokunambitha — hlala ngenxa yomoya.",
+    "quickLinks": "Izixhumanisi Ezisheshayo",
+    "contactInfo": "Ulwazi Lokuxhumana",
+    "hours": "Izinsuku ezi-7 ngeviki",
+    "openHours": "11:00 AM - 11:00 PM",
+    "kitchenNote": "Ikhishi livalwa ngo-10:30 PM",
+    "copyright": "© 2025 Kamalo City. Wonke amalungelo agciniwe.",
+    "tagline": "Noma ulapha ukuze udle, uphumule, noma ugubhe — i-Kamalo City yindawo lapho sonke isikhathi siba yinkumbulo.",
+    "bookNow": "Bhuka Manje"
+  },
+  "reservations": {
+    "title": "Bhuka Ulwazi Lwakho",
+    "description": "Ufuna indawo efanelekile eKapa? I-Kamalo City inikeza ukudla kwangasese, amaphathi okuzalwa, imicimbi yebhizinisi, nokunye. Jabulela ukudla kwangempela, isimo eshisayo, nesinsizakalo esihle.",
+    "bookTable": "Bhuka Itafula Lakho",
+    "openHours": "Kuvuliwe: 11:00 AM kuya ku-11:00 PM, izinsuku ezi-7 ngeviki",
+    "fullName": "Igama Eliphelele",
+    "phoneNumber": "Inombolo Yocingo",
+    "date": "Usuku",
+    "time": "Isikhathi",
+    "guests": "Inani Lezivakashi",
+    "specialRequests": "Izicelo Ezikhethekile",
+    "reserveNow": "Bhuka Manje",
+    "sending": "Kuyathunyelwa...",
+    "successMessage": "Isicelo sokubhuka sithunyelwe! Sizoqinisekisa emahora angu-2.",
+    "confirmationNote": "Sizoqinisekisa ukubhuka kwakho emahora angu-2. Ukubhuka okuphuthumayo, sishayele ngqo.",
+    "alternativeContact": "Noma uxhumane nathi ngqo:",
+    "whatsappGroup": "Iqembu le-WhatsApp",
+    "faqTitle": "Imibuzo Ebuzwa Njalo",
+    "readyToReserve": "Ukulungele Ukubhuka?",
+    "contactDescription": "Xhumana nathi manje ukuze uvikele itafula lakho noma uxoxe ngezinketho zemicimbi yangasese.",
+    "specialRequirementsNote": "Ngezidingo ezikhethekile noma amaqembu amakhulu, sicela ushayele"
+  },
+  "about": {
+    "quote": "Kuphefumlelwe okhokho bethu, kwabelwana nomhlaba.",
+    "title": "Ilifa Elinikwe Ukuphila",
+    "description": "I-Kamalo City yazalwa emabhodlweni yakhiwa ngenjongo. Kusuka ngo-2023, sikhule saba yindawo yokudla, umculo, nomoya womphakathi.",
+    "foundersTitle": "Hlangana Nabasunguli Bethu",
+    "foundersDescription1": "Kuzalwe ukuthanda ukuletha ukunambitha kokhokho enhliziyweni yeKapa, i-Kamalo City ihlanganisa ukudla kwangempela kwe-Afrika nolwazi lwesimanje lomphakathi. Sisebenza njengesikhungo samasiko — lapho abantu behlangana, baphumula, futhi bajabulele ukuphila.",
+    "foundersDescription2": "I-Kamalo City yasungulwa nguPitchou Ntumba nomkakhe, abadala indawo ephambili yokudla nokuzijabulisa kwe-Afrika eKapa. Umbono wabo ohlanganisiwe nekhono labo lokwamukela izivakashi kuguqule le ndawo yaba ngumgubho oshisayo wokudla namasiko e-Afrika.",
+    "foundersDescription3": "Ngaphansi kobuholi babo, i-Kamalo City ikhule yangaphezu kwendlu yokudla nje — yisikhungo samasiko lapho abantu behlangana ukuze bajabulele ukudla kwangempela kwe-Afrika, ulwazi lwe-shisha oluhle, izinsizakalo zokuzilungisa zobuchwepheshe, nokuzijabulisa.",
+    "statsYears": "Iminyaka Esebenzayo",
+    "statsGuests": "Izivakashi Ezijabulayo",
+    "statsDays": "Izinsuku Ezivulekile",
+    "statsCapacity": "Ubukhulu Obuphezulu",
+    "ctaTitle": "Woza Uzijoyine Ulwazi",
+    "ctaDescription": "Ukulungele ukuba yingxenye yolwazi lwe-Kamalo City? Sivakashele uze unambithise uthando kuyo yonke imidla.",
+    "reserveTable": "Bhuka Itafula",
+    "visitToday": "Vakashela Namuhla"
+  },
+  "contact": {
+    "title": "Asixhumane",
+    "description": "Udinga izikhombisi? Ufuna ukwenza ukubhuka? Silapha ukusiza — xhumana nathi nganoma yisiphi isikhathi.",
+    "callUs": "Sishayele",
+    "chatWhatsApp": "Khuluma nge-WhatsApp",
+    "emailUs": "Sithumelele i-Email",
+    "address": "Ikheli",
+    "operatingHours": "Amahora Okusebenza",
+    "mondayToSunday": "NgoMsombuluko – NgeSonto:",
+    "kitchenCloses": "Ikhishi livalwa ngo-10:30 PM",
+    "followUs": "Silandele",
+    "instagram": "Instagram",
+    "whatsappGroup": "Iqembu le-WhatsApp",
+    "joinCommunity": "Joyina umphakathi wethu",
+    "readyToVisit": "Ukulungele Ukuvakashela i-Kamalo City?",
+    "visitDescription": "Yenza ukubhuka noma nje weze ukuze uthole ulwazi lokudla kwangempela kwe-Afrika eKapa.",
+    "makeReservation": "Yenza Ukubhuka",
+    "whatsappUs": "Si-WhatsApp"
+  },
+  "common": {
+    "learnMore": "Funda Kabanzi",
+    "bookNow": "Bhuka Manje",
+    "callNow": "Shayela Manje",
+    "viewMore": "Buka Kabanzi",
+    "getDirections": "Thola Izikhombisi",
+    "orderNow": "Oda Manje"
+  }
+}

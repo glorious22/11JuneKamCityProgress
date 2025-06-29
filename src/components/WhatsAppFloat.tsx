@@ -1,23 +1,24 @@
 import { Globe } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 const LanguageFloat = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState('EN');
+  const { i18n } = useTranslation();
 
   const languages = [
-    { code: 'EN', name: 'English', flag: '🇬🇧' },
-    { code: 'FR', name: 'Français', flag: '🇫🇷' },
-    { code: 'LN', name: 'Lingala', flag: '🌍' },
-    { code: 'ZU', name: 'isiZulu', flag: '🇿🇦' },
-    { code: 'XH', name: 'isiXhosa', flag: '🇿🇦' }
+    { code: 'en', name: 'English', flag: '🇬🇧' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'ln', name: 'Lingala', flag: '🌍' },
+    { code: 'zu', name: 'isiZulu', flag: '🇿🇦' },
+    { code: 'xh', name: 'isiXhosa', flag: '🇿🇦' }
   ];
 
+  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+
   const handleLanguageChange = (langCode: string) => {
-    setCurrentLanguage(langCode);
+    i18n.changeLanguage(langCode);
     setIsOpen(false);
-    // Future: Implement actual translation logic here
-    console.log(`Language changed to: ${langCode}`);
   };
 
   return (
@@ -28,22 +29,28 @@ const LanguageFloat = () => {
         aria-label="Change language"
       >
         <Globe className="w-6 h-6" />
-        <span className="language-code">{currentLanguage}</span>
+        <span className="language-code">{currentLanguage.code.toUpperCase()}</span>
       </button>
       
       {isOpen && (
-        <div className="language-float-dropdown">
-          {languages.map((lang) => (
-            <button
-              key={lang.code}
-              onClick={() => handleLanguageChange(lang.code)}
-              className={`language-float-option ${currentLanguage === lang.code ? 'active' : ''}`}
-            >
-              <span className="flag">{lang.flag}</span>
-              <span className="name">{lang.name}</span>
-            </button>
-          ))}
-        </div>
+        <>
+          <div 
+            className="fixed inset-0 z-40" 
+            onClick={() => setIsOpen(false)}
+          />
+          <div className="language-float-dropdown">
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => handleLanguageChange(lang.code)}
+                className={`language-float-option ${currentLanguage.code === lang.code ? 'active' : ''}`}
+              >
+                <span className="flag">{lang.flag}</span>
+                <span className="name">{lang.name}</span>
+              </button>
+            ))}
+          </div>
+        </>
       )}
     </div>
   );

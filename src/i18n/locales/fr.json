@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "menu": "Menu",
+    "gallery": "Galerie",
+    "about": "À Propos",
+    "services": "Services",
+    "contact": "Contact",
+    "reserve": "Réserver"
+  },
+  "hero": {
+    "title": "Kamalo City – Le Cœur de l'Afrique au Cap",
+    "subtitle": "Un goût de l'Afrique. Une histoire dans chaque bouchée.",
+    "description": "Découvrez la cuisine africaine authentique, les légumes traditionnels, le narguilé premium, les soins de beauté et les divertissements de week-end — tout sous un même toit à Goodwood, Le Cap.",
+    "bookTable": "Réserver une Table",
+    "viewMenu": "Voir le Menu",
+    "address": "90 Voortrekker Road, Goodwood",
+    "phone": "+27 73 159 8909",
+    "hours": "Ouvert 7 jours sur 7 : 11h00 - 23h00"
+  },
+  "story": {
+    "title": "Notre Histoire : Des Décombres au Rythme",
+    "description1": "Kamalo City a commencé en 2023 comme un centre culturel où l'héritage africain rencontre une saveur inoubliable. Aujourd'hui, c'est l'un des restaurants les plus aimés du Cap.",
+    "description2": "Ce qui était autrefois des décombres a été reconstruit avec un but — créer une destination vibrante pour la nourriture, la musique et l'esprit communautaire qui honore nos ancêtres dans chaque plat que nous servons.",
+    "point1": "Des décombres au renouveau – Fondé en 2023 avec vision et détermination",
+    "point2": "Saveurs africaines authentiques – Expérience moderne avec recettes traditionnelles",
+    "point3": "Centre culturel complet – Nourriture, musique, événements et services de style de vie",
+    "quote": "Des décombres au rythme : relancé en 2023, aujourd'hui Kamalo City bat avec saveur, communauté et âme.",
+    "founder": "Pitchou Ntumba, Fondateur"
+  },
+  "timeline": {
+    "title": "Notre Parcours",
+    "description": "De la vision à la réalité, découvrez les étapes qui ont façonné Kamalo City.",
+    "2023": {
+      "title": "Reconstruit et Ouvert",
+      "description": "D'un espace abandonné à un point chaud culturel — Kamalo City a ouvert ses portes avec une vision de restauration africaine authentique."
+    },
+    "2024": {
+      "title": "Lancement d'Événements et de Divertissement en Direct",
+      "description": "Expansion avec divertissement de week-end, organisation d'événements privés et services de style de vie supplémentaires incluant salon de coiffure et narguilé."
+    },
+    "2025": {
+      "title": "Devenu Destination de Choix",
+      "description": "Établi comme le lieu de restauration et de divertissement africain premier du Cap, aimé par les locaux et les visiteurs."
+    }
+  },
+  "services": {
+    "title": "Plus Qu'un Simple Restaurant",
+    "description": "Découvrez l'expérience complète de Kamalo City avec divertissement, événements et services de style de vie",
+    "viewAll": "Voir Tous les Services",
+    "liveEntertainment": {
+      "title": "Divertissement en Direct",
+      "description": "Soirées musicales, DJs et vitrines culturelles chaque vendredi et samedi"
+    },
+    "privateBookings": {
+      "title": "Réservations Privées",
+      "description": "Location complète du lieu pour anniversaires, événements d'entreprise et célébrations jusqu'à 80 invités"
+    },
+    "preOrders": {
+      "title": "Pré-commandes et Traiteur",
+      "description": "Commandez à l'avance pour le retrait ou profitez de notre expérience culinaire complète avec options de traiteur"
+    },
+    "lifestyle": {
+      "title": "Services de Style de Vie",
+      "description": "Salon de narguilé premium, parfums signature, salon de coiffure professionnel et soirées de jeux"
+    }
+  },
+  "menu": {
+    "title": "Plats Vedettes",
+    "description": "Découvrez nos plats africains les plus aimés, préparés avec des saveurs authentiques et des recettes traditionnelles",
+    "viewFull": "Voir le Menu Complet",
+    "pricing": {
+      "title": "Informations sur les Prix du Menu",
+      "dailySpecials": "Tous les Plats du Jour sont à R80 avec pap ou R90 avec riz",
+      "vegetableSides": "Tous les Accompagnements de Légumes sont à R40",
+      "note": "*Note : Les prix en restaurant diffèrent des prix Uber Eats."
+    }
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "description": "Expériences réelles de nos précieux invités"
+  },
+  "gallery": {
+    "title": "Notre Galerie",
+    "description": "Explorez le monde vibrant de Kamalo City à travers notre collection de moments, de la cuisine délicieuse aux événements passionnants et services premium.",
+    "food": "Nourriture",
+    "events": "Événements",
+    "services": "Services",
+    "experience": "Vivez Kamalo City Aujourd'hui",
+    "experienceDescription": "Prêt à créer vos propres souvenirs ? Visitez-nous pour une cuisine africaine authentique et du divertissement.",
+    "bookTable": "Réservez Votre Table",
+    "visitToday": "Visitez Aujourd'hui"
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "description": "Tout ce que vous devez savoir sur votre expérience Kamalo City"
+  },
+  "footer": {
+    "description": "Où le riche héritage africain rencontre une saveur inoubliable. Venez pour le goût — restez pour l'ambiance.",
+    "quickLinks": "Liens Rapides",
+    "contactInfo": "Informations de Contact",
+    "hours": "7 jours sur 7",
+    "openHours": "11h00 - 23h00",
+    "kitchenNote": "La cuisine ferme à 22h30",
+    "copyright": "© 2025 Kamalo City. Tous droits réservés.",
+    "tagline": "Que vous soyez ici pour dîner, vous détendre ou célébrer — Kamalo City est l'endroit où chaque moment devient un souvenir.",
+    "bookNow": "Réserver Maintenant"
+  },
+  "reservations": {
+    "title": "Réservez Votre Expérience",
+    "description": "Vous cherchez le lieu parfait au Cap ? Kamalo City propose des dîners intimes, des fêtes d'anniversaire, des événements d'entreprise et plus encore. Profitez d'une cuisine authentique, d'une ambiance vibrante et d'un excellent service.",
+    "bookTable": "Réservez Votre Table",
+    "openHours": "Ouvert : 11h00 à 23h00, 7 jours sur 7",
+    "fullName": "Nom Complet",
+    "phoneNumber": "Numéro de Téléphone",
+    "date": "Date",
+    "time": "Heure",
+    "guests": "Nombre d'Invités",
+    "specialRequests": "Demandes Spéciales",
+    "reserveNow": "Réserver Maintenant",
+    "sending": "Envoi en cours...",
+    "successMessage": "Demande de réservation envoyée ! Nous confirmerons dans les 2 heures.",
+    "confirmationNote": "Nous confirmerons votre réservation dans les 2 heures. Pour les réservations urgentes, appelez-nous directement.",
+    "alternativeContact": "Ou contactez-nous directement :",
+    "whatsappGroup": "Chat de Groupe WhatsApp",
+    "faqTitle": "Questions Fréquemment Posées",
+    "readyToReserve": "Prêt à Réserver ?",
+    "contactDescription": "Contactez-nous maintenant pour sécuriser votre table ou discuter des options d'événements privés.",
+    "specialRequirementsNote": "Pour des exigences spéciales ou de grands groupes, veuillez appeler"
+  },
+  "about": {
+    "quote": "Inspiré par nos ancêtres, partagé avec le monde.",
+    "title": "Un Héritage Donné Vie",
+    "description": "Kamalo City est né des décombres et reconstruit avec un but. Depuis 2023, nous avons grandi pour devenir une destination pour la nourriture, la musique et l'esprit communautaire.",
+    "foundersTitle": "Rencontrez Nos Fondateurs",
+    "foundersDescription1": "Né de la passion d'apporter les saveurs ancestrales au cœur du Cap, Kamalo City fusionne la nourriture africaine authentique avec une expérience sociale moderne. Nous servons de centre culturel — où les gens se rassemblent, se détendent et profitent de la vie.",
+    "foundersDescription2": "Kamalo City a été fondé par Pitchou Ntumba et sa femme, qui ensemble ont créé la destination de restauration et de divertissement africain premier du Cap. Leur vision combinée et leur expertise en hospitalité ont transformé cet espace en une célébration vibrante de la cuisine et de la culture africaines.",
+    "foundersDescription3": "Sous leur direction, Kamalo City a évolué en plus qu'un simple restaurant – c'est un centre culturel où les gens se rassemblent pour profiter de la cuisine africaine authentique, des expériences de chicha premium, des services de toilettage professionnel et du divertissement.",
+    "statsYears": "Années Actives",
+    "statsGuests": "Invités Heureux",
+    "statsDays": "Jours Ouverts",
+    "statsCapacity": "Capacité Max",
+    "ctaTitle": "Venez Rejoindre l'Expérience",
+    "ctaDescription": "Prêt à faire partie de l'expérience Kamalo City ? Visitez-nous et goûtez la passion dans chaque plat.",
+    "reserveTable": "Réserver une Table",
+    "visitToday": "Visitez Aujourd'hui"
+  },
+  "contact": {
+    "title": "Connectons-nous",
+    "description": "Besoin d'indications ? Vous voulez faire une réservation ? Nous sommes là pour vous aider — contactez-nous à tout moment.",
+    "callUs": "Appelez-nous",
+    "chatWhatsApp": "Chat via WhatsApp",
+    "emailUs": "Envoyez-nous un Email",
+    "address": "Adresse",
+    "operatingHours": "Heures d'Ouverture",
+    "mondayToSunday": "Lundi – Dimanche :",
+    "kitchenCloses": "La cuisine ferme à 22h30",
+    "followUs": "Suivez-nous",
+    "instagram": "Instagram",
+    "whatsappGroup": "Groupe WhatsApp",
+    "joinCommunity": "Rejoignez notre communauté",
+    "readyToVisit": "Prêt à Visiter Kamalo City ?",
+    "visitDescription": "Faites une réservation ou passez simplement pour une expérience culinaire africaine authentique au Cap.",
+    "makeReservation": "Faire une Réservation",
+    "whatsappUs": "WhatsApp Nous"
+  },
+  "common": {
+    "learnMore": "En Savoir Plus",
+    "bookNow": "Réserver Maintenant",
+    "callNow": "Appeler Maintenant",
+    "viewMore": "Voir Plus",
+    "getDirections": "Obtenir des Directions",
+    "orderNow": "Commander Maintenant"
+  }
+}

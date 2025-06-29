@@ -373,80 +373,31 @@
     animation: glow 0.5s ease-in-out;
   }
 
-  /* Language Float Button */
-  .language-float {
+  /* WhatsApp floating button */
+  .whatsapp-float {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    z-index: 1000;
-  }
-
-  .language-float-button {
-    background: #FFD700;
-    color: #2C2C2C;
+    background: #25D366;
+    color: white;
     border: none;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    text-decoration: none;
   }
 
-  .language-float-button:hover {
-    background: #E6C200;
+  .whatsapp-float:hover {
+    background: #128C7E;
     transform: scale(1.1);
-    animation: glow 0.5s ease-in-out;
-  }
-
-  .language-code {
-    font-size: 10px;
-    font-weight: bold;
-  }
-
-  .language-float-dropdown {
-    position: absolute;
-    bottom: 70px;
-    right: 0;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    padding: 8px;
-    min-width: 150px;
-    border: 1px solid #E5E7EB;
-  }
-
-  .language-float-option {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: left;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    font-size: 14px;
-  }
-
-  .language-float-option:hover {
-    background-color: #F3F4F6;
-  }
-
-  .language-float-option.active {
-    background-color: #7B1E1E;
     color: white;
-  }
-
-  .flag {
-    font-size: 16px;
   }
 
   /* Footer icon buttons */

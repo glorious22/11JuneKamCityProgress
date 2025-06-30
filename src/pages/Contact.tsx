@@ -1,12 +1,18 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Phone, MessageSquare, MapPin, Clock, Mail, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ContactFormSection from "@/components/ContactFormSection";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   useEffect(() => {
     document.title = "Contact Us - Kamalo City | Get in Touch";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -14,6 +20,36 @@ const Contact = () => {
       metaDescription.setAttribute('content', 'Contact Kamalo City for reservations, inquiries, or directions. Located at 90 Voortrekker Road, Goodwood, Cape Town. Call +27 73 159 8909.');
     }
   }, []);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Create mailto link
+    const subject = encodeURIComponent('Contact from Kamalo City Website');
+    const body = encodeURIComponent(`
+Name: ${formData.name}
+Email: ${formData.email}
+
+Message:
+${formData.message}
+    `);
+    
+    const mailtoLink = `mailto:kamalocity@outlook.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+    
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({ name: '', email: '', message: '' });
+    }, 3000);
+  };
 
   return (
     <div className="min-h-screen bg-kamalo-dark text-white">
@@ -73,8 +109,100 @@ const Contact = () => {
             </div>
           </ScrollReveal>
 
-          {/* Contact Form Section - Remove email field */}
-          <ContactFormSection />
+          {/* Contact Form Section */}
+          <ScrollReveal delay={300}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-12">
+              {/* Contact Form */}
+              <div className="bg-black/50 rounded-lg p-6 md:p-8 border border-gray-800">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 font-serif">Send us a Message</h3>
+                {isSubmitted ? (
+                  <div className="bg-green-500/20 border border-green-500 rounded-lg p-6 text-center">
+                    <p className="text-green-400 font-semibold text-lg">Thank you! Your email client should open now.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        className="contact-form-input"
+                        placeholder="Your name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        className="contact-form-input"
+                        placeholder="Your email"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        className="contact-form-textarea"
+                        placeholder="Your message"
+                        required
+                      ></textarea>
+                    </div>
+                    <button 
+                      type="submit" 
+                      className="contact-send-btn"
+                    >
+                      Send
+                    </button>
+                  </form>
+                )}
+              </div>
+
+              {/* Contact Info and Map */}
+              <div className="space-y-6">
+                <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-4 flex items-center gap-2 font-serif">
+                    <MapPin className="w-6 h-6 text-kamalo-gold" />
+                    Visit Us
+                  </h3>
+                  <div className="space-y-4 text-gray-300 text-base md:text-lg">
+                    <div className="space-y-2">
+                      <p className="font-semibold text-white">📍 Address:</p>
+                      <p>90 Voortrekker Road, Goodwood, Cape Town</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Phone className="w-5 h-5 text-kamalo-gold" />
+                      <a href="tel:+27731598909" className="hover:text-kamalo-gold transition-colors touch-manipulation font-semibold">
+                        +27 73 159 8909
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-5 h-5 text-kamalo-gold" />
+                      <span className="font-semibold">Open 7 days: 11:00 AM - 11:00 PM</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="h-64 md:h-80 rounded-lg overflow-hidden">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.1055656329913!2d18.546104776047663!3d-33.912682521333636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5b0726596af5%3A0x651107464f9fc317!2sKamalo%20City!5e0!3m2!1sen!2sza!4v1748888283939!5m2!1sen!2sza" 
+                    width="100%" 
+                    height="100%" 
+                    style={{border:0}} 
+                    allowFullScreen={true}
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Kamalo City Location"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
 
           {/* Operating Hours & Social Media */}
           <ScrollReveal delay={400}>

@@ -39,7 +39,7 @@ const MenuPreview = () => {
       tag: "🔥 Most Popular"
     },
     {
-      name: "Kapenta (Monday Special)",
+      name: "Fried Kapenta (Monday Special)",
       description: "Fried kapenta (matemba) in tomato sauce, served with pap and vegetables.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
       alt: "Kamalo City - Kapenta"
@@ -228,9 +228,19 @@ const MenuPreview = () => {
 
         <ScrollReveal delay={600}>
           <div className="text-center">
-            <Link to="/menu" className="btn-primary cta-with-icon">
-              View Full Menu
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <Link to="/menu" className="btn-primary cta-with-icon">
+                View Full Menu
+              </Link>
+              <a 
+                href="https://www.ubereats.com/za/store/kamalo-city/example" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-uber-eats"
+              >
+                Order on Uber Eats
+              </a>
+            </div>
           </div>
         </ScrollReveal>
       </div>

@@ -102,13 +102,21 @@ const Footer = () => {
           <p className="text-kamalo-red mb-6 text-lg font-semibold">
             Whether you're here to dine, unwind, or celebrate — Kamalo City is where every moment becomes a memory.
           </p>
-          <div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Link 
               to="/reservations" 
               className="btn-primary inline-block touch-manipulation cta-with-icon"
             >
               Book Now
             </Link>
+            <a 
+              href="https://www.ubereats.com/za/store/kamalo-city/example" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-uber-eats inline-block touch-manipulation"
+            >
+              Order on Uber Eats
+            </a>
           </div>
         </div>
       </div>

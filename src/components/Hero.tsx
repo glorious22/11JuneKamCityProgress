@@ -47,13 +47,13 @@ const Hero = () => {
       {/* Enhanced background overlay with tribal pattern */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90 tribal-pattern"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '100px' }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '120px' }}>
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight font-serif">
             Welcome to <span className="text-kamalo-gold">Kamalo City</span>
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl text-kamalo-gold mb-4 md:mb-6 font-serif italic leading-relaxed">
-            Where Africa Eats, Sings, and Thrives.
+            A Taste of Africa. A Story in Every Bite.
           </h2>
           
           {/* Tribal divider */}
@@ -69,6 +69,15 @@ const Hero = () => {
               className="btn-primary px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold cta-with-icon"
             >
               <Link to="/reservations">Book a Table</Link>
+            </Button>
+            
+            <Button 
+              asChild 
+              className="btn-uber-eats px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold"
+            >
+              <a href="https://www.ubereats.com/za/store/kamalo-city/example" target="_blank" rel="noopener noreferrer">
+                Order on Uber Eats
+              </a>
             </Button>
             
             <Button 

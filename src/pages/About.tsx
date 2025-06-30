@@ -193,28 +193,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Stats Section */}
-          <section className="mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
-                <div className="text-3xl md:text-4xl font-bold text-kamalo-red mb-2">2+</div>
-                <div className="text-gray-300">Years Active</div>
-              </div>
-              <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
-                <div className="text-3xl md:text-4xl font-bold text-kamalo-gold mb-2">1000+</div>
-                <div className="text-gray-300">Happy Guests</div>
-              </div>
-              <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
-                <div className="text-3xl md:text-4xl font-bold text-kamalo-red mb-2">7</div>
-                <div className="text-gray-300">Days Open</div>
-              </div>
-              <div className="bg-black/50 rounded-lg p-6 border border-gray-800">
-                <div className="text-3xl md:text-4xl font-bold text-kamalo-gold mb-2">80</div>
-                <div className="text-gray-300">Max Capacity</div>
-              </div>
-            </div>
-          </section>
-
           {/* CTA Section */}
           <section className="text-center bg-black/50 rounded-lg p-8 border border-gray-800">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-serif">

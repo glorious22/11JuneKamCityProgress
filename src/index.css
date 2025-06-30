@@ -100,6 +100,11 @@
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-text-size-adjust: 100%;
     overscroll-behavior: none;
+    /* Disable zoom on mobile */
+    -webkit-user-zoom: none;
+    -moz-user-zoom: none;
+    -ms-user-zoom: none;
+    user-zoom: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -241,6 +246,30 @@
     box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3);
   }
 
+  /* Uber Eats CTA Button */
+  .btn-uber-eats {
+    background: linear-gradient(135deg, #00D2AA, #06C167);
+    border-radius: 50px;
+    padding: 14px 28px;
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 210, 170, 0.3);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-uber-eats:hover {
+    background: linear-gradient(135deg, #00B894, #00A085);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 210, 170, 0.4);
+    color: white;
+  }
+
   /* Service Cards with Consistent Styling */
   .service-card {
     background: white;
@@ -271,7 +300,7 @@
   .service-card .service-title {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #2C2C2C;
+    color: #8B0000;
     margin-bottom: 12px;
     font-family: 'Montserrat', serif;
   }
@@ -566,13 +595,14 @@
 
   /* Mobile navbar fixes */
   .mobile-nav-content {
-    height: 60px;
+    height: 50px;
+    padding: 8px 16px;
   }
 
   @media (max-width: 768px) {
     .mobile-nav-content {
-      height: 50px;
-      padding: 8px 16px;
+      height: 45px;
+      padding: 6px 16px;
     }
   }
 
@@ -633,5 +663,90 @@
   .equal-height-grid > * {
     display: flex;
     flex-direction: column;
+  }
+
+  /* Menu tab active state */
+  .menu-tab-active {
+    background: #8B0000 !important;
+    color: white !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+  }
+
+  /* Contact form styling */
+  .contact-form-input {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(26, 31, 44, 0.8);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .contact-form-input:focus {
+    outline: none;
+    border-color: #8B0000;
+    background: rgba(26, 31, 44, 0.9);
+    box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+  }
+
+  .contact-form-input::placeholder {
+    color: #9CA3AF;
+  }
+
+  .contact-form-textarea {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(26, 31, 44, 0.8);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .contact-form-textarea:focus {
+    outline: none;
+    border-color: #8B0000;
+    background: rgba(26, 31, 44, 0.9);
+    box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+  }
+
+  .contact-form-textarea::placeholder {
+    color: #9CA3AF;
+  }
+
+  .contact-send-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #8B0000, #FF0000);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 18px 32px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .contact-send-btn:hover {
+    background: linear-gradient(135deg, #660000, #CC0000);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.4);
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+    }
+    50% {
+      box-shadow: 0 4px 25px rgba(139, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.3);
+    }
   }
 }

@@ -139,13 +139,13 @@ const Menu = () => {
     }
   ];
 
-  // Daily specials data with authentic Flickr images
+  // Daily specials data with authentic Flickr images - UPDATED NAMES
   const dailySpecials = [
     // Monday
     {
       id: 15,
       category: "daily-specials",
-      name: "Fried Kapenta (Matemba) in Light Tomato Sauce",
+      name: "Fried Kapenta (Matemba)",
       description: "Traditional small fish cooked in light tomato sauce, served with vegetables.",
       day: "Monday",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -155,7 +155,7 @@ const Menu = () => {
     {
       id: 16,
       category: "daily-specials",
-      name: "Cooked Ngolo with Light Green Pepper Sauce",
+      name: "Cooked Ngolo",
       description: "Catfish cooked with light green pepper sauce, served with vegetables.",
       day: "Monday",
       image: "https://live.staticflickr.com/65535/54575880180_28fbf65f2c_c.jpg",
@@ -190,28 +190,19 @@ const Menu = () => {
       image: "https://live.staticflickr.com/65535/54597514875_cea4fd204a_c.jpg",
       alt: "Kamalo City - Cooked Beans"
     },
-    {
-      id: 20,
-      category: "daily-specials",
-      name: "Rougf",
-      description: "Fried seasoned meat cuts, a classic Tuesday treat.",
-      day: "Tuesday",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Rougf"
-    },
 
     // Wednesday
     {
-      id: 21,
+      id: 20,
       category: "daily-specials",
-      name: "Fried Makayabu with Green Pepper Onion Relish",
+      name: "Fried Makayabu",
       description: "Fried salt fish with green pepper onion relish.",
       day: "Wednesday",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
       alt: "Kamalo City - Fried Makayabu"
     },
     {
-      id: 22,
+      id: 21,
       category: "daily-specials",
       name: "Fried Tilapia",
       description: "Lightly seasoned tilapia, crispy fried to golden perfection.",
@@ -221,7 +212,7 @@ const Menu = () => {
       tag: "⭐ Customer Favorite"
     },
     {
-      id: 23,
+      id: 22,
       category: "daily-specials",
       name: "Fumbwa with Dry Fish",
       description: "Wild spinach in peanut sauce with dry fish, a traditional favorite.",
@@ -229,19 +220,10 @@ const Menu = () => {
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
       alt: "Kamalo City - Fumbwa"
     },
-    {
-      id: 24,
-      category: "daily-specials",
-      name: "Peanut Butter Sauce with Dry Spinach",
-      description: "Dried spinach cooked in creamy peanut butter sauce.",
-      day: "Wednesday",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Peanut Butter Sauce"
-    },
 
     // Thursday
     {
-      id: 25,
+      id: 23,
       category: "daily-specials",
       name: "Light Fried Pork Smock Ribs",
       description: "Lightly fried smoky pork ribs, crispy outside and tender inside.",
@@ -250,16 +232,7 @@ const Menu = () => {
       alt: "Kamalo City - Pork Smock Ribs"
     },
     {
-      id: 26,
-      category: "daily-specials",
-      name: "Slight Pinfried Mbinzo",
-      description: "Mopane worms pan-fried with light seasoning.",
-      day: "Thursday",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Mbinzo"
-    },
-    {
-      id: 27,
+      id: 24,
       category: "daily-specials",
       name: "Mupanda Worms",
       description: "Traditional protein-rich delicacy prepared with care.",
@@ -268,27 +241,18 @@ const Menu = () => {
       alt: "Kamalo City - Mupanda Worms"
     },
     {
-      id: 28,
+      id: 25,
       category: "daily-specials",
-      name: "Saka Madesu",
+      name: "Nsaka Madesu",
       description: "Beans and cassava leaves, rich in flavor and tradition.",
       day: "Thursday",
       image: "https://live.staticflickr.com/65535/54597519365_372da75c04_c.jpg",
-      alt: "Kamalo City - Saka Madesu"
-    },
-    {
-      id: 29,
-      category: "daily-specials",
-      name: "Cassava Leaves with Beans",
-      description: "Cassava leaves stewed with seasoned beans, a traditional Congolese favorite.",
-      day: "Thursday",
-      image: "https://live.staticflickr.com/65535/54597519365_372da75c04_c.jpg",
-      alt: "Kamalo City - Cassava Leaves with Beans"
+      alt: "Kamalo City - Nsaka Madesu"
     },
 
     // Friday
     {
-      id: 30,
+      id: 26,
       category: "daily-specials",
       name: "Cooked Mukebuka Sauce",
       description: "Mukebuka fish in a light tomato sauce with traditional spices.",
@@ -297,7 +261,7 @@ const Menu = () => {
       alt: "Kamalo City - Mukebuka Sauce"
     },
     {
-      id: 31,
+      id: 27,
       category: "daily-specials",
       name: "Cooked Beef Trips (Mabumu)",
       description: "Richly spiced beef tripe stew with traditional flavors.",
@@ -308,7 +272,7 @@ const Menu = () => {
 
     // Saturday
     {
-      id: 32,
+      id: 28,
       category: "daily-specials",
       name: "Egusi Soup",
       description: "Ground melon seed soup cooked with beef, a weekend favorite.",
@@ -318,7 +282,7 @@ const Menu = () => {
       tag: "🔥 Most Popular"
     },
     {
-      id: 33,
+      id: 29,
       category: "daily-specials",
       name: "Cooked Beef Trips (Mabumu)",
       description: "Rich beef tripe stew, perfect for Saturday dining.",
@@ -329,7 +293,7 @@ const Menu = () => {
 
     // Sunday
     {
-      id: 34,
+      id: 30,
       category: "daily-specials",
       name: "Liboke Ya Ngolo (Cat Fish)",
       description: "Steamed catfish wrapped in banana leaves with traditional spices.",
@@ -338,7 +302,7 @@ const Menu = () => {
       alt: "Kamalo City - Liboke Ya Ngolo"
     },
     {
-      id: 35,
+      id: 31,
       category: "daily-specials",
       name: "Mutu Ya Ntaba (Goat Head in Hot Sauce)",
       description: "Spicy goat head stew served the traditional way.",
@@ -386,7 +350,7 @@ const Menu = () => {
           {/* Header Section */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif" style={{ color: '#4B1E1E' }}>
-              Explore Our <span className="text-kamalo-green">Menu</span>
+              Explore Our <span className="text-kamalo-red">Menu</span>
             </h1>
             <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
             <p className="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto" style={{ color: '#2C2C2C' }}>
@@ -400,7 +364,7 @@ const Menu = () => {
               onClick={() => setActiveFilter("main")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "main" 
-                  ? "bg-kamalo-green text-white" 
+                  ? "menu-tab-active" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -410,7 +374,7 @@ const Menu = () => {
               onClick={() => setActiveFilter("sides")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "sides" 
-                  ? "bg-kamalo-green text-white" 
+                  ? "menu-tab-active" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -420,7 +384,7 @@ const Menu = () => {
               onClick={() => setActiveFilter("vegetable-sides")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "vegetable-sides" 
-                  ? "bg-kamalo-green text-white" 
+                  ? "menu-tab-active" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -430,7 +394,7 @@ const Menu = () => {
               onClick={() => setActiveFilter("daily-specials")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "daily-specials" 
-                  ? "bg-kamalo-green text-white" 
+                  ? "menu-tab-active" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -516,8 +480,8 @@ const Menu = () => {
                     {item.tag && (
                       <span 
                         style={{
-                          backgroundColor: '#2D6A4F',
-                          color: 'white',
+                          backgroundColor: '#FFD700',
+                          color: '#2C2C2C',
                           fontSize: '0.75rem',
                           padding: '2px 8px',
                           borderRadius: '999px',
@@ -550,15 +514,23 @@ const Menu = () => {
           <div className="text-center">
             <div className="bg-white rounded-lg p-8 border-2 border-gray-300 shadow-lg">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 font-serif" style={{ color: '#4B1E1E' }}>
-                Ready to <span className="text-kamalo-green">Try It for Yourself</span>?
+                Ready to <span className="text-kamalo-red">Try It for Yourself</span>?
               </h2>
               <p className="mb-6 text-lg" style={{ color: '#374151' }}>
                 Experience authentic African cuisine and traditional flavors at Kamalo City in Cape Town.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
                 <Link to="/reservations" className="btn-primary">
                   Book a Table
                 </Link>
+                <a 
+                  href="https://www.ubereats.com/za/store/kamalo-city/example" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-uber-eats"
+                >
+                  Order on Uber Eats
+                </a>
                 <a 
                   href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" 
                   target="_blank" 

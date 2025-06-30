@@ -27,58 +27,9 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg' : 'bg-black/95 backdrop-blur-sm'
     } border-b border-gray-800`}>
-      <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-between mobile-nav-content">
-        {/* Brand - Centered on mobile, left on desktop */}
-        <div className="flex items-center justify-center flex-1 md:flex-none md:justify-start">
-          <Link to="/" className="text-lg md:text-xl font-bold text-kamalo-gold hover:text-white transition-colors duration-300 font-serif">
-            Kamalo City
-          </Link>
-        </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-2">
-          <Link to="/" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
-            Home
-          </Link>
-          
-          <Link to="/menu" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
-            Menu
-          </Link>
-          
-          <Link to="/gallery" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
-            Gallery
-          </Link>
-
-          <Link to="/about" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
-            About
-          </Link>
-          
-          <Link to="/services" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
-            Services
-          </Link>
-          
-          <Link to="/contact" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
-            Contact
-          </Link>
-
-          <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-400 transition-colors duration-300 p-2 hover:scale-110">
-            <MessageCircle className="w-4 h-4" />
-          </a>
-          <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400 transition-colors duration-300 p-2 hover:scale-110">
-            <Instagram className="w-4 h-4" />
-          </a>
-
-          {/* Reservation Pill Button */}
-          <Link 
-            to="/reservations" 
-            className="bg-kamalo-red text-white px-5 py-2 rounded-full hover:bg-red-700 transition-all duration-300 font-semibold text-sm hover:scale-105 hover:shadow-lg ml-4 cta-with-icon"
-          >
-            Reserve
-          </Link>
-        </div>
-
-        {/* Mobile Menu - Positioned on the right */}
-        <div className="md:hidden absolute right-4">
+      <div className="max-w-7xl mx-auto mobile-nav-content flex items-center justify-between">
+        {/* Mobile Menu - Left aligned */}
+        <div className="md:hidden">
           <Drawer open={isOpen} onOpenChange={setIsOpen}>
             <DrawerTrigger asChild>
               <button className="text-white p-2 hover:text-kamalo-gold transition-colors touch-manipulation">
@@ -145,6 +96,58 @@ const Navbar = () => {
             </DrawerContent>
           </Drawer>
         </div>
+
+        {/* Brand - Centered on mobile, left on desktop */}
+        <div className="flex items-center justify-center flex-1 md:flex-none md:justify-start">
+          <Link to="/" className="text-lg md:text-xl font-bold text-kamalo-gold hover:text-white transition-colors duration-300 font-serif">
+            Kamalo City
+          </Link>
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-2">
+          <Link to="/" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+            Home
+          </Link>
+          
+          <Link to="/menu" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+            Menu
+          </Link>
+          
+          <Link to="/gallery" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+            Gallery
+          </Link>
+
+          <Link to="/about" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+            About
+          </Link>
+          
+          <Link to="/services" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+            Services
+          </Link>
+          
+          <Link to="/contact" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+            Contact
+          </Link>
+
+          <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-400 transition-colors duration-300 p-2 hover:scale-110">
+            <MessageCircle className="w-4 h-4" />
+          </a>
+          <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400 transition-colors duration-300 p-2 hover:scale-110">
+            <Instagram className="w-4 h-4" />
+          </a>
+
+          {/* Reservation Pill Button */}
+          <Link 
+            to="/reservations" 
+            className="bg-kamalo-red text-white px-5 py-2 rounded-full hover:bg-red-700 transition-all duration-300 font-semibold text-sm hover:scale-105 hover:shadow-lg ml-4 cta-with-icon"
+          >
+            Reserve
+          </Link>
+        </div>
+
+        {/* Empty div for mobile layout balance */}
+        <div className="md:hidden w-10"></div>
       </div>
     </nav>
   );

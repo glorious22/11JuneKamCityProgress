@@ -160,17 +160,6 @@
     }
   }
 
-  /* REMOVE ALL HORIZONTAL LINES AND DIVIDERS */
-  hr, 
-  .divider, 
-  .section-divider, 
-  .tribal-divider,
-  .w-20.h-1,
-  .h-1,
-  .border-t,
-  .border-b {
-    display: none !important;
-  }
 
   /* Enhanced CTA Button Styling with Hover Effects */
   .btn-primary {

@@ -23,11 +23,11 @@ const About = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif">
-              A Legacy <span className="text-kamalo-red">Brought to Life</span>
+              The Kamalo City Journey — <span className="text-kamalo-red">From Rebirth to Renown</span>
             </h1>
             <div className="tribal-divider max-w-md mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Kamalo City was born from rubble and rebuilt with purpose. Since 2023, we've grown into a destination for food, music, and community spirit.
+              Kamalo City was rebuilt from ruins in 2023. Today, we are Cape Town's vibrant meeting point for African heritage, cuisine, and connection. From mouthwatering kapenta to rhythm-filled nights, Kamalo City is a true cultural revival.
             </p>
           </div>
           
@@ -95,7 +95,7 @@ const About = () => {
             </div>
           </section>
 
-          {/* Timeline Section - Moved from homepage */}
+          {/* Timeline Section - Updated events */}
           <section className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
@@ -112,19 +112,19 @@ const About = () => {
                 {[
                   {
                     year: "2023",
-                    title: "Rebuilt and Opened",
+                    title: "Kamalo City opens, transforming rubble into rhythm",
                     description: "From abandoned space to cultural hotspot — Kamalo City opened its doors with a vision of authentic African dining.",
                     isLeft: true
                   },
                   {
                     year: "2024", 
-                    title: "Launched Events and Live Entertainment",
+                    title: "Event services & entertainment launched",
                     description: "Expanded with weekend entertainment, private event hosting, and additional lifestyle services including barbershop and hookah.",
                     isLeft: false
                   },
                   {
                     year: "2025",
-                    title: "Became Top Destination", 
+                    title: "Recognized as one of Cape Town's top African food destinations", 
                     description: "Established as Cape Town's premier African dining and entertainment venue, beloved by locals and visitors alike.",
                     isLeft: true
                   }
@@ -150,17 +150,17 @@ const About = () => {
               {[
                 {
                   year: "2023",
-                  title: "Rebuilt and Opened",
+                  title: "Kamalo City opens, transforming rubble into rhythm",
                   description: "From abandoned space to cultural hotspot — Kamalo City opened its doors with a vision of authentic African dining."
                 },
                 {
                   year: "2024",
-                  title: "Launched Events and Live Entertainment", 
+                  title: "Event services & entertainment launched", 
                   description: "Expanded with weekend entertainment, private event hosting, and additional lifestyle services including barbershop and hookah."
                 },
                 {
                   year: "2025",
-                  title: "Became Top Destination",
+                  title: "Recognized as one of Cape Town's top African food destinations",
                   description: "Established as Cape Town's premier African dining and entertainment venue, beloved by locals and visitors alike."
                 }
               ].map((event, index) => (
@@ -173,11 +173,11 @@ const About = () => {
             </div>
           </section>
 
-          {/* Founder Quote - Blockquote style */}
+          {/* Updated Founder Quote */}
           <div className="mb-16">
             <div className="bg-gradient-to-r from-kamalo-red/20 to-kamalo-gold/20 rounded-lg p-8 border border-kamalo-red/30 text-center">
               <blockquote className="text-2xl md:text-3xl font-bold text-white mb-4 italic font-serif">
-                "From rubble to rhythm: revived in 2023, today Kamalo City beats with flavor, community and soul."
+                "I remember in 2023 this place was just abandoned, so I just remodeled it and turned it into what it is today."
               </blockquote>
               <cite className="text-kamalo-gold font-semibold text-lg">— Pitchou Ntumba, Founder</cite>
             </div>

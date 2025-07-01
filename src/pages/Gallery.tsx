@@ -23,7 +23,7 @@ const Gallery = () => {
       title: "Grilled African Cuisine", 
       caption: "Authentic grilled meats with traditional African spices and aromatic herbs",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Grilled African cuisine platter" 
+      alt: "Grilled African Cuisine – Main Dish at Kamalo City Restaurant" 
     },
     { 
       id: 2, 
@@ -31,7 +31,7 @@ const Gallery = () => {
       title: "Traditional Stew", 
       caption: "Rich, hearty stews prepared with ancestral recipes and slow-cooked perfection",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Traditional African stew" 
+      alt: "Traditional African Stew – Main Dish at Kamalo City Restaurant" 
     },
     { 
       id: 3, 
@@ -39,7 +39,7 @@ const Gallery = () => {
       title: "African Spice Collection", 
       caption: "Traditional spices and ingredients that create our authentic, bold flavors",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Traditional African spices and ingredients" 
+      alt: "African Spices – Traditional Ingredients at Kamalo City Restaurant" 
     },
     { 
       id: 4, 
@@ -47,7 +47,7 @@ const Gallery = () => {
       title: "Fresh Vegetables", 
       caption: "Traditional African vegetables prepared with authentic cooking methods",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Traditional African vegetables" 
+      alt: "Traditional African Vegetables – Fresh Sides at Kamalo City Restaurant" 
     },
     { 
       id: 5, 
@@ -55,7 +55,7 @@ const Gallery = () => {
       title: "Grilled Fish", 
       caption: "Fresh fish grilled to perfection with traditional seasonings",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Grilled fish" 
+      alt: "Grilled Fish – Main Dish at Kamalo City Restaurant" 
     },
     { 
       id: 6, 
@@ -63,7 +63,7 @@ const Gallery = () => {
       title: "Traditional Sides", 
       caption: "Pap, rice, and traditional accompaniments to complete your meal",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Traditional sides" 
+      alt: "Traditional Sides – Pap and Rice at Kamalo City Restaurant" 
     },
 
     // Events Category
@@ -73,7 +73,7 @@ const Gallery = () => {
       title: "Live Music Night", 
       caption: "Friday night live performances featuring talented African artists and cultural celebrations",
       image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Live music performance" 
+      alt: "Friday Jazz Night – Live Music Event at Kamalo City" 
     },
     { 
       id: 8, 
@@ -81,7 +81,7 @@ const Gallery = () => {
       title: "Private Celebration", 
       caption: "Celebrating special moments with friends and family in our intimate venue",
       image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Private event celebration" 
+      alt: "Private Celebration – Event at Kamalo City Restaurant" 
     },
     { 
       id: 9, 
@@ -89,7 +89,7 @@ const Gallery = () => {
       title: "Cultural Heritage Night", 
       caption: "Celebrating African heritage through music, dance, and storytelling",
       image: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Cultural celebration event" 
+      alt: "Cultural Heritage Night – African Event at Kamalo City" 
     },
     { 
       id: 10, 
@@ -97,7 +97,7 @@ const Gallery = () => {
       title: "Weekend Entertainment", 
       caption: "Saturday night entertainment with DJs and live performances",
       image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Weekend entertainment" 
+      alt: "Weekend Entertainment – Live Event at Kamalo City" 
     },
 
     // Services Category
@@ -107,7 +107,7 @@ const Gallery = () => {
       title: "Restaurant Interior", 
       caption: "Warm, welcoming atmosphere that feels like home with authentic African décor",
       image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Restaurant interior and ambiance" 
+      alt: "Restaurant Interior – Kamalo City Dining Space" 
     },
     { 
       id: 12, 
@@ -115,7 +115,7 @@ const Gallery = () => {
       title: "Premium Hookah Lounge", 
       caption: "Relaxing hookah experience in our comfortable lounge with ambient lighting",
       image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Premium hookah lounge experience" 
+      alt: "Premium Hookah Lounge – Relaxation Service at Kamalo City" 
     },
     { 
       id: 13, 
@@ -123,7 +123,7 @@ const Gallery = () => {
       title: "Professional Barbershop", 
       caption: "Expert grooming services with traditional and modern styling techniques",
       image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Professional barbershop service" 
+      alt: "Professional Barbershop – Grooming Service at Kamalo City" 
     },
     { 
       id: 14, 
@@ -131,7 +131,7 @@ const Gallery = () => {
       title: "Game Area", 
       caption: "Pool tables and recreational activities for entertainment",
       image: "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Game area with pool table" 
+      alt: "Game Area – Entertainment Service at Kamalo City" 
     },
     { 
       id: 15, 
@@ -139,7 +139,7 @@ const Gallery = () => {
       title: "Perfume Collection", 
       caption: "Curated selection of premium African-inspired fragrances",
       image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Perfume collection" 
+      alt: "Perfume Collection – Fragrance Service at Kamalo City" 
     },
     { 
       id: 16, 
@@ -147,7 +147,7 @@ const Gallery = () => {
       title: "Event Setup", 
       caption: "Professional event setup and catering services for private functions",
       image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Kamalo City - Event setup service" 
+      alt: "Event Setup – Private Function Service at Kamalo City" 
     }
   ];
 
@@ -155,9 +155,9 @@ const Gallery = () => {
 
   const getCategoryDisplayName = (category: string) => {
     switch (category) {
-      case "food": return "Food & Cuisine";
-      case "events": return "Events & Entertainment";
-      case "services": return "Services & Amenities";
+      case "food": return "Food";
+      case "events": return "Events";
+      case "services": return "Services";
       default: return category;
     }
   };
@@ -181,7 +181,7 @@ const Gallery = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 font-serif">
-              Our <span className="text-kamalo-red">Gallery</span>
+              Moments from Kamalo City — <span className="text-kamalo-red">Food, Culture & Community</span>
             </h1>
             <div className="tribal-divider max-w-md mx-auto mb-6"></div>
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
@@ -194,7 +194,7 @@ const Gallery = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button
               onClick={() => setActiveFilter("food")}
-              className={`px-8 py-4 rounded-full transition-all duration-300 font-semibold text-lg relative overflow-hidden ${
+              className={`px-8 py-4 rounded-full transition-all duration-500 font-semibold text-lg relative overflow-hidden ${
                 activeFilter === "food" 
                   ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"
@@ -204,7 +204,7 @@ const Gallery = () => {
             </Button>
             <Button
               onClick={() => setActiveFilter("events")}
-              className={`px-8 py-4 rounded-full transition-all duration-300 font-semibold text-lg relative overflow-hidden ${
+              className={`px-8 py-4 rounded-full transition-all duration-500 font-semibold text-lg relative overflow-hidden ${
                 activeFilter === "events" 
                   ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"
@@ -214,7 +214,7 @@ const Gallery = () => {
             </Button>
             <Button
               onClick={() => setActiveFilter("services")}
-              className={`px-8 py-4 rounded-full transition-all duration-300 font-semibold text-lg relative overflow-hidden ${
+              className={`px-8 py-4 rounded-full transition-all duration-500 font-semibold text-lg relative overflow-hidden ${
                 activeFilter === "services" 
                   ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"

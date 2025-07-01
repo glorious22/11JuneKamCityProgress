@@ -71,7 +71,7 @@ const Hero = () => {
               asChild 
               className="btn-primary px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold"
             >
-              <Link to="/reservations">Book a Table & Order on Uber Eats</Link>
+              <Link to="/reservations">Book a Table</Link>
             </Button>
             
             <Button 

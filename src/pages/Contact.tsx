@@ -60,11 +60,11 @@ ${formData.message}
           <ScrollReveal>
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif">
-                Let's <span className="text-kamalo-red">Connect</span>
+                Reserve Your Table at <span className="text-kamalo-red">Kamalo City</span>
               </h1>
               <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Need directions? Want to make a booking? We're here to help — contact us anytime.
+                Reach out to book a table, plan a private event, or simply say hi. We'd love to hear from you.
               </p>
             </div>
           </ScrollReveal>
@@ -109,7 +109,7 @@ ${formData.message}
             </div>
           </ScrollReveal>
 
-          {/* Contact Form Section */}
+          {/* Contact Form Section - Name, Email, Message only */}
           <ScrollReveal delay={300}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-12">
               {/* Contact Form - Name, Email, Message only */}

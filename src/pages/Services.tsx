@@ -50,8 +50,8 @@ const Services = () => {
     },
     {
       id: "hookah-lounge",
-      title: "Hookah Lounge",
-      summary: "Premium hookah experience daily from 6 PM",
+      title: "Hookah Lounge – Flavored Relaxation in Cape Town",
+      summary: "Enjoy rich flavored hookah in a relaxed ambiance. Choose from over 10 popular African flavors. Available all day in our shaded lounge.",
       icon: "💨",
       details: [
         "Premium hookah with mint, apple, and fruity blends",
@@ -78,7 +78,7 @@ const Services = () => {
     },
     {
       id: "barbershop",
-      title: "Professional Barbershop",
+      title: "Barber Shop – African Grooming Experience: The Kamalo Cut",
       summary: "Expert grooming services while you dine",
       icon: "✂️",
       details: [
@@ -92,7 +92,7 @@ const Services = () => {
     },
     {
       id: "perfume-collection",
-      title: "Signature Scents",
+      title: "Perfumes – Exclusive Scent Boutique Featuring African Oils",
       summary: "Curated African-inspired fragrances",
       icon: "🧴",
       details: [
@@ -144,11 +144,11 @@ const Services = () => {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif">
-              Our Main <span className="text-kamalo-red">Services</span>
+              Explore Our <span className="text-kamalo-red">African-Inspired Offerings</span>
             </h1>
             <div className="tribal-divider max-w-md mx-auto mb-6"></div>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Explore what makes Kamalo City more than a restaurant.
+              Discover what makes Kamalo City more than a restaurant.
             </p>
           </div>
 

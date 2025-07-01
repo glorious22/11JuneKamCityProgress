@@ -8,10 +8,10 @@ const Menu = () => {
   const [activeFilter, setActiveFilter] = useState("main");
 
   useEffect(() => {
-    document.title = "Menu - Kamalo City | Authentic African Cuisine";
+    document.title = "Kamalo City | Authentic African Cuisine in Cape Town";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Explore our authentic African menu featuring traditional dishes, grilled meats, stews, and vegetable sides at Kamalo City in Cape Town.');
+      metaDescription.setAttribute('content', 'Kamalo City is a top African restaurant offering unforgettable cuisine, hookah, events, and a cultural experience in Cape Town.');
     }
   }, []);
 
@@ -24,7 +24,7 @@ const Menu = () => {
       name: "Grilled Thomson",
       description: "Well-seasoned grilled fish served with pap or rice and a side of traditional vegetables.",
       image: "https://live.staticflickr.com/65535/54597433763_939cd52ca4_c.jpg",
-      alt: "Kamalo City - Grilled Thomson",
+      alt: "Grilled Thomson – Main Dish at Kamalo City Restaurant",
       tag: "⭐ Customer Favorite"
     },
     {
@@ -33,7 +33,7 @@ const Menu = () => {
       name: "Fried Thomson",
       description: "Crispy fried Thomson fish with pap or rice and traditional vegetables.",
       image: "https://live.staticflickr.com/65535/54597433763_939cd52ca4_c.jpg",
-      alt: "Kamalo City - Fried Thomson"
+      alt: "Fried Thomson – Main Dish at Kamalo City Restaurant"
     },
     {
       id: 3,
@@ -41,7 +41,7 @@ const Menu = () => {
       name: "Beef Stew",
       description: "Classic African-style beef in a rich tomato and brinjal sauce.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Beef Stew",
+      alt: "Beef Stew – Main Dish at Kamalo City Restaurant",
       tag: "🔥 Chef's Pick"
     },
     {
@@ -50,7 +50,7 @@ const Menu = () => {
       name: "Grilled Pork Chops",
       description: "Succulent pork grilled to perfection and paired with your choice of side.",
       image: "https://live.staticflickr.com/65535/54597531350_4a42d68b4b_c.jpg",
-      alt: "Kamalo City - Grilled Pork Chops"
+      alt: "Grilled Pork Chops – Main Dish at Kamalo City Restaurant"
     },
     {
       id: 5,
@@ -58,7 +58,7 @@ const Menu = () => {
       name: "Grilled Chicken Quarter Leg",
       description: "Juicy quarter chicken grilled and served with pap or rice.",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Grilled Chicken Quarter Leg",
+      alt: "Grilled Chicken Quarter Leg – Main Dish at Kamalo City Restaurant",
       tag: "🔥 Most Popular"
     },
 
@@ -69,7 +69,7 @@ const Menu = () => {
       name: "Portion Pap",
       description: "Traditional pap served in a hearty portion, perfect with any dish.",
       image: "https://live.staticflickr.com/65535/54575491336_19b4c1f9b5_c.jpg",
-      alt: "Kamalo City - Portion Pap"
+      alt: "Portion Pap – Traditional Side at Kamalo City Restaurant"
     },
     {
       id: 7,
@@ -77,7 +77,7 @@ const Menu = () => {
       name: "Shikwanga (Sour Pap)",
       description: "Fermented cassava for an authentic traditional taste experience.",
       image: "https://live.staticflickr.com/65535/54575695344_661a80be0d_c.jpg",
-      alt: "Kamalo City - Shikwanga"
+      alt: "Shikwanga Sour Pap – Traditional Side at Kamalo City Restaurant"
     },
     {
       id: 8,
@@ -85,7 +85,7 @@ const Menu = () => {
       name: "Portion Rice",
       description: "Soft, fluffy rice that's perfect with any of our main dishes.",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Portion Rice"
+      alt: "Portion Rice – Traditional Side at Kamalo City Restaurant"
     },
 
     // Vegetable Sides
@@ -95,7 +95,7 @@ const Menu = () => {
       name: "Cassava Leaves (Pondu)",
       description: "Stewed cassava leaves with traditional spices and seasonings.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Cassava Leaves"
+      alt: "Cassava Leaves – Traditional African Vegetable Side at Kamalo City"
     },
     {
       id: 10,
@@ -103,7 +103,7 @@ const Menu = () => {
       name: "Sweet Potato Leaves (Matembele)",
       description: "Tender sweet potato leaves sautéed in traditional African style.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Matembele"
+      alt: "Sweet Potato Leaves – Traditional African Vegetable Side at Kamalo City"
     },
     {
       id: 11,
@@ -111,7 +111,7 @@ const Menu = () => {
       name: "Ngai Ngai (Roselle Leaves)",
       description: "Slightly sour greens packed with nutrients and bold flavor.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Ngai Ngai"
+      alt: "Ngai Ngai Roselle Leaves – Traditional African Vegetable Side at Kamalo City"
     },
     {
       id: 12,
@@ -119,7 +119,7 @@ const Menu = () => {
       name: "Ndunda (Wild Spinach)",
       description: "Bold-flavoured wild spinach, steamed to perfection.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Ndunda"
+      alt: "Ndunda Wild Spinach – Traditional African Vegetable Side at Kamalo City"
     },
     {
       id: 13,
@@ -127,7 +127,7 @@ const Menu = () => {
       name: "Repu",
       description: "Earthy green vegetable — a local favourite with unique taste.",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Repu"
+      alt: "Repu – Traditional African Vegetable Side at Kamalo City"
     },
     {
       id: 14,
@@ -135,11 +135,11 @@ const Menu = () => {
       name: "Green Spinach Sauce",
       description: "Smooth, rich spinach-based traditional sauce.",
       image: "https://live.staticflickr.com/65535/54574632582_07c0a392a4_c.jpg",
-      alt: "Kamalo City - Green Spinach"
+      alt: "Green Spinach Sauce – Traditional African Vegetable Side at Kamalo City"
     }
   ];
 
-  // Daily specials data with authentic Flickr images - UPDATED NAMES
+  // Daily specials data with updated names - REMOVED duplicates and renamed items
   const dailySpecials = [
     // Monday
     {
@@ -149,7 +149,7 @@ const Menu = () => {
       description: "Traditional small fish cooked in light tomato sauce, served with vegetables.",
       day: "Monday",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Fried Kapenta",
+      alt: "Kapenta Stew – Main Dish at Kamalo City Restaurant",
       tag: "✅ Chef's Recommendation"
     },
     {
@@ -159,7 +159,7 @@ const Menu = () => {
       description: "Catfish cooked with light green pepper sauce, served with vegetables.",
       day: "Monday",
       image: "https://live.staticflickr.com/65535/54575880180_28fbf65f2c_c.jpg",
-      alt: "Kamalo City - Cooked Ngolo"
+      alt: "Cooked Ngolo Catfish – Monday Special at Kamalo City Restaurant"
     },
 
     // Tuesday
@@ -170,7 +170,7 @@ const Menu = () => {
       description: "Traditional pork trotters cooked to perfection, served with vegetables.",
       day: "Tuesday",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Pork Trotters"
+      alt: "Pork Trotters – Tuesday Special at Kamalo City Restaurant"
     },
     {
       id: 18,
@@ -179,7 +179,7 @@ const Menu = () => {
       description: "Traditional preparation of organ meat with authentic seasonings.",
       day: "Tuesday",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Fried Mabundu"
+      alt: "Fried Mabundu – Tuesday Special at Kamalo City Restaurant"
     },
     {
       id: 19,
@@ -188,7 +188,7 @@ const Menu = () => {
       description: "Traditional Congolese beans cooked in rich, flavorful sauce.",
       day: "Tuesday",
       image: "https://live.staticflickr.com/65535/54597514875_cea4fd204a_c.jpg",
-      alt: "Kamalo City - Cooked Beans"
+      alt: "Cooked Beans Madesu – Tuesday Special at Kamalo City Restaurant"
     },
 
     // Wednesday
@@ -199,7 +199,7 @@ const Menu = () => {
       description: "Fried salt fish with green pepper onion relish.",
       day: "Wednesday",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Fried Makayabu"
+      alt: "Fried Makayabu – Wednesday Special at Kamalo City Restaurant"
     },
     {
       id: 21,
@@ -208,7 +208,7 @@ const Menu = () => {
       description: "Lightly seasoned tilapia, crispy fried to golden perfection.",
       day: "Wednesday",
       image: "https://live.staticflickr.com/65535/54597519455_cd8dd45ce7_c.jpg",
-      alt: "Kamalo City - Fried Tilapia",
+      alt: "Fried Tilapia – Wednesday Special at Kamalo City Restaurant",
       tag: "⭐ Customer Favorite"
     },
     {
@@ -218,7 +218,7 @@ const Menu = () => {
       description: "Wild spinach in peanut sauce with dry fish, a traditional favorite.",
       day: "Wednesday",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Fumbwa"
+      alt: "Fumbwa with Dry Fish – Wednesday Special at Kamalo City Restaurant"
     },
 
     // Thursday
@@ -229,7 +229,7 @@ const Menu = () => {
       description: "Lightly fried smoky pork ribs, crispy outside and tender inside.",
       day: "Thursday",
       image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Pork Smock Ribs"
+      alt: "Pork Smock Ribs – Thursday Special at Kamalo City Restaurant"
     },
     {
       id: 24,
@@ -238,7 +238,7 @@ const Menu = () => {
       description: "Traditional protein-rich delicacy prepared with care.",
       day: "Thursday",
       image: "https://live.staticflickr.com/65535/54597424033_290a663f5e_c.jpg",
-      alt: "Kamalo City - Mupanda Worms"
+      alt: "Mupanda Worms – Thursday Special at Kamalo City Restaurant"
     },
     {
       id: 25,
@@ -247,7 +247,7 @@ const Menu = () => {
       description: "Beans and cassava leaves, rich in flavor and tradition.",
       day: "Thursday",
       image: "https://live.staticflickr.com/65535/54597519365_372da75c04_c.jpg",
-      alt: "Kamalo City - Nsaka Madesu"
+      alt: "Nsaka Madesu – Thursday Special at Kamalo City Restaurant"
     },
 
     // Friday
@@ -258,7 +258,7 @@ const Menu = () => {
       description: "Mukebuka fish in a light tomato sauce with traditional spices.",
       day: "Friday",
       image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Mukebuka Sauce"
+      alt: "Mukebuka Sauce – Friday Special at Kamalo City Restaurant"
     },
     {
       id: 27,
@@ -267,7 +267,7 @@ const Menu = () => {
       description: "Richly spiced beef tripe stew with traditional flavors.",
       day: "Friday",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Beef Trips"
+      alt: "Beef Trips Mabumu – Friday Special at Kamalo City Restaurant"
     },
 
     // Saturday
@@ -278,7 +278,7 @@ const Menu = () => {
       description: "Ground melon seed soup cooked with beef, a weekend favorite.",
       day: "Saturday",
       image: "https://live.staticflickr.com/65535/54597416804_c3e1b0acc7_c.jpg",
-      alt: "Kamalo City - Egusi Soup",
+      alt: "Egusi Soup – Saturday Special at Kamalo City Restaurant",
       tag: "🔥 Most Popular"
     },
     {
@@ -288,7 +288,7 @@ const Menu = () => {
       description: "Rich beef tripe stew, perfect for Saturday dining.",
       day: "Saturday",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Beef Trips Saturday"
+      alt: "Beef Trips Saturday – Saturday Special at Kamalo City Restaurant"
     },
 
     // Sunday
@@ -299,7 +299,7 @@ const Menu = () => {
       description: "Steamed catfish wrapped in banana leaves with traditional spices.",
       day: "Sunday",
       image: "https://live.staticflickr.com/65535/54575880180_28fbf65f2c_c.jpg",
-      alt: "Kamalo City - Liboke Ya Ngolo"
+      alt: "Liboke Ya Ngolo – Sunday Special at Kamalo City Restaurant"
     },
     {
       id: 31,
@@ -308,7 +308,7 @@ const Menu = () => {
       description: "Spicy goat head stew served the traditional way.",
       day: "Sunday",
       image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Mutu Ya Ntaba",
+      alt: "Mutu Ya Ntaba – Sunday Special at Kamalo City Restaurant",
       tag: "⭐ Customer Favorite"
     }
   ];
@@ -321,9 +321,9 @@ const Menu = () => {
   const getCategoryDisplayName = (category: string) => {
     switch (category) {
       case "main": return "Main Dishes";
-      case "vegetable-sides": return "Vegetable Sides";
+      case "vegetable-sides": return "Traditional African Vegetable Sides";
       case "sides": return "Sides";
-      case "daily-specials": return "Daily Specials";
+      case "daily-specials": return "African Daily Specials";
       default: return category;
     }
   };
@@ -337,10 +337,7 @@ const Menu = () => {
           <div className="bg-white rounded-lg p-6 text-center mb-12 max-w-4xl mx-auto border-2 border-kamalo-gold shadow-lg">
             <h2 className="text-2xl font-bold mb-4" style={{ color: '#4B1E1E' }}>Menu Pricing Information</h2>
             <p className="text-lg font-semibold mb-2" style={{ color: '#2C2C2C' }}>
-              <strong>All Daily Specials are R80 with pap or R90 with rice</strong>
-            </p>
-            <p className="text-lg font-semibold mb-2" style={{ color: '#2C2C2C' }}>
-              <strong>All Vegetable Sides are R40</strong>
+              <strong>All Daily Specials are R80 with pap or R90 with rice. All Vegetable Sides are R40.</strong>
             </p>
             <p className="text-sm text-gray-600 mt-4">
               *Note: In-restaurant prices differ from Uber Eats pricing.
@@ -519,7 +516,7 @@ const Menu = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
                 <Link to="/reservations" className="btn-primary">
-                  Book a Table
+                  Book a Table & Order on Uber Eats
                 </Link>
                 <a 
                   href="https://www.ubereats.com/za/store/kamalo-city/example" 

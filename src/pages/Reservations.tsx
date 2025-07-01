@@ -232,7 +232,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
 
                   <Button 
                     type="submit" 
-                    className="w-full btn-primary py-5 text-xl font-semibold rounded-full touch-manipulation cta-with-icon"
+                    className="w-full btn-primary py-5 text-xl font-semibold rounded-full touch-manipulation"
                     disabled={isSubmitted}
                   >
                     {isSubmitted ? 'Sending...' : 'Reserve Now'}

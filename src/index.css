@@ -355,6 +355,39 @@
     margin-bottom: 8px;
   }
 
+  /* Enhanced Congolese tribal pattern overlay */
+  .tribal-pattern {
+    background-image: 
+      /* Kuba cloth inspired pattern */
+      repeating-linear-gradient(
+        45deg,
+        rgba(139, 0, 0, 0.08) 0px,
+        rgba(139, 0, 0, 0.08) 2px,
+        transparent 2px,
+        transparent 12px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(255, 215, 0, 0.06) 0px,
+        rgba(255, 215, 0, 0.06) 2px,
+        transparent 2px,
+        transparent 12px
+      ),
+      /* Diamond pattern */
+      radial-gradient(
+        circle at 25% 25%,
+        rgba(139, 0, 0, 0.04) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 75% 75%,
+        rgba(255, 215, 0, 0.04) 0%,
+        transparent 50%
+      );
+    background-size: 24px 24px, 24px 24px, 48px 48px, 48px 48px;
+    background-position: 0 0, 12px 12px, 0 0, 24px 24px;
+  }
+
   /* Back to top button */
   .back-to-top {
     position: fixed;
@@ -666,41 +699,5 @@
 
   .no-webp .webp-image {
     display: none;
-  }
-
-  /* REMOVE ALL HORIZONTAL LINES AND DIVIDERS */
-  hr, 
-  .divider, 
-  .section-divider, 
-  .tribal-divider,
-  .w-20.h-1,
-  .h-1,
-  .border-t,
-  .border-b {
-    display: none !important;
-  }
-
-  /* Remove tribal pattern backgrounds */
-  .tribal-pattern {
-    background-image: none !important;
-    background: transparent !important;
-  }
-
-  /* Remove any pseudo-element dividers */
-  *::before,
-  *::after {
-    border-top: none !important;
-    border-bottom: none !important;
-    background-image: none !important;
-  }
-
-  /* Remove footer wave divider */
-  footer svg {
-    display: none !important;
-  }
-
-  /* Remove any gradient dividers */
-  .bg-gradient-to-r.from-kamalo-red.via-kamalo-gold.to-kamalo-red {
-    display: none !important;
   }
 }

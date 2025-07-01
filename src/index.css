@@ -160,8 +160,15 @@
     }
   }
 
-  /* Remove ALL horizontal lines and dividers */
-  hr, .divider, .section-divider {
+  /* REMOVE ALL HORIZONTAL LINES AND DIVIDERS */
+  hr, 
+  .divider, 
+  .section-divider, 
+  .tribal-divider,
+  .w-20.h-1,
+  .h-1,
+  .border-t,
+  .border-b {
     display: none !important;
   }
 
@@ -391,11 +398,6 @@
       );
     background-size: 24px 24px, 24px 24px, 48px 48px, 48px 48px;
     background-position: 0 0, 12px 12px, 0 0, 24px 24px;
-  }
-
-  /* Tribal divider elements - REMOVED */
-  .tribal-divider {
-    display: none !important;
   }
 
   /* Back to top button */

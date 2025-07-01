@@ -112,7 +112,7 @@ ${formData.message}
           {/* Contact Form Section */}
           <ScrollReveal delay={300}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-12">
-              {/* Contact Form */}
+              {/* Contact Form - Name, Email, Message only */}
               <div className="bg-black/50 rounded-lg p-6 md:p-8 border border-gray-800">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 font-serif">Send us a Message</h3>
                 {isSubmitted ? (
@@ -127,7 +127,7 @@ ${formData.message}
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="contact-form-input"
+                        className="w-full p-4 md:p-5 bg-gray-800 rounded-full text-white text-base md:text-lg border-2 border-transparent focus:border-kamalo-red transition-colors touch-manipulation"
                         placeholder="Your name"
                         required
                       />
@@ -138,7 +138,7 @@ ${formData.message}
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="contact-form-input"
+                        className="w-full p-4 md:p-5 bg-gray-800 rounded-full text-white text-base md:text-lg border-2 border-transparent focus:border-kamalo-red transition-colors touch-manipulation"
                         placeholder="Your email"
                         required
                       />
@@ -148,14 +148,18 @@ ${formData.message}
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="contact-form-textarea"
+                        className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white h-32 md:h-40 text-base md:text-lg border-2 border-transparent focus:border-kamalo-red transition-colors resize-none touch-manipulation"
                         placeholder="Your message"
                         required
                       ></textarea>
                     </div>
                     <button 
                       type="submit" 
-                      className="contact-send-btn"
+                      className="w-full bg-gradient-to-r from-kamalo-red to-red-600 hover:from-red-700 hover:to-red-800 text-white py-4 md:py-5 rounded-full font-bold text-lg md:text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg touch-manipulation"
+                      style={{
+                        boxShadow: '0 4px 15px rgba(139, 0, 0, 0.4)',
+                        animation: 'pulse 2s ease-in-out infinite'
+                      }}
                     >
                       Send
                     </button>

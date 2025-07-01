@@ -98,6 +98,19 @@ const MenuPreview = () => {
   return (
     <section ref={sectionRef} className="section-spacing" style={{ backgroundColor: '#FAF3EB' }}>
       <div className="max-w-7xl mx-auto px-4">
+        {/* Price Note Above Everything */}
+        <div className="text-center mb-8">
+          <div className="bg-white rounded-lg p-6 border-2 border-kamalo-gold max-w-4xl mx-auto shadow-lg">
+            <h3 className="text-xl font-bold mb-3" style={{ color: '#4B1E1E' }}>Menu Pricing</h3>
+            <p className="text-lg font-semibold mb-2" style={{ color: '#4B1E1E' }}>
+              All Daily Specials are R80 with pap or R90 with rice
+            </p>
+            <p className="text-base" style={{ color: '#6B7280' }}>
+              All Vegetable Sides are R40
+            </p>
+          </div>
+        </div>
+
         <ScrollReveal>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif" style={{ color: '#4B1E1E' }}>
@@ -131,7 +144,9 @@ const MenuPreview = () => {
                     <h3 className="text-xl font-bold text-white mb-2">{featuredDishes[currentSlide].name}</h3>
                     <p className="text-gray-300 text-sm">{featuredDishes[currentSlide].description}</p>
                     {featuredDishes[currentSlide].tag && (
-                      <span className="menu-badge mt-2 inline-block">{featuredDishes[currentSlide].tag}</span>
+                      <span className="inline-block mt-2 px-3 py-1 bg-gradient-to-r from-kamalo-gold to-yellow-400 text-gray-800 text-xs font-bold rounded-full border border-yellow-600">
+                        {featuredDishes[currentSlide].tag}
+                      </span>
                     )}
                   </div>
                 </div>
@@ -156,7 +171,9 @@ const MenuPreview = () => {
                       <h3 className="text-xl font-bold text-white mb-2">{dish.name}</h3>
                       <p className="text-gray-300 text-sm">{dish.description}</p>
                       {dish.tag && (
-                        <span className="menu-badge mt-2 inline-block">{dish.tag}</span>
+                        <span className="inline-block mt-2 px-3 py-1 bg-gradient-to-r from-kamalo-gold to-yellow-400 text-gray-800 text-xs font-bold rounded-full border border-yellow-600">
+                          {dish.tag}
+                        </span>
                       )}
                     </div>
                   </div>
@@ -213,23 +230,10 @@ const MenuPreview = () => {
           </div>
         </div>
 
-        {/* Price Note Below Preview - Enhanced styling */}
-        <div className="text-center mt-8 mb-8">
-          <div className="bg-white rounded-lg p-6 border-2 border-kamalo-gold max-w-3xl mx-auto shadow-lg">
-            <h3 className="text-lg font-bold mb-2" style={{ color: '#4B1E1E' }}>Menu Pricing</h3>
-            <p className="text-lg font-semibold" style={{ color: '#4B1E1E' }}>
-              All Daily Specials are R80 with pap or R90 with rice
-            </p>
-            <p className="text-base mt-2" style={{ color: '#6B7280' }}>
-              All Vegetable Sides are R40
-            </p>
-          </div>
-        </div>
-
         <ScrollReveal delay={600}>
-          <div className="text-center">
+          <div className="text-center mt-12">
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Link to="/menu" className="btn-primary cta-with-icon">
+              <Link to="/menu" className="btn-primary">
                 View Full Menu
               </Link>
               <a 

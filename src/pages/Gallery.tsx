@@ -167,6 +167,17 @@ const Gallery = () => {
       <Navbar />
       <main className="pt-24 px-4 pb-12 tribal-pattern">
         <div className="max-w-7xl mx-auto">
+          {/* Tribal Pattern Title Bar */}
+          <div className="relative mb-8">
+            <div 
+              className="w-full h-2 rounded-full"
+              style={{
+                background: 'linear-gradient(90deg, #8B0000 0%, #FFD700 25%, #8B0000 50%, #FFD700 75%, #8B0000 100%)',
+                backgroundSize: '40px 100%'
+              }}
+            ></div>
+          </div>
+
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 font-serif">
@@ -224,14 +235,14 @@ const Gallery = () => {
           {/* Gallery Grid - 3 columns desktop, 2 columns mobile */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {filteredItems.map((item, index) => (
-              <div key={item.id} className="bg-black/50 rounded-xl overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
+              <div key={item.id} className="bg-black/50 rounded-xl overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
                 <div className="relative h-48 md:h-64 overflow-hidden">
                   <ImageModal
                     src={item.image}
                     alt={item.alt}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                   />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"></div>
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-500"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="text-lg md:text-xl font-bold text-white mb-2">{item.title}</h3>
                     <p className="text-xs md:text-sm text-gray-300 leading-relaxed">{item.caption}</p>
@@ -254,7 +265,7 @@ const Gallery = () => {
                 Ready to create your own memories? Visit us for authentic African cuisine and entertainment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="btn-primary cta-with-icon">
+                <Button className="btn-primary">
                   <a href="/reservations">Book Your Table</a>
                 </Button>
                 <Button className="btn-ghost">

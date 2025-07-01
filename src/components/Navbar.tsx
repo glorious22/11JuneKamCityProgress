@@ -27,7 +27,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg' : 'bg-black/95 backdrop-blur-sm'
     } border-b border-gray-800`}>
-      <div className="max-w-7xl mx-auto mobile-nav-content flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Mobile Menu - Left aligned */}
         <div className="md:hidden">
           <Drawer open={isOpen} onOpenChange={setIsOpen}>
@@ -97,9 +97,9 @@ const Navbar = () => {
           </Drawer>
         </div>
 
-        {/* Brand - Centered on mobile, left on desktop */}
+        {/* Brand - Perfectly Centered on mobile */}
         <div className="flex items-center justify-center flex-1 md:flex-none md:justify-start">
-          <Link to="/" className="text-lg md:text-xl font-bold text-kamalo-gold hover:text-white transition-colors duration-300 font-serif">
+          <Link to="/" className="text-xl md:text-2xl font-bold text-kamalo-gold hover:text-white transition-colors duration-300 font-serif">
             Kamalo City
           </Link>
         </div>
@@ -140,7 +140,7 @@ const Navbar = () => {
           {/* Reservation Pill Button */}
           <Link 
             to="/reservations" 
-            className="bg-kamalo-red text-white px-5 py-2 rounded-full hover:bg-red-700 transition-all duration-300 font-semibold text-sm hover:scale-105 hover:shadow-lg ml-4 cta-with-icon"
+            className="bg-kamalo-red text-white px-5 py-2 rounded-full hover:bg-red-700 transition-all duration-300 font-semibold text-sm hover:scale-105 hover:shadow-lg ml-4"
           >
             Reserve
           </Link>

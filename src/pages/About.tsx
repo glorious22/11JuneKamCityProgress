@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const About = () => {
+  const [showFullStory, setShowFullStory] = useState(false);
+
   useEffect(() => {
     document.title = "About Us - Kamalo City | Our Story & Mission";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -29,57 +31,45 @@ const About = () => {
             </p>
           </div>
           
-          {/* Our Story Section - Shortened and chunked */}
+          {/* Our Story Section - Collapsed with toggle */}
           <section className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6 font-serif">Our Story</h2>
               <div className="tribal-divider max-w-md mx-auto mb-8"></div>
               
-              {/* Chunked paragraphs - 2-3 lines each */}
+              {/* Preview - 3-4 lines */}
               <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-300 leading-relaxed">
                 <p>
-                  Kamalo City was born from the rubble of an abandoned space and reborn in 2023 with rhythm, flavor, and purpose.
+                  Kamalo City was born from the rubble of an abandoned space and reborn in 2023 with rhythm, flavor, and purpose. Today, we are a hub for African celebration, cuisine, and connection in the heart of Cape Town.
                 </p>
-                <p>
-                  Today, we are a hub for African celebration, cuisine, and connection in the heart of Cape Town.
-                </p>
+                
+                {/* Expandable content */}
+                {showFullStory && (
+                  <div className="space-y-6 mt-6">
+                    <p>
+                      Founded by Pitchou Ntumba and his wife, Kamalo City grew from a dream into one of Cape Town's hidden gems. Their combined vision and expertise have transformed this space into a vibrant celebration of African cuisine and culture.
+                    </p>
+                    <p>
+                      What started as an abandoned building has become a thriving restaurant and venue — powered by love for food, music, and community. We serve as a cultural bridge, bringing authentic African experiences to locals and visitors alike.
+                    </p>
+                  </div>
+                )}
+                
+                <button
+                  onClick={() => setShowFullStory(!showFullStory)}
+                  className="text-kamalo-gold hover:text-kamalo-red transition-colors font-semibold underline"
+                >
+                  {showFullStory ? 'Read Less' : 'Read More'}
+                </button>
               </div>
             </div>
           </section>
 
-          {/* Meet the Founders Section - Trimmed to 2 lines max */}
-          <section className="mb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Image */}
-              <div className="order-2 lg:order-1">
-                <img 
-                  src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Kamalo City - Restaurant founders and team"
-                  className="w-full h-96 md:h-[500px] rounded-lg shadow-lg object-cover"
-                  loading="lazy"
-                />
-              </div>
-              
-              {/* Content */}
-              <div className="order-1 lg:order-2">
-                <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6 font-serif">Meet Our Founders</h2>
-                <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
-                  <p>
-                    Founded by Pitchou Ntumba and his wife, Kamalo City grew from a dream into one of Cape Town's hidden gems.
-                  </p>
-                  <p>
-                    Their combined vision and expertise have transformed this space into a vibrant celebration of African cuisine and culture.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Kamalo's Journey Video Section */}
+          {/* Meet Kamalo City Video Section */}
           <section className="mb-20 tribal-pattern bg-black/30 rounded-lg p-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6 font-serif">
-                Kamalo's Journey
+                Meet Kamalo City
               </h2>
               <div className="tribal-divider max-w-md mx-auto mb-8"></div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -202,7 +192,7 @@ const About = () => {
               Ready to be part of the Kamalo City experience? Visit us and taste the passion in every dish.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/reservations" className="btn-primary cta-with-icon">
+              <Link to="/reservations" className="btn-primary">
                 Reserve a Table
               </Link>
               <Link to="/contact" className="btn-ghost">

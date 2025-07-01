@@ -358,13 +358,13 @@ const Menu = () => {
             </p>
           </div>
 
-          {/* Filter Buttons */}
+          {/* Filter Buttons - Fixed highlight persistence */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button
               onClick={() => setActiveFilter("main")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "main" 
-                  ? "menu-tab-active" 
+                  ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -374,7 +374,7 @@ const Menu = () => {
               onClick={() => setActiveFilter("sides")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "sides" 
-                  ? "menu-tab-active" 
+                  ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -384,7 +384,7 @@ const Menu = () => {
               onClick={() => setActiveFilter("vegetable-sides")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "vegetable-sides" 
-                  ? "menu-tab-active" 
+                  ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -394,7 +394,7 @@ const Menu = () => {
               onClick={() => setActiveFilter("daily-specials")}
               className={`px-6 py-3 rounded-full transition duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap font-semibold text-base ${
                 activeFilter === "daily-specials" 
-                  ? "menu-tab-active" 
+                  ? "bg-kamalo-red text-white shadow-lg transform scale-105" 
                   : "bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-300"
               }`}
             >
@@ -479,14 +479,12 @@ const Menu = () => {
                     </h3>
                     {item.tag && (
                       <span 
+                        className="px-3 py-1 rounded-full text-xs font-bold border"
                         style={{
-                          backgroundColor: '#FFD700',
+                          background: 'linear-gradient(135deg, #FFD700, #FFA500)',
                           color: '#2C2C2C',
-                          fontSize: '0.75rem',
-                          padding: '2px 8px',
-                          borderRadius: '999px',
-                          marginLeft: '6px',
-                          fontWeight: 'bold',
+                          borderColor: '#E6C200',
+                          boxShadow: '0 2px 8px rgba(255, 215, 0, 0.3)',
                           whiteSpace: 'nowrap'
                         }}
                       >

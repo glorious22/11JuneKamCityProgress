@@ -531,11 +531,11 @@
     background-size: 80px 140px;
   }
 
-  /* Scroll reveal animations - REMOVED heavy animations */
+  /* Reduced scroll reveal animations */
   .scroll-reveal {
     opacity: 1;
     transform: translateY(0);
-    transition: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   .scroll-reveal.revealed {
@@ -593,19 +593,6 @@
     color: #9CA3AF;
   }
 
-  /* Mobile navbar fixes */
-  .mobile-nav-content {
-    height: 50px;
-    padding: 8px 16px;
-  }
-
-  @media (max-width: 768px) {
-    .mobile-nav-content {
-      height: 45px;
-      padding: 6px 16px;
-    }
-  }
-
   /* Enhanced dish tag styling */
   .dish-tag {
     display: inline-block;
@@ -631,27 +618,6 @@
     border: 1px solid #E6C200;
     box-shadow: 0 2px 6px rgba(255, 215, 0, 0.4);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  }
-
-  /* CTA icon animations */
-  .cta-with-icon {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-with-icon::after {
-    content: '🍽️';
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%) translateX(30px);
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-
-  .cta-with-icon:hover::after {
-    transform: translateY(-50%) translateX(0);
-    opacity: 1;
   }
 
   /* Equal height grid system */
@@ -747,6 +713,15 @@
     }
     50% {
       box-shadow: 0 4px 25px rgba(139, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.3);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+    }
+    50% {
+      box-shadow: 0 4px 25px rgba(139, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
     }
   }
 }

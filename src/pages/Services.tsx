@@ -153,9 +153,9 @@ const Services = () => {
           </div>
 
           {/* Services Grid - 2 columns desktop, 1 column mobile with equal heights */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 equal-height-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {services.map((service, index) => (
-              <div key={service.id} className="service-card bg-black/50 text-white border-gray-800 hover:border-kamalo-red">
+              <div key={service.id} className="bg-black/50 text-white border border-gray-800 hover:border-kamalo-red rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl relative flex flex-col min-h-[500px]">
                 {/* Tag for popular service or coming soon */}
                 {service.tag && (
                   <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold z-10 ${
@@ -176,15 +176,15 @@ const Services = () => {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/20"></div>
-                  <div className="absolute top-4 left-4 text-3xl service-icon">
+                  <div className="absolute top-4 left-4 text-3xl">
                     {service.icon}
                   </div>
                 </div>
                 
                 {/* Service Content */}
                 <div className="flex flex-col flex-grow">
-                  <h3 className="service-title text-white">{service.title}</h3>
-                  <p className="service-description text-gray-300">{service.summary}</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-kamalo-gold mb-4 font-serif">{service.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed flex-grow">{service.summary}</p>
                   
                   {/* Details Button */}
                   <button
@@ -228,7 +228,7 @@ const Services = () => {
               Visit us at 90 Voortrekker Road, Goodwood, Cape Town. Open 7 days a week from 11:00 AM to 11:00 PM.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button className="btn-primary min-h-[44px] cta-with-icon">
+              <Button className="btn-primary min-h-[44px]">
                 <a href="tel:+27731598909" className="flex items-center gap-2">
                   📞 Call Us
                 </a>

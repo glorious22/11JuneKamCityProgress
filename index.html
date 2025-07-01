@@ -23,8 +23,8 @@
     <meta name="twitter:image" content="/og-image.png" />
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg" />
-    <link rel="apple-touch-icon" href="https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,6 +84,17 @@
         "longitude": "18.5516"
       }
     }
+    </script>
+
+    <!-- WebP Detection Script -->
+    <script>
+      (function() {
+        var webP = new Image();
+        webP.onload = webP.onerror = function () {
+          document.documentElement.classList.add(webP.height == 2 ? 'webp' : 'no-webp');
+        };
+        webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+      })();
     </script>
   </head>
 

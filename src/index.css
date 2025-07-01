@@ -100,7 +100,6 @@
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-text-size-adjust: 100%;
     overscroll-behavior: none;
-    /* Disable zoom on mobile */
     -webkit-user-zoom: none;
     -moz-user-zoom: none;
     -ms-user-zoom: none;
@@ -161,21 +160,21 @@
     }
   }
 
-  /* Remove default hr styling */
-  hr {
-    display: none;
+  /* Remove ALL horizontal lines and dividers */
+  hr, .divider, .section-divider {
+    display: none !important;
   }
 
   /* Enhanced CTA Button Styling with Hover Effects */
   .btn-primary {
-    background: linear-gradient(135deg, #8B0000, #FFD700);
+    background: linear-gradient(135deg, #FFD700, #FFA500);
     border-radius: 50px;
     padding: 14px 28px;
-    color: white;
+    color: #2C2C2C;
     border: none;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
     text-decoration: none;
     display: inline-block;
     text-align: center;
@@ -190,7 +189,7 @@
     left: 50%;
     width: 0;
     height: 0;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     transition: width 0.6s, height 0.6s;
@@ -202,10 +201,10 @@
   }
 
   .btn-primary:hover {
-    background: linear-gradient(135deg, #660000, #E6C200);
+    background: linear-gradient(135deg, #E6C200, #FF8C00);
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.3);
-    color: white;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 165, 0, 0.4);
+    color: #2C2C2C;
   }
 
   /* Ghost button styling with enhanced hover */
@@ -361,34 +360,42 @@
     margin-bottom: 8px;
   }
 
-  /* Enhanced tribal pattern overlay */
+  /* Enhanced Congolese tribal pattern overlay */
   .tribal-pattern {
     background-image: 
-      linear-gradient(45deg, rgba(139, 0, 0, 0.05) 25%, transparent 25%),
-      linear-gradient(-45deg, rgba(139, 0, 0, 0.05) 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, rgba(255, 215, 0, 0.05) 75%),
-      linear-gradient(-45deg, transparent 75%, rgba(255, 215, 0, 0.05) 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      /* Kuba cloth inspired pattern */
+      repeating-linear-gradient(
+        45deg,
+        rgba(139, 0, 0, 0.08) 0px,
+        rgba(139, 0, 0, 0.08) 2px,
+        transparent 2px,
+        transparent 12px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(255, 215, 0, 0.06) 0px,
+        rgba(255, 215, 0, 0.06) 2px,
+        transparent 2px,
+        transparent 12px
+      ),
+      /* Diamond pattern */
+      radial-gradient(
+        circle at 25% 25%,
+        rgba(139, 0, 0, 0.04) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 75% 75%,
+        rgba(255, 215, 0, 0.04) 0%,
+        transparent 50%
+      );
+    background-size: 24px 24px, 24px 24px, 48px 48px, 48px 48px;
+    background-position: 0 0, 12px 12px, 0 0, 24px 24px;
   }
 
-  /* Tribal divider elements */
+  /* Tribal divider elements - REMOVED */
   .tribal-divider {
-    background-image: 
-      repeating-linear-gradient(
-        90deg,
-        #8B0000 0px,
-        #8B0000 2px,
-        transparent 2px,
-        transparent 8px,
-        #FFD700 8px,
-        #FFD700 10px,
-        transparent 10px,
-        transparent 16px
-      );
-    height: 4px;
-    width: 100%;
-    margin: 20px 0;
+    display: none !important;
   }
 
   /* Back to top button */
@@ -396,18 +403,21 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #8B0000;
-    color: white;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #2C2C2C;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 56px;
+    height: 56px;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .back-to-top.visible {
@@ -416,15 +426,15 @@
   }
 
   .back-to-top:hover {
-    background: #660000;
+    background: linear-gradient(135deg, #E6C200, #FF8C00);
     transform: scale(1.1);
-    animation: pulse-glow 1s ease-in-out;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
   }
 
   /* WhatsApp floating button */
   .whatsapp-float {
     position: fixed;
-    bottom: 80px;
+    bottom: 90px;
     right: 20px;
     background: #25D366;
     color: white;
@@ -446,7 +456,46 @@
     background: #128C7E;
     transform: scale(1.1);
     color: white;
-    animation: pulse-glow 1s ease-in-out;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  }
+
+  /* Animated WhatsApp chat prompt */
+  .whatsapp-prompt {
+    position: fixed;
+    bottom: 160px;
+    right: 20px;
+    background: white;
+    color: #2C2C2C;
+    padding: 12px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .whatsapp-prompt.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .whatsapp-prompt::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
   }
 
   /* Footer icon buttons */
@@ -521,24 +570,26 @@
     }
   }
 
-  /* Footer tribal pattern */
-  .footer-tribal {
-    background-image: 
-      linear-gradient(30deg, rgba(139, 0, 0, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(139, 0, 0, 0.1) 87.5%, rgba(139, 0, 0, 0.1)),
-      linear-gradient(150deg, rgba(139, 0, 0, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(139, 0, 0, 0.1) 87.5%, rgba(139, 0, 0, 0.1)),
-      linear-gradient(30deg, rgba(255, 215, 0, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 215, 0, 0.05) 87.5%, rgba(255, 215, 0, 0.05)),
-      linear-gradient(150deg, rgba(255, 215, 0, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 215, 0, 0.05) 87.5%, rgba(255, 215, 0, 0.05));
-    background-size: 80px 140px;
-  }
-
-  /* Reduced scroll reveal animations */
+  /* Minimal scroll reveal animations */
   .scroll-reveal {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
   }
 
   .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hero fade animation only */
+  .hero-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .hero-fade.visible {
     opacity: 1;
     transform: translateY(0);
   }
@@ -556,41 +607,22 @@
     border: 0;
   }
 
-  /* Reservation form enhancements */
-  .reservation-form {
-    background: linear-gradient(135deg, rgba(250, 243, 235, 0.1), rgba(139, 0, 0, 0.05));
-    border-radius: 16px;
-    padding: 32px;
-    border: 1px solid rgba(255, 215, 0, 0.2);
+  /* Form validation styles */
+  .form-field-error {
+    border-color: #EF4444 !important;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2) !important;
   }
 
-  .form-field-icon {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #9CA3AF;
-    z-index: 10;
+  .form-error-message {
+    color: #EF4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
   }
 
-  .form-input-with-icon {
-    padding-left: 48px;
-    background: rgba(26, 31, 44, 0.8);
-    border: none;
-    border-radius: 50px;
-    color: white;
-    font-size: 16px;
-    transition: all 0.3s ease;
-  }
-
-  .form-input-with-icon:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #8B0000;
-    background: rgba(26, 31, 44, 0.9);
-  }
-
-  .form-input-with-icon::placeholder {
-    color: #9CA3AF;
+  .form-success-message {
+    color: #10B981;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
   }
 
   /* Enhanced dish tag styling */
@@ -639,81 +671,21 @@
     box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
   }
 
-  /* Contact form styling */
-  .contact-form-input {
-    width: 100%;
-    padding: 16px 20px;
-    background: rgba(26, 31, 44, 0.8);
-    border: 2px solid transparent;
-    border-radius: 50px;
-    color: white;
-    font-size: 16px;
-    transition: all 0.3s ease;
-  }
-
-  .contact-form-input:focus {
-    outline: none;
-    border-color: #8B0000;
-    background: rgba(26, 31, 44, 0.9);
-    box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
-  }
-
-  .contact-form-input::placeholder {
-    color: #9CA3AF;
-  }
-
-  .contact-form-textarea {
-    width: 100%;
-    padding: 16px 20px;
-    background: rgba(26, 31, 44, 0.8);
-    border: 2px solid transparent;
-    border-radius: 20px;
-    color: white;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    resize: vertical;
-    min-height: 120px;
-  }
-
-  .contact-form-textarea:focus {
-    outline: none;
-    border-color: #8B0000;
-    background: rgba(26, 31, 44, 0.9);
-    box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
-  }
-
-  .contact-form-textarea::placeholder {
-    color: #9CA3AF;
-  }
-
-  .contact-send-btn {
-    width: 100%;
-    background: linear-gradient(135deg, #8B0000, #FF0000);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 18px 32px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
-    animation: pulse-glow 2s ease-in-out infinite;
-  }
-
-  .contact-send-btn:hover {
-    background: linear-gradient(135deg, #660000, #CC0000);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.4);
-  }
-
-  @keyframes pulse-glow {
-    0%, 100% {
-      box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+  /* Desktop Menu Preview - Full width container */
+  @media (min-width: 768px) {
+    .menu-preview-container {
+      width: calc(100vw - 32px);
+      margin-left: calc(-50vw + 50% + 16px);
+      margin-right: calc(-50vw + 50% + 16px);
+      padding-left: 16px;
+      padding-right: 16px;
     }
-    50% {
-      box-shadow: 0 4px 25px rgba(139, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.3);
-    }
+  }
+
+  /* Navbar active link highlighting */
+  .nav-link-active {
+    color: #FFD700 !important;
+    font-weight: 700;
   }
 
   @keyframes pulse {
@@ -723,5 +695,19 @@
     50% {
       box-shadow: 0 4px 25px rgba(139, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
     }
+  }
+
+  /* Performance optimizations */
+  img, iframe {
+    loading: lazy;
+  }
+
+  /* WebP support detection */
+  .webp .jpg-fallback {
+    display: none;
+  }
+
+  .no-webp .webp-image {
+    display: none;
   }
 }

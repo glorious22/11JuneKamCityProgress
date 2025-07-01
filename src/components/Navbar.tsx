@@ -1,5 +1,5 @@
 import { Instagram, Menu, X, MessageCircle } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
   Drawer,
@@ -13,6 +13,7 @@ import {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,10 +24,14 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isActiveLink = (path: string) => {
+    return location.pathname === path;
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg' : 'bg-black/95 backdrop-blur-sm'
-    } border-b border-gray-800`}>
+    } border-b border-gray-800 tribal-pattern`}>
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Mobile Menu - Left aligned */}
         <div className="md:hidden">
@@ -36,7 +41,7 @@ const Navbar = () => {
                 <Menu className="w-6 h-6" />
               </button>
             </DrawerTrigger>
-            <DrawerContent className="bg-kamalo-dark border-gray-800 max-h-[85vh]">
+            <DrawerContent className="bg-kamalo-dark border-gray-800 max-h-[85vh] tribal-pattern">
               <DrawerHeader className="flex justify-between items-center border-b border-gray-700 pb-4">
                 <DrawerTitle className="text-white text-xl font-serif">Menu</DrawerTitle>
                 <DrawerClose asChild>
@@ -47,27 +52,27 @@ const Navbar = () => {
               </DrawerHeader>
               <div className="p-4 space-y-2 flex flex-col h-full overflow-y-auto">
                 <div className="flex-1 space-y-2 overflow-y-auto">
-                  <Link to="/" className="block text-white hover:text-kamalo-gold transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/" className={`block py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold transition-colors ${isActiveLink('/') ? 'text-kamalo-gold' : 'text-white hover:text-kamalo-gold'}`} onClick={() => setIsOpen(false)}>
                     Home
                   </Link>
                   
-                  <Link to="/menu" className="block text-white hover:text-kamalo-gold transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/menu" className={`block py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold transition-colors ${isActiveLink('/menu') ? 'text-kamalo-gold' : 'text-white hover:text-kamalo-gold'}`} onClick={() => setIsOpen(false)}>
                     Menu
                   </Link>
                   
-                  <Link to="/gallery" className="block text-white hover:text-kamalo-gold transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/gallery" className={`block py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold transition-colors ${isActiveLink('/gallery') ? 'text-kamalo-gold' : 'text-white hover:text-kamalo-gold'}`} onClick={() => setIsOpen(false)}>
                     Gallery
                   </Link>
 
-                  <Link to="/about" className="block text-white hover:text-kamalo-gold transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/about" className={`block py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold transition-colors ${isActiveLink('/about') ? 'text-kamalo-gold' : 'text-white hover:text-kamalo-gold'}`} onClick={() => setIsOpen(false)}>
                     About
                   </Link>
                   
-                  <Link to="/services" className="block text-white hover:text-kamalo-gold transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/services" className={`block py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold transition-colors ${isActiveLink('/services') ? 'text-kamalo-gold' : 'text-white hover:text-kamalo-gold'}`} onClick={() => setIsOpen(false)}>
                     Services
                   </Link>
                   
-                  <Link to="/contact" className="block text-white hover:text-kamalo-gold transition-colors py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold" onClick={() => setIsOpen(false)}>
+                  <Link to="/contact" className={`block py-3 text-lg border-b border-gray-700 touch-manipulation font-semibold transition-colors ${isActiveLink('/contact') ? 'text-kamalo-gold' : 'text-white hover:text-kamalo-gold'}`} onClick={() => setIsOpen(false)}>
                     Contact
                   </Link>
                   
@@ -106,27 +111,27 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-2">
-          <Link to="/" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+          <Link to="/" className={`px-3 py-2 hover:scale-105 transition-all duration-300 text-sm font-semibold ${isActiveLink('/') ? 'nav-link-active' : 'text-white hover:text-kamalo-gold'}`}>
             Home
           </Link>
           
-          <Link to="/menu" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+          <Link to="/menu" className={`px-3 py-2 hover:scale-105 transition-all duration-300 text-sm font-semibold ${isActiveLink('/menu') ? 'nav-link-active' : 'text-white hover:text-kamalo-gold'}`}>
             Menu
           </Link>
           
-          <Link to="/gallery" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+          <Link to="/gallery" className={`px-3 py-2 hover:scale-105 transition-all duration-300 text-sm font-semibold ${isActiveLink('/gallery') ? 'nav-link-active' : 'text-white hover:text-kamalo-gold'}`}>
             Gallery
           </Link>
 
-          <Link to="/about" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+          <Link to="/about" className={`px-3 py-2 hover:scale-105 transition-all duration-300 text-sm font-semibold ${isActiveLink('/about') ? 'nav-link-active' : 'text-white hover:text-kamalo-gold'}`}>
             About
           </Link>
           
-          <Link to="/services" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+          <Link to="/services" className={`px-3 py-2 hover:scale-105 transition-all duration-300 text-sm font-semibold ${isActiveLink('/services') ? 'nav-link-active' : 'text-white hover:text-kamalo-gold'}`}>
             Services
           </Link>
           
-          <Link to="/contact" className="text-white hover:text-kamalo-gold transition-colors duration-300 text-sm font-semibold px-3 py-2 hover:scale-105">
+          <Link to="/contact" className={`px-3 py-2 hover:scale-105 transition-all duration-300 text-sm font-semibold ${isActiveLink('/contact') ? 'nav-link-active' : 'text-white hover:text-kamalo-gold'}`}>
             Contact
           </Link>
 

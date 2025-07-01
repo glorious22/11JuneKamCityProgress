@@ -12,6 +12,7 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState<{[key: string]: string}>({});
 
   useEffect(() => {
     document.title = "Contact Us - Kamalo City | Get in Touch";
@@ -21,15 +22,49 @@ const Contact = () => {
     }
   }, []);
 
+  const validateForm = () => {
+    const newErrors: {[key: string]: string} = {};
+    
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Email is invalid';
+    }
+    
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: ''
+      });
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
     
     // Create mailto link
     const subject = encodeURIComponent('Contact from Kamalo City Website');
@@ -62,7 +97,6 @@ ${formData.message}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif">
                 Reserve Your Table at <span className="text-kamalo-red">Kamalo City</span>
               </h1>
-              <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 Reach out to book a table, plan a private event, or simply say hi. We'd love to hear from you.
               </p>
@@ -127,10 +161,13 @@ ${formData.message}
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full p-4 md:p-5 bg-gray-800 rounded-full text-white text-base md:text-lg border-2 border-transparent focus:border-kamalo-red transition-colors touch-manipulation"
+                        className={`w-full p-4 md:p-5 bg-gray-800 rounded-full text-white text-base md:text-lg border-2 transition-colors touch-manipulation ${
+                          errors.name ? 'form-field-error' : 'border-transparent focus:border-kamalo-red'
+                        }`}
                         placeholder="Your name"
                         required
                       />
+                      {errors.name && <p className="form-error-message">{errors.name}</p>}
                     </div>
                     <div>
                       <input
@@ -138,20 +175,26 @@ ${formData.message}
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full p-4 md:p-5 bg-gray-800 rounded-full text-white text-base md:text-lg border-2 border-transparent focus:border-kamalo-red transition-colors touch-manipulation"
+                        className={`w-full p-4 md:p-5 bg-gray-800 rounded-full text-white text-base md:text-lg border-2 transition-colors touch-manipulation ${
+                          errors.email ? 'form-field-error' : 'border-transparent focus:border-kamalo-red'
+                        }`}
                         placeholder="Your email"
                         required
                       />
+                      {errors.email && <p className="form-error-message">{errors.email}</p>}
                     </div>
                     <div>
                       <textarea
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white h-32 md:h-40 text-base md:text-lg border-2 border-transparent focus:border-kamalo-red transition-colors resize-none touch-manipulation"
+                        className={`w-full p-4 md:p-5 bg-gray-800 rounded-lg text-white h-32 md:h-40 text-base md:text-lg border-2 transition-colors resize-none touch-manipulation ${
+                          errors.message ? 'form-field-error' : 'border-transparent focus:border-kamalo-red'
+                        }`}
                         placeholder="Your message"
                         required
                       ></textarea>
+                      {errors.message && <p className="form-error-message">{errors.message}</p>}
                     </div>
                     <button 
                       type="submit" 

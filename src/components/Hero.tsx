@@ -48,7 +48,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90 tribal-pattern"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '140px' }}>
-        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`hero-fade ${isVisible ? 'visible' : ''}`}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight font-serif">
             Welcome to <span className="text-kamalo-gold">Kamalo City</span>
           </h1>
@@ -58,9 +58,6 @@ const Hero = () => {
           <h3 className="text-xl md:text-2xl lg:text-3xl text-kamalo-gold mb-4 md:mb-6 font-serif italic leading-relaxed">
             Bringing the Heart of African Cuisine to Every Plate.
           </h3>
-          
-          {/* Tribal divider */}
-          <div className="tribal-divider max-w-md mx-auto mb-6"></div>
           
           <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
             Experience authentic African cuisine, traditional vegetables, premium hookah, grooming, and weekend entertainment — all under one roof in Goodwood, Cape Town.

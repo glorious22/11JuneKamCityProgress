@@ -97,26 +97,26 @@ const MenuPreview = () => {
 
   return (
     <section ref={sectionRef} className="section-spacing" style={{ backgroundColor: '#FAF3EB' }}>
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Price Note Above Everything */}
-        <div className="text-center mb-8">
-          <div className="bg-white rounded-lg p-6 border-2 border-kamalo-gold max-w-4xl mx-auto shadow-lg">
-            <h3 className="text-xl font-bold mb-3" style={{ color: '#4B1E1E' }}>Menu Pricing</h3>
-            <p className="text-lg font-semibold mb-2" style={{ color: '#4B1E1E' }}>
-              All Daily Specials are R80 with pap or R90 with rice
-            </p>
-            <p className="text-base" style={{ color: '#6B7280' }}>
-              All Vegetable Sides are R40
-            </p>
-          </div>
+      {/* Price Note Above Everything */}
+      <div className="text-center mb-8 px-4">
+        <div className="bg-white rounded-lg p-6 border-2 border-kamalo-gold max-w-4xl mx-auto shadow-lg">
+          <h3 className="text-xl font-bold mb-3" style={{ color: '#4B1E1E' }}>Menu Pricing</h3>
+          <p className="text-lg font-semibold mb-2" style={{ color: '#4B1E1E' }}>
+            All Daily Specials are R80 with pap or R90 with rice
+          </p>
+          <p className="text-base" style={{ color: '#6B7280' }}>
+            All Vegetable Sides are R40
+          </p>
         </div>
+      </div>
 
+      {/* Desktop: Full width container */}
+      <div className="menu-preview-container">
         <ScrollReveal>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif" style={{ color: '#4B1E1E' }}>
-              Featured <span className="text-kamalo-red">Dishes</span>
+              Kamalo City <span className="text-kamalo-red">Daily Specials</span>
             </h2>
-            <div className="tribal-divider max-w-md mx-auto mb-6"></div>
             <p className="text-xl max-w-3xl mx-auto" style={{ color: '#2C2C2C' }}>
               Discover our most beloved African dishes, crafted with authentic flavors and traditional recipes
             </p>
@@ -129,7 +129,7 @@ const MenuPreview = () => {
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Mobile: Show 1 slide */}
-          <div className="md:hidden">
+          <div className="md:hidden px-4">
             <ScrollReveal>
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="relative h-64 overflow-hidden">
@@ -155,7 +155,7 @@ const MenuPreview = () => {
           </div>
 
           {/* Desktop: Show 3 slides */}
-          <div className="hidden md:flex gap-6 equal-height-grid">
+          <div className="hidden md:flex gap-6 equal-height-grid px-4">
             {getVisibleSlides().map((dish, index) => (
               <ScrollReveal key={`${currentSlide}-${index}`} delay={index * 200}>
                 <div className="flex-1 bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -231,7 +231,7 @@ const MenuPreview = () => {
         </div>
 
         <ScrollReveal delay={600}>
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 px-4">
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <Link to="/menu" className="btn-primary">
                 View Full Menu

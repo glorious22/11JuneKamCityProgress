@@ -159,6 +159,58 @@
       padding: 60px 0;
     }
   }
+
+  /* African-themed vertical accent lines under headings */
+  .accent-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin: 12px auto 0;
+    width: fit-content;
+  }
+
+  .accent-divider::before,
+  .accent-divider::after {
+    content: '';
+    width: 4px;
+    height: 15px;
+    display: block;
+  }
+
+  .accent-divider::before {
+    background-color: #D72638; /* Red */
+  }
+
+  .accent-divider::after {
+    background-color: #FFC600; /* Yellow */
+  }
+
+  /* Apply accent divider to h2 and h3 elements */
+  h2::after,
+  h3::after {
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin: 12px auto 0;
+    width: fit-content;
+    height: 15px;
+  }
+
+  h2::after {
+    background: linear-gradient(to right, #D72638 0%, #D72638 4px, transparent 4px, transparent 6px, #FFC600 6px, #FFC600 10px);
+    width: 10px;
+    height: 15px;
+  }
+
+  h3::after {
+    background: linear-gradient(to right, #D72638 0%, #D72638 4px, transparent 4px, transparent 6px, #FFC600 6px, #FFC600 10px);
+    width: 10px;
+    height: 15px;
+  }
+
   /* Enhanced CTA Button Styling with Hover Effects */
   .btn-primary {
     background: linear-gradient(135deg, #FFD700, #FFA500);
@@ -354,37 +406,26 @@
     margin-bottom: 8px;
   }
 
-  /* Enhanced Congolese tribal pattern overlay */
+  /* Clean tribal pattern overlay - REMOVED horizontal stripes */
   .tribal-pattern {
+    background-color: #0C0C0C; /* Clean solid background */
+    position: relative;
+  }
+
+  /* Optional: Add subtle texture without horizontal stripes */
+  .tribal-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: 
-      /* Kuba cloth inspired pattern */
-      repeating-linear-gradient(
-        45deg,
-        rgba(139, 0, 0, 0.08) 0px,
-        rgba(139, 0, 0, 0.08) 2px,
-        transparent 2px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        -45deg,
-        rgba(255, 215, 0, 0.06) 0px,
-        rgba(255, 215, 0, 0.06) 2px,
-        transparent 2px,
-        transparent 12px
-      ),
-      /* Diamond pattern */
-      radial-gradient(
-        circle at 25% 25%,
-        rgba(139, 0, 0, 0.04) 0%,
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at 75% 75%,
-        rgba(255, 215, 0, 0.04) 0%,
-        transparent 50%
-      );
-    background-size: 24px 24px, 24px 24px, 48px 48px, 48px 48px;
-    background-position: 0 0, 12px 12px, 0 0, 24px 24px;
+      radial-gradient(circle at 25% 25%, rgba(139, 0, 0, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
+    background-size: 100px 100px, 150px 150px;
+    background-position: 0 0, 50px 50px;
+    pointer-events: none;
   }
 
   /* Back to top button */

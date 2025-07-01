@@ -47,14 +47,17 @@ const Hero = () => {
       {/* Enhanced background overlay with tribal pattern */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90 tribal-pattern"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '120px' }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '140px' }}>
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight font-serif">
             Welcome to <span className="text-kamalo-gold">Kamalo City</span>
           </h1>
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-kamalo-gold mb-4 md:mb-6 font-serif italic leading-relaxed">
-            A Taste of Africa. A Story in Every Bite.
+          <h2 className="text-lg md:text-xl lg:text-2xl text-white mb-2 font-serif">
+            Cape Town's Home of African Flavor
           </h2>
+          <h3 className="text-xl md:text-2xl lg:text-3xl text-kamalo-gold mb-4 md:mb-6 font-serif italic leading-relaxed">
+            Bringing the Heart of African Cuisine to Every Plate.
+          </h3>
           
           {/* Tribal divider */}
           <div className="tribal-divider max-w-md mx-auto mb-6"></div>
@@ -66,9 +69,9 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8 px-4">
             <Button 
               asChild 
-              className="btn-primary px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold cta-with-icon"
+              className="btn-primary px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold"
             >
-              <Link to="/reservations">Book a Table</Link>
+              <Link to="/reservations">Book a Table & Order on Uber Eats</Link>
             </Button>
             
             <Button 

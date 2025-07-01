@@ -75,7 +75,7 @@ const TestimonialsSection = () => {
         <ScrollReveal>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
-              What Our <span className="text-kamalo-red">Customers Are Saying</span>
+              What Our <span className="text-kamalo-red">Guests Are Saying</span>
             </h2>
             <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
             <p className="text-xl text-gray-300">
@@ -115,18 +115,18 @@ const TestimonialsSection = () => {
               </div>
             </div>
 
-            {/* Desktop Navigation buttons */}
+            {/* Desktop Navigation buttons - Moved outside text area */}
             <div className="hidden md:block">
               <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+                className="absolute -left-16 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               
               <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+                className="absolute -right-16 top-1/2 transform -translate-y-1/2 bg-kamalo-red hover:bg-red-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -136,16 +136,16 @@ const TestimonialsSection = () => {
             <div className="carousel-arrows md:hidden">
               <button
                 onClick={prevSlide}
-                className="carousel-arrow hover:bg-red-600 text-white transition-all duration-300"
+                className="carousel-arrow hover:bg-red-600 text-white transition-all duration-300 shadow-lg"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-4 h-4" />
               </button>
               
               <button
                 onClick={nextSlide}
-                className="carousel-arrow hover:bg-red-600 text-white transition-all duration-300"
+                className="carousel-arrow hover:bg-red-600 text-white transition-all duration-300 shadow-lg"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-4 h-4" />
               </button>
             </div>
 

@@ -49,8 +49,8 @@ const ServicesPreview = () => {
     },
     {
       icon: Wind,
-      title: "Lifestyle Services",
-      description: "Premium hookah lounge, signature fragrances, professional barbershop, and game nights",
+      title: "Hookah Lounge – Flavored Relaxation in Cape Town",
+      description: "Premium hookah with mint, apple, and fruity blends in our ambient lounge",
       link: "/services",
       image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=400",
       serviceIcon: "💨"
@@ -63,7 +63,7 @@ const ServicesPreview = () => {
         <ScrollReveal>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-serif">
-              More Than Just <span className="text-kamalo-red">Dining</span>
+              Explore Our <span className="text-kamalo-red">African-Inspired Offerings</span>
             </h2>
             <div className="tribal-divider max-w-md mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -96,7 +96,7 @@ const ServicesPreview = () => {
                     <p className="service-description text-gray-300">{service.description}</p>
                     <Link
                       to={service.link}
-                      className="inline-block bg-kamalo-red text-white px-6 py-3 rounded-full hover:bg-red-600 transition-all duration-300 font-semibold hover:scale-105 hover:shadow-lg mt-auto text-center cta-with-icon"
+                      className="inline-block bg-kamalo-red text-white px-6 py-3 rounded-full hover:bg-red-600 transition-all duration-300 font-semibold hover:scale-105 hover:shadow-lg mt-auto text-center"
                     >
                       Learn More
                     </Link>

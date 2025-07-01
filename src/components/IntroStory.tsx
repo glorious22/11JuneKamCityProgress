@@ -26,14 +26,14 @@ const IntroStory = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
-            Our Story: From Rubble to <span className="text-kamalo-red">Rhythm</span>
+            The Kamalo City Journey: From <span className="text-kamalo-red">Rebirth to Renown</span>
           </h2>
           <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-8"></div>
           
-          {/* Shortened About Preview */}
+          {/* Updated About Preview */}
           <div className={`max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
-              Since 2023, Kamalo City has brought African heritage, food, and culture to life in the heart of Cape Town.
+              Since 2023, Kamalo City has been more than just a restaurant — it's a cultural landmark in Cape Town. We serve soul-warming African dishes, host vibrant events, and bring people together through food, music, and tradition.
             </p>
             
             <Link to="/about">

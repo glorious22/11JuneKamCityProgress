@@ -15,7 +15,7 @@ const Hero = () => {
   useEffect(() => {
     setIsVisible(true);
     
-    // Image carousel
+    // Image carousel - every 5 seconds
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
     }, 5000);
@@ -25,7 +25,7 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image carousel */}
+      {/* Background image carousel with fade transition */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
           <div
@@ -44,8 +44,8 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* Enhanced background overlay with tribal pattern */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-kamalo-dark/90 tribal-pattern"></div>
+      {/* Enhanced background overlay - 40% opacity for readability */}
+      <div className="absolute inset-0 bg-black/40"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '140px' }}>
         <div className={`hero-fade ${isVisible ? 'visible' : ''}`}>
@@ -88,17 +88,20 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="text-gray-400 px-4">
+          {/* Address and contact info */}
+          <div className="text-gray-400 px-4 mb-6">
             <p className="text-sm md:text-base">📍 90 Voortrekker Road, Goodwood • 📞 +27 73 159 8909</p>
             <p className="text-xs md:text-sm mt-2">Open 7 days a week: 11:00 AM - 11:00 PM</p>
           </div>
-        </div>
-      </div>
 
-      {/* Enhanced scroll indicator */}
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-kamalo-gold rounded-full flex justify-center">
-          <div className="w-1 h-2 md:h-3 bg-kamalo-gold rounded-full mt-2 animate-pulse"></div>
+          {/* Animated scroll indicator - moved below address */}
+          <div className="flex justify-center">
+            <div className="animate-bounce">
+              <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-kamalo-gold rounded-full flex justify-center relative">
+                <div className="w-1 h-2 md:h-3 bg-kamalo-gold rounded-full mt-2 animate-pulse"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

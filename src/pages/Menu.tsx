@@ -349,7 +349,6 @@ const Menu = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif" style={{ color: '#4B1E1E' }}>
               Explore Our <span className="text-kamalo-red">Menu</span>
             </h1>
-            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
             <p className="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto" style={{ color: '#2C2C2C' }}>
               Authentic African cuisine crafted with traditional recipes and bold flavors
             </p>
@@ -404,7 +403,6 @@ const Menu = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif" style={{ color: '#4B1E1E' }}>
               {getCategoryDisplayName(activeFilter)}
             </h2>
-            <div className="w-20 h-1 bg-kamalo-gold mx-auto mb-6"></div>
             
             {/* Daily Specials specific header */}
             {activeFilter === "daily-specials" && (
@@ -505,7 +503,7 @@ const Menu = () => {
             ))}
           </div>
 
-          {/* Bottom CTA Section */}
+          {/* Bottom CTA Section - SIMPLIFIED BUTTON */}
           <div className="text-center">
             <div className="bg-white rounded-lg p-8 border-2 border-gray-300 shadow-lg">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 font-serif" style={{ color: '#4B1E1E' }}>
@@ -515,14 +513,17 @@ const Menu = () => {
                 Experience authentic African cuisine and traditional flavors at Kamalo City in Cape Town.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
-                <Link to="/reservations" className="btn-primary">
-                  Book a Table & Order on Uber Eats
+                <Link 
+                  to="/reservations" 
+                  className="bg-kamalo-red hover:bg-red-600 text-white px-6 py-3 text-base rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold touch-manipulation text-center"
+                >
+                  Book a Table
                 </Link>
                 <a 
                   href="https://www.ubereats.com/za/store/kamalo-city/example" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn-uber-eats"
+                  className="btn-uber-eats px-6 py-3 text-base rounded-full"
                 >
                   Order on Uber Eats
                 </a>
@@ -530,7 +531,7 @@ const Menu = () => {
                   href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn-ghost"
+                  className="btn-ghost px-6 py-3 text-base rounded-full"
                 >
                   Order via WhatsApp
                 </a>

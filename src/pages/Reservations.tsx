@@ -85,7 +85,7 @@ Time: ${formData.time}
 Guests: ${formData.guests}
 Special Requests: ${formData.specialRequests || 'None'}`;
     
-    const whatsappUrl = `https://wa.me/+27731598909?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/+27736911461?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -119,7 +119,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-kamalo-gold mb-6 font-serif">
                 Reserve Your <span className="text-kamalo-red">Experience</span>
               </h1>
-              <div className="tribal-divider max-w-md mx-auto mb-6"></div>
+              <div className="congo-pattern-divider"></div>
               <div className="max-w-4xl mx-auto">
                 <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
                   Looking for the perfect venue in Cape Town? Kamalo City offers intimate dinners, birthday parties, corporate events, and more. Enjoy authentic cuisine, vibrant ambiance, and excellent service.
@@ -232,7 +232,7 @@ Special Requests: ${formData.specialRequests || 'None'}`;
 
                   <Button 
                     type="submit" 
-                    className="w-full btn-primary py-5 text-xl font-semibold rounded-full touch-manipulation"
+                    className="w-full btn-primary-slim py-4 text-lg font-semibold rounded-full touch-manipulation"
                     disabled={isSubmitted}
                   >
                     {isSubmitted ? 'Sending...' : 'Reserve Now'}
@@ -243,12 +243,12 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                 <div className="text-center mt-6">
                   <p className="text-gray-400 mb-4">Or contact us directly:</p>
                   <a 
-                    href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im"
+                    href="https://wa.me/+27736911461"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-green-500 hover:text-green-400 transition-colors font-semibold"
                   >
-                    WhatsApp Group Chat
+                    WhatsApp: +27 73 691 1461
                   </a>
                 </div>
               </div>
@@ -337,8 +337,8 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                 <p className="text-gray-300 mb-6 text-lg">Contact us now to secure your table or discuss private event options.</p>
                 <p className="text-gray-400 text-lg">
                   For special requirements or large groups, please call{" "}
-                  <a href="tel:+27731598909" className="text-kamalo-gold hover:text-kamalo-red transition-colors font-semibold">
-                    +27 73 159 8909
+                  <a href="tel:+27736911461" className="text-kamalo-gold hover:text-kamalo-red transition-colors font-semibold">
+                    +27 73 691 1461
                   </a>
                 </p>
               </div>

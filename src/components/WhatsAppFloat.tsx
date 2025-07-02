@@ -56,7 +56,7 @@ const WhatsAppFloat = () => {
 
       {/* WhatsApp float button */}
       <a
-        href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im"
+        href="https://wa.me/+27736911461"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float"

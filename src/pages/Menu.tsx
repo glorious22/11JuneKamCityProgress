@@ -349,6 +349,7 @@ const Menu = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif" style={{ color: '#4B1E1E' }}>
               Explore Our <span className="text-kamalo-red">Menu</span>
             </h1>
+            <div className="congo-pattern-divider"></div>
             <p className="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto" style={{ color: '#2C2C2C' }}>
               Authentic African cuisine crafted with traditional recipes and bold flavors
             </p>
@@ -403,6 +404,7 @@ const Menu = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif" style={{ color: '#4B1E1E' }}>
               {getCategoryDisplayName(activeFilter)}
             </h2>
+            <div className="congo-pattern-divider"></div>
             
             {/* Daily Specials specific header */}
             {activeFilter === "daily-specials" && (
@@ -509,29 +511,30 @@ const Menu = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-4 font-serif" style={{ color: '#4B1E1E' }}>
                 Ready to <span className="text-kamalo-red">Try It for Yourself</span>?
               </h2>
+              <div className="congo-pattern-divider"></div>
               <p className="mb-6 text-lg" style={{ color: '#374151' }}>
                 Experience authentic African cuisine and traditional flavors at Kamalo City in Cape Town.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
                 <Link 
                   to="/reservations" 
-                  className="bg-kamalo-red hover:bg-red-600 text-white px-6 py-3 text-base rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold touch-manipulation text-center"
+                  className="btn-primary-slim px-6 py-3 text-base rounded-full text-center"
                 >
                   Book a Table
                 </Link>
                 <a 
-                  href="https://www.ubereats.com/za/store/kamalo-city/example" 
+                  href="https://www.ubereats.com/za/store/kamalo-city-restaurant/srnMses4VESmEwzdo4gxrw" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn-uber-eats px-6 py-3 text-base rounded-full"
+                  className="btn-uber-eats-slim px-6 py-3 text-base rounded-full"
                 >
                   Order on Uber Eats
                 </a>
                 <a 
-                  href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" 
+                  href="https://wa.me/+27736911461" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn-ghost px-6 py-3 text-base rounded-full"
+                  className="btn-ghost-slim px-6 py-3 text-base rounded-full"
                 >
                   Order via WhatsApp
                 </a>

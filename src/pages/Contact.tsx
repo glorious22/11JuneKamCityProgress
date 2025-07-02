@@ -18,7 +18,7 @@ const Contact = () => {
     document.title = "Contact Us - Kamalo City | Get in Touch";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Contact Kamalo City for reservations, inquiries, or directions. Located at 90 Voortrekker Road, Goodwood, Cape Town. Call +27 73 159 8909.');
+      metaDescription.setAttribute('content', 'Contact Kamalo City for reservations, inquiries, or directions. Located at 90 Voortrekker Road, Goodwood, Cape Town. Call +27 73 691 1461.');
     }
   }, []);
 
@@ -97,6 +97,7 @@ ${formData.message}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif">
                 Reserve Your Table at <span className="text-kamalo-red">Kamalo City</span>
               </h1>
+              <div className="congo-pattern-divider"></div>
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 Reach out to book a table, plan a private event, or simply say hi. We'd love to hear from you.
               </p>
@@ -107,23 +108,23 @@ ${formData.message}
           <ScrollReveal delay={200}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               <a
-                href="tel:+27731598909"
+                href="tel:+27736911461"
                 className="bg-black/50 rounded-lg p-6 text-center hover:bg-kamalo-red/20 transition duration-300 border border-gray-800 hover:border-kamalo-red group touch-manipulation"
               >
                 <Phone className="w-12 h-12 text-kamalo-red mx-auto mb-4 group-hover:scale-110 transition duration-300" />
                 <h3 className="text-lg font-bold text-white mb-2">Call Us</h3>
-                <p className="text-kamalo-red font-semibold">073 159 8909</p>
+                <p className="text-kamalo-red font-semibold">073 691 1461</p>
               </a>
 
               <a
-                href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im"
+                href="https://wa.me/+27736911461"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-black/50 rounded-lg p-6 text-center hover:bg-green-500/20 transition duration-300 border border-gray-800 hover:border-green-500 group touch-manipulation"
               >
                 <MessageSquare className="w-12 h-12 text-green-500 mx-auto mb-4 group-hover:scale-110 transition duration-300" />
                 <h3 className="text-lg font-bold text-white mb-2">Chat via WhatsApp</h3>
-                <p className="text-green-500 font-semibold">Join Group Chat</p>
+                <p className="text-green-500 font-semibold">+27 73 691 1461</p>
               </a>
 
               <a
@@ -224,8 +225,8 @@ ${formData.message}
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone className="w-5 h-5 text-kamalo-gold" />
-                      <a href="tel:+27731598909" className="hover:text-kamalo-gold transition-colors touch-manipulation font-semibold">
-                        +27 73 159 8909
+                      <a href="tel:+27736911461" className="hover:text-kamalo-gold transition-colors touch-manipulation font-semibold">
+                        +27 73 691 1461
                       </a>
                     </div>
                     <div className="flex items-center gap-2">
@@ -286,15 +287,15 @@ ${formData.message}
                     </div>
                   </a>
                   <a
-                    href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im"
+                    href="https://wa.me/+27736911461"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-3 rounded-lg hover:bg-green-500/20 transition duration-300 group touch-manipulation"
                   >
                     <MessageSquare className="w-8 h-8 text-green-500 group-hover:scale-110 transition duration-300" />
                     <div>
-                      <p className="text-white font-semibold">WhatsApp Group</p>
-                      <p className="text-green-500 text-sm">Join our community</p>
+                      <p className="text-white font-semibold">WhatsApp</p>
+                      <p className="text-green-500 text-sm">+27 73 691 1461</p>
                     </div>
                   </a>
                 </div>
@@ -308,6 +309,7 @@ ${formData.message}
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-serif">
                 Ready to Visit <span className="text-kamalo-red">Kamalo City</span>?
               </h2>
+              <div className="congo-pattern-divider"></div>
               <p className="text-gray-300 mb-6 text-lg">
                 Make a reservation or just drop by for an authentic African dining experience in Cape Town.
               </p>
@@ -322,7 +324,7 @@ ${formData.message}
                   asChild 
                   className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg rounded-full hover:scale-105 hover:shadow-lg transition duration-300 font-semibold touch-manipulation"
                 >
-                  <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/+27736911461" target="_blank" rel="noopener noreferrer">
                     WhatsApp Us
                   </a>
                 </Button>

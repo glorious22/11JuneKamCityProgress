@@ -132,8 +132,8 @@ const ContactFormSection = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-5 h-5 text-kamalo-green" />
-                  <a href="tel:+27731598909" className="hover:text-kamalo-green transition-colors touch-manipulation font-semibold">
-                    +27 73 159 8909
+                  <a href="tel:+27736911461" className="hover:text-kamalo-green transition-colors touch-manipulation font-semibold">
+                    +27 73 691 1461
                   </a>
                 </div>
                 <div className="flex items-center gap-2">

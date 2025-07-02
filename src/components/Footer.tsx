@@ -69,8 +69,8 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <Phone className="w-5 h-5 text-kamalo-gold flex-shrink-0" />
-                <a href="tel:+27731598909" className="hover:text-kamalo-gold transition-colors font-semibold">
-                  +27 73 159 8909
+                <a href="tel:+27736911461" className="hover:text-kamalo-gold transition-colors font-semibold">
+                  +27 73 691 1461
                 </a>
               </div>
               
@@ -106,7 +106,7 @@ const Footer = () => {
             {/* Social Media Grid */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               <a
-                href="tel:+27731598909"
+                href="tel:+27736911461"
                 className="flex items-center gap-2 bg-kamalo-red hover:bg-red-700 p-3 rounded-lg transition-all duration-300 hover:scale-105"
                 aria-label="Call us"
               >
@@ -135,11 +135,11 @@ const Footer = () => {
               </a>
               
               <a
-                href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im"
+                href="https://wa.me/+27736911461"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-green-500 hover:bg-green-600 p-3 rounded-lg transition-all duration-300 hover:scale-105"
-                aria-label="Join our WhatsApp group"
+                aria-label="Chat with us on WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span className="text-sm font-semibold">Chat</span>
@@ -157,7 +157,7 @@ const Footer = () => {
         </div>
 
         {/* Tribal Divider */}
-        <div className="w-full h-1 bg-gradient-to-r from-kamalo-red via-kamalo-gold to-kamalo-red mb-8 opacity-60"></div>
+        <div className="congo-pattern-divider mb-8"></div>
 
         {/* Footer Tagline */}
         <div className="text-center mb-8">
@@ -174,7 +174,7 @@ const Footer = () => {
               Book a Table
             </Link>
             <a 
-              href="https://www.ubereats.com/za/store/kamalo-city/example" 
+              href="https://www.ubereats.com/za/store/kamalo-city-restaurant/srnMses4VESmEwzdo4gxrw" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex-1 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full transition-all duration-300 font-bold text-lg hover:scale-105 hover:shadow-lg text-center"
@@ -206,7 +206,7 @@ const Footer = () => {
             "addressRegion": "Western Cape",
             "addressCountry": "South Africa"
           },
-          "telephone": "+27731598909",
+          "telephone": "+27736911461",
           "email": "kamalocity@outlook.com",
           "openingHours": "Mo-Su 11:00-23:00",
           "servesCuisine": "African",

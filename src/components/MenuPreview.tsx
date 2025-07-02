@@ -110,13 +110,14 @@ const MenuPreview = () => {
         </div>
       </div>
 
-      {/* Desktop: Full width container */}
-      <div className="menu-preview-container">
+      {/* Desktop: Full width container with closer right edge */}
+      <div className="menu-preview-container-wide">
         <ScrollReveal>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif" style={{ color: '#4B1E1E' }}>
               Kamalo City <span className="text-kamalo-red">Daily Specials</span>
             </h2>
+            <div className="congo-pattern-divider"></div>
             <p className="text-xl max-w-3xl mx-auto" style={{ color: '#2C2C2C' }}>
               Discover our most beloved African dishes, crafted with authentic flavors and traditional recipes
             </p>
@@ -233,14 +234,14 @@ const MenuPreview = () => {
         <ScrollReveal delay={600}>
           <div className="text-center mt-12 px-4">
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Link to="/menu" className="btn-primary">
+              <Link to="/menu" className="btn-primary-slim">
                 View Full Menu
               </Link>
               <a 
-                href="https://www.ubereats.com/za/store/kamalo-city/example" 
+                href="https://www.ubereats.com/za/store/kamalo-city-restaurant/srnMses4VESmEwzdo4gxrw" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-uber-eats"
+                className="btn-uber-eats-slim"
               >
                 Order on Uber Eats
               </a>

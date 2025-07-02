@@ -66,23 +66,23 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8 px-4">
             <Button 
               asChild 
-              className="btn-primary px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold"
+              className="btn-primary-slim px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full w-full sm:w-auto touch-manipulation font-semibold"
             >
               <Link to="/reservations">Book a Table</Link>
             </Button>
             
             <Button 
               asChild 
-              className="btn-uber-eats px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold"
+              className="btn-uber-eats-slim px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full w-full sm:w-auto touch-manipulation font-semibold"
             >
-              <a href="https://www.ubereats.com/za/store/kamalo-city/example" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.ubereats.com/za/store/kamalo-city-restaurant/srnMses4VESmEwzdo4gxrw" target="_blank" rel="noopener noreferrer">
                 Order on Uber Eats
               </a>
             </Button>
             
             <Button 
               asChild 
-              className="btn-ghost px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl rounded-full w-full sm:w-auto touch-manipulation font-semibold"
+              className="btn-ghost-slim px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full w-full sm:w-auto touch-manipulation font-semibold"
             >
               <Link to="/menu">View Menu</Link>
             </Button>
@@ -90,12 +90,12 @@ const Hero = () => {
           
           {/* Address and contact info */}
           <div className="text-gray-400 px-4 mb-6">
-            <p className="text-sm md:text-base">📍 90 Voortrekker Road, Goodwood • 📞 +27 73 159 8909</p>
+            <p className="text-sm md:text-base">📍 90 Voortrekker Road, Goodwood • 📞 +27 73 691 1461</p>
             <p className="text-xs md:text-sm mt-2">Open 7 days a week: 11:00 AM - 11:00 PM</p>
           </div>
 
           {/* Animated scroll indicator - moved below address */}
-          <div className="flex justify-center">
+          <div className="flex justify-center pt-4">
             <div className="animate-bounce">
               <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-kamalo-gold rounded-full flex justify-center relative">
                 <div className="w-1 h-2 md:h-3 bg-kamalo-gold rounded-full mt-2 animate-pulse"></div>

@@ -78,7 +78,7 @@ const Navbar = () => {
                   
                   {/* Social Media Icons */}
                   <div className="flex gap-6 py-4 border-b border-gray-700 justify-center">
-                    <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 transition-colors touch-manipulation" onClick={() => setIsOpen(false)}>
+                    <a href="https://wa.me/+27736911461" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 transition-colors touch-manipulation" onClick={() => setIsOpen(false)}>
                       <MessageCircle className="w-8 h-8" />
                     </a>
                     <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-400 transition-colors touch-manipulation" onClick={() => setIsOpen(false)}>
@@ -135,7 +135,7 @@ const Navbar = () => {
             Contact
           </Link>
 
-          <a href="https://chat.whatsapp.com/D8ZGSstifLe0eWYs3GJ5Im" target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-400 transition-colors duration-300 p-2 hover:scale-110">
+          <a href="https://wa.me/+27736911461" target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-400 transition-colors duration-300 p-2 hover:scale-110">
             <MessageCircle className="w-4 h-4" />
           </a>
           <a href="https://instagram.com/kamalo_city" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400 transition-colors duration-300 p-2 hover:scale-110">

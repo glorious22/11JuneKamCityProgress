@@ -166,8 +166,8 @@
     align-items: center;
     justify-content: center;
     margin: 16px auto 0;
-    width: 60px;
-    height: 3px;
+    width: 200px;
+    height: 4px;
     background: linear-gradient(
       to right,
       #007FFF 0%,
@@ -180,28 +180,111 @@
     border-radius: 2px;
   }
 
-  /* Apply pattern divider to h1, h2, and h3 elements */
-  h1::after,
-  h2::after,
-  h3::after {
+  /* Enhanced CTA Button Styling with Hover Effects - Slimmer versions */
+  .btn-primary-slim {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: #2C2C2C;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.3);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary-slim::before {
     content: '';
-    display: block;
-    margin: 16px auto 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(
-      to right,
-      #007FFF 0%,
-      #007FFF 33.33%,
-      #FF0000 33.33%,
-      #FF0000 66.66%,
-      #FFD700 66.66%,
-      #FFD700 100%
-    );
-    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
   }
 
-  /* Enhanced CTA Button Styling with Hover Effects */
+  .btn-primary-slim:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-primary-slim:hover {
+    background: linear-gradient(135deg, #E6C200, #FF8C00);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5), 0 0 15px rgba(255, 165, 0, 0.3);
+    color: #2C2C2C;
+  }
+
+  /* Ghost button styling with enhanced hover - Slimmer */
+  .btn-ghost-slim {
+    background: transparent;
+    border: 2px solid #8B0000;
+    color: #8B0000;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-ghost-slim::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #8B0000;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  .btn-ghost-slim:hover::before {
+    left: 0;
+  }
+
+  .btn-ghost-slim:hover {
+    color: white;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(139, 0, 0, 0.3);
+  }
+
+  /* Uber Eats CTA Button - Slimmer */
+  .btn-uber-eats-slim {
+    background: linear-gradient(135deg, #00D2AA, #06C167);
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 210, 170, 0.3);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-uber-eats-slim:hover {
+    background: linear-gradient(135deg, #00B894, #00A085);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 210, 170, 0.4);
+    color: white;
+  }
+
+  /* Legacy button styles for backward compatibility */
   .btn-primary {
     background: linear-gradient(135deg, #FFD700, #FFA500);
     border-radius: 50px;
@@ -699,6 +782,15 @@
       margin-right: calc(-50vw + 50% + 16px);
       padding-left: 16px;
       padding-right: 16px;
+    }
+
+    /* Wider container that extends closer to right edge */
+    .menu-preview-container-wide {
+      width: calc(100vw - 16px);
+      margin-left: calc(-50vw + 50% + 8px);
+      margin-right: calc(-50vw + 50% + 8px);
+      padding-left: 8px;
+      padding-right: 8px;
     }
   }
 

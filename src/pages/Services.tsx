@@ -146,7 +146,7 @@ const Services = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif">
               Explore Our <span className="text-kamalo-red">African-Inspired Offerings</span>
             </h1>
-            <div className="tribal-divider max-w-md mx-auto mb-6"></div>
+            <div className="congo-pattern-divider"></div>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Discover what makes Kamalo City more than a restaurant.
             </p>
@@ -224,16 +224,17 @@ const Services = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-serif">
               Ready to Experience <span className="text-kamalo-red">Kamalo City</span>?
             </h2>
+            <div className="congo-pattern-divider"></div>
             <p className="text-gray-300 mb-6 text-lg max-w-2xl mx-auto">
               Visit us at 90 Voortrekker Road, Goodwood, Cape Town. Open 7 days a week from 11:00 AM to 11:00 PM.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button className="btn-primary min-h-[44px]">
-                <a href="tel:+27731598909" className="flex items-center gap-2">
+              <Button className="btn-primary-slim min-h-[44px]">
+                <a href="tel:+27736911461" className="flex items-center gap-2">
                   📞 Call Us
                 </a>
               </Button>
-              <Button className="btn-ghost min-h-[44px]">
+              <Button className="btn-ghost-slim min-h-[44px]">
                 <a href="/reservations">Make Reservation</a>
               </Button>
             </div>

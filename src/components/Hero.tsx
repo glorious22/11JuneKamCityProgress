@@ -47,7 +47,7 @@ const Hero = () => {
       {/* Enhanced background overlay - 40% opacity for readability */}
       <div className="absolute inset-0 bg-black/40"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center" style={{ paddingTop: '140px' }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center hero-mobile-spacing" style={{ paddingTop: '140px' }}>
         <div className={`hero-fade ${isVisible ? 'visible' : ''}`}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight font-serif">
             Welcome to <span className="text-kamalo-gold">Kamalo City</span>

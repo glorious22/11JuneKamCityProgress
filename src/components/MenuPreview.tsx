@@ -3,11 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import Lightbox from "./Lightbox";
 
 const MenuPreview = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const featuredDishes = [
@@ -53,6 +56,13 @@ const MenuPreview = () => {
     }
   ];
 
+  const lightboxItems = featuredDishes.map(dish => ({
+    type: 'image' as const,
+    src: dish.image,
+    alt: dish.alt,
+    title: dish.name
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -95,6 +105,11 @@ const MenuPreview = () => {
     return slides;
   };
 
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <section ref={sectionRef} className="section-spacing" style={{ backgroundColor: '#FAF3EB' }}>
       {/* Price Note Above Everything */}
@@ -111,7 +126,7 @@ const MenuPreview = () => {
       </div>
 
       {/* Desktop: Full width container with closer right edge */}
-      <div className="menu-preview-container-wide">
+      <div className="menu-preview-container-wide md:menu-preview-container-wide menu-preview-mobile">
         <ScrollReveal>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif" style={{ color: '#4B1E1E' }}>
@@ -137,8 +152,9 @@ const MenuPreview = () => {
                   <img
                     src={featuredDishes[currentSlide].image}
                     alt={featuredDishes[currentSlide].alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover cursor-pointer"
                     loading="lazy"
+                    onClick={() => openLightbox(currentSlide)}
                   />
                   <div className="absolute inset-0 bg-black/40"></div>
                   <div className="absolute bottom-4 left-4 right-4">
@@ -164,8 +180,9 @@ const MenuPreview = () => {
                     <img
                       src={dish.image}
                       alt={dish.alt}
-                      className="w-full h-full object-cover hover:scale-110 transition duration-500"
+                      className="w-full h-full object-cover hover:scale-110 transition duration-500 cursor-pointer"
                       loading="lazy"
+                      onClick={() => openLightbox((currentSlide + index) % featuredDishes.length)}
                     />
                     <div className="absolute inset-0 bg-black/40 hover:bg-black/20 transition duration-300"></div>
                     <div className="absolute bottom-4 left-4 right-4">
@@ -249,6 +266,15 @@ const MenuPreview = () => {
           </div>
         </ScrollReveal>
       </div>
+
+      {/* Lightbox */}
+      <Lightbox
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        items={lightboxItems}
+        currentIndex={lightboxIndex}
+        onNavigate={setLightboxIndex}
+      />
     </section>
   );
 };

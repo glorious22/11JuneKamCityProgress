@@ -25,7 +25,7 @@ const About = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif">
               The Kamalo City Journey — <span className="text-kamalo-red">From Rebirth to Renown</span>
             </h1>
-            <div className="tribal-divider max-w-md mx-auto mb-8"></div>
+            <div className="congo-pattern-divider"></div>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Kamalo City was rebuilt from ruins in 2023. Today, we are Cape Town's vibrant meeting point for African heritage, cuisine, and connection. From mouthwatering kapenta to rhythm-filled nights, Kamalo City is a true cultural revival.
             </p>
@@ -35,7 +35,7 @@ const About = () => {
           <section className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6 font-serif">Our Story</h2>
-              <div className="tribal-divider max-w-md mx-auto mb-8"></div>
+              <div className="congo-pattern-divider"></div>
               
               {/* Preview - 3-4 lines */}
               <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-300 leading-relaxed">
@@ -71,7 +71,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-kamalo-red mb-6 font-serif">
                 Meet Kamalo City
               </h2>
-              <div className="tribal-divider max-w-md mx-auto mb-8"></div>
+              <div className="congo-pattern-divider"></div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 Watch how Kamalo City came to life through food, music, and community.
               </p>
@@ -79,7 +79,7 @@ const About = () => {
             
             {/* Video Container */}
             <div className="max-w-4xl mx-auto">
-              <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+              <div className="video-responsive">
                 <div className="absolute inset-0 bg-black/50 rounded-lg border border-gray-800 flex items-center justify-center">
                   <div className="text-center text-white">
                     <div className="w-20 h-20 bg-kamalo-red rounded-full flex items-center justify-center mx-auto mb-4">
@@ -101,7 +101,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
                 Our <span className="text-kamalo-red">Journey</span>
               </h2>
-              <div className="tribal-divider max-w-md mx-auto mb-6"></div>
+              <div className="congo-pattern-divider"></div>
             </div>
 
             {/* Desktop Timeline - Horizontal */}
@@ -188,14 +188,15 @@ const About = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-serif">
               Come Join the <span className="text-kamalo-red">Experience</span>
             </h2>
+            <div className="congo-pattern-divider"></div>
             <p className="text-gray-300 mb-6 text-lg">
               Ready to be part of the Kamalo City experience? Visit us and taste the passion in every dish.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/reservations" className="btn-primary">
+              <Link to="/reservations" className="btn-primary-slim">
                 Reserve a Table
               </Link>
-              <Link to="/contact" className="btn-ghost">
+              <Link to="/contact" className="btn-ghost-slim">
                 Visit Us Today
               </Link>
             </div>

@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import ImageModal from "@/components/ImageModal";
+import Lightbox from "@/components/Lightbox";
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState("food");
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   useEffect(() => {
     document.title = "Gallery - Kamalo City | Photos of Food, Events & Services";
@@ -153,6 +155,13 @@ const Gallery = () => {
 
   const filteredItems = galleryItems.filter(item => item.category === activeFilter);
 
+  const lightboxItems = filteredItems.map(item => ({
+    type: 'image' as const,
+    src: item.image,
+    alt: item.alt,
+    title: item.title
+  }));
+
   const getCategoryDisplayName = (category: string) => {
     switch (category) {
       case "food": return "Food";
@@ -162,6 +171,11 @@ const Gallery = () => {
     }
   };
 
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-kamalo-dark text-white">
       <Navbar />
@@ -169,13 +183,7 @@ const Gallery = () => {
         <div className="max-w-7xl mx-auto">
           {/* Tribal Pattern Title Bar */}
           <div className="relative mb-8">
-            <div 
-              className="w-full h-2 rounded-full"
-              style={{
-                background: 'linear-gradient(90deg, #8B0000 0%, #FFD700 25%, #8B0000 50%, #FFD700 75%, #8B0000 100%)',
-                backgroundSize: '40px 100%'
-              }}
-            ></div>
+            <div className="congo-pattern-divider"></div>
           </div>
 
           {/* Header */}
@@ -183,7 +191,7 @@ const Gallery = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 font-serif">
               Moments from Kamalo City — <span className="text-kamalo-red">Food, Culture & Community</span>
             </h1>
-            <div className="tribal-divider max-w-md mx-auto mb-6"></div>
+            <div className="congo-pattern-divider"></div>
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
               Explore the vibrant world of Kamalo City through our collection of moments, 
               from delicious cuisine to exciting events and premium services.
@@ -229,7 +237,7 @@ const Gallery = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-serif">
               {getCategoryDisplayName(activeFilter)}
             </h2>
-            <div className="tribal-divider max-w-md mx-auto mb-6"></div>
+            <div className="congo-pattern-divider"></div>
           </div>
 
           {/* Gallery Grid - 3 columns desktop, 2 columns mobile */}
@@ -237,10 +245,11 @@ const Gallery = () => {
             {filteredItems.map((item, index) => (
               <div key={item.id} className="bg-black/50 rounded-xl overflow-hidden border border-gray-800 hover:border-kamalo-red transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
                 <div className="relative h-48 md:h-64 overflow-hidden">
-                  <ImageModal
+                  <img
                     src={item.image}
                     alt={item.alt}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700 cursor-pointer"
+                    onClick={() => openLightbox(index)}
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-500"></div>
                   <div className="absolute bottom-4 left-4 right-4">
@@ -261,14 +270,15 @@ const Gallery = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-serif">
                 Experience <span className="text-kamalo-red">Kamalo City</span> Today
               </h2>
+              <div className="congo-pattern-divider"></div>
               <p className="text-gray-300 mb-6 text-lg">
                 Ready to create your own memories? Visit us for authentic African cuisine and entertainment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="btn-primary">
+                <Button className="btn-primary-slim">
                   <a href="/reservations">Book Your Table</a>
                 </Button>
-                <Button className="btn-ghost">
+                <Button className="btn-ghost-slim">
                   <a href="/contact">Visit Us Today</a>
                 </Button>
               </div>
@@ -277,6 +287,15 @@ const Gallery = () => {
         </div>
       </main>
       <Footer />
+
+      {/* Lightbox */}
+      <Lightbox
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        items={lightboxItems}
+        currentIndex={lightboxIndex}
+        onNavigate={setLightboxIndex}
+      />
     </div>
   );
 };

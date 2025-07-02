@@ -47,8 +47,8 @@ const Footer = () => {
       ></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
-        {/* 3-Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
+        {/* 3-Column Layout - Mobile responsive stacking */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 footer-mobile-stack">
           
           {/* Column 1: Brand */}
           <div className="text-center md:text-left">

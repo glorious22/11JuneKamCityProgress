@@ -104,7 +104,7 @@ const Navbar = () => {
 
         {/* Brand - Perfectly Centered on mobile */}
         <div className="flex items-center justify-center flex-1 md:flex-none md:justify-start">
-          <Link to="/" className="text-xl md:text-2xl font-bold text-kamalo-gold hover:text-white transition-colors duration-300 font-serif">
+          <Link to="/" className="mobile-nav-center md:relative md:left-auto md:transform-none text-xl md:text-2xl font-bold text-kamalo-gold hover:text-white transition-colors duration-300 font-serif">
             Kamalo City
           </Link>
         </div>

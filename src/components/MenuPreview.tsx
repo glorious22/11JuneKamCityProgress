@@ -24,14 +24,14 @@ const MenuPreview = () => {
     {
       name: "Grilled Thomson",
       description: "Seasoned grilled fish served with pap or rice and traditional vegetables.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597433763_939cd52ca4_c.jpg",
       alt: "Kamalo City - Grilled Thomson",
       tag: "⭐ Customer Favorite"
     },
     {
       name: "Fried Thomson",
       description: "Fried Thomson fish served with pap or rice and vegetables.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597212616_2955cf45d8_c.jpg",
       alt: "Kamalo City - Fried Thomson"
     },
     {
@@ -50,7 +50,7 @@ const MenuPreview = () => {
     {
       name: "Egusi Soup (Saturday Special)",
       description: "Ground melon seed soup cooked with beef, a weekend favorite.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597416804_c3e1b0acc7_c.jpg",
       alt: "Kamalo City - Egusi Soup",
       tag: "🔥 Weekend Special"
     }

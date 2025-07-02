@@ -32,7 +32,7 @@ const Menu = () => {
       category: "main",
       name: "Fried Thomson",
       description: "Crispy fried Thomson fish with pap or rice and traditional vegetables.",
-      image: "https://live.staticflickr.com/65535/54597433763_939cd52ca4_c.jpg",
+      image: "https://live.staticflickr.com/65535/54597212616_2955cf45d8_c.jpg",
       alt: "Fried Thomson – Main Dish at Kamalo City Restaurant"
     },
     {
@@ -110,7 +110,7 @@ const Menu = () => {
       category: "vegetable-sides",
       name: "Ngai Ngai (Roselle Leaves)",
       description: "Slightly sour greens packed with nutrients and bold flavor.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597520795_d4a6f5d152_c.jpg",
       alt: "Ngai Ngai Roselle Leaves – Traditional African Vegetable Side at Kamalo City"
     },
     {
@@ -126,7 +126,7 @@ const Menu = () => {
       category: "vegetable-sides",
       name: "Repu",
       description: "Earthy green vegetable — a local favourite with unique taste.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597520795_d4a6f5d152_c.jpg",
       alt: "Repu – Traditional African Vegetable Side at Kamalo City"
     },
     {
@@ -139,7 +139,7 @@ const Menu = () => {
     }
   ];
 
-  // Daily specials data with updated names - REMOVED duplicates and renamed items
+  // Daily specials data with updated names - REMOVED one duplicate "Cooked Beef Trips (Mabumu)"
   const dailySpecials = [
     // Monday
     {
@@ -169,7 +169,7 @@ const Menu = () => {
       name: "Cooked Pork Trotters (Makoso)",
       description: "Traditional pork trotters cooked to perfection, served with vegetables.",
       day: "Tuesday",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597413089_88b023dfa0_c.jpg",
       alt: "Pork Trotters – Tuesday Special at Kamalo City Restaurant"
     },
     {
@@ -178,7 +178,7 @@ const Menu = () => {
       name: "Fried Mabundu",
       description: "Traditional preparation of organ meat with authentic seasonings.",
       day: "Tuesday",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597434488_9510779afe_c.jpg",
       alt: "Fried Mabundu – Tuesday Special at Kamalo City Restaurant"
     },
     {
@@ -198,7 +198,7 @@ const Menu = () => {
       name: "Fried Makayabu",
       description: "Fried salt fish with green pepper onion relish.",
       day: "Wednesday",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597207941_a8b95026e0_c.jpg",
       alt: "Fried Makayabu – Wednesday Special at Kamalo City Restaurant"
     },
     {
@@ -257,7 +257,7 @@ const Menu = () => {
       name: "Cooked Mukebuka Sauce",
       description: "Mukebuka fish in a light tomato sauce with traditional spices.",
       day: "Friday",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597406624_68bd42a048_c.jpg",
       alt: "Mukebuka Sauce – Friday Special at Kamalo City Restaurant"
     },
     {
@@ -266,7 +266,7 @@ const Menu = () => {
       name: "Cooked Beef Trips (Mabumu)",
       description: "Richly spiced beef tripe stew with traditional flavors.",
       day: "Friday",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597204611_0dd8a2055a_c.jpg",
       alt: "Beef Trips Mabumu – Friday Special at Kamalo City Restaurant"
     },
 
@@ -280,15 +280,6 @@ const Menu = () => {
       image: "https://live.staticflickr.com/65535/54597416804_c3e1b0acc7_c.jpg",
       alt: "Egusi Soup – Saturday Special at Kamalo City Restaurant",
       tag: "🔥 Most Popular"
-    },
-    {
-      id: 29,
-      category: "daily-specials",
-      name: "Cooked Beef Trips (Mabumu)",
-      description: "Rich beef tripe stew, perfect for Saturday dining.",
-      day: "Saturday",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Beef Trips Saturday – Saturday Special at Kamalo City Restaurant"
     },
 
     // Sunday
@@ -307,7 +298,7 @@ const Menu = () => {
       name: "Mutu Ya Ntaba (Goat Head in Hot Sauce)",
       description: "Spicy goat head stew served the traditional way.",
       day: "Sunday",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54597519075_6f375072a1_c.jpg",
       alt: "Mutu Ya Ntaba – Sunday Special at Kamalo City Restaurant",
       tag: "⭐ Customer Favorite"
     }

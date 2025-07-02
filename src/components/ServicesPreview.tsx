@@ -1,4 +1,4 @@
-import { Music, Users, Utensils, Wind } from "lucide-react";
+import { Music, Users, Utensils, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import ScrollReveal from "./ScrollReveal";
@@ -28,7 +28,7 @@ const ServicesPreview = () => {
       title: "Live Entertainment",
       description: "Music nights, DJs, and cultural showcases every Friday and Saturday",
       link: "/services",
-      image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54623833912_78cffedfe2_c.jpg",
       serviceIcon: "🎉"
     },
     {
@@ -36,7 +36,7 @@ const ServicesPreview = () => {
       title: "Private Bookings",
       description: "Full venue hire for birthdays, corporate events, and celebrations up to 80 guests",
       link: "/services",
-      image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54624923824_0590af3293_c.jpg",
       serviceIcon: "🎲"
     },
     {
@@ -44,16 +44,16 @@ const ServicesPreview = () => {
       title: "Pre-Orders & Catering",
       description: "Order ahead for pickup or enjoy our full dining experience with catering options",
       link: "/services",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54575452741_3649c67820_c.jpg",
       serviceIcon: "📦"
     },
     {
-      icon: Wind,
-      title: "Hookah Lounge – Flavored Relaxation in Cape Town",
-      description: "Premium hookah with mint, apple, and fruity blends in our ambient lounge",
+      icon: Sparkles,
+      title: "Lifestyle Services",
+      description: "Premium hookah lounge, professional barbershop, and curated perfume collection",
       link: "/services",
-      image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=400",
-      serviceIcon: "💨"
+      image: "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg",
+      serviceIcon: "✨"
     }
   ];
 

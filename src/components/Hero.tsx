@@ -7,8 +7,8 @@ const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const heroImages = [
-    "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1920",
-    "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "https://live.staticflickr.com/65535/54626102243_68ef2ee843_c.jpg",
+    "https://live.staticflickr.com/65535/54625891876_9e21c97cb0_c.jpg",
     "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=1920"
   ];
 

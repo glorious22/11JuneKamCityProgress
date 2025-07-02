@@ -190,6 +190,32 @@
     border-radius: 2px;
   }
 
+  /* Navbar Pattern Background */
+  .navbar-pattern {
+    position: relative;
+  }
+
+  .navbar-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(0, 127, 255, 0.1) 0px,
+      rgba(0, 127, 255, 0.1) 4px,
+      rgba(255, 0, 0, 0.1) 4px,
+      rgba(255, 0, 0, 0.1) 8px,
+      rgba(255, 215, 0, 0.1) 8px,
+      rgba(255, 215, 0, 0.1) 12px
+    );
+    background-size: 12px 12px;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
   /* Enhanced CTA Button Styling with Hover Effects - Slimmer versions */
   .btn-primary-slim {
     background: linear-gradient(135deg, #FFD700, #FFA500);

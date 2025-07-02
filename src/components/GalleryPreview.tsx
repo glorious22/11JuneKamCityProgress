@@ -11,39 +11,39 @@ const GalleryPreview = () => {
   const galleryImages = [
     {
       id: 1,
-      title: "Authentic African Cuisine",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Authentic African food dishes"
+      title: "Our Food",
+      image: "https://live.staticflickr.com/65535/54597520795_d4a6f5d152_c.jpg",
+      alt: "Kamalo City - Our Food"
     },
     {
       id: 2,
-      title: "Vibrant Atmosphere",
-      image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Restaurant crowd and atmosphere"
+      title: "Our Services",
+      image: "https://live.staticflickr.com/65535/54575789460_fcb466083e_c.jpg",
+      alt: "Kamalo City - Our Services"
     },
     {
       id: 3,
-      title: "Premium Hookah Experience",
-      image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Hookah lounge experience"
+      title: "Our Food",
+      image: "https://live.staticflickr.com/65535/54627256147_6f627b5984_c.jpg",
+      alt: "Kamalo City - Our Food"
     },
     {
       id: 4,
-      title: "Professional Barbershop",
-      image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Barber shop services"
+      title: "Our Hookah",
+      image: "https://live.staticflickr.com/65535/54575639694_9a16f68006_c.jpg",
+      alt: "Kamalo City - Our Hookah"
     },
     {
       id: 5,
-      title: "Private Events",
-      image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Private event celebration"
+      title: "Our Perfumes",
+      image: "https://live.staticflickr.com/65535/54575640044_867793b363_c.jpg",
+      alt: "Kamalo City - Our Perfumes"
     },
     {
       id: 6,
-      title: "Restaurant Interior",
-      image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Kamalo City - Restaurant interior space"
+      title: "Our Kitchen",
+      image: "https://live.staticflickr.com/65535/54575452741_3649c67820_c.jpg",
+      alt: "Kamalo City - Our Kitchen"
     }
   ];
 

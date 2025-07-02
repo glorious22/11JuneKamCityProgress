@@ -35,6 +35,12 @@ const Reservations = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Book your table at Kamalo City for authentic African cuisine and entertainment. Easy online reservations for dining, events, and private bookings in Cape Town.');
     }
+
+    // Set favicon
+    const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+    if (favicon) {
+      favicon.href = "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg";
+    }
   }, []);
 
   const generateGuestNumbers = () => {
@@ -264,10 +270,10 @@ Special Requests: ${formData.specialRequests || 'None'}`;
                   <cite className="text-kamalo-red font-semibold">— HM Baloji, Verified Guest</cite>
                 </div>
 
-                {/* Main Image */}
+                {/* Main Image - Updated with Venue Hire image */}
                 <div className="relative h-64 md:h-96 rounded-lg overflow-hidden bg-black/50 border border-gray-800">
                   <img 
-                    src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    src="https://live.staticflickr.com/65535/54624923824_0590af3293_c.jpg"
                     alt="Kamalo City - Restaurant venue for events and dining"
                     className="w-full h-full object-cover"
                     loading="lazy"

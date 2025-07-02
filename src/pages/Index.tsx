@@ -20,6 +20,12 @@ const Index = () => {
 
     // Update HTML lang attribute
     document.documentElement.lang = 'en';
+
+    // Set favicon
+    const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+    if (favicon) {
+      favicon.href = "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg";
+    }
   }, []);
 
   return (

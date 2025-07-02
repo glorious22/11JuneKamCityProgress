@@ -13,6 +13,12 @@ const About = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Learn about Kamalo City founders Pitchou Ntumba and his wife, our mission to bring authentic African culture and cuisine to Cape Town.');
     }
+
+    // Set favicon
+    const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+    if (favicon) {
+      favicon.href = "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg";
+    }
   }, []);
 
   return (

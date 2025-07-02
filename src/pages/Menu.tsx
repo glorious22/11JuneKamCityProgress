@@ -3,15 +3,24 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import Lightbox from "@/components/Lightbox";
 
 const Menu = () => {
   const [activeFilter, setActiveFilter] = useState("main");
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   useEffect(() => {
     document.title = "Kamalo City | Authentic African Cuisine in Cape Town";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Kamalo City is a top African restaurant offering unforgettable cuisine, hookah, events, and a cultural experience in Cape Town.');
+    }
+
+    // Set favicon
+    const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+    if (favicon) {
+      favicon.href = "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg";
     }
   }, []);
 
@@ -139,7 +148,7 @@ const Menu = () => {
     }
   ];
 
-  // Daily specials data with updated names - REMOVED one duplicate "Cooked Beef Trips (Mabumu)"
+  // Daily specials data with updated names
   const dailySpecials = [
     // Monday
     {
@@ -309,6 +318,13 @@ const Menu = () => {
     ? dailySpecials 
     : menuItems.filter(item => item.category === activeFilter);
 
+  const lightboxItems = filteredItems.map(item => ({
+    type: 'image' as const,
+    src: item.image,
+    alt: item.alt,
+    title: item.name
+  }));
+
   const getCategoryDisplayName = (category: string) => {
     switch (category) {
       case "main": return "Main Dishes";
@@ -319,6 +335,11 @@ const Menu = () => {
     }
   };
 
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF3EB' }}>
       <Navbar />
@@ -327,6 +348,7 @@ const Menu = () => {
           {/* Pricing Info Block - Top of Page */}
           <div className="bg-white rounded-lg p-6 text-center mb-12 max-w-4xl mx-auto border-2 border-kamalo-gold shadow-lg">
             <h2 className="text-2xl font-bold mb-4" style={{ color: '#4B1E1E' }}>Menu Pricing Information</h2>
+            <div className="congo-pattern-divider"></div>
             <p className="text-lg font-semibold mb-2" style={{ color: '#2C2C2C' }}>
               <strong>All Daily Specials are R80 with pap or R90 with rice. All Vegetable Sides are R40.</strong>
             </p>
@@ -443,13 +465,14 @@ const Menu = () => {
                   <img
                     src={item.image}
                     alt={item.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover cursor-pointer hover:scale-110 transition duration-500"
                     style={{ 
                       objectFit: 'cover',
                       maxWidth: '100%',
                       height: '192px'
                     }}
                     loading="lazy"
+                    onClick={() => openLightbox(filteredItems.indexOf(item))}
                   />
                 </div>
                 
@@ -541,6 +564,16 @@ const Menu = () => {
           </div>
         </div>
       </main>
+
+      {/* Lightbox */}
+      <Lightbox
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        items={lightboxItems}
+        currentIndex={lightboxIndex}
+        onNavigate={setLightboxIndex}
+      />
+
       <Footer />
     </div>
   );

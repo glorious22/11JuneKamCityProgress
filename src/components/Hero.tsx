@@ -52,6 +52,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-white leading-tight font-serif">
             Welcome to <span className="text-kamalo-gold">Kamalo City</span>
           </h1>
+          <div className="congo-pattern-divider"></div>
           <h2 className="text-lg md:text-xl lg:text-2xl text-white mb-2 font-serif">
             Cape Town's Home of African Flavor
           </h2>
@@ -69,15 +70,6 @@ const Hero = () => {
               className="btn-primary-slim px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full w-full sm:w-auto touch-manipulation font-semibold"
             >
               <Link to="/reservations">Book a Table</Link>
-            </Button>
-            
-            <Button 
-              asChild 
-              className="btn-uber-eats-slim px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full w-full sm:w-auto touch-manipulation font-semibold"
-            >
-              <a href="https://www.ubereats.com/za/store/kamalo-city-restaurant/srnMses4VESmEwzdo4gxrw" target="_blank" rel="noopener noreferrer">
-                Order on Uber Eats
-              </a>
             </Button>
             
             <Button 

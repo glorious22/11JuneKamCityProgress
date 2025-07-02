@@ -20,6 +20,12 @@ const Contact = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Contact Kamalo City for reservations, inquiries, or directions. Located at 90 Voortrekker Road, Goodwood, Cape Town. Call +27 73 691 1461.');
     }
+
+    // Set favicon
+    const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+    if (favicon) {
+      favicon.href = "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg";
+    }
   }, []);
 
   const validateForm = () => {
@@ -150,6 +156,7 @@ ${formData.message}
               {/* Contact Form - Name, Email, Message only */}
               <div className="bg-black/50 rounded-lg p-6 md:p-8 border border-gray-800">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 font-serif">Send us a Message</h3>
+                <div className="congo-pattern-divider"></div>
                 {isSubmitted ? (
                   <div className="bg-green-500/20 border border-green-500 rounded-lg p-6 text-center">
                     <p className="text-green-400 font-semibold text-lg">Thank you! Your email client should open now.</p>
@@ -260,6 +267,7 @@ ${formData.message}
                   <Clock className="w-6 h-6 text-kamalo-red" />
                   Operating Hours
                 </h3>
+                <div className="congo-pattern-divider"></div>
                 <div className="space-y-3 text-gray-300">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold">Monday – Sunday:</span>
@@ -273,6 +281,7 @@ ${formData.message}
 
               <div className="bg-black/50 rounded-lg p-8 border border-gray-800">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 font-serif">Follow Us</h3>
+                <div className="congo-pattern-divider"></div>
                 <div className="space-y-4">
                   <a
                     href="https://instagram.com/kamalo_city"

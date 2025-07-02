@@ -15,54 +15,60 @@ const Gallery = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Browse our gallery showcasing authentic African cuisine, live events, and premium services at Kamalo City in Cape Town.');
     }
+
+    // Set favicon
+    const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+    if (favicon) {
+      favicon.href = "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg";
+    }
   }, []);
 
   const galleryItems = [
-    // Food Category - REMOVED the first "Double Trouble" image
+    // Food Category
     { 
-      id: 2, 
+      id: 1, 
       category: "food", 
       image: "https://live.staticflickr.com/65535/54628348818_226ac07dcf_c.jpg", 
       alt: "Gallery Food 1 – African Cuisine at Kamalo City Restaurant" 
     },
     { 
-      id: 3, 
+      id: 2, 
       category: "food", 
       image: "https://live.staticflickr.com/65535/54628137221_dac8fd3276_c.jpg", 
       alt: "Gallery Food 2 – African Cuisine at Kamalo City Restaurant" 
     },
     { 
-      id: 4, 
+      id: 3, 
       category: "food", 
       image: "https://live.staticflickr.com/65535/54628335184_b54f6a5f69_c.jpg", 
       alt: "Gallery Food 3 – African Cuisine at Kamalo City Restaurant" 
     },
     { 
-      id: 5, 
+      id: 4, 
       category: "food", 
       image: "https://live.staticflickr.com/65535/54628136671_49952e5a26_c.jpg", 
       alt: "Gallery Food 4 – African Cuisine at Kamalo City Restaurant" 
     },
     { 
-      id: 6, 
+      id: 5, 
       category: "food", 
       image: "https://live.staticflickr.com/65535/54627256147_6f627b5984_c.jpg", 
       alt: "Gallery Food 5 – African Cuisine at Kamalo City Restaurant" 
     },
     { 
-      id: 7, 
+      id: 6, 
       category: "food", 
       image: "https://live.staticflickr.com/65535/54597424173_c799427945_c.jpg", 
       alt: "Kebab Stick – African Cuisine at Kamalo City Restaurant" 
     },
     { 
-      id: 8, 
+      id: 7, 
       category: "food", 
       image: "https://live.staticflickr.com/65535/54597205206_c6c31c08fe_c.jpg", 
       alt: "Tarky Dendon – African Cuisine at Kamalo City Restaurant" 
     },
     { 
-      id: 9, 
+      id: 8, 
       category: "food", 
       image: "https://live.staticflickr.com/65535/54597424853_b3f22d7e04_c.jpg", 
       alt: "Triple Trouble Dish – African Cuisine at Kamalo City Restaurant" 
@@ -70,19 +76,19 @@ const Gallery = () => {
 
     // Events Category
     { 
-      id: 10, 
+      id: 9, 
       category: "events", 
       image: "https://live.staticflickr.com/65535/54623833912_78cffedfe2_c.jpg", 
       alt: "Past Event 1 – Live Event at Kamalo City" 
     },
     { 
-      id: 11, 
+      id: 10, 
       category: "events", 
       image: "https://live.staticflickr.com/65535/54574585527_c4e3fb753f_c.jpg", 
       alt: "Restaurant 1 – Event Space at Kamalo City" 
     },
     { 
-      id: 12, 
+      id: 11, 
       category: "events", 
       image: "https://live.staticflickr.com/65535/54626189545_5a6e12b316_c.jpg", 
       alt: "Hero Image 3 – Event at Kamalo City" 
@@ -90,31 +96,31 @@ const Gallery = () => {
 
     // Services Category
     { 
-      id: 13, 
+      id: 12, 
       category: "services", 
       image: "https://live.staticflickr.com/65535/54575789460_fcb466083e_c.jpg", 
       alt: "Barbershop 2 – Grooming Service at Kamalo City" 
     },
     { 
-      id: 14, 
+      id: 13, 
       category: "services", 
       image: "https://live.staticflickr.com/65535/54574585882_a293c9a873_c.jpg", 
       alt: "Hookah 2 – Relaxation Service at Kamalo City" 
     },
     { 
-      id: 15, 
+      id: 14, 
       category: "services", 
       image: "https://live.staticflickr.com/65535/54575639694_9a16f68006_c.jpg", 
       alt: "Hookah 1 – Premium Hookah Service at Kamalo City" 
     },
     { 
-      id: 16, 
+      id: 15, 
       category: "services", 
       image: "https://live.staticflickr.com/65535/54575640044_867793b363_c.jpg", 
       alt: "Perfumes 1 – Fragrance Service at Kamalo City" 
     },
     { 
-      id: 17, 
+      id: 16, 
       category: "services", 
       image: "https://live.staticflickr.com/65535/54624923824_0590af3293_c.jpg", 
       alt: "Venue Hire – Private Function Service at Kamalo City" 
@@ -149,11 +155,6 @@ const Gallery = () => {
       <Navbar />
       <main className="pt-24 px-4 pb-12 tribal-pattern">
         <div className="max-w-7xl mx-auto">
-          {/* Tribal Pattern Title Bar */}
-          <div className="relative mb-8">
-            <div className="congo-pattern-divider"></div>
-          </div>
-
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 font-serif">
@@ -176,7 +177,7 @@ const Gallery = () => {
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"
               }`}
             >
-              <span className="relative z-10">🍽️ Food</span>
+              <span className="relative z-10">Food</span>
             </Button>
             <Button
               onClick={() => setActiveFilter("events")}
@@ -186,7 +187,7 @@ const Gallery = () => {
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"
               }`}
             >
-              <span className="relative z-10">🎉 Events</span>
+              <span className="relative z-10">Events</span>
             </Button>
             <Button
               onClick={() => setActiveFilter("services")}
@@ -196,7 +197,7 @@ const Gallery = () => {
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105"
               }`}
             >
-              <span className="relative z-10">⚡ Services</span>
+              <span className="relative z-10">Services</span>
             </Button>
           </div>
 
@@ -218,6 +219,7 @@ const Gallery = () => {
                     alt={item.alt}
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-700 cursor-pointer"
                     onClick={() => openLightbox(index)}
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-500"></div>
                 </div>

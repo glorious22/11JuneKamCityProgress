@@ -3,11 +3,11 @@ import { ChevronDown, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import PerfumeModal from "@/components/PerfumeModal";
 
 const Services = () => {
   const [openDetails, setOpenDetails] = useState<string | null>(null);
   const [showPerfumeModal, setShowPerfumeModal] = useState(false);
-  const [activeCollection, setActiveCollection] = useState<'men' | 'women'>('men');
 
   useEffect(() => {
     document.title = "Our Services - Kamalo City | Complete African Experience";
@@ -15,29 +15,17 @@ const Services = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Discover all services at Kamalo City: authentic dining, private events, live entertainment, hookah lounge, barbershop, and more in Cape Town.');
     }
+
+    // Set favicon
+    const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+    if (favicon) {
+      favicon.href = "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg";
+    }
   }, []);
 
   const toggleDetails = (serviceId: string) => {
     setOpenDetails(openDetails === serviceId ? null : serviceId);
   };
-
-  const mensPerfumes = [
-    { name: "African Musk", description: "Deep, earthy scent with traditional African oils" },
-    { name: "Sahara Nights", description: "Warm, spicy blend perfect for evening wear" },
-    { name: "Baobab Essence", description: "Fresh, woody fragrance inspired by the African savanna" },
-    { name: "Kalahari Gold", description: "Rich, luxurious scent with hints of amber and sandalwood" },
-    { name: "Congo River", description: "Fresh, aquatic fragrance with green notes" },
-    { name: "Serengeti Storm", description: "Bold, powerful scent with leather and tobacco notes" }
-  ];
-
-  const womensPerfumes = [
-    { name: "Jasmine Nights", description: "Floral, romantic scent with African jasmine" },
-    { name: "Shea Blossom", description: "Soft, creamy fragrance with shea butter notes" },
-    { name: "Marula Breeze", description: "Light, fruity scent perfect for daytime" },
-    { name: "African Rose", description: "Classic rose with exotic African spices" },
-    { name: "Vanilla Sunset", description: "Warm, sweet fragrance with vanilla and honey" },
-    { name: "Hibiscus Dream", description: "Fresh, tropical scent with floral notes" }
-  ];
 
   const services = [
     {
@@ -240,7 +228,7 @@ const Services = () => {
                           onClick={() => setShowPerfumeModal(true)}
                           className="mt-4 w-full bg-kamalo-gold text-gray-800 px-6 py-3 rounded-full hover:bg-yellow-500 transition-all duration-300 font-semibold"
                         >
-                          View Full Collection
+                          View Whole Collection
                         </button>
                       )}
                     </div>
@@ -274,58 +262,10 @@ const Services = () => {
       </main>
 
       {/* Perfume Collection Modal */}
-      {showPerfumeModal && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
-          <div className="bg-kamalo-dark border border-gray-700 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
-            {/* Modal Header */}
-            <div className="flex justify-between items-center p-6 border-b border-gray-700">
-              <h2 className="text-2xl font-bold text-white font-serif">Perfume Collection</h2>
-              <button
-                onClick={() => setShowPerfumeModal(false)}
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Collection Toggles */}
-            <div className="flex border-b border-gray-700">
-              <button
-                onClick={() => setActiveCollection('men')}
-                className={`flex-1 py-4 px-6 font-semibold transition-colors ${
-                  activeCollection === 'men' 
-                    ? 'bg-kamalo-red text-white' 
-                    : 'text-gray-400 hover:text-white'
-                }`}
-              >
-                Men's Collection
-              </button>
-              <button
-                onClick={() => setActiveCollection('women')}
-                className={`flex-1 py-4 px-6 font-semibold transition-colors ${
-                  activeCollection === 'women' 
-                    ? 'bg-kamalo-red text-white' 
-                    : 'text-gray-400 hover:text-white'
-                }`}
-              >
-                Women's Collection
-              </button>
-            </div>
-
-            {/* Perfume List */}
-            <div className="p-6 max-h-96 overflow-y-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {(activeCollection === 'men' ? mensPerfumes : womensPerfumes).map((perfume, index) => (
-                  <div key={index} className="bg-black/50 rounded-lg p-4 border border-gray-800">
-                    <h3 className="text-lg font-bold text-kamalo-gold mb-2">{perfume.name}</h3>
-                    <p className="text-gray-300 text-sm">{perfume.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <PerfumeModal 
+        isOpen={showPerfumeModal} 
+        onClose={() => setShowPerfumeModal(false)} 
+      />
 
       <Footer />
     </div>

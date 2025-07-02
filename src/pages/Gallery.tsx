@@ -18,13 +18,7 @@ const Gallery = () => {
   }, []);
 
   const galleryItems = [
-    // Food Category
-    { 
-      id: 1, 
-      category: "food", 
-      image: "https://live.staticflickr.com/65535/54597520795_d4a6f5d152_c.jpg", 
-      alt: "Double Trouble – African Cuisine at Kamalo City Restaurant" 
-    },
+    // Food Category - REMOVED the first "Double Trouble" image
     { 
       id: 2, 
       category: "food", 

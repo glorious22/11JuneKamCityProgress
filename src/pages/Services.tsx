@@ -51,7 +51,7 @@ const Services = () => {
         "Friendly, family-style service",
         "Open 7 days a week, 11:00 AM - 11:00 PM"
       ],
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://live.staticflickr.com/65535/54574585527_c4e3fb753f_c.jpg"
     },
     {
       id: "live-entertainment",

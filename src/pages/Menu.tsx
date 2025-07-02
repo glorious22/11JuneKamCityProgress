@@ -108,10 +108,10 @@ const Menu = () => {
     {
       id: 11,
       category: "vegetable-sides",
-      name: "Ngai Ngai (Roselle Leaves)",
+      name: "Ngayi Ngayi (Roselle Leaves)",
       description: "Slightly sour greens packed with nutrients and bold flavor.",
       image: "https://live.staticflickr.com/65535/54597520795_d4a6f5d152_c.jpg",
-      alt: "Ngai Ngai Roselle Leaves – Traditional African Vegetable Side at Kamalo City"
+      alt: "Ngayi Ngayi Roselle Leaves – Traditional African Vegetable Side at Kamalo City"
     },
     {
       id: 12,

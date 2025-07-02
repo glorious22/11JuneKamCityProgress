@@ -40,7 +40,7 @@ const Menu = () => {
       category: "main",
       name: "Beef Stew",
       description: "Classic African-style beef in a rich tomato and brinjal sauce.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54628479323_833151957d.jpg",
       alt: "Beef Stew – Main Dish at Kamalo City Restaurant",
       tag: "🔥 Chef's Pick"
     },
@@ -57,7 +57,7 @@ const Menu = () => {
       category: "main",
       name: "Grilled Chicken Quarter Leg",
       description: "Juicy quarter chicken grilled and served with pap or rice.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54628324771_256ca324ca.jpg",
       alt: "Grilled Chicken Quarter Leg – Main Dish at Kamalo City Restaurant",
       tag: "🔥 Most Popular"
     },
@@ -84,7 +84,7 @@ const Menu = () => {
       category: "sides",
       name: "Portion Rice",
       description: "Soft, fluffy rice that's perfect with any of our main dishes.",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54628560355_03b225aeae.jpg",
       alt: "Portion Rice – Traditional Side at Kamalo City Restaurant"
     },
 
@@ -94,7 +94,7 @@ const Menu = () => {
       category: "vegetable-sides",
       name: "Cassava Leaves (Pondu)",
       description: "Stewed cassava leaves with traditional spices and seasonings.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54628646690_27b04bc894.jpg",
       alt: "Cassava Leaves – Traditional African Vegetable Side at Kamalo City"
     },
     {
@@ -102,7 +102,7 @@ const Menu = () => {
       category: "vegetable-sides",
       name: "Sweet Potato Leaves (Matembele)",
       description: "Tender sweet potato leaves sautéed in traditional African style.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54628502859_8d0d46621f.jpg",
       alt: "Sweet Potato Leaves – Traditional African Vegetable Side at Kamalo City"
     },
     {
@@ -118,7 +118,7 @@ const Menu = () => {
       category: "vegetable-sides",
       name: "Ndunda (Wild Spinach)",
       description: "Bold-flavoured wild spinach, steamed to perfection.",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54628573995_96ef7409f1.jpg",
       alt: "Ndunda Wild Spinach – Traditional African Vegetable Side at Kamalo City"
     },
     {
@@ -126,7 +126,7 @@ const Menu = () => {
       category: "vegetable-sides",
       name: "Repu",
       description: "Earthy green vegetable — a local favourite with unique taste.",
-      image: "https://live.staticflickr.com/65535/54597520795_d4a6f5d152_c.jpg",
+      image: "https://live.staticflickr.com/65535/54575640309_71435470de_c.jpg",
       alt: "Repu – Traditional African Vegetable Side at Kamalo City"
     },
     {
@@ -148,7 +148,7 @@ const Menu = () => {
       name: "Fried Kapenta (Matemba)",
       description: "Traditional small fish cooked in light tomato sauce, served with vegetables.",
       day: "Monday",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54628466124_6feb772231.jpg",
       alt: "Kapenta Stew – Main Dish at Kamalo City Restaurant",
       tag: "✅ Chef's Recommendation"
     },
@@ -217,7 +217,7 @@ const Menu = () => {
       name: "Fumbwa with Dry Fish",
       description: "Wild spinach in peanut sauce with dry fish, a traditional favorite.",
       day: "Wednesday",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54627387222_2821f1f2a2.jpg",
       alt: "Fumbwa with Dry Fish – Wednesday Special at Kamalo City Restaurant"
     },
 
@@ -228,7 +228,7 @@ const Menu = () => {
       name: "Light Fried Pork Smock Ribs",
       description: "Lightly fried smoky pork ribs, crispy outside and tender inside.",
       day: "Thursday",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://live.staticflickr.com/65535/54628266556_0fbdc28716.jpg",
       alt: "Pork Smock Ribs – Thursday Special at Kamalo City Restaurant"
     },
     {

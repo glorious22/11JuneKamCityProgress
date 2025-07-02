@@ -65,7 +65,7 @@ const Services = () => {
         "Friday and Saturday night entertainment",
         "Special guest appearances"
       ],
-      image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "https://live.staticflickr.com/65535/54623833912_78cffedfe2_c.jpg",
       tag: "🔥 Popular"
     },
     {
@@ -80,7 +80,7 @@ const Services = () => {
         "Must be 18+",
         "Available throughout operating hours"
       ],
-      image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://live.staticflickr.com/65535/54575639694_9a16f68006_c.jpg"
     },
     {
       id: "venue-hire",
@@ -94,7 +94,7 @@ const Services = () => {
         "Accommodates up to 80 guests",
         "Full catering services available"
       ],
-      image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://live.staticflickr.com/65535/54624923824_0590af3293_c.jpg"
     },
     {
       id: "barbershop",
@@ -108,7 +108,7 @@ const Services = () => {
         "Walk-in service available",
         "Fresh cuts in relaxed atmosphere"
       ],
-      image: "https://live.staticflickr.com/65535/54575453046_73d8f83024_c.jpg"
+      image: "https://live.staticflickr.com/65535/54575789460_fcb466083e_c.jpg"
     },
     {
       id: "perfume-collection",
@@ -122,7 +122,7 @@ const Services = () => {
         "Men's and women's collections",
         "Unique African-inspired blends"
       ],
-      image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "https://live.staticflickr.com/65535/54575452291_291822c7a2_c.jpg",
       hasModal: true
     },
     {
@@ -137,7 +137,7 @@ const Services = () => {
         "Full catering for events",
         "Custom menu planning available"
       ],
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://live.staticflickr.com/65535/54575452741_3649c67820_c.jpg"
     },
     {
       id: "game-nights",

@@ -22,134 +22,108 @@ const Gallery = () => {
     { 
       id: 1, 
       category: "food", 
-      title: "Grilled African Cuisine", 
-      caption: "Authentic grilled meats with traditional African spices and aromatic herbs",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Grilled African Cuisine – Main Dish at Kamalo City Restaurant" 
+      image: "https://live.staticflickr.com/65535/54597520795_d4a6f5d152_c.jpg", 
+      alt: "Double Trouble – African Cuisine at Kamalo City Restaurant" 
     },
     { 
       id: 2, 
       category: "food", 
-      title: "Traditional Stew", 
-      caption: "Rich, hearty stews prepared with ancestral recipes and slow-cooked perfection",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Traditional African Stew – Main Dish at Kamalo City Restaurant" 
+      image: "https://live.staticflickr.com/65535/54628348818_226ac07dcf_c.jpg", 
+      alt: "Gallery Food 1 – African Cuisine at Kamalo City Restaurant" 
     },
     { 
       id: 3, 
       category: "food", 
-      title: "African Spice Collection", 
-      caption: "Traditional spices and ingredients that create our authentic, bold flavors",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "African Spices – Traditional Ingredients at Kamalo City Restaurant" 
+      image: "https://live.staticflickr.com/65535/54628137221_dac8fd3276_c.jpg", 
+      alt: "Gallery Food 2 – African Cuisine at Kamalo City Restaurant" 
     },
     { 
       id: 4, 
       category: "food", 
-      title: "Fresh Vegetables", 
-      caption: "Traditional African vegetables prepared with authentic cooking methods",
-      image: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Traditional African Vegetables – Fresh Sides at Kamalo City Restaurant" 
+      image: "https://live.staticflickr.com/65535/54628335184_b54f6a5f69_c.jpg", 
+      alt: "Gallery Food 3 – African Cuisine at Kamalo City Restaurant" 
     },
     { 
       id: 5, 
       category: "food", 
-      title: "Grilled Fish", 
-      caption: "Fresh fish grilled to perfection with traditional seasonings",
-      image: "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Grilled Fish – Main Dish at Kamalo City Restaurant" 
+      image: "https://live.staticflickr.com/65535/54628136671_49952e5a26_c.jpg", 
+      alt: "Gallery Food 4 – African Cuisine at Kamalo City Restaurant" 
     },
     { 
       id: 6, 
       category: "food", 
-      title: "Traditional Sides", 
-      caption: "Pap, rice, and traditional accompaniments to complete your meal",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Traditional Sides – Pap and Rice at Kamalo City Restaurant" 
+      image: "https://live.staticflickr.com/65535/54627256147_6f627b5984_c.jpg", 
+      alt: "Gallery Food 5 – African Cuisine at Kamalo City Restaurant" 
+    },
+    { 
+      id: 7, 
+      category: "food", 
+      image: "https://live.staticflickr.com/65535/54597424173_c799427945_c.jpg", 
+      alt: "Kebab Stick – African Cuisine at Kamalo City Restaurant" 
+    },
+    { 
+      id: 8, 
+      category: "food", 
+      image: "https://live.staticflickr.com/65535/54597205206_c6c31c08fe_c.jpg", 
+      alt: "Tarky Dendon – African Cuisine at Kamalo City Restaurant" 
+    },
+    { 
+      id: 9, 
+      category: "food", 
+      image: "https://live.staticflickr.com/65535/54597424853_b3f22d7e04_c.jpg", 
+      alt: "Triple Trouble Dish – African Cuisine at Kamalo City Restaurant" 
     },
 
     // Events Category
     { 
-      id: 7, 
-      category: "events", 
-      title: "Live Music Night", 
-      caption: "Friday night live performances featuring talented African artists and cultural celebrations",
-      image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Friday Jazz Night – Live Music Event at Kamalo City" 
-    },
-    { 
-      id: 8, 
-      category: "events", 
-      title: "Private Celebration", 
-      caption: "Celebrating special moments with friends and family in our intimate venue",
-      image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Private Celebration – Event at Kamalo City Restaurant" 
-    },
-    { 
-      id: 9, 
-      category: "events", 
-      title: "Cultural Heritage Night", 
-      caption: "Celebrating African heritage through music, dance, and storytelling",
-      image: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Cultural Heritage Night – African Event at Kamalo City" 
-    },
-    { 
       id: 10, 
       category: "events", 
-      title: "Weekend Entertainment", 
-      caption: "Saturday night entertainment with DJs and live performances",
-      image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Weekend Entertainment – Live Event at Kamalo City" 
+      image: "https://live.staticflickr.com/65535/54623833912_78cffedfe2_c.jpg", 
+      alt: "Past Event 1 – Live Event at Kamalo City" 
+    },
+    { 
+      id: 11, 
+      category: "events", 
+      image: "https://live.staticflickr.com/65535/54574585527_c4e3fb753f_c.jpg", 
+      alt: "Restaurant 1 – Event Space at Kamalo City" 
+    },
+    { 
+      id: 12, 
+      category: "events", 
+      image: "https://live.staticflickr.com/65535/54626189545_5a6e12b316_c.jpg", 
+      alt: "Hero Image 3 – Event at Kamalo City" 
     },
 
     // Services Category
     { 
-      id: 11, 
-      category: "services", 
-      title: "Restaurant Interior", 
-      caption: "Warm, welcoming atmosphere that feels like home with authentic African décor",
-      image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Restaurant Interior – Kamalo City Dining Space" 
-    },
-    { 
-      id: 12, 
-      category: "services", 
-      title: "Premium Hookah Lounge", 
-      caption: "Relaxing hookah experience in our comfortable lounge with ambient lighting",
-      image: "https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Premium Hookah Lounge – Relaxation Service at Kamalo City" 
-    },
-    { 
       id: 13, 
       category: "services", 
-      title: "Professional Barbershop", 
-      caption: "Expert grooming services with traditional and modern styling techniques",
-      image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Professional Barbershop – Grooming Service at Kamalo City" 
+      image: "https://live.staticflickr.com/65535/54575789460_fcb466083e_c.jpg", 
+      alt: "Barbershop 2 – Grooming Service at Kamalo City" 
     },
     { 
       id: 14, 
       category: "services", 
-      title: "Game Area", 
-      caption: "Pool tables and recreational activities for entertainment",
-      image: "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Game Area – Entertainment Service at Kamalo City" 
+      image: "https://live.staticflickr.com/65535/54574585882_a293c9a873_c.jpg", 
+      alt: "Hookah 2 – Relaxation Service at Kamalo City" 
     },
     { 
       id: 15, 
       category: "services", 
-      title: "Perfume Collection", 
-      caption: "Curated selection of premium African-inspired fragrances",
-      image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Perfume Collection – Fragrance Service at Kamalo City" 
+      image: "https://live.staticflickr.com/65535/54575639694_9a16f68006_c.jpg", 
+      alt: "Hookah 1 – Premium Hookah Service at Kamalo City" 
     },
     { 
       id: 16, 
       category: "services", 
-      title: "Event Setup", 
-      caption: "Professional event setup and catering services for private functions",
-      image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      alt: "Event Setup – Private Function Service at Kamalo City" 
+      image: "https://live.staticflickr.com/65535/54575640044_867793b363_c.jpg", 
+      alt: "Perfumes 1 – Fragrance Service at Kamalo City" 
+    },
+    { 
+      id: 17, 
+      category: "services", 
+      image: "https://live.staticflickr.com/65535/54624923824_0590af3293_c.jpg", 
+      alt: "Venue Hire – Private Function Service at Kamalo City" 
     }
   ];
 
@@ -159,7 +133,7 @@ const Gallery = () => {
     type: 'image' as const,
     src: item.image,
     alt: item.alt,
-    title: item.title
+    title: item.alt
   }));
 
   const getCategoryDisplayName = (category: string) => {
@@ -252,16 +226,14 @@ const Gallery = () => {
                     onClick={() => openLightbox(index)}
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-500"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-lg md:text-xl font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-xs md:text-sm text-gray-300 leading-relaxed">{item.caption}</p>
-                    <span className="text-xs text-kamalo-gold capitalize mt-2 block font-semibold">
-                      {item.category.replace('-', ' ')}
-                    </span>
-                  </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Coming Soon Notice */}
+          <div className="text-center mb-12">
+            <p className="text-gray-400 text-lg italic">More images coming soon...</p>
           </div>
 
           {/* CTA Section */}
